@@ -1,0 +1,132 @@
+﻿<div class="col-sm-3" style="padding:0px;">
+    <span class="span_pic" id="QueryIconSpan">
+        <button data-toggle="modal" id="btnScreenHelp" data-target="#myModal" style="BACKGROUND: TRANSPARENT;BORDER: NONE;PADDING: 0PX;">
+            <img class="icon_help" src="../images/icon_show.png">
+        </button>
+    </span>
+    <span class="span_pic" id="AddIconSpan" style="display:none;">
+        <button style="BACKGROUND: TRANSPARENT;BORDER: NONE;PADDING: 0PX;">
+            <img class="icon_help" src="../images/icon_add.png">
+        </button>
+    </span>
+    <span class="span_pic" id="EditIconSpan" style="display:none;">
+        <button style="BACKGROUND: TRANSPARENT;BORDER: NONE;PADDING: 0PX;">
+            <img class="icon_help" src="../images/icon_edite.png">
+
+        </button>
+    </span>
+    @{
+        string ScreenKey = ViewBag.ScreenKey.ToString();
+    }
+    <h4 id="TitleSpan" class="h4_header">@ViewBag.Title</h4>
+    <input type="hidden" name="ScreenKey" id="ScreenKey" value="@ScreenKey" />
+
+    <div class="clear"></div>
+</div>
+
+<script src="~/ClientApp/Partial/ControlsButtons.js"></script>
+<script>
+    $(document).ready(function () {
+        ControlsButtons.OnLoad();
+        var lang = sessionStorage.getItem("temp_lang");
+
+        $(".language").css("display", "none");
+        $("." + lang).css("display", "");
+
+        $("#btnHome").click(function () {
+
+            $("#spnFav").css("display", "none");
+            var homePage = '@Url.Action("HomeIndex","Home")';
+            window.open(homePage, "_self");
+
+        });
+        $(".btn-action").click(function () {
+            $(".table_2").slideToggle();
+            $(".table_1").slideToggle();
+
+        });
+
+
+    });
+</script>
+<div class="col-sm-9">
+
+    <div class="menu text-right">
+        <button id="btnHome" class="item home_ro pageload-link">
+            <div class="link icon_home"></div>
+            <div class="item_content">
+                <h2 class="language ar">الرئيسية</h2>
+                <h2 class="language en">Home</h2>
+            </div>
+        </button>
+
+        <button class="item new_ro" id="AddButton">
+            <div class="link icon_add"></div>
+            <div class="item_content">
+                <h2 class="language ar">اضافة</h2>
+                <h2 class="language en">Add</h2>
+            </div>
+        </button>
+
+        <button class="item edite_ro" id="EditButton">
+            <div class="link icon_edite"></div>
+            <div class="item_content ">
+                <h2 class="language ar">تعديل</h2>
+                <h2 class="language en">Edit</h2>
+            </div>
+        </button>
+
+        <button class="item save_ro" id="SaveButton">
+            <div class="link icon_save"></div>
+            <div class="item_content ">
+                <h2 class="language ar">حفظ </h2>
+                <h2 class="language en">Save</h2>
+            </div>
+        </button>
+
+        <button class="item undo_ro" id="UndoButton">
+            <div class="link icon_undo"></div>
+            <div class="item_content ">
+                <h2 class="language ar">تراجع</h2>
+                <h2 class="language en">undo</h2>
+            </div>
+        </button>
+
+        <button class="item refresh_ro" id="RefreshButton">
+            <div class="link icon_refresh"></div>
+            <div class="item_content">
+                <h2 class="language ar">تنشيط</h2>
+                <h2 class="language en">Refresh</h2>
+            </div>
+        </button>
+
+        <button class="item delete_ro" id="DeleteButton" data-target="#myModal2">
+            <div class="link icon_delete"></div>
+            <div class="item_content">
+                <h2 class="language ar">حذف</h2>
+                <h2 class="language en">Delete</h2>
+            </div>
+        </button>
+
+        <button class="item print_ro" id="PrintButton" data-target="#myModal3" >
+            <div class="link icon_print"></div>
+            <div class="item_content">
+                <h2 class="language ar">طباعة</h2>
+                <h2 class="language en">Print</h2>
+            </div>
+        </button>
+
+        <button class="item pic_item" id="ImageEditorButton" >
+            <div class="link icon_pic"></div>
+            <div class="item_content">
+                <h2 class="language ar">الصور</h2>
+                <h2 class="language en">Images</h2>
+            </div>
+        </button>
+
+    </div>
+
+
+
+</div>
+<div class="clear"></div>

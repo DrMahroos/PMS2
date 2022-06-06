@@ -1,0 +1,249 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "PrequalificationIndex";
+    ViewBag.Title = SystemResource.Men_Prequalification;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+
+        <div class="modal fade" id="myModalPrint" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="menu text-left menu_site_eng">
+                            <button id="btnHome" class="item home_ro pageload-link">
+                                <div class="link icon_home"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">الرئيسية</h2>
+                                    <h2 class="language en">Home</h2>
+                                </div>
+                            </button>
+                            <button class="item delete_ro" id="DeleteButton" data-target="#myModal2">
+                                <div class="link icon_delete"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">حذف</h2>
+                                    <h2 class="language en">Delete</h2>
+                                </div>
+                            </button>
+                            <button class="item print_ro" id="PrintButton" data-toggle="modal" data-target="#myModalPrint">
+                                <div class="link icon_print"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">طباعة</h2>
+                                    <h2 class="language en">Print</h2>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_candcode </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="hidden" class="form-control input-sm" name="SubContractorID" id="txtSubCandidateId">
+                            <input type="text"  class="xaddable xeditable form-control input-sm clearable" name="CandidateCode" id="txtCandidateCode">
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butCandidateCode" name="butCandidateCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        @*<div class="col-md-2"></div>*@
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width: 116px;"> @SystemResource.Fld_vat </label>
+                        <div class="col-sm-2 col-xs-12" style="width: 66px;margin-top: 9px;">
+                            <input type="checkbox" class="checkdef work_checkbox editable addable" style=""id="chkVatType" name="VatType">
+                        </div>
+                        @*<label for="txtEngCode" class="col-sm-2 col-xs-5 control-label" style="width: auto;"> @SystemResource.Fld_vat </label>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            @*<button class="def_btn pull-right preq_btn">Vat Applied?</button>*@
+                            @*<input type="checkbox" class="checkdef work_checkbox editable addable" id="chkVatType" name="VatType" style="right:473px!important">
+                        </div>*@
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_company_namea </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescA" id="txtDescA" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_subcont_code </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" disabled="disabled" class="form-control input-sm clearable" name="SubContractorCode" id="txtSubContractorCode" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_company_namee </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.pre_crNo </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="CrNo" id="txtCrNo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_contact_person </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="ContactPerson" id="txtContactPerson" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_chcommonno </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="ChamberNo" id="txtChamberNo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_Tele1 </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Tel1" id="txtTel1" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_vatno </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="VatNo" id="txtVatNo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_Tele12 </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Tel2" id="txtTel2" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_limit </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="ContractLimit" id="txtContractLimit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_Mobile </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Mobile" id="txtMobile" />
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_spciality </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Specialty" id="txtSpecialty" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_email </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Email" id="txtEmail" />
+                        </div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Pre_address </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="SubContractorAddress" id="txtSubContractorAddress" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Pre_location </label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="BraCode" id="txtBraCode" />
+                        </div>
+                        <div class="info-btn pre_serach">
+                            <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="butBraCode" name="butBraCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12" style=" width: 259px;">
+                            <input type="text" class="form-control inpt-sm clearable " disabled="disabled" id="txtAreaName" name="AreaName">
+                        </div>
+
+                        <div class="col-md-6 col-sm-2 col-xs-6 ramrs_prequ">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Change_Remarks </label>
+                            <div class="col-md-7 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Remarks" id="txtRemarks" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 form-horizontal" id="prequali">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 230px !important;
+                            background-color: #ddd;
+                            margin-top: -13px;
+                        }
+
+                        .form-group {
+                            margin-top: 2px;
+                        }
+                    </style>
+
+                    <table id="preqalifications"></table>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/03_SubContractor/PrequalificationIndex.js"></script>
+</div>

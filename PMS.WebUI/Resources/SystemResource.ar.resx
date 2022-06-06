@@ -1,0 +1,4780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EqCat_ClassCode" xml:space="preserve">
+    <value>رقم الفئة</value>
+  </data>
+  <data name="EqCat_DeprRate" xml:space="preserve">
+    <value>معدل الاهلاك</value>
+  </data>
+  <data name="EqCat_DescA" xml:space="preserve">
+    <value>الاسم عربي</value>
+  </data>
+  <data name="EqCat_DescE" xml:space="preserve">
+    <value>الاسم انجليزي</value>
+  </data>
+  <data name="EqCat_HourCost" xml:space="preserve">
+    <value>تكلفة الساعة</value>
+  </data>
+  <data name="EqCat_HourDeprCost" xml:space="preserve">
+    <value>تكلفة الاهلاك فى الساعة</value>
+  </data>
+  <data name="EqCat_HourOprCost" xml:space="preserve">
+    <value>تكلفة التشغيل فى الساعة</value>
+  </data>
+  <data name="Fld_AbsCode" xml:space="preserve">
+    <value>رمز الغياب</value>
+  </data>
+  <data name="Fld_AccountNo" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+  <data name="Fld_ActivityCode" xml:space="preserve">
+    <value>رمز النشاط</value>
+  </data>
+  <data name="Fld_ActivityID" xml:space="preserve">
+    <value>الانشطة</value>
+  </data>
+  <data name="Fld_ActivityPriceDetailId" xml:space="preserve">
+    <value>رقم  النشاط</value>
+  </data>
+  <data name="Fld_ActivityPriceId" xml:space="preserve">
+    <value>وصف النشاط</value>
+  </data>
+  <data name="Fld_ActQty" xml:space="preserve">
+    <value>كمية النشاط</value>
+  </data>
+  <data name="Fld_AreaName" xml:space="preserve">
+    <value>اسم المنطقة</value>
+  </data>
+  <data name="Fld_AreaNo" xml:space="preserve">
+    <value>رقم المنطقة</value>
+  </data>
+  <data name="Fld_BasicSalary" xml:space="preserve">
+    <value>الراتب الشهرى</value>
+  </data>
+  <data name="Fld_BonusAddFactor" xml:space="preserve">
+    <value>معامل الاضافة لعمولة</value>
+  </data>
+  <data name="Fld_BonusDedFactor" xml:space="preserve">
+    <value>معامل الخصم من العمولة </value>
+  </data>
+  <data name="Fld_BonusRate" xml:space="preserve">
+    <value>معامل البونص</value>
+  </data>
+  <data name="Fld_BraCode" xml:space="preserve">
+    <value>كود الفرع</value>
+  </data>
+  <data name="Fld_BreakEnd" xml:space="preserve">
+    <value>نهاية الاستراحة</value>
+  </data>
+  <data name="Fld_BreakStart" xml:space="preserve">
+    <value>بداية الاستراحة</value>
+  </data>
+  <data name="Fld_CalcUnitPrice" xml:space="preserve">
+    <value>سعر الوحدة</value>
+  </data>
+  <data name="Fld_CarPlateNo" xml:space="preserve">
+    <value>لوحة السيارة</value>
+  </data>
+  <data name="Fld_CategCode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="Fld_ChasisNo" xml:space="preserve">
+    <value>رقم الشاص</value>
+  </data>
+  <data name="Fld_ClassCode" xml:space="preserve">
+    <value>كود </value>
+  </data>
+  <data name="Fld_Code" xml:space="preserve">
+    <value>رمز</value>
+  </data>
+  <data name="Fld_CompCode" xml:space="preserve">
+    <value>رمز الشركة</value>
+  </data>
+  <data name="Fld_CreatedAt" xml:space="preserve">
+    <value>انشاء في </value>
+  </data>
+  <data name="Fld_CreatedBy" xml:space="preserve">
+    <value>اسم</value>
+  </data>
+  <data name="Fld_DailyProdQtyTeam" xml:space="preserve">
+    <value>الانتاج اليومي للفريق</value>
+  </data>
+  <data name="Fld_DailyWorkHours" xml:space="preserve">
+    <value>ساعات العمل اليومية</value>
+  </data>
+  <data name="Fld_DeprRate" xml:space="preserve">
+    <value>نسبة القسم</value>
+  </data>
+  <data name="Fld_DescA" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Fld_DescE" xml:space="preserve">
+    <value>الاسم بالانجليزى</value>
+  </data>
+  <data name="Fld_EffeciencyPrc" xml:space="preserve">
+    <value>الكفاءة%</value>
+  </data>
+  <data name="Fld_Email" xml:space="preserve">
+    <value>البريد الاليكترونى</value>
+  </data>
+  <data name="Fld_EngCode" xml:space="preserve">
+    <value>رمز المهندس</value>
+  </data>
+  <data name="Fld_EquipClassId" xml:space="preserve">
+    <value>تصنيف المعدة</value>
+  </data>
+  <data name="Fld_EquipCost" xml:space="preserve">
+    <value>تكلفة المعدة</value>
+  </data>
+  <data name="Fld_EquipmentOHRate" xml:space="preserve">
+    <value>معدل التكلفة الاضافية من المعدات</value>
+  </data>
+  <data name="Fld_EquipmentPOHRate" xml:space="preserve">
+    <value>معدل تكلفة الانتاج من المعدات</value>
+  </data>
+  <data name="Fld_EquipmentRequirement" xml:space="preserve">
+    <value>متطلبات المعدات</value>
+  </data>
+  <data name="Fld_ExpCatCode" xml:space="preserve">
+    <value>رمز الفئة</value>
+  </data>
+  <data name="Fld_ExpCatID" xml:space="preserve">
+    <value>تكلفة الفئة1</value>
+  </data>
+  <data name="Fld_ExpCatID1" xml:space="preserve">
+    <value>تكلفة الفئة2</value>
+  </data>
+  <data name="Fld_ExpCode" xml:space="preserve">
+    <value>رمز التكلفة</value>
+  </data>
+  <data name="Fld_ExpensesOHRate" xml:space="preserve">
+    <value>معدل التكلفة الاضافية من المصاريف</value>
+  </data>
+  <data name="Fld_ExpensesPOHRate" xml:space="preserve">
+    <value>معدل تكلفة الانتاج من المصاريف</value>
+  </data>
+  <data name="Fld_HourCost" xml:space="preserve">
+    <value>تكلفة التشغيل</value>
+  </data>
+  <data name="Fld_HourDeprCost" xml:space="preserve">
+    <value>تكلفة الاهلاك</value>
+  </data>
+  <data name="Fld_HourOprCost" xml:space="preserve">
+    <value>تكلفة التشغيل للساعة</value>
+  </data>
+  <data name="Fld_HourProduction" xml:space="preserve">
+    <value>الانتاج في الساعة </value>
+  </data>
+  <data name="Fld_IsProdIncluded" xml:space="preserve">
+    <value>يضاف للانتاجية ؟</value>
+  </data>
+  <data name="Fld_ItemID" xml:space="preserve">
+    <value>الصنف</value>
+  </data>
+  <data name="Fld_ItemsSystemActivityId" xml:space="preserve">
+    <value>الانشطة</value>
+  </data>
+  <data name="Fld_ActivityDesc" xml:space="preserve">
+    <value>وصف النشاط</value>
+  </data>
+  <data name="Fld_LaborCategoryId" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="Fld_LaborClassId" xml:space="preserve">
+    <value>كود الطبقة العاملة</value>
+  </data>
+  <data name="Fld_LaborCode" xml:space="preserve">
+    <value>كود العامل</value>
+  </data>
+  <data name="Fld_LaborCost" xml:space="preserve">
+    <value>تكلفة العامل</value>
+  </data>
+  <data name="Fld_LaborOHRate" xml:space="preserve">
+    <value>معدل التكلفة الاضافية من العمالة</value>
+  </data>
+  <data name="Fld_LaborPOHRate" xml:space="preserve">
+    <value>معدل تكلفة الانتاج من العمالة</value>
+  </data>
+  <data name="Fld_LaborProdPerHour" xml:space="preserve">
+    <value>انتاج العامل في الساعة</value>
+  </data>
+  <data name="Fld_LaborRequirement" xml:space="preserve">
+    <value>متطلبات العمالة</value>
+  </data>
+  <data name="Fld_Level" xml:space="preserve">
+    <value>المستوي</value>
+  </data>
+  <data name="Fld_LocationId" xml:space="preserve">
+    <value>رمز المكان</value>
+  </data>
+  <data name="Fld_MaintNotes" xml:space="preserve">
+    <value>ملاحظات الصيانة</value>
+  </data>
+  <data name="Fld_Make" xml:space="preserve">
+    <value>المصنع</value>
+  </data>
+  <data name="Fld_MakeType" xml:space="preserve">
+    <value>نوع المصنع</value>
+  </data>
+  <data name="Fld_MatCost" xml:space="preserve">
+    <value>تكلفة المواد</value>
+  </data>
+  <data name="Fld_MaterialOHRate" xml:space="preserve">
+    <value>معدل التكلفة الاضافية من المواد</value>
+  </data>
+  <data name="Fld_MaterialPOHRate" xml:space="preserve">
+    <value>معدل تكلفة الانتاج من المواد</value>
+  </data>
+  <data name="Fld_MaterialRequirement" xml:space="preserve">
+    <value>متطلبات المواد</value>
+  </data>
+  <data name="Fld_MaterialWaste" xml:space="preserve">
+    <value>%الهادر للمواد</value>
+  </data>
+  <data name="Fld_MinUnitPrice" xml:space="preserve">
+    <value>سعر الحد الأدنى</value>
+  </data>
+  <data name="Fld_Mobile" xml:space="preserve">
+    <value>الجوال</value>
+  </data>
+  <data name="Fld_Model" xml:space="preserve">
+    <value>النموذج</value>
+  </data>
+  <data name="Fld_NationalityCode" xml:space="preserve">
+    <value>رمز الجنسية</value>
+  </data>
+  <data name="Fld_NationalityID" xml:space="preserve">
+    <value>الجنسية</value>
+  </data>
+  <data name="Fld_NewPrice" xml:space="preserve">
+    <value>السعر الجديد</value>
+  </data>
+  <data name="Fld_OHCost" xml:space="preserve">
+    <value>التكالف الاضافية</value>
+  </data>
+  <data name="Fld_OldPrice" xml:space="preserve">
+    <value>السعر القديم</value>
+  </data>
+  <data name="Fld_OutOFServiceDate" xml:space="preserve">
+    <value>تاريخ الخروج من الخدمة</value>
+  </data>
+  <data name="Fld_OverTimeCode" xml:space="preserve">
+    <value>نوع العمل الاضافي</value>
+  </data>
+  <data name="Fld_Parentactivity" xml:space="preserve">
+    <value>النشاط الرئيسي</value>
+  </data>
+  <data name="Fld_ParentLocationId" xml:space="preserve">
+    <value>الموقع الرئيسي</value>
+  </data>
+  <data name="Fld_PhaseId" xml:space="preserve">
+    <value>رقم المرحلة الحالية</value>
+  </data>
+  <data name="Fld_PlateNo" xml:space="preserve">
+    <value>رقم اللوحة</value>
+  </data>
+  <data name="Fld_POHCost" xml:space="preserve">
+    <value>التكلفة الاضافية للانتاج</value>
+  </data>
+  <data name="Fld_ProdPrc" xml:space="preserve">
+    <value>% الانتاجية</value>
+  </data>
+  <data name="Fld_Profit" xml:space="preserve">
+    <value>الربح</value>
+  </data>
+  <data name="Fld_Profit1" xml:space="preserve">
+    <value>الربح%</value>
+  </data>
+  <data name="Fld_ProjectID" xml:space="preserve">
+    <value>كود المشروع الحالى</value>
+  </data>
+  <data name="Fld_PurchaseCost" xml:space="preserve">
+    <value>تكلفة الشراء</value>
+  </data>
+  <data name="Fld_PurchaseDate" xml:space="preserve">
+    <value>تاريخ الشراء</value>
+  </data>
+  <data name="Fld_Rate" xml:space="preserve">
+    <value>معدل</value>
+  </data>
+  <data name="Fld_ReasonCode" xml:space="preserve">
+    <value>كود السبب</value>
+  </data>
+  <data name="Fld_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Fld_ReqQty" xml:space="preserve">
+    <value>الكمية المطلوبة</value>
+  </data>
+  <data name="Fld_SalesEngineerId" xml:space="preserve">
+    <value>مهندس مبيعات</value>
+  </data>
+  <data name="Fld_ScopeCategCode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="Fld_ScopeCategoryID" xml:space="preserve">
+    <value>نطاق الفئة</value>
+  </data>
+  <data name="Fld_ScopeCode" xml:space="preserve">
+    <value>فئة النطاق</value>
+  </data>
+  <data name="Fld_Speciality" xml:space="preserve">
+    <value>التخصص</value>
+  </data>
+  <data name="Fld_StartServiceDate" xml:space="preserve">
+    <value>تاريخ بدء الخدمة</value>
+  </data>
+  <data name="Fld_StartTime" xml:space="preserve">
+    <value>بداية الوقت</value>
+  </data>
+  <data name="Fld_SubControlOHRate" xml:space="preserve">
+    <value>معدل التكلفة الاضافية من مقاولي الباطن</value>
+  </data>
+  <data name="Fld_SubControlPOHRate" xml:space="preserve">
+    <value>معدل تكلفة الانتاج من مقاوي الباطن </value>
+  </data>
+  <data name="Fld_SystemCode" xml:space="preserve">
+    <value>رمز النظام</value>
+  </data>
+  <data name="Fld_Tel" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="Fld_TotalAllow" xml:space="preserve">
+    <value>المستهدف الشهري</value>
+  </data>
+  <data name="Fld_TrNo" xml:space="preserve">
+    <value>رقم الحركة</value>
+  </data>
+  <data name="Fld_UnitPrice" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="Fld_UnitSellingPrice" xml:space="preserve">
+    <value>سعر بيع الوحدة</value>
+  </data>
+  <data name="Fld_UOM" xml:space="preserve">
+    <value>وحدة القياس</value>
+  </data>
+  <data name="Fld_UomCode" xml:space="preserve">
+    <value>رمز وحدة القياس</value>
+  </data>
+  <data name="Fld_UpdatedAt" xml:space="preserve">
+    <value>تاريخ التعديل</value>
+  </data>
+  <data name="Fld_UpdatedBy" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Fld_VendorID" xml:space="preserve">
+    <value>المورد</value>
+  </data>
+  <data name="Fld_Waranty" xml:space="preserve">
+    <value>ضمان</value>
+  </data>
+  <data name="Fld_WorkingDays" xml:space="preserve">
+    <value>أيام العمل</value>
+  </data>
+  <data name="Mem_SiteEngCategory" xml:space="preserve">
+    <value>فئة مهندس الموقع</value>
+  </data>
+  <data name="Men_ActivityDefinition" xml:space="preserve">
+    <value>تعريف الانشطة</value>
+  </data>
+  <data name="Men_ActivityInformationBank" xml:space="preserve">
+    <value>بنك معلومات الانشطة</value>
+  </data>
+  <data name="Men_ActivityPrice" xml:space="preserve">
+    <value>سعر النشاط</value>
+  </data>
+  <data name="Men_ActivityRequirement" xml:space="preserve">
+    <value>متطلبات النشاط</value>
+  </data>
+  <data name="Men_AreaDefinition" xml:space="preserve">
+    <value>تعريف المنطقة</value>
+  </data>
+  <data name="Men_CalendarDefinition" xml:space="preserve">
+    <value>تعريف التقويم</value>
+  </data>
+  <data name="Men_CategoryDefinition" xml:space="preserve">
+    <value>تعريف الفئة</value>
+  </data>
+  <data name="Men_CompanyRespItem" xml:space="preserve">
+    <value>مسؤوليات الشركة</value>
+  </data>
+  <data name="Men_ContractList" xml:space="preserve">
+    <value>قائمة العقود</value>
+  </data>
+  <data name="Men_CustomerBilling" xml:space="preserve">
+    <value>فواتير العملاء</value>
+  </data>
+  <data name="Men_CustomerCategory" xml:space="preserve">
+    <value>فئة العملاء</value>
+  </data>
+  <data name="Men_CustomerRespItems" xml:space="preserve">
+    <value>مسؤوليات الشركة</value>
+  </data>
+  <data name="Men_Customers" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
+  <data name="Men_Engineers" xml:space="preserve">
+    <value>المهندسين</value>
+  </data>
+  <data name="Men_EquipmentCategory" xml:space="preserve">
+    <value>فئات المعدات</value>
+  </data>
+  <data name="Men_EquipmentDefinition" xml:space="preserve">
+    <value>تعريف المعدات</value>
+  </data>
+  <data name="Men_EquipmentDefinitionIndex" xml:space="preserve">
+    <value>فهرس تعريف المعدات </value>
+  </data>
+  <data name="Men_EquipToolsDefinition" xml:space="preserve">
+    <value>تعريف المعدات</value>
+  </data>
+  <data name="Men_Expenses" xml:space="preserve">
+    <value>المصاريف</value>
+  </data>
+  <data name="Men_ExpensesCategory" xml:space="preserve">
+    <value>فئة المصاريف</value>
+  </data>
+  <data name="Men_IssueProduction" xml:space="preserve">
+    <value>فاتورة انجاز</value>
+  </data>
+  <data name="Men_ItemDefinition" xml:space="preserve">
+    <value>تعريف البند</value>
+  </data>
+  <data name="Men_LaborAbsenceReasons" xml:space="preserve">
+    <value>أسباب غياب العامل</value>
+  </data>
+  <data name="Men_LaborCategory" xml:space="preserve">
+    <value>فئة العمال</value>
+  </data>
+  <data name="Men_LaborClass" xml:space="preserve">
+    <value>طبقة العمال</value>
+  </data>
+  <data name="Men_LaborDefinition" xml:space="preserve">
+    <value>تعريف العامل</value>
+  </data>
+  <data name="Men_LaborOvertimetypes" xml:space="preserve">
+    <value>أنواع العمل الإضافي</value>
+  </data>
+  <data name="Men_LocationDefinition" xml:space="preserve">
+    <value>تعريف الموقع</value>
+  </data>
+  <data name="Men_MaterialDefinition" xml:space="preserve">
+    <value>تعريف المواد</value>
+  </data>
+  <data name="Men_Nationality" xml:space="preserve">
+    <value>الجنسية</value>
+  </data>
+  <data name="Men_OfferBillingSchedule" xml:space="preserve">
+    <value>جدول دفعات العرض</value>
+  </data>
+  <data name="Men_OfferCostEstimation" xml:space="preserve">
+    <value>تقدير تكلفة العرض</value>
+  </data>
+  <data name="Men_OfferDefinition" xml:space="preserve">
+    <value>تعريف العرض</value>
+  </data>
+  <data name="Men_OfferSpecification" xml:space="preserve">
+    <value>مواصفات العرض</value>
+  </data>
+  <data name="Men_OtherDefinition" xml:space="preserve">
+    <value>تعريفات متنوعة</value>
+  </data>
+  <data name="Men_PeriodManagement" xml:space="preserve">
+    <value>إدارة الفترة</value>
+  </data>
+  <data name="Men_ProductionAndBilling" xml:space="preserve">
+    <value>الإنتاج والفواتير</value>
+  </data>
+  <data name="Men_ProductionVsBilling" xml:space="preserve">
+    <value>الإنتاج مقابل الفواتير</value>
+  </data>
+  <data name="Men_Reports" xml:space="preserve">
+    <value>التقارير</value>
+  </data>
+  <data name="Men_SalesDataLibrary" xml:space="preserve">
+    <value>مكتبة بيانات المبيعات</value>
+  </data>
+  <data name="Men_SalesEngCategory" xml:space="preserve">
+    <value>فئات مهندسي المبعيات</value>
+  </data>
+  <data name="Men_SalesEngineer" xml:space="preserve">
+    <value>مهندس مبيعات</value>
+  </data>
+  <data name="Men_SalesItemLibrary" xml:space="preserve">
+    <value>بنود المبيعات</value>
+  </data>
+  <data name="Men_SalesItemPlan" xml:space="preserve">
+    <value>تخطيط بنود المبيعات</value>
+  </data>
+  <data name="Men_SalesmanActivity" xml:space="preserve">
+    <value>انشطة مهندسي المبيعات</value>
+  </data>
+  <data name="Men_SalesManBonus" xml:space="preserve">
+    <value>مكافئات مهندسي المبيعات</value>
+  </data>
+  <data name="Men_SalesOperations" xml:space="preserve">
+    <value>عمليات المبيعات</value>
+  </data>
+  <data name="Men_ScopeClassandCat" xml:space="preserve">
+    <value>فئات نطاق العمل </value>
+  </data>
+  <data name="Men_ScopeClassandCategory" xml:space="preserve">
+    <value>فئات نطاق العمل</value>
+  </data>
+  <data name="Men_ScopeDefinition" xml:space="preserve">
+    <value>تعريف نطاق العمل </value>
+  </data>
+  <data name="Men_SiteEngCategory" xml:space="preserve">
+    <value>فئات مهندسي الموقع</value>
+  </data>
+  <data name="Men_SiteEngineer" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="Men_StartOfWork" xml:space="preserve">
+    <value>بداية العمل</value>
+  </data>
+  <data name="Men_SystemSetting" xml:space="preserve">
+    <value>اعدادات النظام</value>
+  </data>
+  <data name="Men_UnitsOfMeasure" xml:space="preserve">
+    <value>وحدات القياس</value>
+  </data>
+  <data name="Men_UnProductioncategory" xml:space="preserve">
+    <value>فئات اسباب توقف الانتاجية </value>
+  </data>
+  <data name="Men_UnProductionreasons" xml:space="preserve">
+    <value>اسباب توقف الانتاجية</value>
+  </data>
+  <data name="Men_VendorDefinition" xml:space="preserve">
+    <value>تعريف الموردين</value>
+  </data>
+  <data name="OFFE_ActivityID" xml:space="preserve">
+    <value>رقم النشاط</value>
+  </data>
+  <data name="OFFE_OfferItemId" xml:space="preserve">
+    <value>البند</value>
+  </data>
+  <data name="OFFE_OfferStageId" xml:space="preserve">
+    <value>رقم المرحلة </value>
+  </data>
+  <data name="OFFE_ProductionIncluded" xml:space="preserve">
+    <value>مشمول بالانتاج </value>
+  </data>
+  <data name="OFFE_ProductionPrc" xml:space="preserve">
+    <value>نسبة الانتاج</value>
+  </data>
+  <data name="OFFE_Qty" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="OFFE_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OFFE_Serial" xml:space="preserve">
+    <value>مسلسل</value>
+  </data>
+  <data name="OFFE_StdUnitPrice" xml:space="preserve">
+    <value>السعر القياسي</value>
+  </data>
+  <data name="OFFE_UnitPrice" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="PManag_Closed" xml:space="preserve">
+    <value>مغلق</value>
+  </data>
+  <data name="PManag_Code" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="PManag_FromDate" xml:space="preserve">
+    <value>من تاريخ</value>
+  </data>
+  <data name="PManag_Open" xml:space="preserve">
+    <value>مفتوح</value>
+  </data>
+  <data name="PManag_Period" xml:space="preserve">
+    <value>الفترة</value>
+  </data>
+  <data name="PManag_Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="PManag_ToDate" xml:space="preserve">
+    <value> الي تاريخ</value>
+  </data>
+  <data name="SEngCat_CategCode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="SEngCat_DescA" xml:space="preserve">
+    <value>الاسم العربي </value>
+  </data>
+  <data name="SEngCat_DescE" xml:space="preserve">
+    <value>الاسم بالانجليزى</value>
+  </data>
+  <data name="SEngCat_Rate" xml:space="preserve">
+    <value>المستهدف السنوي</value>
+  </data>
+  <data name="ExpCat_AccountNo" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+  <data name="ExpCat_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="ExpCat_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="ExpCat_ExpCatCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="Expens_AccountNo" xml:space="preserve">
+    <value>رقم الحساب</value>
+  </data>
+  <data name="Expens_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="Expens_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="Expens_ExpCode" xml:space="preserve">
+    <value>كود التكلفة</value>
+  </data>
+  <data name="Fld_ParentActivityID" xml:space="preserve">
+    <value>كود الاب</value>
+  </data>
+  <data name="LabAbs_AbsCode" xml:space="preserve">
+    <value>كود الغياب</value>
+  </data>
+  <data name="LabAbs_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="LabAbs_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="LabAbs_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="LabCat_BonusRate" xml:space="preserve">
+    <value>معدل المكافئة</value>
+  </data>
+  <data name="LabCat_CategCode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="LabCat_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="LabCat_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="LabCat_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="LabClass_BonusAddFactor" xml:space="preserve">
+    <value>معامل لاضافة علي المكافئة</value>
+  </data>
+  <data name="LabClass_BonusDedFactor" xml:space="preserve">
+    <value>معامل الخصم من المكافئة</value>
+  </data>
+  <data name="LabClass_ClassCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="LabClass_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="LabClass_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="LabClass_HourCost" xml:space="preserve">
+    <value>تكلفة الساعة</value>
+  </data>
+  <data name="LabClass_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="LabOvTime_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="LabOvTime_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="LabOvTime_OverTimeCode" xml:space="preserve">
+    <value>رمز نوع العمل الاضافي</value>
+  </data>
+  <data name="LabOvTime_Rate" xml:space="preserve">
+    <value>معدل</value>
+  </data>
+  <data name="Nationalty_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="Nationalty_DescL" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="Nationalty_NationalityCode" xml:space="preserve">
+    <value>كود الجنسية</value>
+  </data>
+  <data name="ScopClassCat_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="ScopClassCat_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="ScopClassCat_ScopeCategCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="ScopDef_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="ScopDef_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="ScopDef_ScopeCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="UnitMeasre_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="UnitMeasre_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="UnitMeasre_UomCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="UnProdCat_CategCode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="UnProdCat_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="UnProdCat_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="UnProdRes_DescA" xml:space="preserve">
+    <value>الاسم عربى</value>
+  </data>
+  <data name="UnProdRes_DescE" xml:space="preserve">
+    <value>الاسم انجليزى</value>
+  </data>
+  <data name="UnProdRes_ReasonCode" xml:space="preserve">
+    <value>كود السبب</value>
+  </data>
+  <data name="SMB_AddToBusket" xml:space="preserve">
+    <value>الاضافة الي السله</value>
+  </data>
+  <data name="SMB_CurrentBasket" xml:space="preserve">
+    <value>السله الحاليه</value>
+  </data>
+  <data name="SMB_CurrentInvoices" xml:space="preserve">
+    <value>الفاتوره الحاليه</value>
+  </data>
+  <data name="SMB_CurrentSales" xml:space="preserve">
+    <value>المبيعات الحالية</value>
+  </data>
+  <data name="SMB_OpenBasket" xml:space="preserve">
+    <value>افتتاحي السلة</value>
+  </data>
+  <data name="SMB_OpenSales" xml:space="preserve">
+    <value>المبيعات الافتتاحية</value>
+  </data>
+  <data name="SMB_Salary" xml:space="preserve">
+    <value>الراتب</value>
+  </data>
+  <data name="SMB_SalesBonusDetailId" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="SMB_SalesBonusId" xml:space="preserve">
+    <value>BounsId</value>
+  </data>
+  <data name="SMB_SalesEngCategoryId" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SMB_SalesEngineerId" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Act_EquipName" xml:space="preserve">
+    <value>اسم المعدة</value>
+  </data>
+  <data name="Act_ItemName" xml:space="preserve">
+    <value>اسم العنصر</value>
+  </data>
+  <data name="Act_LaborClass" xml:space="preserve">
+    <value>فئة العامل</value>
+  </data>
+  <data name="Act_NoOfEquipments" xml:space="preserve">
+    <value>عدد المعدات</value>
+  </data>
+  <data name="Act_NoOfLabors" xml:space="preserve">
+    <value>عدد العمال</value>
+  </data>
+  <data name="Act_ReqQty" xml:space="preserve">
+    <value>الكمية المطلوبة</value>
+  </data>
+  <data name="Act_WastQty" xml:space="preserve">
+    <value>الكمية المهدرة</value>
+  </data>
+  <data name="Fld_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Fld_ContPer" xml:space="preserve">
+    <value>اسم المسؤول</value>
+  </data>
+  <data name="Fld_mobilee" xml:space="preserve">
+    <value>الجوال</value>
+  </data>
+  <data name="Fld_projcode" xml:space="preserve">
+    <value>رقم المشروع</value>
+  </data>
+  <data name="Fld_projdesc" xml:space="preserve">
+    <value>وصف المشروع </value>
+  </data>
+  <data name="Fld_Remarkss" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Fld_SlsEng" xml:space="preserve">
+    <value>مهندس المبيعات</value>
+  </data>
+  <data name="Fld_telephone" xml:space="preserve">
+    <value>هاتف</value>
+  </data>
+  <data name="SMB_BilledQty" xml:space="preserve">
+    <value>الكمية المفوترة</value>
+  </data>
+  <data name="SMB_Current" xml:space="preserve">
+    <value>الانتاج الحالي</value>
+  </data>
+  <data name="SMB_itemcode" xml:space="preserve">
+    <value>البند</value>
+  </data>
+  <data name="SMB_itemdes" xml:space="preserve">
+    <value>اسم البند</value>
+  </data>
+  <data name="SMB_itemqty" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="SMB_itemserial" xml:space="preserve">
+    <value>مسلسل</value>
+  </data>
+  <data name="SMB_prev" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="SMB_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="SMB_toproqty" xml:space="preserve">
+    <value>اجمالي الكمية المنتجة</value>
+  </data>
+  <data name="SMB_total" xml:space="preserve">
+    <value>الاجمالي</value>
+  </data>
+  <data name="SMB_UnBilledQty" xml:space="preserve">
+    <value>الكمية الغير مفوترة</value>
+  </data>
+  <data name="SMB_UnitPrice" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="Men_SalesPayTerms" xml:space="preserve">
+    <value>تعريف شروط السداد</value>
+  </data>
+  <data name="Fld_ArabicName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Fld_Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Fld_isActive" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="Fld_MinSPrice" xml:space="preserve">
+    <value>اقل سعر للبيع</value>
+  </data>
+  <data name="Fld_salesItemCode" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="Fld_Scope" xml:space="preserve">
+    <value>النطاق</value>
+  </data>
+  <data name="Fld_SellingPrice" xml:space="preserve">
+    <value>سعر البيع</value>
+  </data>
+  <data name="Fld_Vendor" xml:space="preserve">
+    <value>المورد</value>
+  </data>
+  <data name="SystemResource_FldSystemCode" xml:space="preserve">
+    <value>كود النظام</value>
+  </data>
+  <data name="Fld_TotalCost" xml:space="preserve">
+    <value>اجمالى التكلفة </value>
+  </data>
+  <data name="Fld_Authorize" xml:space="preserve">
+    <value>اعتماد</value>
+  </data>
+  <data name="Fld_FromAct" xml:space="preserve">
+    <value>من نشاط</value>
+  </data>
+  <data name="Fld_loadActivity" xml:space="preserve">
+    <value>تحميل النشاط</value>
+  </data>
+  <data name="Fld_ToAct" xml:space="preserve">
+    <value>الى نشاط</value>
+  </data>
+  <data name="Fld_TRDate" xml:space="preserve">
+    <value>تاريخ الحركة</value>
+  </data>
+  <data name="Fld_TRNumber" xml:space="preserve">
+    <value>رقم الحركة</value>
+  </data>
+  <data name="Fld_Cancle" xml:space="preserve">
+    <value>الغاء</value>
+  </data>
+  <data name="Fld_Close" xml:space="preserve">
+    <value>اغلاق</value>
+  </data>
+  <data name="Fld_Help" xml:space="preserve">
+    <value>المساعدة</value>
+  </data>
+  <data name="Fld_Ok" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="Fldclose" xml:space="preserve">
+    <value>مغلق</value>
+  </data>
+  <data name="Fld_Costumer" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="Fld_Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Fld_Final" xml:space="preserve">
+    <value>الاخير</value>
+  </data>
+  <data name="Fld_FromDate" xml:space="preserve">
+    <value>من تاريخ</value>
+  </data>
+  <data name="Fld_GenerateProduction" xml:space="preserve">
+    <value>توليد المنتج</value>
+  </data>
+  <data name="Fld_Process" xml:space="preserve">
+    <value>منفذ</value>
+  </data>
+  <data name="Fld_ProdAmount" xml:space="preserve">
+    <value>كمية المنتج</value>
+  </data>
+  <data name="Fld_ProdNo" xml:space="preserve">
+    <value>رقم المنتج</value>
+  </data>
+  <data name="Fld_Project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Fld_RefNo" xml:space="preserve">
+    <value>Ref No</value>
+  </data>
+  <data name="Fld_Rejectremaining" xml:space="preserve">
+    <value>تجاهل المتبقى</value>
+  </data>
+  <data name="Fld_To" xml:space="preserve">
+    <value>الى</value>
+  </data>
+  <data name="Fld_WorkDescription" xml:space="preserve">
+    <value>وصف العمل</value>
+  </data>
+  <data name="SMB_BonusAmount" xml:space="preserve">
+    <value>مبلغ المكافأه</value>
+  </data>
+  <data name="Fld_Quarter" xml:space="preserve">
+    <value>Quarter</value>
+  </data>
+  <data name="Fld_ToDate" xml:space="preserve">
+    <value>الى تاريخ</value>
+  </data>
+  <data name="Fld_Year" xml:space="preserve">
+    <value>السنة</value>
+  </data>
+  <data name="SMB_Code" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="SMB_engName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Fld_DueDate" xml:space="preserve">
+    <value>DueDate</value>
+  </data>
+  <data name="Fld_ItemDesc" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Fld_OfferItemId" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="Fld_PayDescA" xml:space="preserve">
+    <value>الوصف عربى</value>
+  </data>
+  <data name="Fld_Serial" xml:space="preserve">
+    <value>تسلسل</value>
+  </data>
+  <data name="Fld_PayDescE" xml:space="preserve">
+    <value>PayDescE</value>
+  </data>
+  <data name="Fld_Customer" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="Fld_DownAmt" xml:space="preserve">
+    <value>Down Amt</value>
+  </data>
+  <data name="Fld_DownPrc" xml:space="preserve">
+    <value>Down Prc</value>
+  </data>
+  <data name="Fld_DueAmount" xml:space="preserve">
+    <value>Due Amount</value>
+  </data>
+  <data name="Fld_DuePrc" xml:space="preserve">
+    <value>DuePrc</value>
+  </data>
+  <data name="Fld_Installment" xml:space="preserve">
+    <value>Installment</value>
+  </data>
+  <data name="Fld_OfferDate" xml:space="preserve">
+    <value>تاريخ العرض</value>
+  </data>
+  <data name="Fld_OfferDescA" xml:space="preserve">
+    <value>وصف العرض</value>
+  </data>
+  <data name="Fld_OfferDescL" xml:space="preserve">
+    <value>Offer DescL</value>
+  </data>
+  <data name="Fld_OfferNo" xml:space="preserve">
+    <value>رقم العرض</value>
+  </data>
+  <data name="Fld_OfferPrice" xml:space="preserve">
+    <value>سعر العرض</value>
+  </data>
+  <data name="Fld_OfferSerial" xml:space="preserve">
+    <value>سيريال العرض</value>
+  </data>
+  <data name="Fld_OfferStatus" xml:space="preserve">
+    <value>حالة العرض</value>
+  </data>
+  <data name="Fld_OnProductivity" xml:space="preserve">
+    <value>OnProductivity</value>
+  </data>
+  <data name="Fld_Paymentmethod" xml:space="preserve">
+    <value>طريقة الدفع</value>
+  </data>
+  <data name="Fld_WarrantyAmt" xml:space="preserve">
+    <value>Warranty Amt</value>
+  </data>
+  <data name="Cust_BraCode" xml:space="preserve">
+    <value>الباركود</value>
+  </data>
+  <data name="Cust_custEng_code" xml:space="preserve">
+    <value>مندوب المبيعات</value>
+  </data>
+  <data name="Cust_CustomerCode" xml:space="preserve">
+    <value>كود العميل</value>
+  </data>
+  <data name="Cust_CustomerContact" xml:space="preserve">
+    <value>الشخص المسؤول</value>
+  </data>
+  <data name="Cust_Customermobile" xml:space="preserve">
+    <value>موبيل العمبل</value>
+  </data>
+  <data name="Cust_CustomerTel" xml:space="preserve">
+    <value>تلفيون العميل</value>
+  </data>
+  <data name="Cust_ProjectCode" xml:space="preserve">
+    <value>رقم المشروع</value>
+  </data>
+  <data name="Cust_Proj_remarks" xml:space="preserve">
+    <value>ملاحظات المشروع</value>
+  </data>
+  <data name="Fld_Address" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="Fld_ChamberNo" xml:space="preserve">
+    <value>رقم اشتراك الغرفة</value>
+  </data>
+  <data name="Fld_CRNumber" xml:space="preserve">
+    <value>رقم السجل</value>
+  </data>
+  <data name="Fld_CustomerCode" xml:space="preserve">
+    <value>كود العميل</value>
+  </data>
+  <data name="Fld_fax" xml:space="preserve">
+    <value>الفاكس</value>
+  </data>
+  <data name="Fld_Temporary" xml:space="preserve">
+    <value>عميل</value>
+  </data>
+  <data name="Fld_vat" xml:space="preserve">
+    <value>الضربية</value>
+  </data>
+  <data name="CustCat_Code" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="CustCat_DescA" xml:space="preserve">
+    <value>الاسم عربي</value>
+  </data>
+  <data name="CustCat_DescE" xml:space="preserve">
+    <value>الاسم الانجليزي</value>
+  </data>
+  <data name="CustCat_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Men_SalesPaymentTerms" xml:space="preserve">
+    <value>شروط الدفع للمبيعات</value>
+  </data>
+  <data name="Act_EquipClassName" xml:space="preserve">
+    <value>EquipClassName</value>
+  </data>
+  <data name="Act_ItemCode" xml:space="preserve">
+    <value>المادة</value>
+  </data>
+  <data name="Act_TotalConsQty" xml:space="preserve">
+    <value>TotalConsQty</value>
+  </data>
+  <data name="Act_Unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="Eng_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Men_ProjectDefination" xml:space="preserve">
+    <value>تعريف المشروع</value>
+  </data>
+  <data name="Men_ProjectSpecification" xml:space="preserve">
+    <value>مواصفات المشروع</value>
+  </data>
+  <data name="Def_contractno" xml:space="preserve">
+    <value>رقم التعاقد</value>
+  </data>
+  <data name="Def_contract_val" xml:space="preserve">
+    <value>قيمة التعاقد</value>
+  </data>
+  <data name="Def_contrDate" xml:space="preserve">
+    <value>تاريخ التعاقد</value>
+  </data>
+  <data name="Def_contrperiod" xml:space="preserve">
+    <value>مدة التعاقد</value>
+  </data>
+  <data name="Def_dowpay" xml:space="preserve">
+    <value>الدفعة الاولي</value>
+  </data>
+  <data name="Def_projecphase" xml:space="preserve">
+    <value>مرحلة المشروع</value>
+  </data>
+  <data name="Def_projectitem" xml:space="preserve">
+    <value>بند الشمروع</value>
+  </data>
+  <data name="Def_project_val" xml:space="preserve">
+    <value>قيمة المشروع</value>
+  </data>
+  <data name="Def_techn" xml:space="preserve">
+    <value>المواصفات الفنية</value>
+  </data>
+  <data name="Def_term" xml:space="preserve">
+    <value>الاحكام والشروط</value>
+  </data>
+  <data name="Def_warrant" xml:space="preserve">
+    <value>ضمان</value>
+  </data>
+  <data name="Def_warrantypay" xml:space="preserve">
+    <value>دفع الضمان</value>
+  </data>
+  <data name="Men_Definition" xml:space="preserve">
+    <value>التعريف</value>
+  </data>
+  <data name="Men_Evaluation" xml:space="preserve">
+    <value>ربح مقاول الباطن</value>
+  </data>
+  <data name="Men_OpProductionEntry" xml:space="preserve">
+    <value>دخول الإنتاج</value>
+  </data>
+  <data name="Men_OpProjectExpenses" xml:space="preserve">
+    <value>نفقات المشروع</value>
+  </data>
+  <data name="Men_Prequalification" xml:space="preserve">
+    <value>التأهيل</value>
+  </data>
+  <data name="Men_Production" xml:space="preserve">
+    <value>انتاج مقاول الباطن</value>
+  </data>
+  <data name="Men_ProductionEntry" xml:space="preserve">
+    <value>دخول الإنتاج</value>
+  </data>
+  <data name="Men_ProjectChange" xml:space="preserve">
+    <value>تغيير المشروع</value>
+  </data>
+  <data name="Men_ProjectMasterPlan" xml:space="preserve">
+    <value>خطة المشروع الرئيسية</value>
+  </data>
+  <data name="Men_ServiceOrder" xml:space="preserve">
+    <value>طلب الخدمة</value>
+  </data>
+  <data name="Men_SubContContract" xml:space="preserve">
+    <value>العقد الفرعي</value>
+  </data>
+  <data name="Men_SubContractorActivity" xml:space="preserve">
+    <value>نشاط المقاول الفرعي</value>
+  </data>
+  <data name="Men_SubContractorListing" xml:space="preserve">
+    <value>قائمة المقاول الفرعي</value>
+  </data>
+  <data name="Men_SubContractorReports" xml:space="preserve">
+    <value>تقارير المقاول الفرعي</value>
+  </data>
+  <data name="Men_WorkSchedule" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="Men_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Men_SubContractor" xml:space="preserve">
+    <value>SubContractor</value>
+  </data>
+  <data name="Change_proj_phase" xml:space="preserve">
+    <value>مرحلة المشروع</value>
+  </data>
+  <data name="Change_Refno" xml:space="preserve">
+    <value>الرقم المرجعي</value>
+  </data>
+  <data name="Change_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Change_varvalue" xml:space="preserve">
+    <value>Var Value</value>
+  </data>
+  <data name="Chang_RefDate" xml:space="preserve">
+    <value>Ref Date</value>
+  </data>
+  <data name="Chang_variant_desc" xml:space="preserve">
+    <value>وصف متغير</value>
+  </data>
+  <data name="Chang_variant_no" xml:space="preserve">
+    <value>رقم متغير</value>
+  </data>
+  <data name="Mast_breaking_End" xml:space="preserve">
+    <value>وصف العنصر</value>
+  </data>
+  <data name="Mast_breaking_start" xml:space="preserve">
+    <value>وصف المرحله</value>
+  </data>
+  <data name="Mast_end_date" xml:space="preserve">
+    <value>نهاية التاريخ</value>
+  </data>
+  <data name="Mast_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Mast_start_date" xml:space="preserve">
+    <value>بداية التاريخ</value>
+  </data>
+  <data name="Mast_start_time" xml:space="preserve">
+    <value>رقم العنصر</value>
+  </data>
+  <data name="Change_date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Contr_activityname" xml:space="preserve">
+    <value>Activity Name</value>
+  </data>
+  <data name="Contr_act_code" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="Contr_finished_sos" xml:space="preserve">
+    <value>Finished Sos</value>
+  </data>
+  <data name="Contr_issue_sos" xml:space="preserve">
+    <value>Issue Sos</value>
+  </data>
+  <data name="Contr_open_sos" xml:space="preserve">
+    <value>Open Sos</value>
+  </data>
+  <data name="Contr_price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Contr_qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="Contr_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Contr_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Pre_address" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="Pre_apllydate" xml:space="preserve">
+    <value>تاريخ التطبيق</value>
+  </data>
+  <data name="Pre_approval" xml:space="preserve">
+    <value>الموافقة</value>
+  </data>
+  <data name="Pre_approvdate" xml:space="preserve">
+    <value>تاريخ الموافقة</value>
+  </data>
+  <data name="Pre_candcode" xml:space="preserve">
+    <value>كود المرشح</value>
+  </data>
+  <data name="Pre_chcommonno" xml:space="preserve">
+    <value>Ch Common No</value>
+  </data>
+  <data name="Pre_company_namea" xml:space="preserve">
+    <value>اسم الشركة بالعربي</value>
+  </data>
+  <data name="Pre_company_namee" xml:space="preserve">
+    <value>اسم الشركة انجليزي</value>
+  </data>
+  <data name="Pre_contact_person" xml:space="preserve">
+    <value>الشخص المسؤل</value>
+  </data>
+  <data name="pre_crNo" xml:space="preserve">
+    <value>الرقم المدني</value>
+  </data>
+  <data name="Pre_email" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="Pre_limit" xml:space="preserve">
+    <value>حد التعاقد</value>
+  </data>
+  <data name="Pre_location" xml:space="preserve">
+    <value>عنوان الفرع</value>
+  </data>
+  <data name="Pre_Mobile" xml:space="preserve">
+    <value>الموبيل</value>
+  </data>
+  <data name="Pre_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Pre_scopdesc" xml:space="preserve">
+    <value>وصف النطاق</value>
+  </data>
+  <data name="Pre_spciality" xml:space="preserve">
+    <value>تخصص</value>
+  </data>
+  <data name="Pre_subcont_code" xml:space="preserve">
+    <value>كود مقاول فرعي</value>
+  </data>
+  <data name="Pre_Tele1" xml:space="preserve">
+    <value>جوال 1</value>
+  </data>
+  <data name="Pre_Tele12" xml:space="preserve">
+    <value>جوال 2</value>
+  </data>
+  <data name="Pre_vatno" xml:space="preserve">
+    <value>Vat No</value>
+  </data>
+  <data name="Sub_accountcode" xml:space="preserve">
+    <value>كود الحساب</value>
+  </data>
+  <data name="Sub_def_Defination" xml:space="preserve">
+    <value>تعريف</value>
+  </data>
+  <data name="Sub_def_limit" xml:space="preserve">
+    <value>حدود</value>
+  </data>
+  <data name="Fld_Approve" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="Fld_StandardRatio" xml:space="preserve">
+    <value>Standard Ratio</value>
+  </data>
+  <data name="Cost_EstimatedMaterial" xml:space="preserve">
+    <value>تكلفة المواد</value>
+  </data>
+  <data name="Cost_ItemID" xml:space="preserve">
+    <value>ItemNo</value>
+  </data>
+  <data name="Cost_Qty" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="Cost_Serial" xml:space="preserve">
+    <value>سيريال</value>
+  </data>
+  <data name="Fld_Equip" xml:space="preserve">
+    <value>Equip</value>
+  </data>
+  <data name="Fld_Labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="Fld_Material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Fld_OH" xml:space="preserve">
+    <value>OH</value>
+  </data>
+  <data name="Fld_ProdOH" xml:space="preserve">
+    <value>ProdOH</value>
+  </data>
+  <data name="Fld_allActive" xml:space="preserve">
+    <value>الجميع</value>
+  </data>
+  <data name="Fld_isNoActive" xml:space="preserve">
+    <value>غير نشط</value>
+  </data>
+  <data name="Cost_ActivityCode" xml:space="preserve">
+    <value>Activity Code</value>
+  </data>
+  <data name="Cost_Act_DescA" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Cost_calc_total" xml:space="preserve">
+    <value>Total </value>
+  </data>
+  <data name="Cost_EstimatedEquip" xml:space="preserve">
+    <value>Cost_EstimatedEquip</value>
+  </data>
+  <data name="Cost_EstimatedLabor" xml:space="preserve">
+    <value>Cost_EstimatedLabor</value>
+  </data>
+  <data name="Cost_EstimatedOH" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="Cost_EstimatedPOH" xml:space="preserve">
+    <value>POH Cost</value>
+  </data>
+  <data name="Cost_itm_DescA" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Cost_OHcost" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="Cost_POHcost" xml:space="preserve">
+    <value>POH Cost</value>
+  </data>
+  <data name="Cost_ProductionIncluded" xml:space="preserve">
+    <value>Prod Included?</value>
+  </data>
+  <data name="Cost_ProductionPrc" xml:space="preserve">
+    <value>Production Prc</value>
+  </data>
+  <data name="Cost_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Cost_StdUnitPrice" xml:space="preserve">
+    <value>StdUnitPrice</value>
+  </data>
+  <data name="Cost_UnitPrice" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="Fld_AreaM2" xml:space="preserve">
+    <value>المنطقه 2</value>
+  </data>
+  <data name="Fld_Billingterms" xml:space="preserve">
+    <value>شروط الفاتوره</value>
+  </data>
+  <data name="Fld_Canceled" xml:space="preserve">
+    <value>ملغي</value>
+  </data>
+  <data name="Fld_ContactNo" xml:space="preserve">
+    <value>رقم العقد</value>
+  </data>
+  <data name="Fld_ContactPerson" xml:space="preserve">
+    <value>الرقم الشخصي</value>
+  </data>
+  <data name="Fld_ContractDate" xml:space="preserve">
+    <value>تاريخ العقد</value>
+  </data>
+  <data name="Fld_Contracted" xml:space="preserve">
+    <value>متصل</value>
+  </data>
+  <data name="Fld_Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="Fld_CostEstimation" xml:space="preserve">
+    <value>تقدير التكاليف</value>
+  </data>
+  <data name="Fld_CrNo" xml:space="preserve">
+    <value>الرقم</value>
+  </data>
+  <data name="Fld_CustCompResp" xml:space="preserve">
+    <value>المسئولية</value>
+  </data>
+  <data name="Fld_CustomerInformation" xml:space="preserve">
+    <value>معلومات العميل</value>
+  </data>
+  <data name="Fld_CustomerNameA" xml:space="preserve">
+    <value>اسم العميل عربي</value>
+  </data>
+  <data name="Fld_CustomerNameE" xml:space="preserve">
+    <value>اسم العميل انجليزي</value>
+  </data>
+  <data name="Fld_CustomerPay" xml:space="preserve">
+    <value>دفع العميل</value>
+  </data>
+  <data name="Fld_DeliveryDate" xml:space="preserve">
+    <value>تاريخ التسليم</value>
+  </data>
+  <data name="Fld_Duration" xml:space="preserve">
+    <value>الفتره</value>
+  </data>
+  <data name="Fld_Location" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Fld_Maintenancework" xml:space="preserve">
+    <value>صيانة العمل</value>
+  </data>
+  <data name="Fld_New" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="Fld_OffrGCondterms" xml:space="preserve">
+    <value>شروط عامة</value>
+  </data>
+  <data name="Fld_Payment" xml:space="preserve">
+    <value>الدفع</value>
+  </data>
+  <data name="Fld_Penalties" xml:space="preserve">
+    <value>غرامات</value>
+  </data>
+  <data name="Fld_PhaseNo" xml:space="preserve">
+    <value>رقم المرحله</value>
+  </data>
+  <data name="Fld_PrintQuotation" xml:space="preserve">
+    <value>تحديد الطباعه</value>
+  </data>
+  <data name="Fld_PrintSubmittal" xml:space="preserve">
+    <value>تقديم الطباعه</value>
+  </data>
+  <data name="Fld_ProductionStage" xml:space="preserve">
+    <value>مرحلة الانتاج</value>
+  </data>
+  <data name="Fld_ProjectNo" xml:space="preserve">
+    <value>رقم المشروع</value>
+  </data>
+  <data name="Fld_Ready" xml:space="preserve">
+    <value>جاهز</value>
+  </data>
+  <data name="Fld_RefNumber" xml:space="preserve">
+    <value>رقم المرجع</value>
+  </data>
+  <data name="Fld_Rejected" xml:space="preserve">
+    <value>مرفوض</value>
+  </data>
+  <data name="Fld_SalesMan" xml:space="preserve">
+    <value>رجل المبيعات</value>
+  </data>
+  <data name="Fld_SendTocustomer" xml:space="preserve">
+    <value>الارسال الي العميل</value>
+  </data>
+  <data name="Fld_Specification" xml:space="preserve">
+    <value>المواصفات</value>
+  </data>
+  <data name="Fld_Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Fld_Technicalspecifications" xml:space="preserve">
+    <value>المواصفات الفنيه</value>
+  </data>
+  <data name="Fld_WarranteeAmount" xml:space="preserve">
+    <value>تكلفة الضمان</value>
+  </data>
+  <data name="Off_Desc" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Off_PaymentId" xml:space="preserve">
+    <value>الدفع</value>
+  </data>
+  <data name="Off_Remark" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Off_Reposibility" xml:space="preserve">
+    <value>مسؤوليات</value>
+  </data>
+  <data name="Off_Scope" xml:space="preserve">
+    <value>مدي</value>
+  </data>
+  <data name="Off_StageCode" xml:space="preserve">
+    <value>كود</value>
+  </data>
+  <data name="Off_StageDescA" xml:space="preserve">
+    <value>الاسم عربي</value>
+  </data>
+  <data name="Off_StageDescE" xml:space="preserve">
+    <value>الاسم النجليزي</value>
+  </data>
+  <data name="Off_StTotal" xml:space="preserve">
+    <value>الاجمالي</value>
+  </data>
+  <data name="Cost_Act_Code" xml:space="preserve">
+    <value>Act.Code</value>
+  </data>
+  <data name="Fld_Active" xml:space="preserve">
+    <value>النشاط</value>
+  </data>
+  <data name="Def_area" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="Def_customer" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="Def_customeraccount" xml:space="preserve">
+    <value>حساب العميل</value>
+  </data>
+  <data name="Def_Customermob" xml:space="preserve">
+    <value>جوال العميل</value>
+  </data>
+  <data name="Def_CustomerTele" xml:space="preserve">
+    <value>هاتف العميل </value>
+  </data>
+  <data name="def_Finished" xml:space="preserve">
+    <value>انهاء</value>
+  </data>
+  <data name="Def_location" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="def_new" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="Def_offerserial" xml:space="preserve">
+    <value>عرض المسلسل</value>
+  </data>
+  <data name="Def_offno" xml:space="preserve">
+    <value>رقم العرض</value>
+  </data>
+  <data name="Def_projectno" xml:space="preserve">
+    <value>رقم المشروع </value>
+  </data>
+  <data name="Def_projnamea" xml:space="preserve">
+    <value>الاسم عربي</value>
+  </data>
+  <data name="Def_projnamee" xml:space="preserve">
+    <value>الاسم انجليزي</value>
+  </data>
+  <data name="Def_Recipperson" xml:space="preserve">
+    <value>الشخص المسؤل</value>
+  </data>
+  <data name="Def_refno" xml:space="preserve">
+    <value>رقم المرجع</value>
+  </data>
+  <data name="Def_Saleseng" xml:space="preserve">
+    <value>مندوب مبيعات</value>
+  </data>
+  <data name="Fld_Bra" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="Fld_Categ" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="Fld_Class" xml:space="preserve">
+    <value>التصنيف</value>
+  </data>
+  <data name="def_stoped" xml:space="preserve">
+    <value>وقف</value>
+  </data>
+  <data name="def_Suspned" xml:space="preserve">
+    <value>معلق</value>
+  </data>
+  <data name="def_UnderProc" xml:space="preserve">
+    <value>تحت الانتاج</value>
+  </data>
+  <data name="other_info" xml:space="preserve">
+    <value>معلومات اضافية</value>
+  </data>
+  <data name="def_actqty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="def_Caleander" xml:space="preserve">
+    <value>التقويم</value>
+  </data>
+  <data name="def_contrqty" xml:space="preserve">
+    <value>Contr Qty</value>
+  </data>
+  <data name="def_EndDate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="def_enginer" xml:space="preserve">
+    <value>المهندس</value>
+  </data>
+  <data name="def_itemname" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="def_itemno" xml:space="preserve">
+    <value>رقم الصنف</value>
+  </data>
+  <data name="def_phasedescriptiona" xml:space="preserve">
+    <value>وصف المرحلة ا</value>
+  </data>
+  <data name="def_phasedescriptionb" xml:space="preserve">
+    <value>وصف المرحلة ب</value>
+  </data>
+  <data name="def_prodQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="def_schedqty" xml:space="preserve">
+    <value>Sched Qty</value>
+  </data>
+  <data name="def_schprod" xml:space="preserve">
+    <value>Sch Prod</value>
+  </data>
+  <data name="def_scope" xml:space="preserve">
+    <value>نطاق</value>
+  </data>
+  <data name="def_scprodqty" xml:space="preserve">
+    <value>Sc Prod Qty</value>
+  </data>
+  <data name="def_scqty" xml:space="preserve">
+    <value>Sc Qty</value>
+  </data>
+  <data name="def_StartDate" xml:space="preserve">
+    <value>تاريخ البداء</value>
+  </data>
+  <data name="def_System" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="Act_ProdQty" xml:space="preserve">
+    <value>ProdQty</value>
+  </data>
+  <data name="Act_WastPrc" xml:space="preserve">
+    <value>Wast Prc</value>
+  </data>
+  <data name="def_umo" xml:space="preserve">
+    <value>وحدة القياس</value>
+  </data>
+  <data name="sub_contact" xml:space="preserve">
+    <value>العقد</value>
+  </data>
+  <data name="sub_downpay" xml:space="preserve">
+    <value>الدفعة الأولى</value>
+  </data>
+  <data name="sub_duration" xml:space="preserve">
+    <value>المدة</value>
+  </data>
+  <data name="sub_equipment" xml:space="preserve">
+    <value>الادوات</value>
+  </data>
+  <data name="sub_labor" xml:space="preserve">
+    <value>
+العمل</value>
+  </data>
+  <data name="sub_material" xml:space="preserve">
+    <value>الخامة</value>
+  </data>
+  <data name="sub_offer" xml:space="preserve">
+    <value>تقديم الشروط العامة والشروط</value>
+  </data>
+  <data name="sub_penalites" xml:space="preserve">
+    <value>غرامه</value>
+  </data>
+  <data name="sub_specification" xml:space="preserve">
+    <value>المواصفات الفنية</value>
+  </data>
+  <data name="sub_specificationanditem" xml:space="preserve">
+    <value>المواصفات والمدة</value>
+  </data>
+  <data name="sub_techniqal" xml:space="preserve">
+    <value>تقني</value>
+  </data>
+  <data name="sub_warrantp" xml:space="preserve">
+    <value>فترة الضمان</value>
+  </data>
+  <data name="sub_warranty" xml:space="preserve">
+    <value>ضمان</value>
+  </data>
+  <data name="serv_closedate" xml:space="preserve">
+    <value>تاريخ الاغلاق</value>
+  </data>
+  <data name="serv_closereason" xml:space="preserve">
+    <value>سبب الاغلاق</value>
+  </data>
+  <data name="serv_genral_material" xml:space="preserve">
+    <value>المواد العامة</value>
+  </data>
+  <data name="serv_po" xml:space="preserve">
+    <value>العقد</value>
+  </data>
+  <data name="serv_relase" xml:space="preserve">
+    <value>Service Order</value>
+  </data>
+  <data name="serv_total" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="Cost_UnitCost" xml:space="preserve">
+    <value>تكلفة الوحدة</value>
+  </data>
+  <data name="Eve_issuedate" xml:space="preserve">
+    <value>تاريخ الاصدار</value>
+  </data>
+  <data name="Eve_prodvalue" xml:space="preserve">
+    <value>Prod Value</value>
+  </data>
+  <data name="Eve_siteenginer" xml:space="preserve">
+    <value>مهندس الموقع</value>
+  </data>
+  <data name="Eve_sono" xml:space="preserve">
+    <value>SO No</value>
+  </data>
+  <data name="Eve_sovalue" xml:space="preserve">
+    <value>SO Value</value>
+  </data>
+  <data name="Eve_Tech" xml:space="preserve">
+    <value>Tech</value>
+  </data>
+  <data name="Eve_time" xml:space="preserve">
+    <value>الوقت</value>
+  </data>
+  <data name="Eve_TotalEval" xml:space="preserve">
+    <value>Total Eval</value>
+  </data>
+  <data name="Eve_transno" xml:space="preserve">
+    <value>رقم الحركة</value>
+  </data>
+  <data name="Prod_entryno" xml:space="preserve">
+    <value>رقم الدخول</value>
+  </data>
+  <data name="Prod_sitesuper" xml:space="preserve">
+    <value>مشرف الموقع</value>
+  </data>
+  <data name="Prod_sonumber" xml:space="preserve">
+    <value>SO Number</value>
+  </data>
+  <data name="project_amount" xml:space="preserve">
+    <value>كمية</value>
+  </data>
+  <data name="project_Beneficial" xml:space="preserve">
+    <value>المستفيد</value>
+  </data>
+  <data name="project_expdesc" xml:space="preserve">
+    <value>وصف النفقة</value>
+  </data>
+  <data name="project_expno" xml:space="preserve">
+    <value>رقم النفقه</value>
+  </data>
+  <data name="project_phaseno" xml:space="preserve">
+    <value>رقم المرحلة</value>
+  </data>
+  <data name="project_RefNo" xml:space="preserve">
+    <value>رقم المرجع</value>
+  </data>
+  <data name="Fld_ProfitRation" xml:space="preserve">
+    <value>نسبة الربح</value>
+  </data>
+  <data name="work_sec_sched" xml:space="preserve">
+    <value>الجدول الزمني</value>
+  </data>
+  <data name="work_sec_sched_arbianame" xml:space="preserve">
+    <value>الاسم بالعربي</value>
+  </data>
+  <data name="work_sec_sched_englishname" xml:space="preserve">
+    <value>الاسم انجليزي</value>
+  </data>
+  <data name="work_activityqty" xml:space="preserve">
+    <value>الكمية المتاحة</value>
+  </data>
+  <data name="work_assigneqyp" xml:space="preserve">
+    <value>تخصيص المعدات</value>
+  </data>
+  <data name="work_assign_Equi" xml:space="preserve">
+    <value>المعدات</value>
+  </data>
+  <data name="work_assign_labor" xml:space="preserve">
+    <value>تعيين العمل</value>
+  </data>
+  <data name="work_availqty" xml:space="preserve">
+    <value>الكمية المتاحة</value>
+  </data>
+  <data name="work_classdec" xml:space="preserve">
+    <value>وصف الفئة</value>
+  </data>
+  <data name="work_classdesc" xml:space="preserve">
+    <value>وصف الفئة</value>
+  </data>
+  <data name="work_equipcode" xml:space="preserve">
+    <value>كود الجهاز</value>
+  </data>
+  <data name="work_equipment" xml:space="preserve">
+    <value>المعدات</value>
+  </data>
+  <data name="work_equipment1" xml:space="preserve">
+    <value>المعدات</value>
+  </data>
+  <data name="work_equipmentclass" xml:space="preserve">
+    <value>فئة المعدات</value>
+  </data>
+  <data name="work_equipmentclass1" xml:space="preserve">
+    <value>فئة المعدات</value>
+  </data>
+  <data name="work_equipname" xml:space="preserve">
+    <value>اسم الجهاز</value>
+  </data>
+  <data name="Work_equipno" xml:space="preserve">
+    <value>عدد الادوات</value>
+  </data>
+  <data name="work_exp_leave_date" xml:space="preserve">
+    <value>Exp Leave Date</value>
+  </data>
+  <data name="work_finishqty" xml:space="preserve">
+    <value>Finish Qty</value>
+  </data>
+  <data name="work_fromperiod" xml:space="preserve">
+    <value>من الفترة</value>
+  </data>
+  <data name="work_general" xml:space="preserve">
+    <value>طلب المواد العامة</value>
+  </data>
+  <data name="Work_item" xml:space="preserve">
+    <value>الصنف</value>
+  </data>
+  <data name="work_joindate" xml:space="preserve">
+    <value>تاريخ الانضمام</value>
+  </data>
+  <data name="work_join_name" xml:space="preserve">
+    <value>اسم الانضمام</value>
+  </data>
+  <data name="work_labor" xml:space="preserve">
+    <value>العمل</value>
+  </data>
+  <data name="work_laborclass" xml:space="preserve">
+    <value>تصنيف العامل</value>
+  </data>
+  <data name="work_laborclass1" xml:space="preserve">
+    <value>تصنيف العامل</value>
+  </data>
+  <data name="Work_laborno" xml:space="preserve">
+    <value>عدد العمال</value>
+  </data>
+  <data name="work_labors" xml:space="preserve">
+    <value>العمال</value>
+  </data>
+  <data name="work_labors1" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="work_labor_name" xml:space="preserve">
+    <value>اسم العمل</value>
+  </data>
+  <data name="work_leave_date" xml:space="preserve">
+    <value>تاريخ مغادرة</value>
+  </data>
+  <data name="work_producedbefore" xml:space="preserve">
+    <value>أنتجت من قبل</value>
+  </data>
+  <data name="work_scqty" xml:space="preserve">
+    <value>كمية أمر العمل</value>
+  </data>
+  <data name="work_toperiod" xml:space="preserve">
+    <value>الى الفترة</value>
+  </data>
+  <data name="wrok_period_Hours" xml:space="preserve">
+    <value>ساعات الانتاج</value>
+  </data>
+  <data name="SalesItem_CalcUnitPrice" xml:space="preserve">
+    <value> حساب سعر الوحدة</value>
+  </data>
+  <data name="SalesItem_DescA" xml:space="preserve">
+    <value>الوصف بالعربي</value>
+  </data>
+  <data name="SalesItem_DescE" xml:space="preserve">
+    <value>الوصف بالانجليزي</value>
+  </data>
+  <data name="SalesItem_MinUnitPrice" xml:space="preserve">
+    <value>اقل سعر للوحدة</value>
+  </data>
+  <data name="SalesItem_SystemCode" xml:space="preserve">
+    <value>كود النظام</value>
+  </data>
+  <data name="SalesItem_UnitPrice" xml:space="preserve">
+    <value>سعر الوحدة</value>
+  </data>
+  <data name="SalesItem_VendorID" xml:space="preserve">
+    <value>اسم البائع</value>
+  </data>
+  <data name="parentitem" xml:space="preserve">
+    <value>الصنف الرئيسي</value>
+  </data>
+  <data name="Contract_actno" xml:space="preserve">
+    <value>Act No</value>
+  </data>
+  <data name="Contract_approvedprodvalue" xml:space="preserve">
+    <value>Approved Prod Value</value>
+  </data>
+  <data name="Contract_avprice" xml:space="preserve">
+    <value>Av Price</value>
+  </data>
+  <data name="Contract_ClosedValue" xml:space="preserve">
+    <value>Closed Value</value>
+  </data>
+  <data name="Contract_closesos" xml:space="preserve">
+    <value>Closed Sos</value>
+  </data>
+  <data name="Contract_entryvalue" xml:space="preserve">
+    <value>Entry Value</value>
+  </data>
+  <data name="Contract_eval" xml:space="preserve">
+    <value>Eval</value>
+  </data>
+  <data name="Contract_finishdate" xml:space="preserve">
+    <value>Finish Date</value>
+  </data>
+  <data name="Contract_invapp_no" xml:space="preserve">
+    <value>Inv.App.No</value>
+  </data>
+  <data name="Contract_invoiceno" xml:space="preserve">
+    <value>Invoice No</value>
+  </data>
+  <data name="Contract_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Contract_opensos" xml:space="preserve">
+    <value>Open Sos</value>
+  </data>
+  <data name="Contract_OpenValue" xml:space="preserve">
+    <value>Open Value</value>
+  </data>
+  <data name="Contract_Prod" xml:space="preserve">
+    <value>Prod %</value>
+  </data>
+  <data name="Contract_proddate" xml:space="preserve">
+    <value>Prod date</value>
+  </data>
+  <data name="Contract_prodvalue" xml:space="preserve">
+    <value>Prod Value</value>
+  </data>
+  <data name="Contract_remvalue" xml:space="preserve">
+    <value>Rem Value</value>
+  </data>
+  <data name="Contract_sos" xml:space="preserve">
+    <value>Sos</value>
+  </data>
+  <data name="Contract_Sovalue" xml:space="preserve">
+    <value>So Value</value>
+  </data>
+  <data name="Contract_uprice" xml:space="preserve">
+    <value>U Price</value>
+  </data>
+  <data name="work_desc" xml:space="preserve">
+    <value>وصف العمل</value>
+  </data>
+  <data name="work_Esthour" xml:space="preserve">
+    <value>الساعات الخطة</value>
+  </data>
+  <data name="work_Evalutionform" xml:space="preserve">
+    <value>التقييم من</value>
+  </data>
+  <data name="work_Evalutionformto" xml:space="preserve">
+    <value>التقييم ل</value>
+  </data>
+  <data name="work_fromsubcontr" xml:space="preserve">
+    <value>من المقاول الفرعي</value>
+  </data>
+  <data name="work_grade" xml:space="preserve">
+    <value>التقدير</value>
+  </data>
+  <data name="work_schedule_qtu" xml:space="preserve">
+    <value>جدول الكمية</value>
+  </data>
+  <data name="work_so" xml:space="preserve">
+    <value>امر العمل</value>
+  </data>
+  <data name="work_subcontr" xml:space="preserve">
+    <value>مقاول الباطن</value>
+  </data>
+  <data name="work_tosubcontr" xml:space="preserve">
+    <value>إلى المقاول الفرعي</value>
+  </data>
+  <data name="work_unprodhours" xml:space="preserve">
+    <value>ساعات التوقف</value>
+  </data>
+  <data name="work_unprodreason" xml:space="preserve">
+    <value>سبب التوقف</value>
+  </data>
+  <data name="pre_Scope" xml:space="preserve">
+    <value>تحميل الاعدادت</value>
+  </data>
+  <data name="Fld_IsDetail" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="OffStagI_Fixed" xml:space="preserve">
+    <value>ثابت</value>
+  </data>
+  <data name="OffStagI_IsOfferItem" xml:space="preserve">
+    <value>عرض البند</value>
+  </data>
+  <data name="OffStagI_ItemName" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="OffStagI_ItemNo" xml:space="preserve">
+    <value>رقم الصنف</value>
+  </data>
+  <data name="OffStagI_Qty" xml:space="preserve">
+    <value>الكميه</value>
+  </data>
+  <data name="OffStagI_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OffStagI_Ser" xml:space="preserve">
+    <value> مسلسل</value>
+  </data>
+  <data name="OffStagI_System" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="OffStagI_Total" xml:space="preserve">
+    <value>الاجمالي</value>
+  </data>
+  <data name="OffStagI_UnitPrice" xml:space="preserve">
+    <value>وحدة البيع</value>
+  </data>
+  <data name="OffStagI_UOM" xml:space="preserve">
+    <value>وحدة القياس</value>
+  </data>
+  <data name="FldWorkStartOrderno" xml:space="preserve">
+    <value>Work Start Order no</value>
+  </data>
+  <data name="Fld_AddtoExistingProject" xml:space="preserve">
+    <value>Add to Existing Project</value>
+  </data>
+  <data name="Fld_AuthorizeCreateProject" xml:space="preserve">
+    <value>Authorize Create Project</value>
+  </data>
+  <data name="Fld_contractDays" xml:space="preserve">
+    <value>Contract Days</value>
+  </data>
+  <data name="Fld_Newproject" xml:space="preserve">
+    <value>New project</value>
+  </data>
+  <data name="Fld_Phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="work_HourCost" xml:space="preserve">
+    <value>سعر الساعه</value>
+  </data>
+  <data name="Fld_ComputeProductionprice" xml:space="preserve">
+    <value>حساب سعر الإنتاج</value>
+  </data>
+  <data name="CustomerCardRP" xml:space="preserve">
+    <value>كارت العميل</value>
+  </data>
+  <data name="CustomerListRP" xml:space="preserve">
+    <value>قائمة العملاء</value>
+  </data>
+  <data name="Fld_all" xml:space="preserve">
+    <value>الجميع</value>
+  </data>
+  <data name="FromCustomerRP" xml:space="preserve">
+    <value>من عميل</value>
+  </data>
+  <data name="TempCustomer" xml:space="preserve">
+    <value>عميل </value>
+  </data>
+  <data name="TOCustomerRP" xml:space="preserve">
+    <value>الي عميل</value>
+  </data>
+  <data name="project_Exp_ExpCode" xml:space="preserve">
+    <value>كود النفقه</value>
+  </data>
+  <data name="project_Phase_Code" xml:space="preserve">
+    <value>كود المرحله</value>
+  </data>
+  <data name="chkFriday" xml:space="preserve">
+    <value>الجمعة</value>
+  </data>
+  <data name="chkMonday" xml:space="preserve">
+    <value>الأثنين</value>
+  </data>
+  <data name="chkOneShift" xml:space="preserve">
+    <value>دوام متصل</value>
+  </data>
+  <data name="chkSaturday" xml:space="preserve">
+    <value>السبت</value>
+  </data>
+  <data name="chkSunday" xml:space="preserve">
+    <value>الأحد</value>
+  </data>
+  <data name="chkThursday" xml:space="preserve">
+    <value>الخميس</value>
+  </data>
+  <data name="chkTuseday" xml:space="preserve">
+    <value>الثلاثاء</value>
+  </data>
+  <data name="chkWednsday" xml:space="preserve">
+    <value>الأربعاء</value>
+  </data>
+  <data name="Fld_EndTime" xml:space="preserve">
+    <value>نهاية الوقت</value>
+  </data>
+  <data name="OffSpec_ACT" xml:space="preserve">
+    <value>النشاط</value>
+  </data>
+  <data name="OffSpec_Act_DescA" xml:space="preserve">
+    <value>اسم النشاط عربي</value>
+  </data>
+  <data name="OffSpec_Act_DescE" xml:space="preserve">
+    <value>اسم النشاط انجليزي</value>
+  </data>
+  <data name="OffSpec_IsFixedSystem" xml:space="preserve">
+    <value>النظام الثابت</value>
+  </data>
+  <data name="OffSpec_Item_DescA" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="OffSpec_Item_DescE" xml:space="preserve">
+    <value>اسم الصنف انجليزي</value>
+  </data>
+  <data name="OffSpec_Item_ItemCode" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="OffSpec_ProductionIncluded" xml:space="preserve">
+    <value>محتوي الانتاج</value>
+  </data>
+  <data name="OffSpec_ProductionPrc" xml:space="preserve">
+    <value>نسبة الانتاج</value>
+  </data>
+  <data name="OffSpec_Qty" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="OffSpec_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OffSpec_Serial" xml:space="preserve">
+    <value>مسلسل</value>
+  </data>
+  <data name="OffSpec_StdUnitPrice" xml:space="preserve">
+    <value>بداية وحدة البيع</value>
+  </data>
+  <data name="OffSpec_System" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="OffSpec_TotalPrice" xml:space="preserve">
+    <value>اجمالي السعر</value>
+  </data>
+  <data name="OffSpec_UnitPrice" xml:space="preserve">
+    <value>وحدة البيع</value>
+  </data>
+  <data name="OffSpec_UOM" xml:space="preserve">
+    <value>وحدة القياس</value>
+  </data>
+  <data name="OffSpec_Uom_UomCode" xml:space="preserve">
+    <value>كود وحدة القياس</value>
+  </data>
+  <data name="Mat_issueno" xml:space="preserve">
+    <value>رقم الإصدار</value>
+  </data>
+  <data name="Mat_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Mat_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Mat_req_approvedBy" xml:space="preserve">
+    <value>قبول من</value>
+  </data>
+  <data name="Mat_req_Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Mat_req_issuestore" xml:space="preserve">
+    <value>مخزن الإصدار</value>
+  </data>
+  <data name="Mat_req_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Mat_req_prodsched" xml:space="preserve">
+    <value>Prod. Sched</value>
+  </data>
+  <data name="Mat_req_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Mat_req_remark" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="Mat_req_RequestedBy" xml:space="preserve">
+    <value>بتوصية من</value>
+  </data>
+  <data name="Mat_req_requestno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Mat_req_scsoreder" xml:space="preserve">
+    <value>Scs Order</value>
+  </data>
+  <data name="Mat_req_siteenginer" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="Mont_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Mont_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Mont_sercviceorder" xml:space="preserve">
+    <value>Sc Service Order</value>
+  </data>
+  <data name="Mont_siteeng" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="Mont_workschead" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="Men_BillOfMaterial" xml:space="preserve">
+    <value>فاتورة المواد</value>
+  </data>
+  <data name="Men_Equipment" xml:space="preserve">
+    <value>المعدات</value>
+  </data>
+  <data name="Men_EquipmentAssign" xml:space="preserve">
+    <value>تعيين المعدات</value>
+  </data>
+  <data name="Men_EquipmentMonitoring" xml:space="preserve">
+    <value>مراقبة المعدات</value>
+  </data>
+  <data name="Men_EquipmentRequest" xml:space="preserve">
+    <value>طلب المعدات</value>
+  </data>
+  <data name="Men_Labor" xml:space="preserve">
+    <value>العمال</value>
+  </data>
+  <data name="Men_LaborAssign" xml:space="preserve">
+    <value>تعيين العمال</value>
+  </data>
+  <data name="Men_LaborMonitoring" xml:space="preserve">
+    <value>مراقبة العمال</value>
+  </data>
+  <data name="Men_LaborRequest" xml:space="preserve">
+    <value>طلب العمال</value>
+  </data>
+  <data name="Men_LateandAbsence" xml:space="preserve">
+    <value>التأخير والغياب</value>
+  </data>
+  <data name="Men_Material" xml:space="preserve">
+    <value>المواد</value>
+  </data>
+  <data name="Men_MaterialIssuance" xml:space="preserve">
+    <value>إصدار المواد</value>
+  </data>
+  <data name="Men_MaterialMonitoring" xml:space="preserve">
+    <value>مراقبة المواد</value>
+  </data>
+  <data name="Men_MaterialRequest" xml:space="preserve">
+    <value>طلب المواد</value>
+  </data>
+  <data name="Men_MaterialReturn" xml:space="preserve">
+    <value>ارتجاع المواد</value>
+  </data>
+  <data name="Men_OverTimeSheet" xml:space="preserve">
+    <value>ملف الاضافي</value>
+  </data>
+  <data name="Prod_ActCode" xml:space="preserve">
+    <value>كود النشاط</value>
+  </data>
+  <data name="Prod_ActivityName" xml:space="preserve">
+    <value>اسم النشاط</value>
+  </data>
+  <data name="Prod_Class_Code" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="Prod_Class_DescA" xml:space="preserve">
+    <value>فءة العامل</value>
+  </data>
+  <data name="Prod_FinishQty" xml:space="preserve">
+    <value>FinishQty</value>
+  </data>
+  <data name="Prod_HourCost" xml:space="preserve">
+    <value>HourCost</value>
+  </data>
+  <data name="Prod_Item" xml:space="preserve">
+    <value>الصنف</value>
+  </data>
+  <data name="Prod_Lab_DescA" xml:space="preserve">
+    <value>اسم العامل</value>
+  </data>
+  <data name="Prod_ProdBeforeQty" xml:space="preserve">
+    <value>ProdBeforeQty</value>
+  </data>
+  <data name="Prod_Prod_Lab_Code" xml:space="preserve">
+    <value>كود العامل</value>
+  </data>
+  <data name="Prod_RemainQty" xml:space="preserve">
+    <value>Remain Qty</value>
+  </data>
+  <data name="Prod_ScheduleQty" xml:space="preserve">
+    <value>ScheduleQty</value>
+  </data>
+  <data name="Prod_UnProdHours" xml:space="preserve">
+    <value>UnProdHours</value>
+  </data>
+  <data name="Prod_Lab_Code" xml:space="preserve">
+    <value>Lab Code</value>
+  </data>
+  <data name="Contr_Totamount" xml:space="preserve">
+    <value>الكميه الكليه</value>
+  </data>
+  <data name="Contr_TotalAmount" xml:space="preserve">
+    <value>الكمية الكلية</value>
+  </data>
+  <data name="ServiceOrder_Act_ActivityCode" xml:space="preserve">
+    <value>كود النشاط</value>
+  </data>
+  <data name="ServiceOrder_Act_DescA" xml:space="preserve">
+    <value>النشاط</value>
+  </data>
+  <data name="ServiceOrder_AppQty" xml:space="preserve">
+    <value>App Qty</value>
+  </data>
+  <data name="ServiceOrder_ProjectQty" xml:space="preserve">
+    <value>Proj Qty</value>
+  </data>
+  <data name="ServiceOrder_RemainQty" xml:space="preserve">
+    <value>الكمية المتبقية</value>
+  </data>
+  <data name="ServiceOrder_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="ServiceOrder_SOQty" xml:space="preserve">
+    <value>SOQty</value>
+  </data>
+  <data name="ServiceOrder_Total" xml:space="preserve">
+    <value>الاجمالى</value>
+  </data>
+  <data name="ServiceOrder_UnitPrice" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="ServiceOrder_uom_DescA" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="Fld_Defined" xml:space="preserve">
+    <value>واضح</value>
+  </data>
+  <data name="ServiceOrder_ContractQty" xml:space="preserve">
+    <value>ContractQty</value>
+  </data>
+  <data name="Fld_Detail" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="FromItemRP1" xml:space="preserve">
+    <value>من صنف</value>
+  </data>
+  <data name="ItemCardRP1" xml:space="preserve">
+    <value>كارت  البنود</value>
+  </data>
+  <data name="ItemListRP1" xml:space="preserve">
+    <value>قائمة البنود</value>
+  </data>
+  <data name="parentitemRp" xml:space="preserve">
+    <value>الصنف الرئيسي</value>
+  </data>
+  <data name="ToItemRP2" xml:space="preserve">
+    <value> الي صنف</value>
+  </data>
+  <data name="Resm_Bill_material_itemcode" xml:space="preserve">
+    <value>رمز الصنف</value>
+  </data>
+  <data name="Resm_Bill_material_itemdesc" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Resm_Bill_material_netissued" xml:space="preserve">
+    <value>صافي كمية الصرف</value>
+  </data>
+  <data name="Resm_Bill_material_remainqty" xml:space="preserve">
+    <value>الكمية المتبقية</value>
+  </data>
+  <data name="Resm_Bill_material_totalrequired" xml:space="preserve">
+    <value>مجموع الكمية المطلوبة</value>
+  </data>
+  <data name="Resm_Bill_material_unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="ResM_fld_laborasign" xml:space="preserve">
+    <value>عمال</value>
+  </data>
+  <data name="ResM_fld_laborasign1" xml:space="preserve">
+    <value>العمال</value>
+  </data>
+  <data name="ResM_fld_laborrequest_freelabors" xml:space="preserve">
+    <value>عمال حرة</value>
+  </data>
+  <data name="ResM_fld_laborrequest_fromdate" xml:space="preserve">
+    <value>من تاريخ</value>
+  </data>
+  <data name="ResM_fld_laborrequest_laborclass" xml:space="preserve">
+    <value>متطلبات العمل</value>
+  </data>
+  <data name="ResM_fld_laborrequest_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="ResM_fld_laborrequest_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="ResM_fld_laborrequest_requestdate" xml:space="preserve">
+    <value>تاريخ الطلب</value>
+  </data>
+  <data name="ResM_fld_laborrequest_requestno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="ResM_fld_laborrequest_scheduleno" xml:space="preserve">
+    <value>رقم الجدول</value>
+  </data>
+  <data name="ResM_fld_laborrequest_showfree" xml:space="preserve">
+    <value>عرض مجاني</value>
+  </data>
+  <data name="ResM_fld_laborrequest_siteeng" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="ResM_fld_laborrequest_todate" xml:space="preserve">
+    <value>الي تاريخ</value>
+  </data>
+  <data name="ResM_Fld_MaterialOvertime_overtimeno" xml:space="preserve">
+    <value>رقم الوقت الاضافي</value>
+  </data>
+  <data name="ResM_Fld_MaterialOvertime_projecteng" xml:space="preserve">
+    <value>مشروع المهندس</value>
+  </data>
+  <data name="ResM_fld_MatLabor_category" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="ResM_fld_MatLabor_class" xml:space="preserve">
+    <value>فئة</value>
+  </data>
+  <data name="ResM_fld_MatLabor_delayed" xml:space="preserve">
+    <value>عرض تأخير</value>
+  </data>
+  <data name="ResM_fld_MatLabor_laborclassreq" xml:space="preserve">
+    <value>متطلبات الطبقة العاملة</value>
+  </data>
+  <data name="ResM_fld_MatLabor_laborlist" xml:space="preserve">
+    <value>قائمة العمل</value>
+  </data>
+  <data name="ResM_fld_MatLabor_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="ResM_fld_MatLabor_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="ResM_fld_MatLabor_showall" xml:space="preserve">
+    <value>عرض الكل</value>
+  </data>
+  <data name="ResM_fld_MatLabor_showcurrent" xml:space="preserve">
+    <value>عرض الحالي</value>
+  </data>
+  <data name="ResM_fld_MatLabor_siteenginer" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="ResM_fld_MatLabor_worksched" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="Resm_fld_mat_issue_date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Resm_fld_mat_issue_issueno" xml:space="preserve">
+    <value>رقم العدد</value>
+  </data>
+  <data name="Resm_fld_mat_issue_issuestore" xml:space="preserve">
+    <value>مخزن الإصدار</value>
+  </data>
+  <data name="Resm_fld_mat_issue_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Resm_fld_mat_issue_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Resm_fld_mat_issue_remarks" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="Resm_fld_mat_issue_requestno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Resm_fld_Mat_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Resm_fld_Mat_req_approvedBy" xml:space="preserve">
+    <value>قبول من</value>
+  </data>
+  <data name="Resm_fld_Mat_req_Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Resm_fld_Mat_req_issuestore" xml:space="preserve">
+    <value>مخزن الإصدار</value>
+  </data>
+  <data name="Resm_fld_Mat_req_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Resm_fld_Mat_req_prodsched" xml:space="preserve">
+    <value>Prod. Sched</value>
+  </data>
+  <data name="Resm_fld_Mat_req_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Resm_fld_Mat_req_remark" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="Resm_fld_Mat_req_RequestedBy" xml:space="preserve">
+    <value>بتوصية من</value>
+  </data>
+  <data name="Resm_fld_Mat_req_requestno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Resm_fld_Mat_req_scsoreder" xml:space="preserve">
+    <value>Scs Order</value>
+  </data>
+  <data name="Resm_fld_Mat_req_siteenginer" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="Resm_fld_mat_return_createdby" xml:space="preserve">
+    <value>صنع من قبل</value>
+  </data>
+  <data name="Resm_fld_mat_return_date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Resm_fld_mat_return_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Resm_fld_mat_return_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Resm_fld_mat_return_remarks" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="Resm_fld_mat_return_requestno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Resm_fld_mat_return_retno" xml:space="preserve">
+    <value>رقم المرتجع</value>
+  </data>
+  <data name="Resm_fld_mat_return_tostore" xml:space="preserve">
+    <value>للتخزين</value>
+  </data>
+  <data name="Resm_fld_mat_return_updateby" xml:space="preserve">
+    <value>تحديث بواسطة</value>
+  </data>
+  <data name="Resm_fld_phase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Resm_fld_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Resm_fld_request" xml:space="preserve">
+    <value>الطلب</value>
+  </data>
+  <data name="Resm_fld_Resm_fld_Mat_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Resm_fld_schedule" xml:space="preserve">
+    <value>جدول</value>
+  </data>
+  <data name="Resm_fld_sercviceorder" xml:space="preserve">
+    <value>Sc Service Order</value>
+  </data>
+  <data name="Resm_fld_siteeng" xml:space="preserve">
+    <value>مهندس موقع</value>
+  </data>
+  <data name="Resm_fld_workschead" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="ResM_Materiallabor_absdays" xml:space="preserve">
+    <value>ايام الغياب</value>
+  </data>
+  <data name="ResM_Materiallabor_Absence" xml:space="preserve">
+    <value>غياب</value>
+  </data>
+  <data name="ResM_Materiallabor_Absencedec" xml:space="preserve">
+    <value>وصف الغياب</value>
+  </data>
+  <data name="ResM_Materiallabor_actualleavedate" xml:space="preserve">
+    <value>Actual Leave Date</value>
+  </data>
+  <data name="ResM_Materiallabor_assigndate" xml:space="preserve">
+    <value>تعيين التاريخ</value>
+  </data>
+  <data name="ResM_Materiallabor_assigned" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="ResM_Materiallabor_category" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="ResM_Materiallabor_categorycode" xml:space="preserve">
+    <value>كود المجموعة</value>
+  </data>
+  <data name="ResM_Materiallabor_class" xml:space="preserve">
+    <value>فئة</value>
+  </data>
+  <data name="ResM_Materiallabor_classcode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="ResM_Materiallabor_classname" xml:space="preserve">
+    <value>اسم الفئة</value>
+  </data>
+  <data name="ResM_Materiallabor_date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="ResM_Materiallabor_hours" xml:space="preserve">
+    <value>ساعات</value>
+  </data>
+  <data name="ResM_Materiallabor_labclass" xml:space="preserve">
+    <value>فئة العمل</value>
+  </data>
+  <data name="ResM_Materiallabor_labor" xml:space="preserve">
+    <value>العمل</value>
+  </data>
+  <data name="ResM_Materiallabor_laborcode" xml:space="preserve">
+    <value>قانون العمل</value>
+  </data>
+  <data name="ResM_Materiallabor_Laborname" xml:space="preserve">
+    <value>اسم العمل</value>
+  </data>
+  <data name="ResM_Materiallabor_latehour" xml:space="preserve">
+    <value>ساعات التأخير</value>
+  </data>
+  <data name="ResM_Materiallabor_leavedate" xml:space="preserve">
+    <value>تاريخ مغادرة</value>
+  </data>
+  <data name="ResM_Materiallabor_name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="ResM_Materiallabor_overtime" xml:space="preserve">
+    <value>نوع الوقت الاضافي</value>
+  </data>
+  <data name="ResM_Materiallabor_overtimedesc" xml:space="preserve">
+    <value>وصف الوقت الاضافي</value>
+  </data>
+  <data name="ResM_Materiallabor_phasecode" xml:space="preserve">
+    <value>كود المرحلة</value>
+  </data>
+  <data name="ResM_Materiallabor_phaseno" xml:space="preserve">
+    <value>رقم الحالة</value>
+  </data>
+  <data name="ResM_Materiallabor_planeleavedate" xml:space="preserve">
+    <value>تاريخ انهاء الخطة</value>
+  </data>
+  <data name="ResM_Materiallabor_projectcode" xml:space="preserve">
+    <value>كود المشروع</value>
+  </data>
+  <data name="ResM_Materiallabor_remain" xml:space="preserve">
+    <value>المتبقي</value>
+  </data>
+  <data name="ResM_Materiallabor_remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredhrs" xml:space="preserve">
+    <value>الساعات المطلوبة</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredlabors" xml:space="preserve">
+    <value>العمال المطلوبة</value>
+  </data>
+  <data name="ResM_Materiallabor_schedno" xml:space="preserve">
+    <value>الجدول الزمني</value>
+  </data>
+  <data name="ResM_Materiallabor_schno" xml:space="preserve">
+    <value>Sch No.</value>
+  </data>
+  <data name="ResM_Materiallabor_startdate" xml:space="preserve">
+    <value>تاريخ البدء</value>
+  </data>
+  <data name="ResM_Materiallabor_status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="ResM_Materiallabor_status1" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Resm_mat_issue_avqty" xml:space="preserve">
+    <value>متوسط الكمية</value>
+  </data>
+  <data name="Resm_mat_issue_issuedqty" xml:space="preserve">
+    <value>الكمية المصدرة</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemcode" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemdesc" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="Resm_mat_issue_reqbalanceqty" xml:space="preserve">
+    <value>طلب الرصيد الكميه</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_assigned" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_categorycode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_classcode" xml:space="preserve">
+    <value>كود الفصل</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_classname" xml:space="preserve">
+    <value>اسم الفصل</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_labclass" xml:space="preserve">
+    <value>فئة المختبر</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_laborcode" xml:space="preserve">
+    <value>قانون العمل</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_laborname" xml:space="preserve">
+    <value>اسم العمل</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_phasecode" xml:space="preserve">
+    <value>رمز المرحلة</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_planedate" xml:space="preserve">
+    <value>تاريخ المغادرة</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_projectcode" xml:space="preserve">
+    <value>رمز المشروع</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_remain" xml:space="preserve">
+    <value>يبقي</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_reqlabor" xml:space="preserve">
+    <value>العمال المطلوبين</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_requiredhrs" xml:space="preserve">
+    <value>الساعات المطلوبة</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_schno" xml:space="preserve">
+    <value>Sch.no</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Resm_Mat_mon_enddate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="Resm_Mat_mon_phaseno" xml:space="preserve">
+    <value>رقم المرحلة</value>
+  </data>
+  <data name="Resm_Mat_mon_projno" xml:space="preserve">
+    <value>رقم المشروع</value>
+  </data>
+  <data name="Resm_Mat_mon_reqno" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Resm_Mat_mon_secdule" xml:space="preserve">
+    <value>الجدول</value>
+  </data>
+  <data name="Resm_Mat_mon_sso" xml:space="preserve">
+    <value>Sched / SS SO No</value>
+  </data>
+  <data name="Resm_Mat_mon_startdate" xml:space="preserve">
+    <value>تاريخ البداية</value>
+  </data>
+  <data name="Resm_Mat_mon_status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Resm_Mat_mon_workdesc" xml:space="preserve">
+    <value>وصف العمل</value>
+  </data>
+  <data name="Resm_Mat_req__approvedqty" xml:space="preserve">
+    <value>الكمية المعتمدة</value>
+  </data>
+  <data name="Resm_Mat_req__balancedqty" xml:space="preserve">
+    <value>رصيد الكمية</value>
+  </data>
+  <data name="Resm_Mat_req__itemcode" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="Resm_Mat_req__itemdesc" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Resm_Mat_req__requestbefore" xml:space="preserve">
+    <value>طلب قبل</value>
+  </data>
+  <data name="Resm_Mat_req__requiredqty" xml:space="preserve">
+    <value>الكمية المطلوبة</value>
+  </data>
+  <data name="Resm_Mat_req__scheadremain" xml:space="preserve">
+    <value>موعد البقاء</value>
+  </data>
+  <data name="Resm_Mat_req__schedqty" xml:space="preserve">
+    <value>جدول الكمية</value>
+  </data>
+  <data name="Resm_Mat_req__unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="Resm_mat_return_itemcode" xml:space="preserve">
+    <value> كود الصنف</value>
+  </data>
+  <data name="Resm_mat_return_itemdesc" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Resm_mat_return_netissuedqty" xml:space="preserve">
+    <value>صافي الكمية المصدرة</value>
+  </data>
+  <data name="Resm_mat_return_returnqty" xml:space="preserve">
+    <value>عودة الكمية</value>
+  </data>
+  <data name="Resm_mat_return_unit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="ProjDef_BilledQty" xml:space="preserve">
+    <value>الكميه المسجله</value>
+  </data>
+  <data name="ProjDef_Caleander" xml:space="preserve">
+    <value>تقويم</value>
+  </data>
+  <data name="ProjDef_ContrQty" xml:space="preserve">
+    <value>عدد الكميه</value>
+  </data>
+  <data name="ProjDef_EndDate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="ProjDef_Enginer" xml:space="preserve">
+    <value>المهندس</value>
+  </data>
+  <data name="ProjDef_ItemName" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="ProjDef_ItemNo" xml:space="preserve">
+    <value>رقم الصنف</value>
+  </data>
+  <data name="ProjDef_ItemQty" xml:space="preserve">
+    <value>كمية الصنف</value>
+  </data>
+  <data name="ProjDef_Itemser" xml:space="preserve">
+    <value>مسلسل الصنف</value>
+  </data>
+  <data name="ProjDef_PhaseDescriptionA" xml:space="preserve">
+    <value>اسم المرحله عربي</value>
+  </data>
+  <data name="ProjDef_PhaseDescriptionB" xml:space="preserve">
+    <value>اسم المرحله انجليزي</value>
+  </data>
+  <data name="ProjDef_PhaseNo" xml:space="preserve">
+    <value>رقم المرحله</value>
+  </data>
+  <data name="ProjDef_ProdQty" xml:space="preserve">
+    <value>الكميه المنتجه</value>
+  </data>
+  <data name="ProjDef_Remark" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="ProjDef_Scope" xml:space="preserve">
+    <value>نطاق</value>
+  </data>
+  <data name="ProjDef_ScopeName" xml:space="preserve">
+    <value>اسم النطاق</value>
+  </data>
+  <data name="ProjDef_StartDate" xml:space="preserve">
+    <value>تاريخ البدء</value>
+  </data>
+  <data name="ProjDef_Status" xml:space="preserve">
+    <value>الحاله</value>
+  </data>
+  <data name="ProjDef_System" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="ProjDef_UntilPrice" xml:space="preserve">
+    <value>وحدة البيع</value>
+  </data>
+  <data name="Fld_Finished" xml:space="preserve">
+    <value>انتهاء</value>
+  </data>
+  <data name="Fld_Stopped" xml:space="preserve">
+    <value>اوقف</value>
+  </data>
+  <data name="Fld_Suspended" xml:space="preserve">
+    <value>توقف مؤقت</value>
+  </data>
+  <data name="Fld_working" xml:space="preserve">
+    <value>يعمل</value>
+  </data>
+  <data name="ResM_fld_MatLabor_Left" xml:space="preserve">
+    <value>عرض التاخير</value>
+  </data>
+  <data name="ChkStatus" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Men_OfferList" xml:space="preserve">
+    <value>قائمة العروض</value>
+  </data>
+  <data name="ServiceOrder_ProdBeforeQty" xml:space="preserve">
+    <value>ProdBeforeQty</value>
+  </data>
+  <data name="ServiceOrder_FinishQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="Men_MaterialList" xml:space="preserve">
+    <value>قائمة المواد</value>
+  </data>
+  <data name="Resm_Equip_FldEquipemtns" xml:space="preserve">
+    <value>الادوات</value>
+  </data>
+  <data name="Resm_Equip_FldEquipemtnsclassrequi" xml:space="preserve">
+    <value>فئة المعدات المطلوبة</value>
+  </data>
+  <data name="Resm_Equip_FldReeEquipemtns" xml:space="preserve">
+    <value>معدات مجانية</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipclass" xml:space="preserve">
+    <value>فئة المعدة</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipcode" xml:space="preserve">
+    <value>كود المعدة</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipname" xml:space="preserve">
+    <value>اسم المعدة</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredequip" xml:space="preserve">
+    <value>المعدات المطلوبة</value>
+  </data>
+  <data name="rpApproved" xml:space="preserve">
+    <value>معتمد</value>
+  </data>
+  <data name="rpBillingterms" xml:space="preserve">
+    <value>شروط السداد</value>
+  </data>
+  <data name="rpCanceled" xml:space="preserve">
+    <value>ملغي</value>
+  </data>
+  <data name="rpContracted" xml:space="preserve">
+    <value>متعاقد</value>
+  </data>
+  <data name="rpCostEstimation" xml:space="preserve">
+    <value>تقدير التكلفة</value>
+  </data>
+  <data name="rpNew" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="rpRejected" xml:space="preserve">
+    <value>رفوض</value>
+  </data>
+  <data name="rpSendTocustomer" xml:space="preserve">
+    <value>مرسل</value>
+  </data>
+  <data name="rpSpecification" xml:space="preserve">
+    <value>ماصفات</value>
+  </data>
+  <data name="ResM_Fld_accepte" xml:space="preserve">
+    <value>قبول</value>
+  </data>
+  <data name="Resm_Fld_categorycode" xml:space="preserve">
+    <value>كود الفئة</value>
+  </data>
+  <data name="ResM_Fld_load" xml:space="preserve">
+    <value>حمل</value>
+  </data>
+  <data name="ResM_Fld_reject" xml:space="preserve">
+    <value>رفض</value>
+  </data>
+  <data name="ResM_Fld_showall" xml:space="preserve">
+    <value>عرض الكل</value>
+  </data>
+  <data name="ResM_Fld_showCurrent" xml:space="preserve">
+    <value>إظهار الحالي</value>
+  </data>
+  <data name="ResM_Fld_showdelayed" xml:space="preserve">
+    <value>عرض متأخر</value>
+  </data>
+  <data name="ResM_Fld_showfree" xml:space="preserve">
+    <value>عرض مجاني</value>
+  </data>
+  <data name="Resm_Material_Materiallistcost" xml:space="preserve">
+    <value>التكلفة</value>
+  </data>
+  <data name="Resm_Material_Materiallistdesca" xml:space="preserve">
+    <value>وصف بالعربي</value>
+  </data>
+  <data name="Resm_Material_Materiallistdescb" xml:space="preserve">
+    <value>وصف انجليزي</value>
+  </data>
+  <data name="Resm_Material_Materiallistmatcode" xml:space="preserve">
+    <value>كود المادة</value>
+  </data>
+  <data name="Resm_Material_Materiallistunit" xml:space="preserve">
+    <value>وحدة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_assigned" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_classcode" xml:space="preserve">
+    <value>Class code</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_classname" xml:space="preserve">
+    <value>اسم الفصل</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipclass" xml:space="preserve">
+    <value>فئة المعدة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipcode" xml:space="preserve">
+    <value>كود المعدة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipname" xml:space="preserve">
+    <value>اسم المعدة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_planeleavedate" xml:space="preserve">
+    <value>تاريخ المغادرة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_projectcode" xml:space="preserve">
+    <value>كود المشروع</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_projectphase" xml:space="preserve">
+    <value>كود المرحلة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_remain" xml:space="preserve">
+    <value>يبقى</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_requiredhrs" xml:space="preserve">
+    <value>الساعات المطلوبة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_requiredlabors" xml:space="preserve">
+    <value>العمال المطلوبة</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_schno" xml:space="preserve">
+    <value>Sch. No</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="RDByCustomer" xml:space="preserve">
+    <value>الإنتاج و الفواتير بالعميل</value>
+  </data>
+  <data name="RDByEng" xml:space="preserve">
+    <value>الإنتاج و الفواتير بالمهندس</value>
+  </data>
+  <data name="RDByProject" xml:space="preserve">
+    <value>الإنتاج و الفواتير بالمشروع</value>
+  </data>
+  <data name="RDCustBlanc" xml:space="preserve">
+    <value>الإنتاج و الفواتير مجمع بالعميل</value>
+  </data>
+  <data name="RDProdcutList" xml:space="preserve">
+    <value>قائمة الإنتاج و الفواتير</value>
+  </data>
+  <data name="RDProjBlanc" xml:space="preserve">
+    <value>الإنتاج و الفواتير مجمع بالمشروع</value>
+  </data>
+  <data name="SMB_FromDate" xml:space="preserve">
+    <value>من تاريخ</value>
+  </data>
+  <data name="SMB_IsFinal" xml:space="preserve">
+    <value>IsFinal</value>
+  </data>
+  <data name="SMB_ProdTotal" xml:space="preserve">
+    <value>الاجمالى</value>
+  </data>
+  <data name="SMB_ToDate" xml:space="preserve">
+    <value>الى تاريخ</value>
+  </data>
+  <data name="SMB_TrDate" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="SMB_TrNo" xml:space="preserve">
+    <value>رقم </value>
+  </data>
+  <data name="End_Date" xml:space="preserve">
+    <value>تاريخ النهايه</value>
+  </data>
+  <data name="Fld_IncludedinBonus" xml:space="preserve">
+    <value>داخل التكلفه</value>
+  </data>
+  <data name="Fld_MiantenanceWork" xml:space="preserve">
+    <value>صيانة العمل</value>
+  </data>
+  <data name="Fld_StartWork" xml:space="preserve">
+    <value>بداية العمل</value>
+  </data>
+  <data name="Fld_Suspend" xml:space="preserve">
+    <value>مؤقتا</value>
+  </data>
+  <data name="Fld_Tobeinvoiced" xml:space="preserve">
+    <value>فاتوره</value>
+  </data>
+  <data name="Spec_Cleander" xml:space="preserve">
+    <value>تقويم</value>
+  </data>
+  <data name="Spec_costcenter" xml:space="preserve">
+    <value>مركز التكلفه</value>
+  </data>
+  <data name="spec_eng" xml:space="preserve">
+    <value>موقع العمل</value>
+  </data>
+  <data name="Spec_projectDesc" xml:space="preserve">
+    <value>موصفات المشروع</value>
+  </data>
+  <data name="Spec_scope" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="Spec_Workhours" xml:space="preserve">
+    <value>الساعات</value>
+  </data>
+  <data name="Start_date" xml:space="preserve">
+    <value>تاريخ البدايه</value>
+  </data>
+  <data name="ProjSpec_ActivQty" xml:space="preserve">
+    <value>كمية النشاط</value>
+  </data>
+  <data name="ProjSpec_act_Activity" xml:space="preserve">
+    <value>النشاط</value>
+  </data>
+  <data name="ProjSpec_act_ActivityCode" xml:space="preserve">
+    <value>كود النشاط</value>
+  </data>
+  <data name="ProjSpec_act_DescE" xml:space="preserve">
+    <value>اسم النشاط</value>
+  </data>
+  <data name="ProjSpec_BilledQty" xml:space="preserve">
+    <value>كمية البناء</value>
+  </data>
+  <data name="ProjSpec_ContrQty" xml:space="preserve">
+    <value>عدد الكميه</value>
+  </data>
+  <data name="ProjSpec_ItemQty" xml:space="preserve">
+    <value>كمية الصنف</value>
+  </data>
+  <data name="ProjSpec_ItSys_Code" xml:space="preserve">
+    <value>كود النظام</value>
+  </data>
+  <data name="ProjSpec_ProdQty" xml:space="preserve">
+    <value>كمية الانتاج</value>
+  </data>
+  <data name="ProjSpec_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="ProjSpec_SchedProdQty" xml:space="preserve">
+    <value>فصل كمية الانتاج</value>
+  </data>
+  <data name="ProjSpec_SchedQty" xml:space="preserve">
+    <value>فصل الكمية</value>
+  </data>
+  <data name="ProjSpec_SConProdQty" xml:space="preserve">
+    <value>SC. Prod Qty</value>
+  </data>
+  <data name="ProjSpec_SCon_Qty" xml:space="preserve">
+    <value>SC. Qty</value>
+  </data>
+  <data name="ProjSpec_Scp_DescE" xml:space="preserve">
+    <value>اسم العرض</value>
+  </data>
+  <data name="ProjSpec_Serial" xml:space="preserve">
+    <value>مسلسل</value>
+  </data>
+  <data name="ProjSpec_SlsITm_DescE" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="ProjSpec_SlsITm_ItemCode" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="ProjSpec_TotalProdQty" xml:space="preserve">
+    <value>اجمالي الكميه</value>
+  </data>
+  <data name="ProjSpec_UnitPrice" xml:space="preserve">
+    <value>وحدة البيع</value>
+  </data>
+  <data name="ProjSpec_UOM_DescE" xml:space="preserve">
+    <value>كمية وحدة القياس</value>
+  </data>
+  <data name="SMB_InvQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="SMB_ToBillQty" xml:space="preserve">
+    <value>ToBillQty</value>
+  </data>
+  <data name="ResM_Materiallabor_IsAbsence" xml:space="preserve">
+    <value>هل غائب</value>
+  </data>
+  <data name="Men_LaborSchedule" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="Men_LaborScheduleUtilization" xml:space="preserve">
+    <value>جدول افادة العمل</value>
+  </data>
+  <data name="Men_ProjectExpenses" xml:space="preserve">
+    <value>حسابات المشروع</value>
+  </data>
+  <data name="Men_ProjectProgress" xml:space="preserve">
+    <value>مراحل المشروع</value>
+  </data>
+  <data name="Men_ProjectStatus" xml:space="preserve">
+    <value>حالة المشروع</value>
+  </data>
+  <data name="Eng_Fld_projectexpCustomer" xml:space="preserve">
+    <value>العمير</value>
+  </data>
+  <data name="Eng_Fld_projectexpdistribution" xml:space="preserve">
+    <value>توزيع بواسطة</value>
+  </data>
+  <data name="Eng_Fld_projectexpexpcat" xml:space="preserve">
+    <value>فئة المصروفات</value>
+  </data>
+  <data name="Eng_Fld_projectexpexpcode" xml:space="preserve">
+    <value>رمز المصاريف</value>
+  </data>
+  <data name="Eng_Fld_projectexpFromproject" xml:space="preserve">
+    <value>من المشروع</value>
+  </data>
+  <data name="Eng_Fld_projectexpproject" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Eng_Fld_projectexpscope" xml:space="preserve">
+    <value>النطاقة</value>
+  </data>
+  <data name="Eng_Fld_projectexpscopeclass" xml:space="preserve">
+    <value>فئة النطاق</value>
+  </data>
+  <data name="Eng_Fld_projectexpToproject" xml:space="preserve">
+    <value>الي مشروع</value>
+  </data>
+  <data name="Eng_Res_projectexpAmount" xml:space="preserve">
+    <value>كمية</value>
+  </data>
+  <data name="Eng_Res_projectexpDescription" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Eng_Res_projectexpExpenses" xml:space="preserve">
+    <value>المصروفات</value>
+  </data>
+  <data name="Eng_Res_projectexpExpensesCode" xml:space="preserve">
+    <value>قانون المصروفات</value>
+  </data>
+  <data name="Eng_Res_projectexpExpensesname" xml:space="preserve">
+    <value>اسم المصروفات</value>
+  </data>
+  <data name="Eng_Res_projectexpPhase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Eng_Res_projectexpphaseTotal" xml:space="preserve">
+    <value>مجموع المرحلة</value>
+  </data>
+  <data name="Eng_Res_projectexpProject" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Eng_Res_projectexpprojectTotal" xml:space="preserve">
+    <value>مجموع المشروع</value>
+  </data>
+  <data name="Eng_Res_projectexpTotal" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="Eng_Res_projectexpTrdate" xml:space="preserve">
+    <value>Tr  Date.</value>
+  </data>
+  <data name="Eng_Res_projectexpTrno" xml:space="preserve">
+    <value>Tr  No.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_act" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_actprod" xml:space="preserve">
+    <value>Act Prod</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_allproject" xml:space="preserve">
+    <value>كل المشروع</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_area" xml:space="preserve">
+    <value>منطقة</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_bonus" xml:space="preserve">
+    <value>الاضافى</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_bonusfactor" xml:space="preserve">
+    <value>عامل المكافأة</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customer" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customercat" xml:space="preserve">
+    <value>Customer Cat.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customerclass" xml:space="preserve">
+    <value>فئة العملاء</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_descr" xml:space="preserve">
+    <value>وصف</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_descri" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_diff" xml:space="preserve">
+    <value>Diff</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_engco" xml:space="preserve">
+    <value>Eng. Co</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_grandtotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_include" xml:space="preserve">
+    <value>تتضمن</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_labcost" xml:space="preserve">
+    <value>Lab Cost</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_nonrepair" xml:space="preserve">
+    <value>غير الإصلاح</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_phase" xml:space="preserve">
+    <value>المرحله</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_prod" xml:space="preserve">
+    <value>منتج</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_project" xml:space="preserve">
+    <value>المشروع</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_projeng" xml:space="preserve">
+    <value>مهندس المشروع</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_repair" xml:space="preserve">
+    <value>الاصلاح</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scope" xml:space="preserve">
+    <value>النطاق</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scopecat" xml:space="preserve">
+    <value>Scope Cat.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scopeclass" xml:space="preserve">
+    <value>فئة النطاق</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_stdlabor" xml:space="preserve">
+    <value>Std. Labor</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_stdprod" xml:space="preserve">
+    <value>Std. Prod</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_unprod" xml:space="preserve">
+    <value>سعات عدم الانتاج</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_work" xml:space="preserve">
+    <value>عمل</value>
+  </data>
+  <data name="Eng_Rep_Projectprogaccqty" xml:space="preserve">
+    <value>ACC.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogAct" xml:space="preserve">
+    <value>Act.</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbalqty" xml:space="preserve">
+    <value>BAL QTY</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbstatus" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbtotal" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbuprice" xml:space="preserve">
+    <value>سعر الوحدة</value>
+  </data>
+  <data name="Eng_Rep_Projectprogcur" xml:space="preserve">
+    <value>CUR</value>
+  </data>
+  <data name="Eng_Rep_Projectprogdescrip" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Eng_Rep_Projectprogitem" xml:space="preserve">
+    <value>صنف</value>
+  </data>
+  <data name="Eng_Rep_Projectprogphase" xml:space="preserve">
+    <value>المرحلة</value>
+  </data>
+  <data name="Eng_Rep_Projectprogprvqty" xml:space="preserve">
+    <value>PRV.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogReqqty" xml:space="preserve">
+    <value>REQ.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogUOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscontrvalue" xml:space="preserve">
+    <value>قيمة العقد</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscurrentvalue" xml:space="preserve">
+    <value>القيمة الحالية</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscustomer" xml:space="preserve">
+    <value>عميل</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscustomerclass" xml:space="preserve">
+    <value>فئة العملاء</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusincome" xml:space="preserve">
+    <value>الدخل</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusinvoiceremain" xml:space="preserve">
+    <value>الفاتورة المتبقية</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusProdRemain" xml:space="preserve">
+    <value>المنتج المتبقي</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusProductionValue" xml:space="preserve">
+    <value>قيمة الإنتاج</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusproj" xml:space="preserve">
+    <value>مشروع</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusprojectdesc" xml:space="preserve">
+    <value>وصف المشروع</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatussalescode" xml:space="preserve">
+    <value>كود المبيعات</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusvariance" xml:space="preserve">
+    <value>الفرق</value>
+  </data>
+  <data name="Eng_RepDailySuperVisorbouns" xml:space="preserve">
+    <value>مكافأة المشرف</value>
+  </data>
+  <data name="Eng_RepDailyWork" xml:space="preserve">
+    <value>عمل يومي</value>
+  </data>
+  <data name="Eng_RepSubContractivity" xml:space="preserve">
+    <value>نشاط المقاول الفرعي</value>
+  </data>
+  <data name="Eng_RepSubContrList" xml:space="preserve">
+    <value>قائمة المقاولين الفرعية</value>
+  </data>
+  <data name="Off_CompanyResposibility" xml:space="preserve">
+    <value>مسؤوليات الشركه</value>
+  </data>
+  <data name="Off_CustomerResposibility" xml:space="preserve">
+    <value>مسؤوليات العميل</value>
+  </data>
+  <data name="Fld_Activity" xml:space="preserve">
+    <value>الانشطه</value>
+  </data>
+  <data name="Fld_PhaseItems" xml:space="preserve">
+    <value>مراحل الاصناف</value>
+  </data>
+  <data name="Fld_ProjectFreeItems" xml:space="preserve">
+    <value>اصناف المشروع المتاحه</value>
+  </data>
+  <data name="Sales_SalesItemlib_techdesca" xml:space="preserve">
+    <value>وصف فني عربي</value>
+  </data>
+  <data name="Sales_SalesItemlib_techdesce" xml:space="preserve">
+    <value>وصف فني انجليزي</value>
+  </data>
+  <data name="Sales_SalesItem_minsalesprice" xml:space="preserve">
+    <value>سعر البيع الأدنى</value>
+  </data>
+  <data name="Sales_SalesItem_stdsalesprice" xml:space="preserve">
+    <value>سعر البيع القياسي</value>
+  </data>
+  <data name="Sales_SalesItem_unitsellingprice" xml:space="preserve">
+    <value>سعر بيع الوحدة</value>
+  </data>
+  <data name="Fld_IsEditable" xml:space="preserve">
+    <value>قابل للتعديل</value>
+  </data>
+  <data name="Sales_Fld_Salesprice" xml:space="preserve">
+    <value>سعر المبيعات</value>
+  </data>
+  <data name="Sales_Fld_Salestechdesca" xml:space="preserve">
+    <value>وصف الفني</value>
+  </data>
+  <data name="OffStagI_MinUnitPrice" xml:space="preserve">
+    <value>اقل سعر بيع</value>
+  </data>
+  <data name="OffStagI_TechDescA" xml:space="preserve">
+    <value>الاسم الفني عربي</value>
+  </data>
+  <data name="OffStagI_TechDescE" xml:space="preserve">
+    <value>الاسم الفني انجليزي</value>
+  </data>
+  <data name="Cleander_Fld_friday" xml:space="preserve">
+    <value>الجمعة</value>
+  </data>
+  <data name="Cleander_Fld_Monday" xml:space="preserve">
+    <value>الاثنين</value>
+  </data>
+  <data name="Cleander_Fld_Starday" xml:space="preserve">
+    <value>السبت</value>
+  </data>
+  <data name="Cleander_Fld_Sunday" xml:space="preserve">
+    <value>الاحد</value>
+  </data>
+  <data name="Cleander_Fld_thersday" xml:space="preserve">
+    <value>الخميس</value>
+  </data>
+  <data name="Cleander_Fld_Tuesday" xml:space="preserve">
+    <value>الثلاثاء</value>
+  </data>
+  <data name="Cleander_Fld_wednesday" xml:space="preserve">
+    <value>الأربعاء</value>
+  </data>
+  <data name="Fld_ContractNet" xml:space="preserve">
+    <value>صافي العقد</value>
+  </data>
+  <data name="Fld_ContractPrice" xml:space="preserve">
+    <value>سعر العقد</value>
+  </data>
+  <data name="Fld_DiscountAmount" xml:space="preserve">
+    <value>تكلفة الخصم</value>
+  </data>
+  <data name="Fld_DiscountPrc" xml:space="preserve">
+    <value>نسبة الخصم</value>
+  </data>
+  <data name="Fld_DownPaymentPrc" xml:space="preserve">
+    <value>الدفعه الاولي</value>
+  </data>
+  <data name="Fld_WarrntyPrc" xml:space="preserve">
+    <value>سعر الكفاله</value>
+  </data>
+  <data name="Fld_ContractNetPrice" xml:space="preserve">
+    <value>صافى العقد</value>
+  </data>
+  <data name="Fld_Cancel" xml:space="preserve">
+    <value>الغاء</value>
+  </data>
+  <data name="Fld_ComputeTotal" xml:space="preserve">
+    <value>حساب المجموع</value>
+  </data>
+  <data name="Fld_Contract" xml:space="preserve">
+    <value>عقد</value>
+  </data>
+  <data name="Fld_OfferItem" xml:space="preserve">
+    <value>عرض البند</value>
+  </data>
+  <data name="Fld_PrintOffer" xml:space="preserve">
+    <value>طباعة العرض</value>
+  </data>
+  <data name="Fld_Reject" xml:space="preserve">
+    <value>رفض</value>
+  </data>
+  <data name="PManag_DirctCost" xml:space="preserve">
+    <value>التكلفة </value>
+  </data>
+  <data name="PManag_DescE" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="PManag_EquipmentCost" xml:space="preserve">
+    <value>تكلفة المعدات</value>
+  </data>
+  <data name="PManag_ExpensesCost" xml:space="preserve">
+    <value>Expe Cost</value>
+  </data>
+  <data name="PManag_LabourCost" xml:space="preserve">
+    <value>أجرة العاملين</value>
+  </data>
+  <data name="PManag_MaterialCost" xml:space="preserve">
+    <value>تكلفة المادة</value>
+  </data>
+  <data name="PManag_OHCost" xml:space="preserve">
+    <value>OHCost</value>
+  </data>
+  <data name="PManag_PeriodCode" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="PManag_ProdBudget" xml:space="preserve">
+    <value>الميزانيه</value>
+  </data>
+  <data name="PManag_ProductionOHCost" xml:space="preserve">
+    <value>تكلفة الانتاج</value>
+  </data>
+  <data name="PManag_StdOHLabor" xml:space="preserve">
+    <value>OHLabor</value>
+  </data>
+  <data name="PManag_StdProdOHLabor" xml:space="preserve">
+    <value>إنتاج العمل</value>
+  </data>
+  <data name="PManag_SubContractorCost" xml:space="preserve">
+    <value>تكلفة المقاول من الباطن</value>
+  </data>
+  <data name="PManag_btnClc" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="PManag_btnClose" xml:space="preserve">
+    <value>غلق</value>
+  </data>
+  <data name="PManag_btnOpen" xml:space="preserve">
+    <value>فتح</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>مغلق</value>
+  </data>
+  <data name="Fld_Stage" xml:space="preserve">
+    <value>الدرجه</value>
+  </data>
+  <data name="Fld_LogOut" xml:space="preserve">
+    <value>تسجيل خروج</value>
+  </data>
+  <data name="Fld_ProfitMargin" xml:space="preserve">
+    <value>هامش الربح</value>
+  </data>
+  <data name="Fld_Fld_SubContractorCode" xml:space="preserve">
+    <value>رمز المقاول من الباطن</value>
+  </data>
+  <data name="Fld_ContractTerms" xml:space="preserve">
+    <value>شروط التعاقد</value>
+  </data>
+  <data name="ResMat_SchedType" xml:space="preserve">
+    <value>نوع الجدول</value>
+  </data>
+  <data name="ResMat_ssso" xml:space="preserve">
+    <value>SS SO</value>
+  </data>
+  <data name="ResmMat_SContractor" xml:space="preserve">
+    <value>S. Contractor</value>
+  </data>
+  <data name="ResmMat_WorkSch" xml:space="preserve">
+    <value>Work Sch</value>
+  </data>
+  <data name="Resm_Material_balanceQty" xml:space="preserve">
+    <value>رصيد الكمية</value>
+  </data>
+  <data name="Resm_Material_desc" xml:space="preserve">
+    <value>وصف</value>
+  </data>
+  <data name="Resm_Material_issuedQty" xml:space="preserve">
+    <value>الكمية المصدرة</value>
+  </data>
+  <data name="Resm_Material_issueNo" xml:space="preserve">
+    <value>العدد رقم</value>
+  </data>
+  <data name="Resm_Material_Reqdate" xml:space="preserve">
+    <value>تاريخ الطلب</value>
+  </data>
+  <data name="Resm_Material_ReqNo" xml:space="preserve">
+    <value>رقم الطلب</value>
+  </data>
+  <data name="Resm_Material_ReqQty" xml:space="preserve">
+    <value>الكمية المطلوبة</value>
+  </data>
+  <data name="Resm_Material_returnNo" xml:space="preserve">
+    <value>عودة لا</value>
+  </data>
+  <data name="Resm_Material_returnQty" xml:space="preserve">
+    <value>عودة الكمية</value>
+  </data>
+  <data name="Resm_Material_SechQty" xml:space="preserve">
+    <value>Sech. Qty</value>
+  </data>
+  <data name="Resm_Material_status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Resm_Material_trdate" xml:space="preserve">
+    <value>TR Date</value>
+  </data>
+  <data name="Resm_Bill_material_ApprovedQty" xml:space="preserve">
+    <value>الكمية المعتمدة</value>
+  </data>
+  <data name="Resm_Bill_material_BalanceQty" xml:space="preserve">
+    <value>رصيد الكمية</value>
+  </data>
+  <data name="Resm_Bill_material_IssuedQty" xml:space="preserve">
+    <value>الكمية المصدرة</value>
+  </data>
+  <data name="Resm_Bill_material_RequiredQty" xml:space="preserve">
+    <value>الكمية المطلوبة</value>
+  </data>
+  <data name="Resm_Bill_material_ReturnQty" xml:space="preserve">
+    <value>عودة الكمية</value>
+  </data>
+  <data name="Resm_Bill_material_SchedRemain" xml:space="preserve">
+    <value>جدول البقاء</value>
+  </data>
+  <data name="Resm_Bill_material_total" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="Resm_Bill_material_unitcost" xml:space="preserve">
+    <value>تكلفة الوحدة</value>
+  </data>
+  <data name="ResM_Mat_ScheduleNo" xml:space="preserve">
+    <value>رقم الجدول</value>
+  </data>
+  <data name="ResM_Mat_Unauthorized" xml:space="preserve">
+    <value>غير مصرح</value>
+  </data>
+  <data name="ResM_Leave" xml:space="preserve">
+    <value>مغادرة</value>
+  </data>
+  <data name="Fld_WaranteePrd" xml:space="preserve">
+    <value>مدة الضمان</value>
+  </data>
+  <data name="Def_Additions" xml:space="preserve">
+    <value>الإضافات</value>
+  </data>
+  <data name="Def_Discount" xml:space="preserve">
+    <value>خصم</value>
+  </data>
+  <data name="Def_projectnet" xml:space="preserve">
+    <value>صافي المشروع</value>
+  </data>
+  <data name="Def_warrentyperiod" xml:space="preserve">
+    <value>فترة الضمان</value>
+  </data>
+  <data name="Work_RequiredNo" xml:space="preserve">
+    <value>العدد المطلوب</value>
+  </data>
+  <data name="Resm_Scserviceorder" xml:space="preserve">
+    <value>رقم الخدمة</value>
+  </data>
+  <data name="Resm_WorkSchedule" xml:space="preserve">
+    <value>جدول العمل</value>
+  </data>
+  <data name="Resm_all" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="Resm_AttendanceSheet" xml:space="preserve">
+    <value>ورقة الحضور</value>
+  </data>
+  <data name="Resm_bonusheet" xml:space="preserve">
+    <value>ورقة مكافأة</value>
+  </data>
+  <data name="Resm_branch" xml:space="preserve">
+    <value>الفرع</value>
+  </data>
+  <data name="Resm_Byitem" xml:space="preserve">
+    <value>حسب البند</value>
+  </data>
+  <data name="Resm_Byphase" xml:space="preserve">
+    <value>حسب المرحلة</value>
+  </data>
+  <data name="Resm_detailseng" xml:space="preserve">
+    <value>التفاصيل حسب المهندس</value>
+  </data>
+  <data name="Resm_Equipmentmovement" xml:space="preserve">
+    <value>حركة المعدات</value>
+  </data>
+  <data name="Resm_Equipmentutilization" xml:space="preserve">
+    <value>استخدام المعدات</value>
+  </data>
+  <data name="Resm_finish" xml:space="preserve">
+    <value>انهاء</value>
+  </data>
+  <data name="Resm_fromlabor" xml:space="preserve">
+    <value>من العمل</value>
+  </data>
+  <data name="Resm_LaborMovement" xml:space="preserve">
+    <value>الحركة العمالية</value>
+  </data>
+  <data name="Resm_Laborutilization" xml:space="preserve">
+    <value>استخدام العمالة</value>
+  </data>
+  <data name="Resm_LaborWork" xml:space="preserve">
+    <value>مهمة العمل</value>
+  </data>
+  <data name="Resm_materialcat" xml:space="preserve">
+    <value>فئة المواد</value>
+  </data>
+  <data name="Resm_MaterialUsage" xml:space="preserve">
+    <value>استخدام المواد</value>
+  </data>
+  <data name="Resm_PhaseStatus" xml:space="preserve">
+    <value>حالة المرحلة</value>
+  </data>
+  <data name="Resm_ProjectRequirements" xml:space="preserve">
+    <value>متطلبات المشروع</value>
+  </data>
+  <data name="Resm_reporttype" xml:space="preserve">
+    <value>نوع التقرير</value>
+  </data>
+  <data name="Resm_summarybyproject" xml:space="preserve">
+    <value>ملخص حسب المشروع</value>
+  </data>
+  <data name="Resm_toequip" xml:space="preserve">
+    <value>الي تجهيز</value>
+  </data>
+  <data name="Resm_tolabor" xml:space="preserve">
+    <value>إلى العمل</value>
+  </data>
+  <data name="Resm_tomat" xml:space="preserve">
+    <value>الي مادة</value>
+  </data>
+  <data name="Resm_UnprodHour" xml:space="preserve">
+    <value>Un prod. Hour</value>
+  </data>
+  <data name="Resm_Utilization" xml:space="preserve">
+    <value>استغلال</value>
+  </data>
+  <data name="Men_ResourceReports" xml:space="preserve">
+    <value>تقارير ادارة الموارد</value>
+  </data>
+  <data name="Project_eng_ActCode" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="Project_eng_ActDesc" xml:space="preserve">
+    <value>Act Description</value>
+  </data>
+  <data name="Project_eng_ActName" xml:space="preserve">
+    <value>Act Name</value>
+  </data>
+  <data name="Project_eng_ActQty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="Project_eng_ActualQty" xml:space="preserve">
+    <value>Actual Qty</value>
+  </data>
+  <data name="Project_eng_DiffQty" xml:space="preserve">
+    <value>Diff Qty</value>
+  </data>
+  <data name="Project_eng_Duration" xml:space="preserve">
+    <value>المدة الزمنية</value>
+  </data>
+  <data name="Project_eng_Durationhh" xml:space="preserve">
+    <value>المدة الزمنية</value>
+  </data>
+  <data name="Project_eng_EndDate" xml:space="preserve">
+    <value>نهاية التاريخ</value>
+  </data>
+  <data name="Project_eng_Isnew" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="Project_eng_ItemCode" xml:space="preserve">
+    <value>كود الصنف</value>
+  </data>
+  <data name="Project_eng_ItemDescription" xml:space="preserve">
+    <value>وصف السلعة</value>
+  </data>
+  <data name="Project_eng_ItemQty" xml:space="preserve">
+    <value>البند الكمية</value>
+  </data>
+  <data name="Project_eng_ItemSer" xml:space="preserve">
+    <value>رقم الكود</value>
+  </data>
+  <data name="Project_eng_Lag" xml:space="preserve">
+    <value>تأخر</value>
+  </data>
+  <data name="Project_eng_newqty" xml:space="preserve">
+    <value>New Qty</value>
+  </data>
+  <data name="Project_eng_oldqty" xml:space="preserve">
+    <value>Old  Qty</value>
+  </data>
+  <data name="Project_eng_OrgQty" xml:space="preserve">
+    <value>Org Qty</value>
+  </data>
+  <data name="Project_eng_OrgRate" xml:space="preserve">
+    <value>Org. Rate</value>
+  </data>
+  <data name="Project_eng_PhaseDesc" xml:space="preserve">
+    <value>وصف المرحلة</value>
+  </data>
+  <data name="Project_eng_ProdQty" xml:space="preserve">
+    <value>Prod. Qty</value>
+  </data>
+  <data name="Project_eng_ProdRate" xml:space="preserve">
+    <value>Prod. Rate</value>
+  </data>
+  <data name="Project_eng_ProductionQty" xml:space="preserve">
+    <value>الكمية الإنتاج</value>
+  </data>
+  <data name="Project_eng_RelationActivity" xml:space="preserve">
+    <value>Relation Activity</value>
+  </data>
+  <data name="Project_eng_RelationItem" xml:space="preserve">
+    <value>البند العلاقة</value>
+  </data>
+  <data name="Project_eng_Relationphase" xml:space="preserve">
+    <value>علاقة المرحلة</value>
+  </data>
+  <data name="Project_eng_Relationtype" xml:space="preserve">
+    <value>نوع المرحلة</value>
+  </data>
+  <data name="Project_eng_StartDate" xml:space="preserve">
+    <value>بداية التاريخ</value>
+  </data>
+  <data name="Project_eng_system" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="Project_eng_Total" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="Project_eng_UnitPrice" xml:space="preserve">
+    <value>سعر الوحده</value>
+  </data>
+  <data name="Project_eng_uom" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Project_eng_phaseno" xml:space="preserve">
+    <value>رقم المرحلة</value>
+  </data>
+  <data name="Projec_eng_ActivityVariation" xml:space="preserve">
+    <value>تباين النشاط</value>
+  </data>
+  <data name="Project_eng_lineCode" xml:space="preserve">
+    <value>كود الخط</value>
+  </data>
+  <data name="OpProExp_Change_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OpProExp_Cost_Serial" xml:space="preserve">
+    <value>سيريال</value>
+  </data>
+  <data name="OpProExp_project_amount" xml:space="preserve">
+    <value>كمية</value>
+  </data>
+  <data name="OpProExp_project_Beneficial" xml:space="preserve">
+    <value>المستفيد</value>
+  </data>
+  <data name="OpProExp_project_expdesc" xml:space="preserve">
+    <value>وصف النفقة</value>
+  </data>
+  <data name="OpProExp_project_expno" xml:space="preserve">
+    <value>رقم النفقه</value>
+  </data>
+  <data name="OpProExp_project_Phase_Code" xml:space="preserve">
+    <value>كود المرحله</value>
+  </data>
+  <data name="OpProExp_project_RefNo" xml:space="preserve">
+    <value>رقم المرجع</value>
+  </data>
+  <data name="Eng_ByActivity" xml:space="preserve">
+    <value>حسب النشاط</value>
+  </data>
+  <data name="Eng_ByProject" xml:space="preserve">
+    <value>حسب المشروع</value>
+  </data>
+  <data name="Project_eng_OldProductionPrc" xml:space="preserve">
+    <value>نسبة الكميه القديمه</value>
+  </data>
+  <data name="Project_eng_ProductionPrc" xml:space="preserve">
+    <value>نسبة الانتاج</value>
+  </data>
+  <data name="Project_eng_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="Project_eng_ItemNameAr" xml:space="preserve">
+    <value>Item Name Ar</value>
+  </data>
+  <data name="Project_eng_ItemNameEn" xml:space="preserve">
+    <value>Item Name En</value>
+  </data>
+  <data name="Print__Activity" xml:space="preserve">
+    <value>طباعه النشاط</value>
+  </data>
+  <data name="Eng_budget_Apirl" xml:space="preserve">
+    <value>أبريل</value>
+  </data>
+  <data name="Eng_budget_aug" xml:space="preserve">
+    <value>اغسطس</value>
+  </data>
+  <data name="Eng_budget_BeforeJan" xml:space="preserve">
+    <value>قبل يناير</value>
+  </data>
+  <data name="Eng_budget_Dec" xml:space="preserve">
+    <value>ديسمبر</value>
+  </data>
+  <data name="Eng_budget_Feb" xml:space="preserve">
+    <value>فبراير</value>
+  </data>
+  <data name="Eng_budget_Jan" xml:space="preserve">
+    <value>يناير</value>
+  </data>
+  <data name="Eng_budget_july" xml:space="preserve">
+    <value>يوليو</value>
+  </data>
+  <data name="Eng_budget_june" xml:space="preserve">
+    <value>يونيو</value>
+  </data>
+  <data name="Eng_budget_March" xml:space="preserve">
+    <value>مارس</value>
+  </data>
+  <data name="Eng_budget_may" xml:space="preserve">
+    <value>مايو</value>
+  </data>
+  <data name="Eng_budget_Nov" xml:space="preserve">
+    <value>نوفمبر</value>
+  </data>
+  <data name="Eng_budget_oct" xml:space="preserve">
+    <value>أكتوبر</value>
+  </data>
+  <data name="Eng_budget_PhaseNo" xml:space="preserve">
+    <value>رقم المرحلة</value>
+  </data>
+  <data name="Eng_budget_ProjNo" xml:space="preserve">
+    <value>رقم المشروع</value>
+  </data>
+  <data name="Eng_budget_sept" xml:space="preserve">
+    <value>سبتمبر</value>
+  </data>
+  <data name="Eng_budget_Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="Eng_budget_ytod" xml:space="preserve">
+    <value>YTOD</value>
+  </data>
+  <data name="Eng_Budg_Month" xml:space="preserve">
+    <value>الشهر</value>
+  </data>
+  <data name="Spec_MaterialUsageitem" xml:space="preserve">
+    <value>استخدام المواد حسب البند</value>
+  </data>
+  <data name="Spec_MaterialUsageproject" xml:space="preserve">
+    <value>استخدام المواد حسب المشروع</value>
+  </data>
+  <data name="Spec_summary" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="Spec_UnProdCat" xml:space="preserve">
+    <value>UnProd Cat.</value>
+  </data>
+  <data name="Spec_UnProdReason" xml:space="preserve">
+    <value>UnProd Reason</value>
+  </data>
+  <data name="Spec_Equipmentwork" xml:space="preserve">
+    <value>عمل المعدات</value>
+  </data>
+  <data name="Spec_ProjectEngineer" xml:space="preserve">
+    <value>مهندس المشروع</value>
+  </data>
+  <data name="Eng_budget_ActualApirl" xml:space="preserve">
+    <value>Actual Apirl</value>
+  </data>
+  <data name="Eng_budget_Actualaug" xml:space="preserve">
+    <value>Actual Aug</value>
+  </data>
+  <data name="Eng_budget_ActualDec" xml:space="preserve">
+    <value>Actual Dec</value>
+  </data>
+  <data name="Eng_budget_ActualFeb" xml:space="preserve">
+    <value>Actual Feb</value>
+  </data>
+  <data name="Eng_budget_ActualJan" xml:space="preserve">
+    <value>Actual Jan</value>
+  </data>
+  <data name="Eng_budget_Actualjuly" xml:space="preserve">
+    <value>Actual July</value>
+  </data>
+  <data name="Eng_budget_Actualjune" xml:space="preserve">
+    <value>Actual June</value>
+  </data>
+  <data name="Eng_budget_ActualMarch" xml:space="preserve">
+    <value>Actual March</value>
+  </data>
+  <data name="Eng_budget_Actualmay" xml:space="preserve">
+    <value>Actual May</value>
+  </data>
+  <data name="Eng_budget_ActualNov" xml:space="preserve">
+    <value>Actual Nov</value>
+  </data>
+  <data name="Eng_budget_Actualoct" xml:space="preserve">
+    <value>Actual Oct</value>
+  </data>
+  <data name="Eng_budget_Actualsept" xml:space="preserve">
+    <value>Actual Sept</value>
+  </data>
+  <data name="Eng_budget_Actualytod" xml:space="preserve">
+    <value>Actual YTOD</value>
+  </data>
+  <data name="Eng_budget_BudgetApirl" xml:space="preserve">
+    <value>Budget Apirl</value>
+  </data>
+  <data name="Eng_budget_Budgetaug" xml:space="preserve">
+    <value>Budget Aug</value>
+  </data>
+  <data name="Eng_budget_BudgetDec" xml:space="preserve">
+    <value>Budget Dec</value>
+  </data>
+  <data name="Eng_budget_BudgetFeb" xml:space="preserve">
+    <value>Budget Feb</value>
+  </data>
+  <data name="Eng_budget_budgetJan" xml:space="preserve">
+    <value>Budget Jan</value>
+  </data>
+  <data name="Eng_budget_Budgetjuly" xml:space="preserve">
+    <value>Budget July</value>
+  </data>
+  <data name="Eng_budget_Budgetjune" xml:space="preserve">
+    <value>Budget June</value>
+  </data>
+  <data name="Eng_budget_BudgetMarch" xml:space="preserve">
+    <value>Budget March</value>
+  </data>
+  <data name="Eng_budget_Budgetmay" xml:space="preserve">
+    <value>Budget May</value>
+  </data>
+  <data name="Eng_budget_BudgetNov" xml:space="preserve">
+    <value>Budget Nov</value>
+  </data>
+  <data name="Eng_budget_Budgetoct" xml:space="preserve">
+    <value>Budget Oct</value>
+  </data>
+  <data name="Eng_budget_Budgetsept" xml:space="preserve">
+    <value>Budget Sept</value>
+  </data>
+  <data name="Eng_budget_Budgetytod" xml:space="preserve">
+    <value>Budget YTOD</value>
+  </data>
+  <data name="Spec_Detail" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="Resm_Laborbonus" xml:space="preserve">
+    <value>عمل اضافى</value>
+  </data>
+  <data name="Men_ProjectBandFollowUp" xml:space="preserve">
+    <value>متابعة فرقة المشروع</value>
+  </data>
+  <data name="Men_ProjectDistribution" xml:space="preserve">
+    <value>توزيع المشروع</value>
+  </data>
+  <data name="Men_ProjectFollowUp" xml:space="preserve">
+    <value>متابعة المشروع</value>
+  </data>
+  <data name="Men_ProjectPhaseDistribution" xml:space="preserve">
+    <value>توزيع مرحلة المشروع</value>
+  </data>
+  <data name="Men_ProjectWorking" xml:space="preserve">
+    <value>مشروع العمل</value>
+  </data>
+  <data name="REP_Monitoring" xml:space="preserve">
+    <value>مراقبة</value>
+  </data>
+  <data name="Men_RepEquipCostVariance" xml:space="preserve">
+    <value>تجهيز فروق التكلفة</value>
+  </data>
+  <data name="Men_RepLaborCostVariance" xml:space="preserve">
+    <value>تكلفة العمالة التباين</value>
+  </data>
+  <data name="Men_RepLaborEvaluation" xml:space="preserve">
+    <value>تقييم العمل</value>
+  </data>
+  <data name="Men_RepMaterialCoverage" xml:space="preserve">
+    <value>تغطية المواد</value>
+  </data>
+  <data name="Men_RepProjectCost" xml:space="preserve">
+    <value>تكلفة المشروع</value>
+  </data>
+  <data name="Men_RepProjectCostVarian" xml:space="preserve">
+    <value>تكلفة المشروع التباين</value>
+  </data>
+  <data name="Men_RepProjectEvaluation" xml:space="preserve">
+    <value>تقييم المشاريع</value>
+  </data>
+  <data name="Men_RepSiteEngineerBonus" xml:space="preserve">
+    <value>مهندس موقع مكافأة </value>
+  </data>
+  <data name="RepVariance" xml:space="preserve">
+    <value>التباين</value>
+  </data>
+  <data name="REP_RepEvaluation" xml:space="preserve">
+    <value>التقييم</value>
+  </data>
+  <data name="Eng_fld_LaborEvaluation" xml:space="preserve">
+    <value>تقييم العمل</value>
+  </data>
+  <data name="Ger_Rep_fld_Included" xml:space="preserve">
+    <value>Included</value>
+  </data>
+  <data name="Ger_Rep_fld_salesengcode" xml:space="preserve">
+    <value>sales engineer code</value>
+  </data>
+  <data name="Ger_Rep_fld_scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Ger_Rep_fld_SiteEngCode" xml:space="preserve">
+    <value>Site Engineer Code</value>
+  </data>
+  <data name="Eng_fld_Region" xml:space="preserve">
+    <value>منطقة</value>
+  </data>
+  <data name="Eng_fld_ItemsCode" xml:space="preserve">
+    <value>Items Code</value>
+  </data>
+  <data name="Men_BranchComparison" xml:space="preserve">
+    <value>مقارنة فرع</value>
+  </data>
+  <data name="Men_ByActivity" xml:space="preserve">
+    <value>نشاطي</value>
+  </data>
+  <data name="Men_ByBranch" xml:space="preserve">
+    <value>حسب الفرع</value>
+  </data>
+  <data name="Men_ByCustomerClass" xml:space="preserve">
+    <value>حسب فئة العملاء</value>
+  </data>
+  <data name="Men_ByItem" xml:space="preserve">
+    <value>حسب البند</value>
+  </data>
+  <data name="Men_ByProject" xml:space="preserve">
+    <value>حسب المشروع</value>
+  </data>
+  <data name="Men_ByScope" xml:space="preserve">
+    <value>بواسطة النطاق</value>
+  </data>
+  <data name="Men_ByScopeCategory" xml:space="preserve">
+    <value>حسب نطاق الفئة</value>
+  </data>
+  <data name="Men_CompanyCollectiveWor" xml:space="preserve">
+    <value>شركة العمل الجماعي</value>
+  </data>
+  <data name="Men_DirectCostComparison" xml:space="preserve">
+    <value>مقارنة التكلفة المباشرة</value>
+  </data>
+  <data name="Men_EvaluationComparison" xml:space="preserve">
+    <value>مقارنة التقييم</value>
+  </data>
+  <data name="Men_IncomeComparison" xml:space="preserve">
+    <value>مقارنة الدخل</value>
+  </data>
+  <data name="Men_NormsVariationReport" xml:space="preserve">
+    <value>تقرير تنوع القواعد</value>
+  </data>
+  <data name="Men_ProductionComparison" xml:space="preserve">
+    <value>مقارنة الإنتاج</value>
+  </data>
+  <data name="Men_SalesComparison" xml:space="preserve">
+    <value>مقارنة المبيعات</value>
+  </data>
+  <data name="Men_SubContractorWork" xml:space="preserve">
+    <value>عمل المقاول من الباطن</value>
+  </data>
+  <data name="Dss_fld_AdditionalWork" xml:space="preserve">
+    <value>تكلفة الساعة</value>
+  </data>
+  <data name="Dss_fld_ContractPrice" xml:space="preserve">
+    <value>قيمة التعاقد</value>
+  </data>
+  <data name="Dss_fld_NewProjects" xml:space="preserve">
+    <value>مشروع جديد</value>
+  </data>
+  <data name="Dss_fld_ProjectChange" xml:space="preserve">
+    <value>تغيير المشروع</value>
+  </data>
+  <data name="Dss_fld_Projectincluded" xml:space="preserve">
+    <value>محتوي المشروع</value>
+  </data>
+  <data name="Dss_fld_SalesValueSelection" xml:space="preserve">
+    <value>اختيار قيمة المبيعات</value>
+  </data>
+  <data name="Dss_fld_BySalesPrice" xml:space="preserve">
+    <value>حسب سعر البيع</value>
+  </data>
+  <data name="Dss_fld_ByStdPrice" xml:space="preserve">
+    <value>By Std Price</value>
+  </data>
+  <data name="Dss_fld_InternalProd" xml:space="preserve">
+    <value>Internal Prod.</value>
+  </data>
+  <data name="Dss_fld_ByCustomerBill" xml:space="preserve">
+    <value>بواسطة بيل العملاء</value>
+  </data>
+  <data name="Dss_fld_ByProductionInvoice" xml:space="preserve">
+    <value>بواسطة فاتورة الإنتاج</value>
+  </data>
+  <data name="Dss_fld_IncomeValueSelection" xml:space="preserve">
+    <value>اختيار قيمة الدخل</value>
+  </data>
+  <data name="DSs_ProductionValueSelection" xml:space="preserve">
+    <value>اختيار قيمة الإنتاج</value>
+  </data>
+  <data name="Dss_fld_FromBranch" xml:space="preserve">
+    <value>من فرع</value>
+  </data>
+  <data name="Dss_fld_tobranch" xml:space="preserve">
+    <value>الي الفرع</value>
+  </data>
+  <data name="DSS_byRegion" xml:space="preserve">
+    <value>بالمنطقة</value>
+  </data>
+  <data name="serv_MaterialRequest" xml:space="preserve">
+    <value>Mat. Req.</value>
+  </data>
+  <data name="Cost_LineCode" xml:space="preserve">
+    <value>الكود</value>
+  </data>
+  <data name="OffBil_DueAmount" xml:space="preserve">
+    <value>المبلغ المستحق</value>
+  </data>
+  <data name="OffBil_DueDate" xml:space="preserve">
+    <value>تاريخ الاستحقاق</value>
+  </data>
+  <data name="OffBil_DuePrc" xml:space="preserve">
+    <value>نسبة الاستحقاق</value>
+  </data>
+  <data name="OffBil_ItemDesc" xml:space="preserve">
+    <value>وصف العنصر</value>
+  </data>
+  <data name="OffBil_OfferItemId" xml:space="preserve">
+    <value>رقم العرض</value>
+  </data>
+  <data name="OffBil_PayDescA" xml:space="preserve">
+    <value>الوصف عربى</value>
+  </data>
+  <data name="OffBil_PayDescE" xml:space="preserve">
+    <value>الوصف انجليزى</value>
+  </data>
+  <data name="OffBil_Prodprc" xml:space="preserve">
+    <value>نسبة الانجاز</value>
+  </data>
+  <data name="OffBil_Remarks" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="OffBil_Serial" xml:space="preserve">
+    <value>المسلسل</value>
+  </data>
+  <data name="work_PlanQty" xml:space="preserve">
+    <value>ك مخطط</value>
+  </data>
+  <data name="SMB_LineCode" xml:space="preserve">
+    <value>رقم البند</value>
+  </data>
+  <data name="SMB_Prod_TrNo" xml:space="preserve">
+    <value>رقم الانتاج</value>
+  </data>
+  <data name="Fld_Validty" xml:space="preserve">
+    <value>الصلاحية بالشهور</value>
+  </data>
+  <data name="Resm_fld_Issue" xml:space="preserve">
+    <value>العمليات</value>
+  </data>
+  <data name="ResM_Materiallabor_Labname" xml:space="preserve">
+    <value>اسم العامل</value>
+  </data>
+  <data name="Old_Project" xml:space="preserve">
+    <value>ادخال المشروع</value>
+  </data>
+  <data name="Fld_Additional" xml:space="preserve">
+    <value>التكلفة الاضافية</value>
+  </data>
+  <data name="SMB_PrevBillQty" xml:space="preserve">
+    <value>مفوتر سابقا</value>
+  </data>
+  <data name="SMB_ProdQty" xml:space="preserve">
+    <value>الانتاج</value>
+  </data>
+  <data name="SMB_ProjQty" xml:space="preserve">
+    <value>كمية المشروع</value>
+  </data>
+  <data name="SMB_UomCode" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="Act_EquipName1" xml:space="preserve">
+    <value>اسم المعدة</value>
+  </data>
+  <data name="ByLabor" xml:space="preserve">
+    <value>بواسطة العمل</value>
+  </data>
+  <data name="Men_UsersSetting" xml:space="preserve">
+    <value>صلاحيات المستخدمين</value>
+  </data>
+  <data name="URS_Active" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="URS_Add" xml:space="preserve">
+    <value>الاضافة</value>
+  </data>
+  <data name="URS_City" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="URS_CopyFrom" xml:space="preserve">
+    <value>نسخة من</value>
+  </data>
+  <data name="URS_CUSTOM1" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="URS_CUSTOM1_DESC" xml:space="preserve">
+    <value>C1_DESC</value>
+  </data>
+  <data name="URS_CUSTOM2" xml:space="preserve">
+    <value>C2</value>
+  </data>
+  <data name="URS_CUSTOM2_DESC" xml:space="preserve">
+    <value>C2_DESC</value>
+  </data>
+  <data name="URS_CUSTOM3" xml:space="preserve">
+    <value>C3</value>
+  </data>
+  <data name="URS_CUSTOM3_DESC" xml:space="preserve">
+    <value>C3_DESC</value>
+  </data>
+  <data name="URS_CUSTOM4" xml:space="preserve">
+    <value>C4</value>
+  </data>
+  <data name="URS_CUSTOM4_DESC" xml:space="preserve">
+    <value>C4_DESC</value>
+  </data>
+  <data name="URS_CUSTOM5" xml:space="preserve">
+    <value>C5</value>
+  </data>
+  <data name="URS_CUSTOM5_DESC" xml:space="preserve">
+    <value>C5_DESC</value>
+  </data>
+  <data name="URS_CUSTOM6" xml:space="preserve">
+    <value>C6</value>
+  </data>
+  <data name="URS_CUSTOM6_DESC" xml:space="preserve">
+    <value>C6_DESC</value>
+  </data>
+  <data name="URS_CUSTOM7" xml:space="preserve">
+    <value>C7</value>
+  </data>
+  <data name="URS_CUSTOM7_DESC" xml:space="preserve">
+    <value>C7_DESC</value>
+  </data>
+  <data name="URS_CUSTOM8" xml:space="preserve">
+    <value>C8</value>
+  </data>
+  <data name="URS_CUSTOM8_DESC" xml:space="preserve">
+    <value>C8_DESC</value>
+  </data>
+  <data name="URS_CUSTOM9" xml:space="preserve">
+    <value>C9</value>
+  </data>
+  <data name="URS_CUSTOM9_DESC" xml:space="preserve">
+    <value>C9_DESC</value>
+  </data>
+  <data name="URS_Delete" xml:space="preserve">
+    <value>الحذف</value>
+  </data>
+  <data name="URS_Department" xml:space="preserve">
+    <value>القسم</value>
+  </data>
+  <data name="URS_Edit" xml:space="preserve">
+    <value>التعديل</value>
+  </data>
+  <data name="URS_EditImg" xml:space="preserve">
+    <value>تعديل الصورة</value>
+  </data>
+  <data name="URS_Job" xml:space="preserve">
+    <value>الوظيفة</value>
+  </data>
+  <data name="URS_KeepRelation" xml:space="preserve">
+    <value>حفظ العلاقات</value>
+  </data>
+  <data name="URS_Operate" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="URS_Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="URS_Print" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="URS_Save" xml:space="preserve">
+    <value>الحفظ</value>
+  </data>
+  <data name="URS_Show" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="URS_ShowImg" xml:space="preserve">
+    <value>عرض الصورة</value>
+  </data>
+  <data name="URS_UserCode" xml:space="preserve">
+    <value>كود المستخدم</value>
+  </data>
+  <data name="URS_UserName" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="RDBillingList" xml:space="preserve">
+    <value>قائمة الفواتير</value>
+  </data>
+  <data name="RDProdVsBill" xml:space="preserve">
+    <value>الانتاج مقابل الفواتير</value>
+  </data>
+  <data name="By_Engineer" xml:space="preserve">
+    <value>حسب المهندس</value>
+  </data>
+  <data name="By_SubContractor" xml:space="preserve">
+    <value>حسب مقاول الباطن</value>
+  </data>
+  <data name="Fld_NetAmount" xml:space="preserve">
+    <value>الصافي</value>
+  </data>
+  <data name="ProjSpec_ProdPRc" xml:space="preserve">
+    <value>النسبة</value>
+  </data>
+  <data name="ProjItemsInventory" xml:space="preserve">
+    <value>جرد أصناف مشروع</value>
+  </data>
+  <data name="Men_EngReports" xml:space="preserve">
+    <value>تقارير المشاريع</value>
+  </data>
+  <data name="ByScope" xml:space="preserve">
+    <value>بالنطاق</value>
+  </data>
+  <data name="Rpt_Grouping" xml:space="preserve">
+    <value>تجميع بواسطة</value>
+  </data>
+  <data name="Fld_Reopen" xml:space="preserve">
+    <value>اعادة فتح</value>
+  </data>
+  <data name="Fld_VatPrc" xml:space="preserve">
+    <value>نسبة الضريبة</value>
+  </data>
+  <data name="Def_VatPrc" xml:space="preserve">
+    <value>نسبة الضريبة</value>
+  </data>
+  <data name="PManag_EOH" xml:space="preserve">
+    <value>EQ OH</value>
+  </data>
+  <data name="PManag_EPOH" xml:space="preserve">
+    <value>EQ P OH</value>
+  </data>
+  <data name="PManag_ExOH" xml:space="preserve">
+    <value>Exp OH</value>
+  </data>
+  <data name="PManag_ExPOH" xml:space="preserve">
+    <value>Exp P OH</value>
+  </data>
+  <data name="PManag_LOH" xml:space="preserve">
+    <value>Lab OH</value>
+  </data>
+  <data name="PManag_LPOH" xml:space="preserve">
+    <value>Lab P OH</value>
+  </data>
+  <data name="PManag_MOH" xml:space="preserve">
+    <value>Mat OH</value>
+  </data>
+  <data name="PManag_MPOH" xml:space="preserve">
+    <value>Mat P OH</value>
+  </data>
+  <data name="PManag_SOH" xml:space="preserve">
+    <value>Sub C OH</value>
+  </data>
+  <data name="PManag_SPOH" xml:space="preserve">
+    <value>Sub P OH</value>
+  </data>
+  <data name="Eng_Summary" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="Spec_MaterialUsageSummary" xml:space="preserve">
+    <value>ملخص استخدام المواد</value>
+  </data>
+  <data name="By_Material" xml:space="preserve">
+    <value>وفقا للمادة</value>
+  </data>
+  <data name="By_Transaction" xml:space="preserve">
+    <value>وفقا لحركة الصرف</value>
+  </data>
+  <data name="Fld_TotalAllowance" xml:space="preserve">
+    <value>اجمالي البدلات</value>
+  </data>
+  <data name="rpByInvoice" xml:space="preserve">
+    <value>بالفاتورة</value>
+  </data>
+  <data name="rpByPhase" xml:space="preserve">
+    <value>بالمرحلة</value>
+  </data>
+  <data name="RpVatType" xml:space="preserve">
+    <value>نوع الضريبة</value>
+  </data>
+  <data name="Men_PeriodBudget" xml:space="preserve">
+    <value>مستهدف الانتاج الشهري</value>
+  </data>
+  <data name="ResM_Materiallabor_LateNo" xml:space="preserve">
+    <value>رقم الحركة</value>
+  </data>
+  <data name="Eng_Rep_RedinternalWork" xml:space="preserve">
+    <value>انتاج داخلي</value>
+  </data>
+  <data name="Eng_Rep_RedSubWork" xml:space="preserve">
+    <value>انتاج مقاولي الباطن</value>
+  </data>
+  <data name="work_SchTarget" xml:space="preserve">
+    <value>الانتاج اليومي</value>
+  </data>
+  <data name="ItemCodeLike" xml:space="preserve">
+    <value>رقم الصنف يحتوي</value>
+  </data>
+  <data name="ItemNameLike" xml:space="preserve">
+    <value>اسم الصنف يحتوي</value>
+  </data>
+  <data name="Resm_ProdVSProgress" xml:space="preserve">
+    <value>Prod VS Progress</value>
+  </data>
+  <data name="Men_Techvariationorder" xml:space="preserve">
+    <value>Technical Variation Order</value>
+  </data>
+  <data name="Men_Projectvaliation" xml:space="preserve">
+    <value>Project Valiation</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>String2</value>
+  </data>
+  <data name="CRMReport" xml:space="preserve">
+    <value>CRM Report</value>
+  </data>
+  <data name="TaxInvoicelist" xml:space="preserve">
+    <value>Tax Invoice list</value>
+  </data>
+  <data name="Men_CreditDebitNote" xml:space="preserve">
+    <value>CreditDebitNote</value>
+  </data>
+</root>

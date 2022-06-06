@@ -1,0 +1,169 @@
+﻿
+@using PMS.WebUI.Resources;
+@{
+    ViewBag.Title = "HomeResourceIndex";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<ul class="nav navbar-nav">
+    <li class="liItem disabledLi dropdown" id="btnMaterial">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_Material <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi" key="BillOfMaterial"><a id="btnBillOfMaterial" href="#">@SystemResource.Men_BillOfMaterial</a></li>
+            <li class="liItem disabledLi" key="MaterialMonitoring"><a id="btnMaterialMonitoring" href="#">@SystemResource.Men_MaterialMonitoring </a></li>
+            <li class="liItem disabledLi" key="MaterialRequest"><a id="btnMaterialRequest" href="#">@SystemResource.Men_MaterialRequest </a></li>
+            <li class="liItem disabledLi" key="MaterialIssuance"><a id="btnMaterialIssuance" href="#">@SystemResource.Men_MaterialIssuance </a></li>
+            <li class="liItem disabledLi" key="MaterialReturn"><a id="btnMaterialReturn" href="#">@SystemResource.Men_MaterialReturn </a></li>
+            <li class="liItem disabledLi" key="MaterialList"><a id="btnMaterialList" href="#">@SystemResource.Men_MaterialList </a></li>
+        </ul>
+    </li>
+    <li class="liItem disabledLi dropdown" id="btnEquipment">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_Equipment <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi" key="EquipmentMonitoring"><a id="btnEquipmentMonitoring" href="#">@SystemResource.Men_EquipmentMonitoring</a></li>
+            <li class="liItem disabledLi" key="EquipmentRequest"><a id="btnEquipmentRequest" href="#">@SystemResource.Men_EquipmentRequest </a></li>
+            <li class="liItem disabledLi" key="EquipmentAssign"><a id="btnEquipmentAssign" href="#">@SystemResource.Men_EquipmentAssign </a></li>
+        </ul>
+    </li>
+    <li class="liItem disabledLi dropdown" id="btnLabor">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_Labor <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi" key="LaborMonitoring"><a id="btnLaborMonitoring" href="#">@SystemResource.Men_LaborMonitoring </a></li>
+            <li class="liItem disabledLi" key="LaborRequest"><a id="btnLaborRequest" href="#">@SystemResource.Men_LaborRequest </a></li>
+            <li class="liItem disabledLi" key="LaborAssign"><a id="btnLaborAssign" href="#">@SystemResource.Men_LaborAssign </a></li>
+            <li class="liItem disabledLi" key="OverTimeSheet"><a id="btnOverTimeSheet" href="#">@SystemResource.Men_OverTimeSheet </a></li>
+            <li class="liItem disabledLi" key="LateandAbsence"><a id="btnLateandAbsence" href="#">@SystemResource.Men_LateandAbsence </a></li>
+        </ul>
+    </li>
+    <li class="liItem disabledLi dropdown" id="btnReports">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_Reports <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi" key="ProjectRequirements"><a id="btnProjectRequirements" href="#">@SystemResource.Resm_ProjectRequirements</a></li>
+            <li class="liItem disabledLi" key="UnprodHour"><a id="btnUnprodHour" href="#">@SystemResource.Resm_UnprodHour </a></li>
+
+            <li class="dropdown drop_list" id="btnMaterialRep">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button">@SystemResource.Resm_MaterialUsage <i class="fa fa-arrow-right"></i></a>
+                <ul class="dropdown-menu sub-menu sub3">
+                    <li class="liItem disabledLi" key="MaterialUsage"><a id="btnMaterialUsage" href="#">@SystemResource.Spec_MaterialUsageitem</a></li>
+                    <li class="liItem disabledLi" key="MaterialUsageproject"><a id="btnMaterialUsageproject" href="#">@SystemResource.Spec_MaterialUsageproject</a></li>
+
+                </ul>
+            </li>
+
+
+
+            <li class="dropdown drop_list" id="btLaborRep">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button">@SystemResource.Fld_Labor <i class="fa fa-arrow-right"></i></a>
+                <ul class="dropdown-menu sub-menu sub3">
+                    <li class="liItem disabledLi" key="LaborMovement"><a id="btnLaborMovement" href="#">@SystemResource.Resm_LaborMovement </a></li>
+                    @*<li class="liItem disabledLi" key="LaborSchedule"><a id="btnLaborSchedule" href="#">@SystemResource.Eng_RepDailySuperVisorbouns</a></li>*@
+
+                    <li class="liItem disabledLi" key="LaborSchedule"><a id="btnLaborSchedule" href="#">@SystemResource.Men_LaborSchedule</a></li>
+
+                    <li class="liItem disabledLi" key="LaborWork"><a id="btnLaborWork" href="#">@SystemResource.Resm_LaborWork </a></li>
+                    <li class="liItem disabledLi" key="AttendanceSheet"><a id="btnAttendanceSheet" href="#">@SystemResource.Resm_AttendanceSheet </a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown drop_list" id="btnEquipRep">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button">@SystemResource.Men_Equipment <i class="fa fa-arrow-right"></i></a>
+                <ul class="dropdown-menu sub-menu sub3">
+                    <li class="liItem disabledLi" key="Equipmentmovement"><a id="btnEquipmentmovement" href="#">@SystemResource.Resm_Equipmentmovement</a></li>
+                    <li class="liItem disabledLi" key="Equipmentutilization"><a id="btnEquipmentutilization" href="#">@SystemResource.Spec_Equipmentwork </a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+@*//------------------------------------------------------NewSession---------------------------------------*@
+<div class="modal fade messagealert" id="modalSession" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="MessageBoxTitle">الوقت!!</h4>
+            </div>
+            <div class="modal-body" style="max-height:200px; overflow:auto;">
+                <div class="col-xs-7"> <h3 id="MessageBoxMessage">لقد استنفذت وقت الجلسة هل تريد الاستمرار </h3></div>
+                <div class="col-xs-5 text-center">
+                    <i class="glyphicon btn-danger"></i>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="SessionBoxOk" class="btn btn-danger">نعم</button>
+                <button type="button" id="SessionBoxCancel" class="btn btn-warning" data-dismiss="modal">لا</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .display_none {
+        display: none
+    }
+</style>
+<span id="timeLeft" class="admin-name display_none" style="color: red;font-weight: bold;     margin-right: 76%;font-size: 20px;"></span>
+<input id="idSession" value="10" class="display_none" />
+<select id="SelectSession" class="display_none">
+    <option value="0">off</option>
+    <option value="1">on</option>
+    <option value="2">out</option>
+</select>
+<script>
+    debugger
+    var timeInSecondsAfterSessionOut = 0;
+    $(function () {
+        $("body").on('mousemove', function () {
+            $("#timeLeft").addClass('display_none');
+            ResetThisSession();
+        });
+    });
+    $('#SelectSession').on('change', function () {
+        timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+        $("#timeLeft").html(timeInSecondsAfterSessionOut);
+    });
+    timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+    $("#timeLeft").html(timeInSecondsAfterSessionOut);
+    var secondTick = 0;
+    StartThisSessionTimer();
+    function ResetThisSession() {
+        secondTick = 0;
+    }
+    var SessionBoxOk = document.getElementById("SessionBoxOk");
+    var SessionBoxCancel = document.getElementById("SessionBoxCancel");
+    function StartThisSessionTimer() {
+        secondTick++;
+        var timeLeft = ((timeInSecondsAfterSessionOut - secondTick) / 60).toFixed(0); // in minutes
+        timeLeft = timeInSecondsAfterSessionOut - secondTick; // override, we have 30 secs only
+        if (timeLeft == 9) {
+            $("#timeLeft").removeClass('display_none')
+        }
+        $("#timeLeft").html(timeLeft);
+        if (secondTick > timeInSecondsAfterSessionOut) {
+            clearTimeout(tick);
+            var chak = false;
+            $("#modalSession").modal("show");
+            $("#timeLeft").addClass('display_none');
+            $("#" + SessionBoxOk.id).click(() => {
+                $("#timeLeft").addClass('display_none')
+                secondTick = 0;
+                $("#modalSession").modal("hide");
+                chak = true;
+            });
+            $("#" + SessionBoxCancel.id).click(() => {
+                $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                $("#modalSession").modal("hide");
+                chak = false;
+            });
+            setTimeout(function () {
+                if (chak == false) {
+                    $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                }
+            }, 10000);
+        }
+        tick = setTimeout("StartThisSessionTimer()", 1000);
+    }
+</script>
+@*//---------------------------------------------------------------------------------------------------------------*@

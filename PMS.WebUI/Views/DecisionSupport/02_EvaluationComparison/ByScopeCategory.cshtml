@@ -1,0 +1,142 @@
+﻿
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Men_SalesComparison</label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+
+
+
+
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+
+
+                            <div class="col-md-12" style="padding:0px;margin:5px">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.PManag_FromDate </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                    <input type="date" class="form-control input-sm addable editable" name="EngCode" id="FromDate">
+                                </div>
+                                <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right" style="width: 90px;"> @SystemResource.ResM_fld_laborrequest_todate </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                    <input type="date" class="form-control input-sm addable editable" name="EngCode" id="ToDate">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-7">
+
+                                        <div class="col-md-12" style="padding:0px;margin:5px; ">
+                                            <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_fld_Region</label>
+                                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                                <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="Region1">
+                                                <input type="text" class="form-control input-sm" id="txtRegionID" name="Region2" disabled>
+                                            </div>
+                                            <div class="info-btn">
+                                                <button type="button" class="btn btn-warning" id="btnRegionID">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                                <input type="text" class="form-control inpt-sm" id="txtRegionDes" name="Region4" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 col-xs-5 text-center">
+                                            <label style="margin-left: 355%;" class="labelpopup">@SystemResource.Ger_Rep_fld_Included</label>
+                                        </div>
+
+                                        </div>
+
+                                        
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-7">
+                                        <div class="col-md-12" style="padding:0px;margin:5px">
+                                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Resm_branch </label>
+                                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                                <input type="text" class="form-control input-sm" id="txtBranchCod" name="txtBranchCod"disabled>
+                                            </div>
+                                            <div class="info-btn">
+                                                <button type="button" class="btn btn-warning" id="btnBranch">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </div>
+                                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                                <input type="text" class="form-control inpt-sm" id="txtBranchDes" name="txtBranchDes"disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12" style="padding:0px;margin:5px;margin-top:-4px">
+                                            <div class="col-md-12" style="padding:0px;margin:5px 0px">
+                                                <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_customerclass</label>
+                                                <div class="col-md-2 col-sm-4 col-xs-5">
+                                                    <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="txtCustClass">
+                                                    <input type="text" class="form-control input-sm" id="txtCustClassCod" name="txtCustClassCod"disabled>
+                                                </div>
+                                                <div class="info-btn">
+                                                    <button type="button" class="btn btn-warning" id="btnCustClassID" name="CustClassID">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                                    <input type="text" class="form-control inpt-sm" id="txtCustClassDes"disabled>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-md-5 popsection">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6 col-xs-5">
+
+                                                <input type="radio" checked name="price" class="dailwork_input" id="RedAllProject" />
+                                                <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_allproject</label>
+                                            </div>
+                                            <div class="col-md-6 col-xs-5">
+                                                <input type="radio" name="price" class="dailwork_input" id="RedNonRepair" />
+                                                <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_nonrepair</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-12 col-xs-5">
+                                                <input type="radio" checked name="price" class="dailwork_input" id="RedRepair" />
+                                                <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_repair</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+</form>
+    </div>
+</div>
+
+
+
+<script src="~/ClientApp/Components/DecisionSupport/02_EvaluationComparison/ByScopeCategory.js"></script>

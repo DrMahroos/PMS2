@@ -1,0 +1,196 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "SiteEngineerIndex";
+    ViewBag.Title = SystemResource.Men_SiteEngineer;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div class="modal fade" id="myModalPrint" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="menu text-left menu_site_eng">
+                            <button id="btnHome" class="item home_ro pageload-link">
+                                <div class="link icon_home"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">الرئيسية</h2>
+                                    <h2 class="language en">Home</h2>
+                                </div>
+                            </button>
+                            <button class="item delete_ro" id="DeleteButton" data-target="#myModal2">
+                                <div class="link icon_delete"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">حذف</h2>
+                                    <h2 class="language en">Delete</h2>
+                                </div>
+                            </button>
+                            <button class="item print_ro" id="PrintButton" data-toggle="modal" data-target="#myModalPrint">
+                                <div class="link icon_print"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">طباعة</h2>
+                                    <h2 class="language en">Print</h2>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_EngCode </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="hidden" class="form-control input-sm" name="SiteEngineerId" id="txtSiteEngineerId">
+                            <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtEngCode">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable" id="butEngCode" name="butEngCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="col-xs-2"></div>
+                        <div class="col-md-2 col-sm-2 col-xs-6 checks">
+                            <span class="label">Active</span>
+                            <label class="switch">
+                                <input type="checkbox" class="addable editable" id="ChkIsActive" name="IsActive" /> @SystemResource.Fld_isActive
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_DescE </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+                        </div>
+                        <label for="txtMobile" class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_Mobile </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Mobile" id="txtMobile" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescA" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_DescA </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescA" id="txtDescA" />
+                        </div>
+                        <label for="txtTel1" class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_Tel </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Tel1" id="txtTel1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtSpeciality" class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_Speciality</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" name="Speciality" class="form-control input-sm addable editable" id="txtSpeciality">
+                        </div>
+                        <label for="txtCarPlateNo" class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_CarPlateNo  </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm addable editable" name="CarPlateNo" id="txtCarPlateNo">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtBasicSalary" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_BasicSalary </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="number" class="form-control input-sm addable editable" name="BasicSalary" id="txtBasicSalary">
+                        </div>
+                        <div class="col-md-2 hidden-xs"></div>
+                        <label for="txtEmail" class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_Email </label>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" name="Email" id="txtEmail">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtTotalAllow" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_TotalAllowance </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="number" class="form-control input-sm addable editable" name="TotalAllow" id="txtTotalAllow">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtSiteEngCategoryId" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_CategCode</label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="SiteEngCategoryId" id="txtSiteEngCategoryId">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="src-btn btn btn-warning addable editable" id="butSiteEngCategoryId" name="butSiteEngCategoryId">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="catin col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtDescECat">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_BraCode </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="BraCode" id="txtBraCode">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-info src-btn btn btn-warning addable editable" id="btnArea">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="catin col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtAreaName" name="AreaName">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="NationalityID" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_NationalityID </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="NationalityID" id="txtNationalityID">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="src-btn btn btn-warning addable editable" id="butNationalityID" name="NationalityID">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="catin col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtNationaltyName">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtRemarks" class="col-md-2 col-xs-2 control-label text-right"> @SystemResource.Fld_Remarks </label>
+                        <div class="col-md-4 col-sm-10 col-xs-12">
+                            <textarea class="form-control col-xs-12 form-control input-sm addable editable" rows="5" name="Remarks" id="txtRemarks"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/01_SubEngineers/SiteEngineer.js"></script>
+</div>

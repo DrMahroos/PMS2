@@ -1,0 +1,33 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "LaborOvertimetypesIndex";
+    ViewBag.Title = SystemResource.Men_LaborOvertimetypes;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+
+        <div class="clear"></div>
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 250px !important;
+            }
+        </style>
+
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    <script src="~/ClientApp/Components/Definitions/02_SubLaborDefinition/LaborOvertimetypes.js"></script>
+    @*@Html.Partial("../Partial/Navigator")*@
+</div>
+

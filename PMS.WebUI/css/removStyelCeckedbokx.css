@@ -1,0 +1,60 @@
+﻿
+input[type=checkbox]:before {
+    content: unset !important;
+    position: unset !important;
+    z-index: unset !important;
+    width: unset !important;
+    height: unset !important;
+    top: unset !important;
+    margin-top: unset !important;
+    background: unset !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    transition: unset !important;
+}
+
+input[type=checkbox]:after {
+    content: unset !important;
+    position: unset !important;
+    z-index: unset !important;
+    margin: unset !important;
+    top: unset !important;
+    display: unset !important;
+    background: unset !important;
+    padding: unset !important;
+    width: unset !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    color: #ffffff;
+    text-shadow: unset !important;
+    text-transform: unset !important;
+    font-size: unset !important;
+    text-align: unset !important;
+}
+
+input [type=checkbox]:checked:after {
+    content: unset !important;
+    text-align: unset !important;
+    background: unset !important;
+    color: unset !important;
+}
+
+td.jsgrid-cell.jsgrid-align-center input[type=checkbox]:checked::after {
+    background-color: unset !important;
+}
+
+.gridcehck:after, .gridcehck :before {
+    content: unset !important;
+}
+
+.gridcehck:checked:after {
+    content: unset !important;
+}
+
+.gridcehck:before {
+    content: unset !important;
+}
+
+.gridcehck:after {
+    content: unset !important;
+}

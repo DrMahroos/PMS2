@@ -1,0 +1,32 @@
+﻿.under-construction {
+    background-image: url('../images/background/sales1.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.intro {
+    background-image: url('../images/background/sales1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.large-header {
+    background-image: url('../images/background/sales1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    top:0%;
+    height:100%;
+}
+
+.main-menu {
+    background-image: url('../images/background/sales1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-color: #0b4151!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

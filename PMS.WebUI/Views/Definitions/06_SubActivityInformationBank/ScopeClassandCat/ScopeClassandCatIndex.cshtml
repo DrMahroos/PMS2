@@ -1,0 +1,33 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ScopeClassandCatIndex";
+    ViewBag.Title = SystemResource.Men_ScopeClassandCat;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+
+        <div class="clear"></div>
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 250px !important;
+            }
+        </style>
+
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/06_SubActivityInformationBank/ScopeClassandCat.js"></script>
+</div>
+

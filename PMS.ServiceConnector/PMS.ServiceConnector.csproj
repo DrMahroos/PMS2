@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD9D6219-25CC-4282-B783-A8C99C89E308}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PMS.ServiceConnector</RootNamespace>
+    <AssemblyName>PMS.ServiceConnector</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\DbEntities.cs" />
+    <Compile Include="Models\DescByCode.cs" />
+    <Compile Include="Models\Entities\A_ACCOUNT.cs" />
+    <Compile Include="Models\Entities\CustomEntities\G_USERModel.cs" />
+    <Compile Include="Models\Entities\CustomEntities\PQActivityCollection.cs" />
+    <Compile Include="Models\Entities\CustomEntities\P_TR_InvoiceCollection.cs" />
+    <Compile Include="Models\Entities\Definitions\IQ_SrchItem.cs" />
+    <Compile Include="Models\Entities\Definitions\PQ_GetActivityEquipmentClass.cs" />
+    <Compile Include="Models\Entities\Definitions\PQ_GetActivityLaborClass.cs" />
+    <Compile Include="Models\Entities\Definitions\PQ_GetActivityMaterialClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Activity.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_ActivityEquipClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_ActivityIMaterial.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_ActivityLaborClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Calender.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_CalenderDays.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Equipment.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_EquipmentClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Expences.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_ExpencesCategory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Labor.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_LaborAbsenceType.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_LaborCategory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_LaborClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_LaborLaborClass.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_LaborOverTimeType.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Location.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_SalesEgineer.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_SalesEngCateory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_Scope.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_ScopeCategory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_SiteEngCategory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_SiteEngineer.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_UnProdCategory.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_UnProdReason.cs" />
+    <Compile Include="Models\Entities\Definitions\P_D_UOM.cs" />
+    <Compile Include="Models\Entities\Definitions\P_G_Period.cs" />
+    <Compile Include="Models\Entities\Definitions\P_G_Region.cs" />
+    <Compile Include="Models\Entities\Definitions\P_G_WorkStatus.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_EngLoadProductionActivity_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_EngLoadProductionEquipment_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_EngLoadProductionLabor_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_Eng_BudgetEngineerActiv_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_EngVariationLoadItem_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PProc_Eng_BudgetEngineer_Result.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngExpenses.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngExpensesDetail.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProduction.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngproductionActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProductionEquipment.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProductionLabour.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProject.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProjectActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProjectItem.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngProjectPhase.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngServiceOrderActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubCandidateScope.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubContract.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubContractActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubContractorScope.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubProduction.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubProductionActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngSubServiceOrder.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngVariation.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngVariationActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngVariationItem.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchdule.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleEquip.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleEquipClass.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleLabor.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleLaborClass.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_GetEngWorkSchduleMaterial.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_LoadEngSubSOContractActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_SrchActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_SrchEngProjectActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\PQ_SrchEngProjectPhase.cs" />
+    <Compile Include="Models\Entities\Engineer\P_D_SubCandidate.cs" />
+    <Compile Include="Models\Entities\Engineer\P_D_SubCandidateScope.cs" />
+    <Compile Include="Models\Entities\Engineer\P_D_SubContractor.cs" />
+    <Compile Include="Models\Entities\Engineer\P_D_SubContractorScope.cs" />
+    <Compile Include="Models\Entities\Engineer\P_G_Budget.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngExpensesEntry.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngExpensesEntryDetail.cs" />
+    <Compile Include="Models\Entities\Engineer\P_Tr_EngProduction.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProductionActiv.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProductionEquip.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProductionLabour.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProject.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProjectActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProjectItem.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngProjectPhase.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngSchedule.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngScheduleActiv.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngScheduleEquip.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngScheduleEquipClass.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngScheduleLabor.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngScheduleLaborClass.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngVariation.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngVariationActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_EngVariationItem.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubContract.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubContractActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubProduction.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubProductionActivity.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubServiceOrder.cs" />
+    <Compile Include="Models\Entities\Engineer\P_TR_SubServiceOrderActivity.cs" />
+    <Compile Include="Models\Entities\GQ_GetUserModule.cs" />
+    <Compile Include="Models\Entities\GQ_GetUserSubsystem.cs" />
+    <Compile Include="Models\Entities\GQ_UserFavorite.cs" />
+    <Compile Include="Models\Entities\G_AlertControl.cs" />
+    <Compile Include="Models\Entities\G_AlertLog.cs" />
+    <Compile Include="Models\Entities\P_D_Status.cs" />
+    <Compile Include="Models\Entities\G_AlertType.cs" />
+    <Compile Include="Models\Entities\G_ModuleHelp.cs" />
+    <Compile Include="Models\Entities\G_Nationality.cs" />
+    <Compile Include="Models\Entities\CustomEntities\ItemUnitsModel.cs" />
+    <Compile Include="Models\Entities\CustomEntities\MemberStatisticsModel.cs" />
+    <Compile Include="Models\Entities\CustomEntities\ReportParameters.cs" />
+    <Compile Include="Models\Entities\G_BRANCH.cs" />
+    <Compile Include="Models\Entities\G_COMPANY.cs" />
+    <Compile Include="Models\Entities\G_COST_CENTER.cs" />
+    <Compile Include="Models\Entities\G_MODULES.cs" />
+    <Compile Include="Models\Entities\G_REGION.cs" />
+    <Compile Include="Models\Entities\G_REGION_BRANCH.cs" />
+    <Compile Include="Models\Entities\G_SearchForm.cs" />
+    <Compile Include="Models\Entities\G_SearchFormModule.cs" />
+    <Compile Include="Models\Entities\G_SearchFormSetting.cs" />
+    <Compile Include="Models\Entities\G_SUB_SYSTEMS.cs" />
+    <Compile Include="Models\Entities\G_USERS.cs" />
+    <Compile Include="Models\Entities\G_USER_BRANCH.cs" />
+    <Compile Include="Models\Entities\G_USER_COMPANY.cs" />
+    <Compile Include="Models\Entities\G_USER_FAVORITE.cs" />
+    <Compile Include="Models\Entities\G_USER_LOG.cs" />
+    <Compile Include="Models\Entities\G_USER_MODULE.cs" />
+    <Compile Include="Models\Entities\G_USER_SUB_SYSTEM.cs" />
+    <Compile Include="Models\Entities\G_USER_SYSTEM.cs" />
+    <Compile Include="Models\Entities\I_D_Category.cs" />
+    <Compile Include="Models\Entities\I_D_Specification.cs" />
+    <Compile Include="Models\Entities\I_D_SpecificationValues.cs" />
+    <Compile Include="Models\Entities\I_D_UnitGroup.cs" />
+    <Compile Include="Models\Entities\I_D_UnitGroupUom.cs" />
+    <Compile Include="Models\Entities\I_D_UOM.cs" />
+    <Compile Include="Models\Entities\I_G_CostMethods.cs" />
+    <Compile Include="Models\Entities\I_G_ItemType.cs" />
+    <Compile Include="Models\Entities\I_G_StockMethods.cs" />
+    <Compile Include="Models\Entities\I_Item.cs" />
+    <Compile Include="Models\Entities\I_ItemBatch.cs" />
+    <Compile Include="Models\Entities\I_ItemSpecsValue.cs" />
+    <Compile Include="Models\Entities\I_ItemStore.cs" />
+    <Compile Include="Models\Entities\I_ItemStoreBatch.cs" />
+    <Compile Include="Models\Entities\I_Pay_Vendor.cs" />
+    <Compile Include="Models\Entities\I_Pay_VendorItemCategory.cs" />
+    <Compile Include="Models\Entities\P_Control.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\IQ_GetItemList.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PPrc_Res_MaterialRequired_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_EngMonitorScheduleEquip_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_EngMonitorScheduleLabourClass_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_EngMonitorScheduleLabour_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_ResGetFreeEquip_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_ResGetFreeLabor_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PProc_ResGetMaterialissueReturn_Result.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResEquipAssign.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResLabourAbsence.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResLabourAbsenceDetail.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResLabourAssign.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResLabourOverTime.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResLabourOverTimeDetail.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResMaterialIssue.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResMaterialIssueDetails.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResMaterialReturned.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResMaterialReturnedDetails.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResReqLabour.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestEquipment.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestLaborDetails.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestLabours.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestMaterial.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestMaterialDetails.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_GetResRequestMaterialMontoring.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_SearchSchduleMaterial.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\PQ_SrcSchdule.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_EngScheduleMaterial.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResAbsence.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResAbsenceLabour.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResMaterialIssue.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResMaterialIssueDetail.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResMaterialReturn.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResMaterialReturnDetail.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResOverTime.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResOverTimeLabour.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResRequestEquipment.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_Tr_ResRequestLabour.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResRequestMaterial.cs" />
+    <Compile Include="Models\Entities\ResourceManagement\P_TR_ResRequestMaterialDetail.cs" />
+    <Compile Include="Models\Entities\ResponseResult.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesDbCrDetail.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesDbCr.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesDbCr.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesDbCrDetail.cs" />
+    <Compile Include="Models\Entities\Sales\PProc_Prnt_sls_Invoice_Result.cs" />
+    <Compile Include="Models\Entities\Sales\PProc_Sales_Production_Result.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesActivityPrice.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesActivityPriceDetails.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesCustomer.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesFillInvoiceProd.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesInvoice.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesInvoiceDetail.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesInvoiceProd.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesIssueProduction.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesIssueProductionDetails.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesItem.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GETSalesItemActivity.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesManBonus.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesOffer.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsCustomer.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferActivity.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferBilling.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferPayment.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferResponsibility.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferStage.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSlsOfferStageItem.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_SalesInvoiceDetail.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_Sales_SrchOfferItem.cs" />
+    <Compile Include="Models\Entities\Sales\PQ_GetSalesCustomerDoc.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesCustomer.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesCustomerCategory.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesItems.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesItemsActivity.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesPaymentTerms.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesResponsibility.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesActivtyPrice.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesActivtyPriceDetail.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesBonus.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesBonusDetail.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesInvoice.cs" />
+    <Compile Include="Models\Entities\Sales\P_D_SalesCustomerDoc.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesInvoiceDetail.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesInvoiceProd.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesOffer.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesOfferBilling.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesOfferPayment.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesOfferResponsibility.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesOfferStage.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesOfferStageItem.cs" />
+    <Compile Include="Models\Entities\Sales\P_Tr_SalesOfferStageItemActivity.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesProduction.cs" />
+    <Compile Include="Models\Entities\Sales\P_TR_SalesProductionDetail.cs" />
+    <Compile Include="Models\Entities\SessionRecord.cs" />
+    <Compile Include="Models\Entities\SystemParameters.cs" />
+    <Compile Include="Models\GQ_GetUserBranch.cs" />
+    <Compile Include="Models\Reports.cs" />
+    <Compile Include="Models\RestClient.cs" />
+    <Compile Include="Models\ServerTransactions.cs" />
+    <Compile Include="Models\SystemTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\BaseRestClient.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\SessionManager.cs" />
+    <Compile Include="Tools\UserPrivilege.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LinqToSqlConverter">
+      <HintPath>C:\Users\Bse\Desktop\PMS\PMS.ServiceConnector\bin\Release\LinqToSqlConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\Orange\API\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="StringFormater, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Bse\Desktop\PMS\PMS.ServiceConnector\bin\Release\StringFormater.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\Users\Bse\Desktop\PMS\PMS.ServiceConnector\bin\Release\System.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PRep_sls_ProductionEngEN.rdlc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\LinqToSqlConverter.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\PMS.ServiceConnector.pdb" />
+    <Content Include="bin\Debug\StringFormater.dll" />
+    <Content Include="bin\Debug\System.Web.dll" />
+    <Content Include="bin\Release\LinqToSqlConverter.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\PMS.ServiceConnector.pdb" />
+    <Content Include="bin\Release\StringFormater.dll" />
+    <Content Include="bin\Release\System.Web.dll" />
+    <Content Include="Security.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

@@ -1,0 +1,83 @@
+﻿
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Resm_AttendanceSheet </label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.ResM_fld_laborrequest_fromdate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm" id="FromDate" name="FromDate">
+                        </div>
+
+                        <label class="col-sm-2 col-xs-12 control-label text-right" style="width: 93px;">@SystemResource.ResM_fld_laborrequest_todate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:19.9%">
+                            <input type="date" class="form-control inpt-sm"  id="ToDate">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.work_laborclass</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtLaborClassID" id="txtLaborClassID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtLaborClassRP" name="txtLaborClassRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnLaborClassRP" name="btnLaborClassRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:31%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtLaborClass1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Men_LaborCategory</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtLabCatID" id="txtLabCatID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtLabCatRP" name="txtLabCatRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnLabCatRP" name="btnLabCatRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:31%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtLabCat1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Resm_fromlabor</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            @*<input type="hidden" class="form-control input-sm" name="txtLaborClassID" id="txtLaborClassID">*@
+                            <input type="text" class="form-control input-sm" id="txtFromLaborRP" name="txtFromLaborRP">
+                        </div>
+
+                        <label class="col-sm-2 col-xs-12 control-label text-right" style="width: 93px;">@SystemResource.Resm_tolabor</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:19.9%">
+                            <input type="text" class="form-control inpt-sm"  id="txtToLaborRP">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/ClientApp/Components/ResourceManagement/05_Reports/AttendanceSheet.js"></script>
+

@@ -1,0 +1,32 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "CustomerCategoryIndex";
+    ViewBag.Title = @SystemResource.Men_CustomerCategory;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+
+        <div class="clear"></div>
+        <style>
+            #GridCustomers {
+                height: 550px !important;
+            }
+            .jsgrid-grid-body {
+                max-height: 500px !important;
+                height: 500px !important;
+            }
+        </style>
+
+        <table id="GridCustomers"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    
+    <script src="~/ClientApp/Components/Sales/01_SalesDataLibrary/CustomerCategory.js"></script>
+</div>

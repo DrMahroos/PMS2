@@ -1,0 +1,382 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "OpProjectExpensesIndex";
+    ViewBag.Title = SystemResource.Men_WorkSchedule;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir dir_defination" id="effects">
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+
+           
+                <div class="col-xs-6">                  
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.work_sec_sched </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm   xaddable xeditable clearable"   name="TrNo" id="txtTrNo">
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchSchdule">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right    "> @SystemResource.Fld_Date </label>
+                        <div class="col-md-5 col-sm-4 col-xs-5 ">
+                            <input type="date" class="form-control input-sm addable editable" name="TrDate" id="txtTrDate">
+                        </div>
+                    </div>               
+                  
+                    <div class="form-group col-lg-12">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.work_sec_sched_arbianame </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable clearable " name="WorkDescr" id="txtWorkDescr" />
+                        </div>
+
+
+                    </div>                 
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Eng_project </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="editable addable form-control input-sm clearable"  name="Prj_ProjectCode" id="txtPrj_ProjectCode">
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchProject">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Prj_DescE" id="txtPrj_DescE">
+                        </div>
+
+                    </div>
+                 
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Def_projecphase </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="editable addable form-control input-sm clearable"  name="Phase_ProjectPhaseCode" id="txtPhase_CCCode">
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchPhase">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled"  name="Phase_DescE" id="txtPhase_DescE">
+                        </div>
+                         
+                    </div>
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Change_Remarks </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable clearable" name="Remarks" id="txtRemarks" />
+                        </div>
+
+ 
+                    </div>              
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.work_assign_labor </label>
+                        <div class="col-sm-3 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  clearable" disabled="disabled" name="RLab_TrNo" id="txtAssignLaborId" />
+                        </div>
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right  padinglepel  "> @SystemResource.work_assigneqyp </label>
+                        <div class="col-sm-4 col-xs-12" >
+                            <input type="text" maxlength="100" class="form-control input-sm  clearable" disabled="disabled" name="REq_TrNo" id="txtAssignEquipId" />
+                        </div>
+                      
+                    </div>
+                 </div>
+
+            <div class="col-lg-6">
+                <div class="form-group col-lg-12">
+                    <div class="form-group col-lg-12">
+                        <div class="col-sm-4 col-xs-12">
+                            </div>
+                            <div class="col-sm-3 col-xs-12" style="padding-left:0px">
+                                <button class="authorize" id="btnReopen" type="button" disabled="disabled"> @SystemResource.Fld_Reopen </button>
+                            </div>
+
+                            <div class="col-sm-3 col-xs-12"style="right: 10px;">
+                                <button class="authorize" id="btnUnauthorized" type="button" disabled="disabled"> @SystemResource.Fld_Close </button>
+                            </div>
+
+                            <div class="col-sm-1 col-xs-12"style="left: 46px;">
+                                <input type="checkbox" class="checkdef " disabled="disabled" id="ChkClose" name="Close">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label  padinglepel"> @SystemResource.Spec_Cleander </label>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Cal_calenderCode" id="txtCal_calenderCode" />
+                            </div>
+
+                            <div class="info-btn col-md-1  " >
+                                <button type="button" class="src-btn btn btn-warning addable editable " id="btnSearchCalender">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm clearable " disabled="disabled" name="Cal_DescE" id="txtCal_DescE" />
+                            </div>
+
+
+                        </div>
+                        <div class="form-group col-lg-12">
+
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel"> @SystemResource.work_fromperiod </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm addable editable " name="StartDateTime1" id="txtStartDateTime" />
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="time" maxlength="100" class="form-control input-sm addable editable " name="StartDateTime" id="txtStartTime" />
+                            </div>
+
+
+
+                            <button class="authorize" type="button" disabled="disabled" id="btnAuthorize">Authorize </button>
+                            <label for="txtDescE" class="col-sm-1 col-xs-12 padinglepel">  @SystemResource.Fld_Authorize </label>
+
+                            <div class="col-sm-1 col-xs-12">
+                                <input type="checkbox" class="checkdef " disabled="disabled" id="ChkStatus" name="Status">
+                            </div>
+
+                        </div>
+                        <div class="form-group col-lg-12">
+
+
+
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel "> @SystemResource.work_toperiod </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm addable editable " name="EndDateTime1" id="txtEndDateTime" />
+                            </div>
+                            <div class="col-sm-4 col-xs-12" >
+                                <input type="time" value="16:32:55" maxlength="100" class="form-control input-sm addable editable " name="EndDateTime" id="txtEndTime" />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel"> @SystemResource.wrok_period_Hours </label>
+                            <div class="col-md-2 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm clearable" disabled="disabled" name="WorkHours" id="txtProdHours" />
+                            </div>
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel"> Calender Hrs </label>
+                            <div class="col-md-2 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm clearable" disabled="disabled" name="CalHours" id="txtCalHours" />
+                            </div>
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel"> OT Hours </label>
+                            <div class="col-md-2 col-xs-12  ">
+                                <input type="text" maxlength="20" class="form-control input-sm editable addable clearable " name="OTHours" id="txtOTHours" />
+                            </div>
+
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel"> @SystemResource.work_general </label>
+                            <div class="col-sm-2 col-xs-12  ">
+                                <input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="RMat_TrNo" id="txtMaterialReqId" />
+                            </div>
+
+                                 <div class="col-sm-3 col-xs-12" >
+                                     <button class="authorize addable editable" type="button" id="btnCalcHours">CalcHours </button>
+
+                                     </div>
+                                     <div class="col-sm-3 col-xs-12" style="right: 10px;">
+                                         <button class="authorize  " disabled="disabled" type="button" id="btnCalcRequirement">Calc Requirement </button>
+
+                                         </div>
+
+
+                                     </div>
+                    </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="ani col-xs-12 form-group" style="margin-top: 22px;margin-bottom: 10px;">
+                    <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a;" class="col-xs-12">
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 form-group" style="margin-top:0%;margin-bottom:0%;">
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item workactivitybtn" type="button">Work Activity</button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def laborclass" type="button"> @SystemResource.work_laborclass </button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item Equipmentbtnclass" type="button"> @SystemResource.work_equipmentclass </button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item  Labors" type="button"> @SystemResource.work_labors </button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item  Equipment" type="button"> @SystemResource.work_equipment </button>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item  Materialbtn" type="button"> @SystemResource.Fld_Material</button>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 form-horizontal " id="gridactivity">
+                    <div class="form-group" style="height:345px; overflow:hidden" >
+                        <table id="GridActivity"></table>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-12 form-horizontal" id="laborclass">
+                    <div class="form-group" style="height:345px; overflow:hidden">
+                        <table id="GridLaborClass"></table>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-xs-12 form-horizontal" id="equipmentclass">
+                  
+                    <div class="form-group" style="height:345px; overflow:hidden">
+                        <table id="GridEquipClasses"></table>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-xs-12 form-horizontal" id="labors">
+                   
+                    <div class="form-group" style="height:345px; overflow:hidden">
+                        <table id="GridLabors"></table>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="Equipment">
+                    <div class="form-group" style="height:345px; overflow:hidden">
+                        <table id="GridEquipment"></table>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="Material">
+                    <div class="form-group" style="height:345px; overflow:hidden">
+                        <table id="GridMaterial"></table>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div>
+        <table></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/02_Operations/WorkSchedule.js"></script>
+</div>
+
+
+<style>
+
+    .padinglepel {
+        padding: 6px 0 0 0;
+    }
+
+    .fst_serach_proj {
+        margin-left: -8px!important;
+    }
+    .jsgrid-grid-body {
+        height: 268px !important;
+        margin-top: -14px;
+    }
+
+    #gridactivity .jsgrid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+
+    .work_cleander {
+        margin-left: -114px !important;
+        margin-right: 25px !important;
+    }
+
+    .margintxt {
+        margin-left: -23px;
+    }
+
+    .wid {
+        width: 96%;
+    }
+
+    .unauthorized {
+        margin-left: 60px !important;
+    }
+
+    .stylebtn {
+        margin-left: 87px;
+    }
+
+    .sub_contr_sub {
+        margin-left: -63px !important;
+        width: 240px;
+    }
+
+    .general_material {
+        padding: 0px;
+        margin-left: 56px !important;
+        margin-right: -35px !important;
+    }
+
+    .styletxtt {
+        margin-left: -19px;
+        width: 159px;
+    }
+
+    .second_work_serch {
+        margin-left: -109px !important;
+    }
+
+    .cleander_input {
+        margin-left: 0px !important;
+    }
+
+    .cleander_input, .start_date_label, .end_date_label {
+        width: 120px;
+    }
+</style>

@@ -1,0 +1,131 @@
+﻿
+
+
+
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Men_IncomeComparison</label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Eng_fld_Region </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 123px;">
+                                <input type="text" class="form-control input-sm addable editable" name="Region" id="txtRegionID"disabled>
+                            </div>
+                            <div class="info-btn">
+                                <button type="button" class="btn btn-warning" id="btnRegionID" name="btnProjectEngineerRP">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm" id="txtRegionDes"disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-5 text-center">
+                            <label style="margin: 6px 0px;" class="labelpopup">@SystemResource.Ger_Rep_fld_Included</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Fld_Year</label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 123px;">
+                                <input type="text" class="form-control input-sm addable editable" name="year" id="txtyer">
+                            </div>
+                        </div>
+                        <div class="col-md-5 popsection">
+                            <div class="col-md-12">
+                                <div class="col-md-6 col-xs-5">
+
+                                    <input type="radio" checked name="price" class="dailwork_input" id="RedAllProject" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_allproject</label>
+                                </div>
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="price" class="dailwork_input" id="RedNonRepair" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_nonrepair</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-md-12 col-xs-5">
+                                    <input type="radio" checked name="price" class="dailwork_input" id="RedRepair" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Eng_Rep_Dailyworkprod_repair</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+
+                            <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_customerclass</label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 123px;">
+                                <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="txtCustClass">
+                                <input type="text" class="form-control input-sm" id="txtCustClassCod" name="txtcustomerclass"disabled>
+                            </div>
+                            <div class="info-btn">
+                                <button type="button" class="btn btn-warning" id="btnCustClassID" name="btnProjectEngineerRP">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm" id="txtCustClassDes"disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                                <div class="col-md-12" style="padding:0px;margin:5px 0px">
+                                    <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_scopeclass</label>
+                                    <div class="col-md-1 col-sm-4 col-xs-5" style="width: 123px;">
+                                        <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="txtScopeCalID">
+                                        <input type="text" class="form-control input-sm" id="txtScopeCalCod" name="txtscopeclass"disabled>
+                                    </div>
+                                    <div class="info-btn">
+                                        <button type="button" class="btn btn-warning" id="btnScopeCalID" name="btnProjectEngineerRP">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-5 col-sm-4 col-xs-5">
+                                        <input type="text" class="form-control inpt-sm" id="txtScopeCalDes"disabled>
+                                    </div>
+                                </div>
+                            <div class="col-md-12" style="padding:0px;margin:5px 0px">
+                                <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_scope</label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 123px;">
+                                    <input type="hidden" class="form-control input-sm" name="ScopeID" id="txtScopeID">
+                                    <input type="text" class="form-control input-sm" id="txtScopeCode" name="scope"disabled>
+                                </div>
+                                <div class="info-btn">
+                                    <button type="button" class="btn btn-warning" id="butScopeID" name="btnProjectEngineerRP">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control inpt-sm"  id="txtScopeDes" name="ScopeDes"disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+</div>
+
+<script src="~/ClientApp/Components/DecisionSupport/01_BranchComparison/IncomeComparison.js"></script>

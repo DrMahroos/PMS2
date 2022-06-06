@@ -1,0 +1,33 @@
+﻿
+@using PMS.WebUI.Resources
+
+<link href="~/css/main.css" rel="stylesheet" />
+<div class="clear"></div>
+
+<label for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_ActivityDefinition</label>
+
+             <div class="form-horizontal">
+                 <div class="form-group">
+                     <label for="ParentActivityID" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Active </label>
+                     <div class="col-md-2 col-xs-4">
+                         <input type="text" class="form-control input-sm" disabled="disabled" id="txtParentActivityIDRp" name="ParentActivityID">
+                     </div>
+                     <div class="col-xs-2">
+                         <button type="button" class="btn btn-info addable editable" id="btnParentActivityRp">
+                             <i class="glyphicon glyphicon-search"></i>
+                         </button>
+                     </div>
+                     <div class="col-xs-4">
+                         <input type="text" class="form-control input-sm" disabled="disabled" id="txtParentActivityNameRp">
+                     </div>
+                 </div>
+             </div>
+
+
+<script src="~/ClientApp/JsGrid.js"></script>
+<script src="~/ClientApp/GeneralReports/ActivityReport.js"></script>
+<script>
+	$(document).ready(function () {
+        ActivityReport.InitalizeComponent();
+	})
+</script>

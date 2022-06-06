@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af3e752e28444c3ebabc9350c1d67244" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="PMSModel.G_AlertControl" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_AlertLog" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_AlertType" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_BRANCH" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_COMPANY" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_CONTROL" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_COST_CENTER" Width="1.5" PointX="4.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_ModuleHelp" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_MODULES" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_Nationality" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_REGION" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_REGION_BRANCH" Width="1.5" PointX="6.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_ReportWebSetting" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SearchForm" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SearchFormModule" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SearchFormSetting" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SMSControl" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SMSLog" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_STORE" Width="1.5" PointX="8.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SUB_SYSTEMS" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_SYSTEM" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_TransCounter" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_TransCounterSetting" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_BRANCH" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_COMPANY" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_FAVORITE" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_LOG" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_MODULE" Width="1.5" PointX="10.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_SUB_SYSTEM" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USER_SYSTEM" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.G_USERS" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_Category" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_Specification" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_SpecificationValues" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_UnitGroup" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_UnitGroupUom" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_D_UOM" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_G_CostMethods" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_G_ItemType" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_G_StockMethods" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_Item" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_ItemBatch" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_ItemSpecsValue" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_ItemStore" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_ItemStoreBatch" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_Pay_Vendor" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.I_Pay_VendorItemCategory" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Activity" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ActivityEquipClass" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ActivityIMaterial" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ActivityLaborClass" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Calender" Width="1.5" PointX="14.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_CalenderDays" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Equipment" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_EquipmentClass" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Expences" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ExpencesCategory" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Labor" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_LaborAbsenceType" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_LaborCategory" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_LaborClass" Width="1.5" PointX="10.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_LaborLaborClass" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_LaborOverTimeType" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Location" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesCustomer" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesCustomerCategory" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesEgineer" Width="1.5" PointX="16.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesEngCateory" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesItems" Width="4.375" PointX="16.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesItemsActivity" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesPaymentTerms" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Scope" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ScopeCategory" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SiteEngCategory" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SiteEngineer" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_Status" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SubCandidate" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SubCandidateScope" Width="1.5" PointX="12.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SubContractor" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SubContractorScope" Width="1.5" PointX="14.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_UnProdCategory" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_UnProdReason" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_D_UOM" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_G_Budget" Width="1.5" PointX="18.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_G_Period" Width="1.5" PointX="2.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_G_Region" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_G_WorkStatus" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_G_YearControl" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngExpensesEntry" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngExpensesEntryDetail" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_EngProduction" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngProductionActiv" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngProductionEquip" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngProjectItem" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngProjectPhase" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleActiv" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleEquip" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleEquipClass" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleLabor" Width="1.5" PointX="20.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleLaborClass" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngScheduleMaterial" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngVariationItem" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResAbsence" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResAbsenceLabour" Width="1.5" PointX="20.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResMaterialIssue" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResMaterialIssueDetail" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResMaterialReturn" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResMaterialReturnDetail" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResOverTime" Width="1.5" PointX="14.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResOverTimeLabour" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResRequestEquipment" Width="1.5" PointX="16.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_ResRequestLabour" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResRequestMaterial" Width="1.5" PointX="18.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_ResRequestMaterialDetail" Width="1.5" PointX="20.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesActivtyPrice" Width="1.5" PointX="21.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesActivtyPriceDetail" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesBonus" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesBonusDetail" Width="1.5" PointX="22.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesInvoice" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesInvoiceProd" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesOffer" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesOfferBilling" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesOfferPayment" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesOfferResponsibility" Width="1.5" PointX="22.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesOfferStage" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesOfferStageItem" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Tr_SalesOfferStageItemActivity" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesProduction" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesProductionDetail" Width="1.5" PointX="14.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubContract" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubContractActivity" Width="1.5" PointX="16.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubProduction" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubProductionActivity" Width="1.5" PointX="18.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubServiceOrder" Width="1.5" PointX="22.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SubServiceOrderActivity" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.GQ_GetUserBranch" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.GQ_GetUserModule" Width="1.5" PointX="23.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.GQ_UserFavorite" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.IQ_GetItemList" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.IQ_SrchItem" Width="1.5" PointX="24.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_Calc_ActivityCost" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_Calc_ActivityLocalCost" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_G_Budget" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetActivityEquipmentClass" Width="1.5" PointX="6.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetActivityLaborClass" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetActivityMaterialClass" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngExpenses" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngExpensesDetail" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngproductionActivity" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProductionEquipment" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProductionItems" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProductionLabour" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProjectPhase" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngServiceOrderActivity" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubCandidateScope" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubContract" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubContractActivity" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubContractorScope" Width="1.5" PointX="24.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubProduction" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubProductionActivity" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubServiceOrder" Width="1.5" PointX="25.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngVariation" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngVariationItem" Width="1.5" PointX="26.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleActivity" Width="1.5" PointX="2.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleEquip" Width="1.5" PointX="4.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleEquipClass" Width="1.5" PointX="26.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleLabor" Width="1.5" PointX="6.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleLaborClass" Width="1.5" PointX="26.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngWorkSchduleMaterial" Width="1.5" PointX="8.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetProjCustomer" Width="1.5" PointX="26.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResEquipAssign" Width="1.5" PointX="10.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResLabourAbsence" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResLabourAbsenceDetail" Width="1.5" PointX="12.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResLabourAssign" Width="1.5" PointX="26.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResLabourOverTime" Width="1.5" PointX="14.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResLabourOverTimeDetail" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResMaterialIssue" Width="1.5" PointX="16.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResMaterialIssueDetails" Width="1.5" PointX="26.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResMaterialReturned" Width="1.5" PointX="18.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResMaterialReturnedDetails" Width="1.5" PointX="26.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResReqLabour" Width="1.5" PointX="20.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestEquipment" Width="1.5" PointX="26.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestLaborDetails" Width="1.5" PointX="22.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestLabours" Width="1.5" PointX="26.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestMaterial" Width="1.5" PointX="24.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestMaterialDetails" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetResRequestMaterialMontoring" Width="1.5" PointX="27.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesActivityPrice" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesActivityPriceDetails" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesCustomer" Width="1.5" PointX="28.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesInvoice" Width="1.5" PointX="2.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesIssueProduction" Width="1.5" PointX="4.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesIssueProductionDetails" Width="1.5" PointX="28.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesItem" Width="1.5" PointX="6.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GETSalesItemActivity" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesManBonus" Width="1.5" PointX="8.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesOffer" Width="1.5" PointX="28.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsCustomer" Width="1.5" PointX="10.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferActivity" Width="1.5" PointX="28.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferBilling" Width="1.5" PointX="12.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferPayment" Width="1.5" PointX="28.75" PointY="14.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferResponsibility" Width="1.5" PointX="14.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferStage" Width="1.5" PointX="28.75" PointY="16.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSlsOfferStageItem" Width="1.5" PointX="16.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_LoadEngSubSOContractActivity" Width="1.5" PointX="28.75" PointY="18.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_ResEquipmentWork" Width="1.5" PointX="18.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_ResLabourWork" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_Sales_SrchOfferItem" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SalesInvoiceDetail" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SearchSchduleMaterial" Width="1.5" PointX="22.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrchActivity" Width="1.5" PointX="28.75" PointY="24.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrchEngProjectPhase" Width="1.5" PointX="24.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrchSalesOffer" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrchSlsItem" Width="1.5" PointX="26.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesInvoiceDetail" Width="1.5" PointX="28.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.sysdiagram" Width="1.5" PointX="29.75" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngSchedule" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProjectItem" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesInvoiceProd" Width="1.5" PointX="30.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_Control" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrcSchdule" Width="1.5" PointX="30.75" PointY="6.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.GQ_GetUserSubsystem" Width="1.5" PointX="6.75" PointY="30.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_SrchEngProjectActivity" Width="1.5" PointX="30.75" PointY="8.75" IsExpanded="false" />
+        <AssociationConnector Association="PMSModel.FK_G_BRANCH_G_COMPANY" />
+        <AssociationConnector Association="PMSModel.FK_G_REGION_BRANCH_G_BRANCH" />
+        <AssociationConnector Association="PMSModel.FK_G_COST_CENTER_G_COMPANY" />
+        <AssociationConnector Association="PMSModel.FK_G_REGION_G_COMPANY" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Labor_G_Nationality" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesEgineer_G_Nationality" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SiteEngineer_G_Nationality" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_SUB_SYSTEM_G_SUB_SYSTEMS" />
+        <AssociationConnector Association="PMSModel.FK_G_TransCounter_G_TransCounterSetting" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_BRANCH_G_USER_COMPANY" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_COMPANY_G_USERS" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_LOG_G_USERS" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_MODULE_G_USERS" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_SUB_SYSTEM_G_USERS" />
+        <AssociationConnector Association="PMSModel.FK_G_USER_SYSTEM_G_USERS" />
+        <AssociationConnector Association="PMSModel.FK_I_D_Category_I_D_Category" />
+        <AssociationConnector Association="PMSModel.FK_I_D_Category_I_G_CostMethods" />
+        <AssociationConnector Association="PMSModel.FK_I_D_Category_I_G_ItemType" />
+        <AssociationConnector Association="PMSModel.FK_I_D_Category_I_G_StockMethods" />
+        <AssociationConnector Association="PMSModel.FK_I_Item_I_D_Category" />
+        <AssociationConnector Association="PMSModel.FK_I_Pay_VendorItemCategory_I_D_Category" />
+        <AssociationConnector Association="PMSModel.FK_I_D_SpecificationValues_I_D_Specification" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemSpecsValue_I_D_SpecificationValues" />
+        <AssociationConnector Association="PMSModel.FK_I_D_UnitGroup_I_D_UOM" />
+        <AssociationConnector Association="PMSModel.FK_I_D_UnitGroupUom_I_D_UnitGroup" />
+        <AssociationConnector Association="PMSModel.FK_I_D_UnitGroupUom_I_D_UOM" />
+        <AssociationConnector Association="PMSModel.FK_I_Item_I_D_UOM" />
+        <AssociationConnector Association="PMSModel.FK_I_Item_I_G_ItemType" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemBatch_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemSpecsValue_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemStore_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityIMaterial_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngScheduleMaterial_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialIssueDetail_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialReturnDetail_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResRequestMaterialDetail_I_Item" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemStoreBatch_I_ItemBatch" />
+        <AssociationConnector Association="PMSModel.FK_I_ItemStoreBatch_I_ItemStore" />
+        <AssociationConnector Association="PMSModel.FK_I_Pay_VendorItemCategory_I_Pay_Vendor" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Period_P_CONTROL" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Activity_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityEquipClass_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityIMaterial_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityLaborClass_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesItemsActivity_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectActivity_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesActivtyPrice_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesActivtyPriceDetail_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItemActivity_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubContractActivity_P_D_Activity" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityEquipClass_P_D_EquipmentClass" />
+        <AssociationConnector Association="PMSModel.FK_P_D_ActivityLaborClass_P_D_LaborClass" />
+        <AssociationConnector Association="PMSModel.FK_P_D_CalenderDays_P_D_Calender" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectPhase_P_D_Calender" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Equipment_P_D_EquipmentClass" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Expences_P_D_ExpencesCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Labor_P_D_LaborCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Labor_P_D_LaborClass" />
+        <AssociationConnector Association="PMSModel.FK_P_D_LaborLaborClass_P_D_Labor" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResAbsenceLabour_P_D_LaborAbsenceType" />
+        <AssociationConnector Association="PMSModel.FK_P_D_LaborLaborClass_P_D_LaborClass" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResOverTimeLabour_P_D_LaborOverTimeType" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Location_P_D_Location" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProject_P_D_Location" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesOffer_P_D_Location" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesCustomer_P_D_SalesCustomerCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesCustomer_P_D_SalesEgineer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProject_P_D_SalesCustomer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesInvoice_P_D_SalesCustomer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesOffer_P_D_SalesCustomer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesProduction_P_D_SalesCustomer" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesEgineer_P_D_SalesEngCateory" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProject_P_D_SalesEgineer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesBonusDetail_P_D_SalesEgineer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesOffer_P_D_SalesEgineer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesBonusDetail_P_D_SalesEngCateory" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesItems_P_D_SalesItems" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesItems_P_D_Scope" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SalesItemsActivity_P_D_SalesItems" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectItem_P_D_SalesItems" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItem_P_D_SalesItems" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesProductionDetail_P_D_SalesItems" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferPayment_P_D_SalesPaymentTerms" />
+        <AssociationConnector Association="PMSModel.FK_P_D_Scope_P_D_ScopeCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SubCandidateScope_P_D_Scope" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SubContractorScope_P_D_Scope" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectPhase_P_D_Scope" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStage_P_D_Scope" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SiteEngineer_P_D_SiteEngCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectPhase_P_D_SiteEngineer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResAbsence_P_D_SiteEngineer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResOverTime_P_D_SiteEngineer" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SubCandidateScope_P_D_SubCandidate" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SubContractor_P_D_SubCandidate" />
+        <AssociationConnector Association="PMSModel.FK_P_D_SubContractorScope_P_D_SubContractor" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubContract_P_D_SubContractor" />
+        <AssociationConnector Association="PMSModel.FK_P_D_UnProdReason_P_D_UnProdCategory" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectActivity_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectItem_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectPhase_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariation_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResAbsence_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResOverTime_P_TR_EngProject" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectActivity_P_TR_EngProjectActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectActivity_P_TR_EngProjectItem" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectActivity_P_TR_EngProjectPhase" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariationActivity_P_TR_EngProjectActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubContractActivity_P_TR_EngProjectActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubServiceOrderActivity_P_TR_EngProjectActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectItem_P_TR_EngProjectItem" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngProjectItem_P_TR_EngProjectPhase" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariationItem_P_TR_EngProjectItem" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariation_P_TR_EngProjectPhase" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngScheduleMaterial_P_TR_EngSchedule" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResRequestEquipment_P_TR_EngSchedule" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_ResRequestLabour_P_TR_EngSchedule" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResRequestMaterial_P_TR_EngSchedule" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngScheduleMaterial_P_TR_SubServiceOrder" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariationItem_P_TR_EngVariation" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_EngVariationActivity_P_TR_EngVariationItem" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResAbsenceLabour_P_TR_ResAbsence" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialIssue_P_TR_ResMaterialIssue" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialIssueDetail_P_TR_ResMaterialIssue" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialReturn_P_TR_ResMaterialReturn" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResMaterialReturnDetail_P_TR_ResMaterialReturn" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResOverTimeLabour_P_TR_ResOverTime" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_ResRequestMaterialDetail_P_TR_ResRequestMaterial" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesActivtyPriceDetail_P_Tr_SalesActivtyPrice" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesBonusDetail_P_Tr_SalesBonus" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesInvoiceDetail_P_TR_SalesInvoice" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesInvoiceProd_P_TR_SalesInvoiceDetail" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesInvoiceProd_P_TR_SalesProductionDetail" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferBilling_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferPayment_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesOfferResponsibility_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStage_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItem_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItemActivity_P_TR_SalesOffer" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItem_P_Tr_SalesOfferStage" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItemActivity_P_Tr_SalesOfferStage" />
+        <AssociationConnector Association="PMSModel.FK_P_Tr_SalesOfferStageItemActivity_P_Tr_SalesOfferStageItem" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesProductionDetail_P_TR_SalesProduction" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubContractActivity_P_TR_SubContract" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubServiceOrder_P_TR_SubContract" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubServiceOrderActivity_P_TR_SubContractActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubProduction_P_TR_SubServiceOrder" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubProductionActivity_P_TR_SubProduction" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubProductionActivity_P_TR_SubServiceOrderActivity" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SubServiceOrderActivity_P_TR_SubServiceOrder" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesResponsibility_" Width="1.5" PointX="54.625" PointY="7" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesFillInvoiceProd" Width="1.5" PointX="8.75" PointY="30.75" IsExpanded="false" />
+        <AssociationConnector Association="PMSModel.FK_P_TR_SalesOfferResponsibility_P_D_SalesResponsibility_" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProduction" Width="1.5" PointX="30.75" PointY="10.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngSubProductionItems" Width="1.5" PointX="10.75" PointY="30.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.m" Width="1.5" PointX="30.75" PointY="12.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngVariation" Width="1.5" PointX="13.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngProjectActivity" Width="1.5" PointX="15.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_EngVariationActivity" Width="1.5" PointX="17.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProjectActivity" Width="1.5" PointX="19.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngVariationActivity" Width="1.5" PointX="21.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesCustomerDoc" Width="1.5" PointX="23.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesCustomerDoc" Width="1.5" PointX="25.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesInvoiceDetail" Width="1.5" PointX="27.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetEngProject" Width="1.5" PointX="29.375" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesDbCr" Width="1.5" PointX="31.75" PointY="14.75" />
+        <EntityTypeShape EntityType="PMSModel.P_TR_SalesDbCrDetail" Width="1.5" PointX="31.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesDbCr" Width="1.5" PointX="31.75" PointY="30.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesDbCrDetail" Width="1.5" PointX="0.75" PointY="32.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,150 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "EquipmentRequestIndex";
+    ViewBag.Title = SystemResource.Men_EquipmentRequest;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_requestno</label>
+                        <div class="col-sm-1 col-xs-12 equipmentRequest">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" style="width:140px" name="TrNo" id="txtTrNo" />
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchRequest">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                            <div class="col-md-4" style="width: 117px;"></div>
+                        <div class="col-md-6">
+                            <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;width: 108px"> @SystemResource.Fld_Authorize </label>
+                            <div class="col-xs-2">
+                                <input type="checkbox" class="checkdef  overtimecheck editable" style="margin-left: 38%;height: 0px;margin-top: 12px;" name="Status" id="ChkStatus">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_scheduleno</label>
+                        <div class="col-sm-2 col-xs-12" style="width:140px;">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="ScheduleId" id="txtScheduleId" />
+                        </div>
+                        @*<div class="col-md-4" style="width: 210px;"></div>*@
+                        <div class="info-btn col-md-1" style="width: 50px;">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="WorkDescr" id="txtWorkDescr" />
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_requestdate</label>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <input type="date" maxlength="100" class="form-control input-sm addable editable" name="TrDate" id="txtTrDate" />
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Resm_fld_Mat_project</label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Prj_ProjectCode" id="txtPrj_ProjectCode" />
+                        </div>
+
+                        <div class="col-sm-3 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Prj_DescE" id="txtPrj_DescE" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_fromdate</label>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <input type="datetime-local" maxlength="100" class="form-control input-sm addable editable" name="StartDateTime" id="txtStartDateTime" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_phase</label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Phase_ProjectPhaseCode" id="txtPhase_ProjectPhaseCode" />
+                        </div>
+                        <div class="col-sm-3 col-xs-12 ">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Phase_DescE" id="txtPhase_DescE" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_todate</label>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <input type="datetime-local" maxlength="100" class="form-control input-sm addable editable" name="EndDateTime" id="txtEndDateTime" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                @*<div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_siteenginer</label>
+                            <div class="col-sm-1 col-xs-12">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+                            </div>
+                            <div class="col-sm-3 col-xs-12 ">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+                            </div>
+
+                        </div>
+                    </div>*@
+
+                <div class="col-xs-12 form-horizontal" id="laborlistsec">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 350px !important;
+                            max-height: 350px !important;
+                        }
+                    </style>
+                    <div class="" style="height: 390px;overflow:unset;">
+                        <table id="GridParent"></table>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-xs-12 form-horizontal" id="laborclass">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 450px !important;
+                    }
+                </style>
+                <div class="form-group" style="height: 320px;">
+                    <table id="GridChild"></table>
+                    </div>
+                </div>*@
+        </form>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/ResourceManagement/02_Equipment/EquipmentRequest.js"></script>
+</div>
+
+

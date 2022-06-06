@@ -1,0 +1,160 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "MaterialMonitoringIndex";
+    ViewBag.Title = SystemResource.Men_MaterialMonitoring;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_workschead </label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtSchduleTrNo" />
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchSchadule">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable sub_contr_sub" id="txtSchaduleName" />
+						</div>
+
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right mate_schedtype"> @SystemResource.ResMat_SchedType </label>
+						<div class="secduleradio col-md-2" style="width: 206px;">
+							<input type="radio" id="RdServiceOrder" name="schduleType" class="monitorsecdulradio secdulenorequestradio" />
+							<label for="Schedule" class="montior_secdule_input " style="margin-top: 6px;">@SystemResource.Resm_Scserviceorder</label>
+						</div>
+						<div class="secduleradio col-md-2">
+							<input type="radio" id="RdScahdule" name="schduleType" class="monitorsecdulradio secdulenorequestradio" />
+							<label for="Schedule" class="montior_secdule_input " style="margin-top: 6px;">@SystemResource.Resm_WorkSchedule</label>
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eve_sono</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtServiceTrNo" />
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning fst_serach_proj" id="btnSearchServiceOrder">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12"  style="width: 230px;">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable sub_contr_sub" id="txtServiceName" />
+						</div>
+
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResmMat_SContractor</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtSubContractor" />
+						</div>
+
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" id="txtSubContractorName" />
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Project</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtProjectCode" />
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12" style="width: 324px;">
+							<input type="text" maxlength="20" style="width: 277px;" class="form-control input-sm addable editable" id="txtProjectName" />
+						</div>
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eve_siteenginer</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtSiteEngCode" />
+						</div>
+
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" id="txtSiteEngName" />
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Mat_phase</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtPhaseCode" />
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12" style="width: 308px;">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" id="txtPhaseName" />
+						</div>
+						<div class="col-md-6">
+							<button type="button" style="display:none" id="btnShowData" class="def_btn material_btn schedtype">Show Data</button>
+                            <div class="col-md-2" style="width:220px"></div>
+                            <button class=" btn btn-info btn_def_item rquestgrid" style="width: 146px;" type="button" id="def_item_btn"> @SystemResource.Resm_fld_Issue </button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 form-horizontal" id="secduleandservice">
+					
+					<div class="containersec" style="height: 340px;overflow:unset">
+						<table id="parent"></table>
+					</div>
+				</div>
+
+
+				<div class="col-xs-12 form-horizontal" id="requestseq">
+				
+					<div class="form-group" style="height: 400px;overflow:unset">
+						<table id="Child"></table>
+						</div>
+					</div>
+
+
+			</div>
+		</form>
+	</div>
+	<div>
+		<table></table>
+	</div>
+	<script src="~/ClientApp/JsGrid.js"></script>
+	<script src="~/ClientApp/Components/ResourceManagement/01_Material/MaterialMonitoring.js"></script>
+</div>
+<style>
+    .jsgrid-grid-body {
+        height: 340px !important;
+        max-height: 340px !important;
+    }
+    #requestseq  .jsgrid-grid-body {
+        height: 360px!important;
+        max-height: 360px!important;
+    }
+</style>

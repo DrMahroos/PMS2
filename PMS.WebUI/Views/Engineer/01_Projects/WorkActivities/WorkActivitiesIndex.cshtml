@@ -1,0 +1,260 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "WorkActivitiesIndex";
+    ViewBag.Title = SystemResource.Men_WorkActivities;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@*<style>
+    .rootColor {
+        color: #04252f;
+        line-height: 2em;
+    }
+
+    .parentColor {
+        color: #09495c;
+        line-height: 2.2em;
+    }
+
+    .leafColor {
+        color: #0b6d8a;
+        line-height: 2.4em;
+    }
+
+    .selectedLi {
+        background-color: darkgray;
+        color: black;
+    }
+</style>*@
+
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    @*<script src="~/ClientApp/TreeView.js"></script>
+
+        <div class="row" style="background-color:white;">
+            <input type="text" class="form-control" id="code" />
+            <input type="text" class="form-control" id="name" />
+            <button type="button" class="btn btn-primary" id="btnActivityId" name="btnActivityId">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>*@
+
+    <div class="clear"></div>
+    <div class="dir col-xs-12 workactivity">
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="col-xs-7">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="ActivityCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_ActivityCode </label>
+                            <div class="col-md-2 col-xs-4" style="width: 141px;">
+                                <input type="text" class="form-control input-sm addable editable" id="txtActivityCode" name="ActivityCode" disabled="disabled">
+                            </div>
+                            <div class="col-xs-2 workactivtysearch" style="margin-top: -2px;">
+                                <button type="button" class="btn btn-info xaddable xeditable" id="btnActCode">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right:0%;width: 68px;"> Is Detail </label>
+                            <div class="col-xs-2" style="margin-top: 7px;">
+                                <input type="checkbox" class="checkdef  col-xs-5 editable addable" style="" id="ChkIsDetail" name="Status" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="DescA" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescA </label>
+                            <div class="col-sm-4 col-xs-12" style="width: 431px;">
+                                <input type="text" class="form-control input-sm addable editable" id="txtDescA" name="DescA" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="DescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescE </label>
+                            <div class="col-sm-4 col-xs-12" style="width: 431px;">
+                                <input type="text" class="form-control input-sm addable editable" id="txtDescE" name="DescE" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="UomID" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_UOM </label>
+                            <div class="col-md-2 col-xs-4" style="width: 110px;">
+                                <input type="text" class="form-control input-sm" id="txtUomID" disabled="disabled" name="UomID1">
+                            </div>
+                            <div class="col-xs-1 workactivtysearch">
+                                <button type="button" class="btn btn-info addable editable" disabled="disabled" id="btnUomID">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-xs-4" style="width: 283px;">
+                                <input type="text" class="form-control input-sm" disabled="disabled" id="txtUomName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="ParentActivityID" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_ParentActivityID </label>
+                            <div class="col-md-2 col-xs-4" style="width: 110px;">
+                                <input type="text" class="form-control input-sm" disabled="disabled" id="txtParentActivityID" name="ParentActivityID1">
+                            </div>
+                            <div class="col-xs-1 workactivtysearch">
+                                <button type="button" class="btn btn-info addable editable" id="btnParentActivity">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-xs-4" style="width: 283px;">
+                                <input type="text" class="form-control input-sm" disabled="disabled" id="txtParentActivityName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="ActivityLevel" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Level </label>
+                            <div class="col-md-2 col-xs-4" style="width: 110px;">
+                                <input type="text" class="form-control input-sm addable editable" id="txtActivityLevel" name="ActivityLevel">
+                            </div>
+                            @*<label class="col-sm-2 col-xs-12 control-label text-right">  Code </label>*@
+                            <div class="col-xs-4">
+                                @*<input type="text" class="form-control input-sm">*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="Remarks" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Remarks  </label>
+                            <div class="col-sm-8 col-xs-12">
+                                <textarea style="height: 58px;" class="form-control col-xs-12 addable editable" rows="3" id="txtRemarks" name="Remarks"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5">
+                    <div class="current-project form-horizontal">
+                        <p>
+                            @*@SystemResource.Fld_ProductionStandardsandPrice*@
+                        </p>
+                        <div class="content">
+                            <div class="form-group">
+                                <label for="HourProduction" class="col-sm-5 col-xs-12 control-label text-right" style="width: 226px;max-width: 162px;"> @SystemResource.Fld_HourProduction </label>
+                                <div class="col-md-7 col-sm-5 col-xs-12">
+                                    <input type="text" class="form-control input-sm addable editable" id="txtHourProduction" name="HourProduction">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-5 col-xs-12 control-label text-right" style="width: 226px;max-width: 162px;">  Daily Prod. Qty /Team  </label>
+                                <div class="col-md-7 col-sm-5 col-xs-12">
+                                    <input type="text" class="form-control input-sm" disabled="disabled" id="txtDailyProd" name="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="LaborProdRate" class="col-sm-5 col-xs-12 control-label text-right" style="width: 226px;max-width: 162px;"> @SystemResource.Fld_LaborProdRate </label>
+                                <div class="col-md-7 col-sm-5 col-xs-12">
+                                    <input type="text" class="form-control input-sm addable editable" id="txtLaborProdRate" name="LaborProdRate">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="UnitPrice" class="col-sm-5 col-xs-12 control-label text-right" style="width: 226px;max-width: 162px;"> @SystemResource.Fld_UnitSellingPrice </label>
+                                <div class="col-md-7 col-sm-5 col-xs-12">
+                                    <input type="text" class="form-control input-sm addable editable" id="txtUnitPrice" name="UnitPrice">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-group" style="margin-top: 9px;margin-bottom:0%;">
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn1" type="button" id="btnMaterial"> @SystemResource.Fld_MaterialRequirement </button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn2" type="button" id="btnLabor"> @SystemResource.Fld_LaborRequirement </button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn3" type="button" id="btnEquipt"> @SystemResource.Fld_EquipmentRequirement </button>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" id="Material">
+                    <style>
+                        #grid {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-body {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-header {
+                            height: 62px;
+                        }
+
+                        .jsgrid-table {
+                            padding: 0px;
+                            margin-top: -5px;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 253px;margin-top: 5px;">
+                        <table id="GridMaterial"></table>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" id="Labor">
+
+                    <style>
+                        #grid {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-body {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-header {
+                            height: 62px;
+                        }
+
+                        .jsgrid-table {
+                            padding: 0px;
+                            margin-top: -5px;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 253px;margin-top: 5px;">
+                        <table id="GridLabor"></table>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" id="Equipment">
+                    <style>
+                        #grid {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-body {
+                            height: 250px !important;
+                        }
+
+                        .jsgrid-grid-header {
+                            height: 62px;
+                        }
+
+                        .jsgrid-table {
+                            padding: 0px;
+                            margin-top: -5px;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 253px;margin-top: 5px;">
+                        <table id="GridEquipment"></table>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/01_Projects/WorkActivities.js"></script>
+   
+</div>
+
+

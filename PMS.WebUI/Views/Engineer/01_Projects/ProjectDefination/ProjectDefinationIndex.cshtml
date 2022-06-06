@@ -1,0 +1,358 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ProjectDefinationIndex";
+    ViewBag.Title = SystemResource.Men_ProjectDefination;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir projectDefination" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                @*Begain Master Part 1*@
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtProjectCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projectno </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="xaddable xeditable form-control input-sm" name="ProjectCode" id="txtProjectCode" >
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnProjectCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-5 col-sm-2 col-xs-6 projectdef_offerno">
+                            <label for="txtOfferTrNo" class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;"> @SystemResource.Def_offno </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm" disabled="disabled" name="OfferTrNo" id="txtOfferTrNo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescA" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projnamea </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm editable" name="DescA" id="txtDescA" />
+                        </div>
+
+                        <div class="col-md-5 col-sm-2 col-xs-6 ">
+                            <label for="txtOfferTrSerial" class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;"> @SystemResource.Def_offerserial </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm" disabled="disabled" name="OfferTrSerial" id="txtOfferTrSerial" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescL" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projnamee </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm editable" name="DescL" id="txtDescL" />
+                        </div>
+                        <div class="col-md-5 col-sm-2 col-xs-6 ">
+                            <label for="txtContractRefNo" class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;">  @SystemResource.Def_refno </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm editable" name="ContractRefNo" id="txtContractRefNo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ani col-xs-12 form-group" style="margin-bottom:0%;">
+                    <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a;margin-top" class="col-xs-12">
+
+                    <div class="col-xs-4">
+                    </div>
+
+                </div>
+                <div class="col-xs-12 form-group" style="margin-top:0%;margin-bottom: 1%;">
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def" type="button" id="btnDefination"> @SystemResource.Def_projecphase </button>
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item" type="button" id="def_item_btn"> @SystemResource.Def_projectitem </button>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtcust_CustomerCode" class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Def_customer</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" disabled="disabled" name="cust_CustomerCode" class="form-control input-sm clearable" id="txtcust_CustomerCode">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12" style="width: 283px;">
+                            <input type="text" maxlength="20" disabled="disabled" class="form-control input-sm custom def_customer" name="cust_DescA" id="txtcust_DescA">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtCustomerAccCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_customeraccount </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="number" class="form-control input-sm" name="CustomerAccCode" id="txtCustomerAccCode" disabled="disabled">
+                        </div>
+                        <div class="col-md-5 col-sm-2 col-xs-6 ">
+                            <label for="txtCustomerMobile" class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;">  @SystemResource.Def_Customermob </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm editable" name="CustomerMobile" id="txtCustomerMobile" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @*Not Field Resp. person*@
+                        <label for="txtTotalAllow" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_Recipperson </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="text" class="form-control input-sm editable" name="CustomerContact" id="txtTotalAllow">
+                        </div>
+                        <div class="col-md-5 col-sm-2 col-xs-6 ">
+                            <label for="txtCustomerTel" class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;">  @SystemResource.Def_CustomerTele </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm editable" name="CustomerTel" id="txtCustomerTel" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEng_Code" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_Saleseng</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="Eng_Code" id="txtEng_Code">
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" name="Eng_DescA" id="txtEng_DescA">
+                        </div>
+                        @*///*@
+                        <div class="col-md-5 col-sm-2 col-xs-6">
+                            <label class="col-sm-3 col-xs-12 control-label text-right" style="width: 137px;">  @SystemResource.Fld_Status </label>
+                            <div class="col-md-5 col-sm-4 col-xs-12">
+                                <select id="SelectStatus" name="Status" class="form-control form-control-sm" disabled="disabled">
+                                    <option selected="selected" value="0">@SystemResource.def_new</option>
+                                    <option value="1">@SystemResource.Fld_working</option>
+                                    <option value="2">@SystemResource.Fld_Stopped</option>
+                                    <option value="3">@SystemResource.Fld_Suspended</option>
+                                    <option value="5">@SystemResource.Fld_Finished</option>
+                                </select>
+                                @*<input type="text" maxlength="20" class="form-control input-sm editable" name="mob" id="txtTel1" />*@
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtProjArea" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_area </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ProjArea" id="txtProjArea">
+                        </div>
+
+                        <button type="button" id="btnStartWork" class="btn btn-warning projectdef_btn">@SystemResource.Fld_working</button>
+                        <button type="button" id="btnSuspend" class="btn btn-warning">Suspend</button>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="Loc_DescA" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_location </label>
+                        <div class="col-sm-5 col-xs-12">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="Loc_DescA" id="txtLoc_DescA">
+                        </div>
+                        <button type="button" id="btnStopped" class="btn btn-warning projectdef_btn">Stopped</button>
+                        <button type="button" id="btnFinished" class="btn btn-warning">Finished</button>
+                    </div>
+
+                </div>
+                @*End Master Part 1*@
+
+                @*Begain Grid*@
+
+                @*End Grid*@
+
+                @*<div class="info_title text-center">
+            <h3>@SystemResource.other_info</h3>
+        </div>*@
+                @*Begain Master Part 2*@
+                <div class="form-horizontal def_textarea">
+                    <div class="form-group">
+                        <label for="txtProjectTermsCond" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_term </label>
+                        <div class="col-md-9 col-sm-4 col-xs-5">
+                            <textarea type="text" class="form-control input-sm editable" disabled="disabled" name="ProjectTermsCond" id="txtProjectTermsCond">
+							</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal def_textarea">
+                    <div class="form-group">
+                        <label for="txtProjTechnicalSpecs" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_techn </label>
+                        <div class="col-md-9 col-sm-4 col-xs-5">
+                            <textarea type="text" class="form-control input-sm editable" disabled="disabled" name="ProjTechnicalSpecs" id="txtProjTechnicalSpecs">
+							</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @*Not Field Project Value*@
+                        <label for="txtContractCode" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_contractno </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractCode" id="txtContractCode">
+                        </div>
+
+                        @*<label for="txtContractPrice" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_contract_val </label>*@
+                        @*<div class="col-md-2 col-sm-4 col-xs-5">
+            <input type="hidden" class="form-control input-sm" disabled="disabled" name="ContractPrice" id="txtContractPrice">
+        </div>*@
+                        <label for="txtContractPrice" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_contract_val </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractPrice" id="txtContractPrice">
+                        </div>
+
+
+                        <div class="col-lg-1 col-md-2 col-xs-2 " style="padding-right:0px">
+                            <label for="txtStartDate" class="col-lg1 control-label pading_left margintop"> @SystemResource.Start_date </label>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-xs-2 " style="width: 13%;">
+                            <input name="StartDate" id="txtStartDate" type="date" maxlength="20" class="form-control input-sm custom def_customer editable"  >
+                        </div> 
+                        <div class="col-lg-1 col-md-2 col-xs-2 " style="padding-right:0px">
+                            <label for="txtEndDate" class="col-lg1 control-label pading_left margintop"> @SystemResource.End_Date</label>
+                        </div>  
+                            <div class="col-lg-2 col-md-2 col-xs-2 " style="width: 13%;">
+                                <input name="EndDate" id="txtEndDate" type="date" maxlength="20" class="form-control input-sm  editable "  > 
+                            </div>
+
+
+                        </div>
+                    </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @*<label for="txtDownPaymentPrc" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_dowpay %</label>
+        <div class="col-md-2 col-sm-4 col-xs-5">
+            <input type="text" class="form-control input-sm" disabled="disabled" name="DownPaymentPrc" id="txtDownPaymentPrc">
+        </div>*@
+                        <label for="txtContractDate" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_contrDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractDate" id="txtContractDate">
+                        </div>
+                        <label for="discount" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_Discount % </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable" disabled="disabled" name="ContractDiscountPrc" id="txtContractDiscountPrc">
+                        </div>
+
+                        <label for="discount" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_warrentyperiod</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractWarantyPrd" id="txtContractWarantyPrd">
+                        </div>
+
+
+
+                        
+                        @*<label for="txtDownPaymentAmount" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_dowpay </label>
+        <div class="col-md-2 col-sm-4 col-xs-5">
+            <input type="text" class="form-control input-sm" disabled="disabled" name="DownPaymentAmount" id="txtDownPaymentAmount">
+        </div>*@
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtContractPeriod" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_contrperiod </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractPeriod" id="txtContractPeriod">
+                        </div>
+
+
+                        @*<label for="txtWarrntyPaymentAmount" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_warrantypay </label>
+        <div class="col-md-2 col-sm-4 col-xs-5">
+            <input type="text" class="form-control input-sm" disabled="disabled" name="WarrntyPaymentAmount" id="txtWarrntyPaymentAmount">
+        </div>*@
+
+
+                        <label for="addtional" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_Additions</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractAdditions" id="txtContractAdditions">
+                        </div>
+
+                        <label for="txtWarrntyPaymentPrc" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_warrant %</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable"   name="WarrntyPaymentPrc" id="txtWarrntyPaymentPrc">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDownPaymentPrc" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_dowpay %</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="DownPaymentPrc" id="txtDownPaymentPrc">
+                        </div>
+                        <label for="txtWarrntyPaymentAmount" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projectnet </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtProjectNet">
+                        </div>
+                       
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Def_VatPrc </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <select id="txtVatPrc" class="form-control   editable " name="VatPrc">
+                                <option value="0">Zero Vat</option>
+                                <option value="5">5%</option>
+                                <option value="15">15%</option>
+                            </select>
+                        </div>
+                           
+                    </div>
+                </div>
+                @*End Master Part 2*@
+
+                @*Begain Grid*@
+                <div class="col-xs-12 form-horizontal" id="projectphase">
+                    <div class="col-xs-12 form-group" style="height: 460px;">
+                        <table id="GridPhase"></table>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 form-horizontal" id="def_item">
+                    <div class="col-xs-12 form-group" style="height: 460px;">
+                        <table id="GridItem"></table>
+                    </div>
+                </div>
+                @*End Grid*@
+            </div>
+        </form>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/01_Projects/ProjectDefination.js"></script>
+</div>
+
+<style>
+
+    .jsgrid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+    .jsgrid-grid-body {
+        height: 360px!important;
+        max-height: 420px!important;
+    }
+    #def_item .form-group, #projectphase .form-group{
+        overflow: unset;
+    }
+</style>

@@ -1,0 +1,4872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Men_ActivityInformationBank" xml:space="preserve">
+    <value>Activity Information Bank</value>
+  </data>
+  <data name="Men_WorkActivities" xml:space="preserve">
+    <value>Work Activities</value>
+  </data>
+  <data name="Men_AreaDefinition" xml:space="preserve">
+    <value>Area Definition</value>
+  </data>
+  <data name="Men_CalendarDefinition" xml:space="preserve">
+    <value>Calendar Definition</value>
+  </data>
+  <data name="Men_CategoryDefinition" xml:space="preserve">
+    <value>Category Definition</value>
+  </data>
+  <data name="Men_Engineers" xml:space="preserve">
+    <value>Engineers</value>
+  </data>
+  <data name="Men_EquipmentCategory" xml:space="preserve">
+    <value>Equipment Class</value>
+  </data>
+  <data name="Men_EquipmentDefinition" xml:space="preserve">
+    <value>Equipment Definition</value>
+  </data>
+  <data name="Men_EquipToolsDefinition" xml:space="preserve">
+    <value>Equip Tools Definition</value>
+  </data>
+  <data name="Men_Expenses" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="Men_ExpensesCategory" xml:space="preserve">
+    <value>Expenses Category</value>
+  </data>
+  <data name="Men_ItemDefinition" xml:space="preserve">
+    <value>Item Definition</value>
+  </data>
+  <data name="Men_LaborAbsenceReasons" xml:space="preserve">
+    <value>Labor Absence Reasons</value>
+  </data>
+  <data name="Men_LaborCategory" xml:space="preserve">
+    <value>Labor Category</value>
+  </data>
+  <data name="Men_LaborClass" xml:space="preserve">
+    <value>Labor Class</value>
+  </data>
+  <data name="Men_LaborDefinition" xml:space="preserve">
+    <value>Labor Definition</value>
+  </data>
+  <data name="Men_LaborOvertimetypes" xml:space="preserve">
+    <value>Labor Overtime types</value>
+  </data>
+  <data name="Men_LocationDefinition" xml:space="preserve">
+    <value>Location Definition</value>
+  </data>
+  <data name="Men_MaterialDefinition" xml:space="preserve">
+    <value>Material Definition</value>
+  </data>
+  <data name="Men_Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="Men_OtherDefinition" xml:space="preserve">
+    <value>Other Definition</value>
+  </data>
+  <data name="Men_PeriodManagement" xml:space="preserve">
+    <value>Period Management</value>
+  </data>
+  <data name="Men_SalesEngCategory" xml:space="preserve">
+    <value>Sales Eng. Category</value>
+  </data>
+  <data name="Men_SalesEngineer" xml:space="preserve">
+    <value>Sales Engineer</value>
+  </data>
+  <data name="Men_ScopeClassandCategory" xml:space="preserve">
+    <value>Scope Classand Category</value>
+  </data>
+  <data name="Men_ScopeDefinition" xml:space="preserve">
+    <value>Scope Definition</value>
+  </data>
+  <data name="Men_SiteEngCategory" xml:space="preserve">
+    <value>Site Eng. Category</value>
+  </data>
+  <data name="Men_SiteEngineer" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Men_UnitsOfMeasure" xml:space="preserve">
+    <value>Units Of Measure</value>
+  </data>
+  <data name="Men_UnProductioncategory" xml:space="preserve">
+    <value>Stop Production Reason Category</value>
+  </data>
+  <data name="Men_UnProductionreasons" xml:space="preserve">
+    <value>Stop  Production Reasons</value>
+  </data>
+  <data name="Men_VendorDefinition" xml:space="preserve">
+    <value>Vendor Definition</value>
+  </data>
+  <data name="Fld_CategCode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="Fld_AbsCode" xml:space="preserve">
+    <value>Absence Code</value>
+  </data>
+  <data name="Fld_BonusAddFactor" xml:space="preserve">
+    <value>Bonus Add Factor</value>
+  </data>
+  <data name="Fld_BonusDedFactor" xml:space="preserve">
+    <value>Bonus Ded Factor</value>
+  </data>
+  <data name="Fld_BonusRate" xml:space="preserve">
+    <value>Bouns Rate</value>
+  </data>
+  <data name="Fld_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="Fld_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="Fld_HourCost" xml:space="preserve">
+    <value>Hour Opr. Cost</value>
+  </data>
+  <data name="Fld_Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Fld_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Men_ScopeClassandCat" xml:space="preserve">
+    <value>Scope Class and Category</value>
+  </data>
+  <data name="Fld_AccountNo" xml:space="preserve">
+    <value>Account Number</value>
+  </data>
+  <data name="Fld_ClassCode" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="Fld_DeprRate" xml:space="preserve">
+    <value>Department Rate</value>
+  </data>
+  <data name="Fld_ExpCatCode" xml:space="preserve">
+    <value>Category  Code</value>
+  </data>
+  <data name="Fld_ExpCode" xml:space="preserve">
+    <value>Expenses Code</value>
+  </data>
+  <data name="Fld_HourDeprCost" xml:space="preserve">
+    <value>Depr. Cost</value>
+  </data>
+  <data name="Fld_HourOprCost" xml:space="preserve">
+    <value>Operation Hour Cost</value>
+  </data>
+  <data name="Fld_NationalityCode" xml:space="preserve">
+    <value>Nationality Code</value>
+  </data>
+  <data name="Fld_ReasonCode" xml:space="preserve">
+    <value>Reason Code</value>
+  </data>
+  <data name="Fld_ReqQty" xml:space="preserve">
+    <value>Req Qty</value>
+  </data>
+  <data name="Fld_ScopeCategCode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="Fld_ScopeCode" xml:space="preserve">
+    <value>Scope Code</value>
+  </data>
+  <data name="Fld_UomCode" xml:space="preserve">
+    <value>Uom Code</value>
+  </data>
+  <data name="Men_ActivityDefinition" xml:space="preserve">
+    <value>Activity Definition</value>
+  </data>
+  <data name="Men_SystemSetting" xml:space="preserve">
+    <value>System Setting</value>
+  </data>
+  <data name="Fld_ActivityID" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="Fld_ActivityPriceDetailId" xml:space="preserve">
+    <value>Act Number</value>
+  </data>
+  <data name="Fld_ActivityPriceId" xml:space="preserve">
+    <value>Act description</value>
+  </data>
+  <data name="Fld_ActQty" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Fld_CalcUnitPrice" xml:space="preserve">
+    <value>Calc Price</value>
+  </data>
+  <data name="Fld_CompCode" xml:space="preserve">
+    <value>Acc Code</value>
+  </data>
+  <data name="Fld_CreatedAt" xml:space="preserve">
+    <value>Contracts Value</value>
+  </data>
+  <data name="Fld_CreatedBy" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Fld_EquipCost" xml:space="preserve">
+    <value>Equip Cost</value>
+  </data>
+  <data name="Fld_IsProdIncluded" xml:space="preserve">
+    <value>prod included ?</value>
+  </data>
+  <data name="Fld_ItemID" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Fld_ItemsSystemActivityId" xml:space="preserve">
+    <value>ACT</value>
+  </data>
+  <data name="Fld_ActivityDesc" xml:space="preserve">
+    <value>Activity Description</value>
+  </data>
+  <data name="Fld_LaborCost" xml:space="preserve">
+    <value>Labor Cost</value>
+  </data>
+  <data name="Fld_MatCost" xml:space="preserve">
+    <value>Mat.cost</value>
+  </data>
+  <data name="Fld_MinUnitPrice" xml:space="preserve">
+    <value>Min Price</value>
+  </data>
+  <data name="Fld_NewPrice" xml:space="preserve">
+    <value>New Price</value>
+  </data>
+  <data name="Fld_OHCost" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="Fld_OldPrice" xml:space="preserve">
+    <value>Old Price</value>
+  </data>
+  <data name="Fld_POHCost" xml:space="preserve">
+    <value>POH Cost</value>
+  </data>
+  <data name="Fld_ProdPrc" xml:space="preserve">
+    <value>% Prod</value>
+  </data>
+  <data name="Fld_Profit" xml:space="preserve">
+    <value>Profit Amt.</value>
+  </data>
+  <data name="Fld_SystemCode" xml:space="preserve">
+    <value>System Code</value>
+  </data>
+  <data name="Fld_TrNo" xml:space="preserve">
+    <value>No of Offers</value>
+  </data>
+  <data name="Fld_UnitPrice" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="Fld_UpdatedAt" xml:space="preserve">
+    <value>Offer Value</value>
+  </data>
+  <data name="Fld_UpdatedBy" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="Fld_VendorID" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="Men_ActivityPrice" xml:space="preserve">
+    <value>Activity Price</value>
+  </data>
+  <data name="Men_CompanyRespItem" xml:space="preserve">
+    <value>Company Resp Item</value>
+  </data>
+  <data name="Men_ContractList" xml:space="preserve">
+    <value>Contract List</value>
+  </data>
+  <data name="Men_CustomerBilling" xml:space="preserve">
+    <value>Customer Billing</value>
+  </data>
+  <data name="Men_CustomerCategory" xml:space="preserve">
+    <value>Customer Category</value>
+  </data>
+  <data name="Men_CustomerRespItems" xml:space="preserve">
+    <value>Customer Resp Items</value>
+  </data>
+  <data name="Men_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="Men_IssueProduction" xml:space="preserve">
+    <value>Issue Production</value>
+  </data>
+  <data name="Men_OfferBillingSchedule" xml:space="preserve">
+    <value>Offer Billing Schedule</value>
+  </data>
+  <data name="Men_OfferCostEstimation" xml:space="preserve">
+    <value>Offer Cost Estimation</value>
+  </data>
+  <data name="Men_OfferDefinition" xml:space="preserve">
+    <value>Offer Definition</value>
+  </data>
+  <data name="Men_OfferSpecification" xml:space="preserve">
+    <value>Offer Specification</value>
+  </data>
+  <data name="Men_ProductionAndBilling" xml:space="preserve">
+    <value>Production And Billing</value>
+  </data>
+  <data name="Men_ProductionVsBilling" xml:space="preserve">
+    <value>Production Vs Billing</value>
+  </data>
+  <data name="Men_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Men_SalesDataLibrary" xml:space="preserve">
+    <value>Sales Data Library</value>
+  </data>
+  <data name="Men_SalesItemLibrary" xml:space="preserve">
+    <value>Sales Item Library</value>
+  </data>
+  <data name="Men_SalesItemPlan" xml:space="preserve">
+    <value>Sales item Breakdown</value>
+  </data>
+  <data name="Men_SalesmanActivity" xml:space="preserve">
+    <value>Sales man Activity</value>
+  </data>
+  <data name="Men_SalesManBonus" xml:space="preserve">
+    <value>Sales Man Bonus</value>
+  </data>
+  <data name="Men_SalesOperations" xml:space="preserve">
+    <value>Sales Operations</value>
+  </data>
+  <data name="Men_StartOfWork" xml:space="preserve">
+    <value>Start Of Work</value>
+  </data>
+  <data name="Fld_AreaNo" xml:space="preserve">
+    <value>Area No.</value>
+  </data>
+  <data name="Fld_ChasisNo" xml:space="preserve">
+    <value>Chasis No.</value>
+  </data>
+  <data name="Fld_EffeciencyPrc" xml:space="preserve">
+    <value>Effeciency %</value>
+  </data>
+  <data name="Fld_EquipClassId" xml:space="preserve">
+    <value>Equip. Class </value>
+  </data>
+  <data name="Fld_MaintNotes" xml:space="preserve">
+    <value>Maint Notes</value>
+  </data>
+  <data name="Fld_Make" xml:space="preserve">
+    <value>Make</value>
+  </data>
+  <data name="Fld_MakeType" xml:space="preserve">
+    <value>MakeType</value>
+  </data>
+  <data name="Fld_Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Fld_OutOFServiceDate" xml:space="preserve">
+    <value>Out OF Service Date</value>
+  </data>
+  <data name="Fld_PhaseId" xml:space="preserve">
+    <value>Current Phase Number</value>
+  </data>
+  <data name="Fld_PlateNo" xml:space="preserve">
+    <value>Plate No.</value>
+  </data>
+  <data name="Fld_ProjectID" xml:space="preserve">
+    <value>Current Project Number </value>
+  </data>
+  <data name="Fld_PurchaseCost" xml:space="preserve">
+    <value>Purchase Cost</value>
+  </data>
+  <data name="Fld_PurchaseDate" xml:space="preserve">
+    <value>Purchase Date</value>
+  </data>
+  <data name="Fld_StartServiceDate" xml:space="preserve">
+    <value>Start Service Date</value>
+  </data>
+  <data name="Fld_Waranty" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="Fld_AreaName" xml:space="preserve">
+    <value>Area Name</value>
+  </data>
+  <data name="Fld_BasicSalary" xml:space="preserve">
+    <value>Monthly Salary</value>
+  </data>
+  <data name="Fld_CarPlateNo" xml:space="preserve">
+    <value>Car Plate</value>
+  </data>
+  <data name="Fld_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Fld_EngCode" xml:space="preserve">
+    <value>Eng. Code</value>
+  </data>
+  <data name="Fld_Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Fld_NationalityID" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="Fld_Speciality" xml:space="preserve">
+    <value>Engineer Special</value>
+  </data>
+  <data name="Fld_TotalAllow" xml:space="preserve">
+    <value>Monlthly Target</value>
+  </data>
+  <data name="Fld_Tel" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="Fld_BraCode" xml:space="preserve">
+    <value>Area Code</value>
+  </data>
+  <data name="Fld_ExpCatID" xml:space="preserve">
+    <value>Exp. Category</value>
+  </data>
+  <data name="Fld_LocationId" xml:space="preserve">
+    <value>Location Code</value>
+  </data>
+  <data name="Fld_ParentLocationId" xml:space="preserve">
+    <value>Parent Location</value>
+  </data>
+  <data name="Fld_SalesEngineerId" xml:space="preserve">
+    <value>Sales Engineer</value>
+  </data>
+  <data name="Fld_ActivityCode" xml:space="preserve">
+    <value>Activity Code</value>
+  </data>
+  <data name="Fld_BreakEnd" xml:space="preserve">
+    <value>Break End</value>
+  </data>
+  <data name="Fld_BreakStart" xml:space="preserve">
+    <value>Break Start</value>
+  </data>
+  <data name="Fld_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Fld_DailyProdQtyTeam" xml:space="preserve">
+    <value>Daily Prod. Qty /Team</value>
+  </data>
+  <data name="Fld_DailyWorkHours" xml:space="preserve">
+    <value>Daily Work Hours</value>
+  </data>
+  <data name="Fld_EquipmentOHRate" xml:space="preserve">
+    <value>Equipment OH Rate</value>
+  </data>
+  <data name="Fld_EquipmentPOHRate" xml:space="preserve">
+    <value>Equipment POH Rate</value>
+  </data>
+  <data name="Fld_EquipmentRequirement" xml:space="preserve">
+    <value>Equipment Requirement</value>
+  </data>
+  <data name="Fld_ExpensesOHRate" xml:space="preserve">
+    <value>Expenses OH Rate</value>
+  </data>
+  <data name="Fld_ExpensesPOHRate" xml:space="preserve">
+    <value>Expenses POH Rate</value>
+  </data>
+  <data name="Fld_LaborOHRate" xml:space="preserve">
+    <value>Labor OH Rate</value>
+  </data>
+  <data name="Fld_LaborPOHRate" xml:space="preserve">
+    <value>Labor POH Rate</value>
+  </data>
+  <data name="Fld_LaborProdPerHour" xml:space="preserve">
+    <value>Labor Prod. Per Hour</value>
+  </data>
+  <data name="Fld_LaborRequirement" xml:space="preserve">
+    <value>Labor Requirement</value>
+  </data>
+  <data name="Fld_Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Fld_MaterialOHRate" xml:space="preserve">
+    <value>Material OH Rate</value>
+  </data>
+  <data name="Fld_MaterialPOHRate" xml:space="preserve">
+    <value>Material POH Rate</value>
+  </data>
+  <data name="Fld_MaterialRequirement" xml:space="preserve">
+    <value>Material Requirement</value>
+  </data>
+  <data name="Fld_MaterialWaste" xml:space="preserve">
+    <value>Material Waste %</value>
+  </data>
+  <data name="Fld_Parentactivity" xml:space="preserve">
+    <value>Parent Activity</value>
+  </data>
+  <data name="Fld_Profit1" xml:space="preserve">
+    <value>Profit %</value>
+  </data>
+  <data name="Fld_ScopeCategoryID" xml:space="preserve">
+    <value>Scope Category</value>
+  </data>
+  <data name="Fld_StartTime" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="Fld_SubControlOHRate" xml:space="preserve">
+    <value>Sub Control OH Rate</value>
+  </data>
+  <data name="Fld_SubControlPOHRate" xml:space="preserve">
+    <value>Sub Control POH Rate</value>
+  </data>
+  <data name="Fld_UnitSellingPrice" xml:space="preserve">
+    <value>Unit Selling Price</value>
+  </data>
+  <data name="Fld_UOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Fld_WorkingDays" xml:space="preserve">
+    <value>Working Days</value>
+  </data>
+  <data name="Fld_HourProduction" xml:space="preserve">
+    <value>Hour Prod. Qty/ Team</value>
+  </data>
+  <data name="Fld_LaborCategoryId" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="Fld_LaborClassId" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="Fld_LaborCode" xml:space="preserve">
+    <value>LaborCode</value>
+  </data>
+  <data name="Fld_LaborProdRate" xml:space="preserve">
+    <value>Labor Prod Rate</value>
+  </data>
+  <data name="Fld_OverTimeCode" xml:space="preserve">
+    <value>Over Time Code</value>
+  </data>
+  <data name="Fld_ParentActivityID" xml:space="preserve">
+    <value>Parent Activity ID</value>
+  </data>
+  <data name="ExpCat_AccountNo" xml:space="preserve">
+    <value>AccountNo</value>
+  </data>
+  <data name="ExpCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="ExpCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="ExpCat_ExpCatCode" xml:space="preserve">
+    <value>Expense CatCode</value>
+  </data>
+  <data name="Expens_AccountNo" xml:space="preserve">
+    <value>AccountNo</value>
+  </data>
+  <data name="Expens_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="Expens_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="Expens_ExpCode" xml:space="preserve">
+    <value>Expenses Code</value>
+  </data>
+  <data name="LabAbs_AbsCode" xml:space="preserve">
+    <value>Absence Code</value>
+  </data>
+  <data name="LabAbs_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="LabAbs_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="LabAbs_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="LabCat_BonusRate" xml:space="preserve">
+    <value>Bonus Rate</value>
+  </data>
+  <data name="LabCat_CategCode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="LabCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="LabCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="LabCat_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="LabClass_BonusAddFactor" xml:space="preserve">
+    <value>BonusAddFactor</value>
+  </data>
+  <data name="LabClass_BonusDedFactor" xml:space="preserve">
+    <value>BonusDedFactor</value>
+  </data>
+  <data name="LabClass_ClassCode" xml:space="preserve">
+    <value>ClassCode</value>
+  </data>
+  <data name="LabClass_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="LabClass_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="LabClass_HourCost" xml:space="preserve">
+    <value>Hour Cost</value>
+  </data>
+  <data name="LabClass_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="LabOvTime_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="LabOvTime_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="LabOvTime_OverTimeCode" xml:space="preserve">
+    <value>OverTimeCode</value>
+  </data>
+  <data name="LabOvTime_Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Nationalty_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="Nationalty_DescL" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="Nationalty_NationalityCode" xml:space="preserve">
+    <value>Nationality Code</value>
+  </data>
+  <data name="ScopClassCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="ScopClassCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="ScopClassCat_ScopeCategCode" xml:space="preserve">
+    <value>ScopeCategory Code</value>
+  </data>
+  <data name="ScopDef_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="ScopDef_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="ScopDef_ScopeCode" xml:space="preserve">
+    <value>ScopeCode</value>
+  </data>
+  <data name="UnitMeasre_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="UnitMeasre_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="UnitMeasre_UomCode" xml:space="preserve">
+    <value>UomCode</value>
+  </data>
+  <data name="UnProdCat_CategCode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="UnProdCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="UnProdCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="UnProdRes_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="UnProdRes_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="UnProdRes_ReasonCode" xml:space="preserve">
+    <value>Reason Code</value>
+  </data>
+  <data name="EqCat_ClassCode" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="EqCat_DeprRate" xml:space="preserve">
+    <value>Depereciation Rate</value>
+  </data>
+  <data name="EqCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="EqCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="EqCat_HourCost" xml:space="preserve">
+    <value>Hour Cost</value>
+  </data>
+  <data name="EqCat_HourDeprCost" xml:space="preserve">
+    <value>Hour Depereciation Cost</value>
+  </data>
+  <data name="EqCat_HourOprCost" xml:space="preserve">
+    <value>Hour Operating Cost</value>
+  </data>
+  <data name="SMB_AddToBusket" xml:space="preserve">
+    <value>AddToBusket</value>
+  </data>
+  <data name="SMB_CurrentBasket" xml:space="preserve">
+    <value>Current Basket</value>
+  </data>
+  <data name="SMB_CurrentInvoices" xml:space="preserve">
+    <value>Current Invoices</value>
+  </data>
+  <data name="SMB_CurrentSales" xml:space="preserve">
+    <value>CurrentSales</value>
+  </data>
+  <data name="SMB_OpenBasket" xml:space="preserve">
+    <value>Op. Basket</value>
+  </data>
+  <data name="SMB_OpenSales" xml:space="preserve">
+    <value>Op.Sales</value>
+  </data>
+  <data name="SMB_Salary" xml:space="preserve">
+    <value>Salary</value>
+  </data>
+  <data name="SMB_SalesBonusDetailId" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="SMB_SalesBonusId" xml:space="preserve">
+    <value>BounsId</value>
+  </data>
+  <data name="SMB_SalesEngCategoryId" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SMB_SalesEngineerId" xml:space="preserve">
+    <value>Categ Code</value>
+  </data>
+  <data name="Act_ActivityID" xml:space="preserve">
+    <value>ActivityID</value>
+  </data>
+  <data name="Act_EquipName" xml:space="preserve">
+    <value>EquipName</value>
+  </data>
+  <data name="Act_ItemName" xml:space="preserve">
+    <value>Material Name</value>
+  </data>
+  <data name="Act_LaborClass" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="Act_NoOfEquipments" xml:space="preserve">
+    <value>NoOfEquipments</value>
+  </data>
+  <data name="Act_NoOfLabors" xml:space="preserve">
+    <value>NoOfLabors</value>
+  </data>
+  <data name="Act_ReqQty" xml:space="preserve">
+    <value>Req Qty</value>
+  </data>
+  <data name="Act_WastQty" xml:space="preserve">
+    <value>WastQty</value>
+  </data>
+  <data name="Fld_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Fld_ContPer" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="Fld_mobilee" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Fld_projcode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="Fld_projdesc" xml:space="preserve">
+    <value>Project Description</value>
+  </data>
+  <data name="Fld_Remarkss" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Fld_SlsEng" xml:space="preserve">
+    <value>Sales Engineer</value>
+  </data>
+  <data name="Fld_telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="SMB_BilledQty" xml:space="preserve">
+    <value>Bill Qty</value>
+  </data>
+  <data name="SMB_Current" xml:space="preserve">
+    <value>Cur Prod Qty</value>
+  </data>
+  <data name="SMB_itemcode" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="SMB_itemdes" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="SMB_itemqty" xml:space="preserve">
+    <value>Item Qty</value>
+  </data>
+  <data name="SMB_itemserial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="SMB_prev" xml:space="preserve">
+    <value>Prev P Qty</value>
+  </data>
+  <data name="SMB_Remarks" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="SMB_toproqty" xml:space="preserve">
+    <value>Total P Qty</value>
+  </data>
+  <data name="SMB_total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="SMB_UnBilledQty" xml:space="preserve">
+    <value>Un Billed Qty</value>
+  </data>
+  <data name="SMB_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="Men_SalesPayTerms" xml:space="preserve">
+    <value>Sales Payment Terms</value>
+  </data>
+  <data name="Fld_ArabicName" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="Fld_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Fld_isActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Fld_MinSPrice" xml:space="preserve">
+    <value>Min Sales Price</value>
+  </data>
+  <data name="Fld_salesItemCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Fld_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Fld_SellingPrice" xml:space="preserve">
+    <value>Selling Price</value>
+  </data>
+  <data name="Fld_Vendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="Fld_TotalCost" xml:space="preserve">
+    <value>TotalCost</value>
+  </data>
+  <data name="Fld_Authorize" xml:space="preserve">
+    <value>Authorize</value>
+  </data>
+  <data name="Fld_FromAct" xml:space="preserve">
+    <value>FromAct</value>
+  </data>
+  <data name="Fld_loadActivity" xml:space="preserve">
+    <value>loadActivity</value>
+  </data>
+  <data name="Fld_ToAct" xml:space="preserve">
+    <value>ToAct</value>
+  </data>
+  <data name="Fld_TRDate" xml:space="preserve">
+    <value>TRDate</value>
+  </data>
+  <data name="Fld_TRNumber" xml:space="preserve">
+    <value>TRNumber</value>
+  </data>
+  <data name="Fld_Cancle" xml:space="preserve">
+    <value>Cancle</value>
+  </data>
+  <data name="Fld_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Fld_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Fld_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Fldclose" xml:space="preserve">
+    <value>close</value>
+  </data>
+  <data name="Fld_Costumer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Fld_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Fld_Final" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="Fld_FromDate" xml:space="preserve">
+    <value>FromDate</value>
+  </data>
+  <data name="Fld_GenerateProduction" xml:space="preserve">
+    <value>Generate Production</value>
+  </data>
+  <data name="Fld_Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="Fld_ProdAmount" xml:space="preserve">
+    <value>Prod Amount</value>
+  </data>
+  <data name="Fld_ProdNo" xml:space="preserve">
+    <value>ProdNo</value>
+  </data>
+  <data name="Fld_Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Fld_RefNo" xml:space="preserve">
+    <value>Ref No.</value>
+  </data>
+  <data name="Fld_Rejectremaining" xml:space="preserve">
+    <value>Reject remaining</value>
+  </data>
+  <data name="Fld_To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Fld_WorkDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SMB_BonusAmount" xml:space="preserve">
+    <value>Bonus Amount</value>
+  </data>
+  <data name="Fld_Quarter" xml:space="preserve">
+    <value>Quarter</value>
+  </data>
+  <data name="Fld_ToDate" xml:space="preserve">
+    <value>ToDate</value>
+  </data>
+  <data name="Fld_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="SMB_Code" xml:space="preserve">
+    <value>Cat</value>
+  </data>
+  <data name="SMB_engName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Fld_DueDate" xml:space="preserve">
+    <value>Due Date</value>
+  </data>
+  <data name="Fld_ItemDesc" xml:space="preserve">
+    <value>Item Desc</value>
+  </data>
+  <data name="Fld_OfferItemId" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="Fld_PayDescA" xml:space="preserve">
+    <value>Payment Description Ar</value>
+  </data>
+  <data name="Fld_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="Fld_PayDescE" xml:space="preserve">
+    <value>Payment Description En</value>
+  </data>
+  <data name="Fld_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Fld_DownAmt" xml:space="preserve">
+    <value>Down Amt</value>
+  </data>
+  <data name="Fld_DownPrc" xml:space="preserve">
+    <value>Down Prc</value>
+  </data>
+  <data name="Fld_DueAmount" xml:space="preserve">
+    <value>Due Amount</value>
+  </data>
+  <data name="Fld_DuePrc" xml:space="preserve">
+    <value>Due Prc</value>
+  </data>
+  <data name="Fld_Installment" xml:space="preserve">
+    <value>Installment</value>
+  </data>
+  <data name="Fld_OfferDate" xml:space="preserve">
+    <value>Offer Date</value>
+  </data>
+  <data name="Fld_OfferDescA" xml:space="preserve">
+    <value>Offer DescA</value>
+  </data>
+  <data name="Fld_OfferDescL" xml:space="preserve">
+    <value>Offer DescL</value>
+  </data>
+  <data name="Fld_OfferNo" xml:space="preserve">
+    <value>OfferNo</value>
+  </data>
+  <data name="Fld_OfferPrice" xml:space="preserve">
+    <value>OfferPrice</value>
+  </data>
+  <data name="Fld_OfferSerial" xml:space="preserve">
+    <value>OfferSerial</value>
+  </data>
+  <data name="Fld_OfferStatus" xml:space="preserve">
+    <value>Offer Status</value>
+  </data>
+  <data name="Fld_OnProductivity" xml:space="preserve">
+    <value>On Productivity</value>
+  </data>
+  <data name="Fld_Paymentmethod" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="Fld_WarrantyAmt" xml:space="preserve">
+    <value>Warranty Amt</value>
+  </data>
+  <data name="Fld_WarrantyPrc" xml:space="preserve">
+    <value>Warranty Prc</value>
+  </data>
+  <data name="Cust_BraCode" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Cust_custEng_code" xml:space="preserve">
+    <value>Sales Engineer</value>
+  </data>
+  <data name="Cust_CustomerCode" xml:space="preserve">
+    <value>Customer Code</value>
+  </data>
+  <data name="Cust_CustomerContact" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="Cust_CustomerTel" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="Cust_ProjectCode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="Cust_Proj_descE" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="Cust_Proj_remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Fld_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Fld_ChamberNo" xml:space="preserve">
+    <value>ChamberNo</value>
+  </data>
+  <data name="Fld_CRNumber" xml:space="preserve">
+    <value>CRNumber</value>
+  </data>
+  <data name="Fld_CustomerCode" xml:space="preserve">
+    <value>Customer Code</value>
+  </data>
+  <data name="Fld_fax" xml:space="preserve">
+    <value>fax</value>
+  </data>
+  <data name="Fld_Temporary" xml:space="preserve">
+    <value>Temporary</value>
+  </data>
+  <data name="Fld_vat" xml:space="preserve">
+    <value>VAT</value>
+  </data>
+  <data name="CustCat_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CustCat_DescA" xml:space="preserve">
+    <value>Arabic Name</value>
+  </data>
+  <data name="CustCat_DescE" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="CustCat_Remarks" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Men_SalesPaymentTerms" xml:space="preserve">
+    <value>Sales Payment Terms</value>
+  </data>
+  <data name="Act_EquipClassName" xml:space="preserve">
+    <value>EquipClassName</value>
+  </data>
+  <data name="Act_ItemCode" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Act_LaborClassName" xml:space="preserve">
+    <value>ClassName</value>
+  </data>
+  <data name="Act_TotalConsQty" xml:space="preserve">
+    <value>TotalConsQty</value>
+  </data>
+  <data name="Act_Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Cust_Customermobile" xml:space="preserve">
+    <value>Customer Mobile</value>
+  </data>
+  <data name="Cust_GLAccountCode" xml:space="preserve">
+    <value>Account Code</value>
+  </data>
+  <data name="Eng_SubContractor" xml:space="preserve">
+    <value>SubContractor</value>
+  </data>
+  <data name="Men_ProjectDefination" xml:space="preserve">
+    <value>Project Definition</value>
+  </data>
+  <data name="Men_ProjectSpecification" xml:space="preserve">
+    <value>Project Specification</value>
+  </data>
+  <data name="Def_area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Def_contractno" xml:space="preserve">
+    <value>Contract Number</value>
+  </data>
+  <data name="Def_contract_val" xml:space="preserve">
+    <value>Contract Value</value>
+  </data>
+  <data name="Def_contrDate" xml:space="preserve">
+    <value>Contract Date</value>
+  </data>
+  <data name="Def_contrperiod" xml:space="preserve">
+    <value>Contract Period</value>
+  </data>
+  <data name="Def_customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Def_customeraccount" xml:space="preserve">
+    <value>Customer Account</value>
+  </data>
+  <data name="Def_Customermob" xml:space="preserve">
+    <value>Customer Mobile</value>
+  </data>
+  <data name="Def_CustomerTele" xml:space="preserve">
+    <value>Customer Tele</value>
+  </data>
+  <data name="Def_dowpay" xml:space="preserve">
+    <value>Down payment</value>
+  </data>
+  <data name="Def_location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Def_offerserial" xml:space="preserve">
+    <value>Offer Serial</value>
+  </data>
+  <data name="Def_offno" xml:space="preserve">
+    <value>Offer No</value>
+  </data>
+  <data name="Def_projecphase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Def_projectitem" xml:space="preserve">
+    <value>Project Item</value>
+  </data>
+  <data name="Def_projectno" xml:space="preserve">
+    <value>Project Number</value>
+  </data>
+  <data name="Def_project_val" xml:space="preserve">
+    <value>Project Value</value>
+  </data>
+  <data name="Def_projnamea" xml:space="preserve">
+    <value>Phase Name A</value>
+  </data>
+  <data name="Def_projnamee" xml:space="preserve">
+    <value>Phase Name E</value>
+  </data>
+  <data name="Def_Recipperson" xml:space="preserve">
+    <value>Resp.person</value>
+  </data>
+  <data name="Def_refno" xml:space="preserve">
+    <value>Reference No.</value>
+  </data>
+  <data name="Def_Saleseng" xml:space="preserve">
+    <value>Sales Eng</value>
+  </data>
+  <data name="Def_techn" xml:space="preserve">
+    <value>Techniqal Specification</value>
+  </data>
+  <data name="Def_term" xml:space="preserve">
+    <value>Term And Condition</value>
+  </data>
+  <data name="Def_warrant" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="Def_warrantypay" xml:space="preserve">
+    <value>Warranty Payment</value>
+  </data>
+  <data name="End_Date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Spec_Cleander" xml:space="preserve">
+    <value>Calender</value>
+  </data>
+  <data name="Spec_costcenter" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
+  <data name="Spec_decA" xml:space="preserve">
+    <value>Phase Desc A</value>
+  </data>
+  <data name="Spec_decE" xml:space="preserve">
+    <value>Phase Desc E</value>
+  </data>
+  <data name="spec_eng" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Spec_projectDesc" xml:space="preserve">
+    <value>Project Description</value>
+  </data>
+  <data name="Spec_projectspec" xml:space="preserve">
+    <value>Project Specification</value>
+  </data>
+  <data name="Spec_scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Spec_Workhours" xml:space="preserve">
+    <value>Work hours</value>
+  </data>
+  <data name="Start_date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Men_Definition" xml:space="preserve">
+    <value>Definition</value>
+  </data>
+  <data name="Men_Evaluation" xml:space="preserve">
+    <value>Sub Contr Evaluation</value>
+  </data>
+  <data name="Men_OpProductionEntry" xml:space="preserve">
+    <value>Production Entry</value>
+  </data>
+  <data name="Men_OpProjectExpenses" xml:space="preserve">
+    <value>Project Expenses</value>
+  </data>
+  <data name="Men_Prequalification" xml:space="preserve">
+    <value>Prequalification</value>
+  </data>
+  <data name="Men_Production" xml:space="preserve">
+    <value>Sub Contractor Production</value>
+  </data>
+  <data name="Men_ProductionEntry" xml:space="preserve">
+    <value>SC Production Entry</value>
+  </data>
+  <data name="Men_ProjectChange" xml:space="preserve">
+    <value>Project Change</value>
+  </data>
+  <data name="Men_ProjectMasterPlan" xml:space="preserve">
+    <value>Project Master Plan</value>
+  </data>
+  <data name="Men_ServiceOrder" xml:space="preserve">
+    <value>Service Order</value>
+  </data>
+  <data name="Men_SubContContract" xml:space="preserve">
+    <value>Sub Cont Contract</value>
+  </data>
+  <data name="Men_SubContractorActivity" xml:space="preserve">
+    <value>Sub Contractor Activity</value>
+  </data>
+  <data name="Men_SubContractorListing" xml:space="preserve">
+    <value>Sub Contractor Listing</value>
+  </data>
+  <data name="Men_SubContractorReports" xml:space="preserve">
+    <value>Sub Contractor Reports</value>
+  </data>
+  <data name="Men_WorkSchedule" xml:space="preserve">
+    <value>Work Schedule</value>
+  </data>
+  <data name="Men_Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Men_SubContractor" xml:space="preserve">
+    <value>SubContractor</value>
+  </data>
+  <data name="Change_proj_phase" xml:space="preserve">
+    <value>Project_phase</value>
+  </data>
+  <data name="Change_Refno" xml:space="preserve">
+    <value>Ref No</value>
+  </data>
+  <data name="Change_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Change_varvalue" xml:space="preserve">
+    <value>Var Value</value>
+  </data>
+  <data name="Chang_RefDate" xml:space="preserve">
+    <value>Ref Date</value>
+  </data>
+  <data name="Chang_variant_desc" xml:space="preserve">
+    <value>Variant Description</value>
+  </data>
+  <data name="Chang_variant_no" xml:space="preserve">
+    <value>Variant No</value>
+  </data>
+  <data name="Mast_breaking_End" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Mast_breaking_start" xml:space="preserve">
+    <value>Phase Description</value>
+  </data>
+  <data name="Mast_end_date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Mast_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Mast_start_date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Mast_start_time" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Change_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Contr_activityname" xml:space="preserve">
+    <value>Activity Name</value>
+  </data>
+  <data name="Contr_act_code" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="Contr_finished_sos" xml:space="preserve">
+    <value>Finished Sos</value>
+  </data>
+  <data name="Contr_issue_sos" xml:space="preserve">
+    <value>Issue Sos</value>
+  </data>
+  <data name="Contr_no" xml:space="preserve">
+    <value>Cont. No</value>
+  </data>
+  <data name="Contr_open_sos" xml:space="preserve">
+    <value>Open Sos</value>
+  </data>
+  <data name="Contr_price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Contr_qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="Contr_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Contr_subcont" xml:space="preserve">
+    <value>Sub Contractor</value>
+  </data>
+  <data name="Contr_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Pre_address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Pre_apllydate" xml:space="preserve">
+    <value>Apply Date</value>
+  </data>
+  <data name="Pre_approval" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="Pre_approvdate" xml:space="preserve">
+    <value>Approval Date</value>
+  </data>
+  <data name="Pre_candcode" xml:space="preserve">
+    <value>Candidate Code</value>
+  </data>
+  <data name="Pre_chcommonno" xml:space="preserve">
+    <value>Ch. Of Comm. No</value>
+  </data>
+  <data name="Pre_company_namea" xml:space="preserve">
+    <value>Company Name A</value>
+  </data>
+  <data name="Pre_company_namee" xml:space="preserve">
+    <value>Company Name E</value>
+  </data>
+  <data name="Pre_contact_person" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="pre_crNo" xml:space="preserve">
+    <value>Cr No</value>
+  </data>
+  <data name="Pre_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Pre_limit" xml:space="preserve">
+    <value>Contract Limit</value>
+  </data>
+  <data name="Pre_location" xml:space="preserve">
+    <value>Location Branch</value>
+  </data>
+  <data name="Pre_Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Pre_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Pre_scopcode" xml:space="preserve">
+    <value>Scope Code</value>
+  </data>
+  <data name="Pre_scopdesc" xml:space="preserve">
+    <value>Scope Description</value>
+  </data>
+  <data name="Pre_spciality" xml:space="preserve">
+    <value>Speciality</value>
+  </data>
+  <data name="Pre_subcont_code" xml:space="preserve">
+    <value>Subcont Code</value>
+  </data>
+  <data name="Pre_Tele1" xml:space="preserve">
+    <value>Tele (1)</value>
+  </data>
+  <data name="Pre_Tele12" xml:space="preserve">
+    <value>Tele (2)</value>
+  </data>
+  <data name="Pre_vatno" xml:space="preserve">
+    <value>Vat No</value>
+  </data>
+  <data name="Sub_accountcode" xml:space="preserve">
+    <value>Account Code</value>
+  </data>
+  <data name="Sub_def_Defination" xml:space="preserve">
+    <value>Definition</value>
+  </data>
+  <data name="Sub_def_limit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="Fld_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Fld_StandardRatio" xml:space="preserve">
+    <value>Standard Ratio</value>
+  </data>
+  <data name="Cost_EstimatedMaterial" xml:space="preserve">
+    <value>Material Cost</value>
+  </data>
+  <data name="Cost_ItemID" xml:space="preserve">
+    <value>ItemNo</value>
+  </data>
+  <data name="Cost_Qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="Cost_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="Fld_Equip" xml:space="preserve">
+    <value>Equip</value>
+  </data>
+  <data name="Fld_Labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="Fld_Material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Fld_OH" xml:space="preserve">
+    <value>OH</value>
+  </data>
+  <data name="Fld_ProdOH" xml:space="preserve">
+    <value>ProdOH</value>
+  </data>
+  <data name="Fld_allActive" xml:space="preserve">
+    <value>All Active</value>
+  </data>
+  <data name="Fld_isNoActive" xml:space="preserve">
+    <value>InActive</value>
+  </data>
+  <data name="Cost_ActivityCode" xml:space="preserve">
+    <value>Activity Code</value>
+  </data>
+  <data name="Cost_Act_DescA" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Cost_calc_total" xml:space="preserve">
+    <value>Total </value>
+  </data>
+  <data name="Cost_EstimatedEquip" xml:space="preserve">
+    <value>Equip Cost</value>
+  </data>
+  <data name="Cost_EstimatedLabor" xml:space="preserve">
+    <value>Labor Cost</value>
+  </data>
+  <data name="Cost_EstimatedOH" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="Cost_EstimatedPOH" xml:space="preserve">
+    <value>POH Cost</value>
+  </data>
+  <data name="Cost_ItemID1" xml:space="preserve">
+    <value>ItemNo</value>
+  </data>
+  <data name="Cost_itm_DescA" xml:space="preserve">
+    <value>item Name</value>
+  </data>
+  <data name="Cost_OHcost" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="Cost_POHcost" xml:space="preserve">
+    <value>POH Cost</value>
+  </data>
+  <data name="Cost_ProductionIncluded" xml:space="preserve">
+    <value>Prod Included?</value>
+  </data>
+  <data name="Cost_ProductionPrc" xml:space="preserve">
+    <value>Production Prc</value>
+  </data>
+  <data name="Cost_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Cost_StdUnitPrice" xml:space="preserve">
+    <value>StdUnitPrice</value>
+  </data>
+  <data name="Cost_UnitPrice" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="Fld_AreaM2" xml:space="preserve">
+    <value>Area M2</value>
+  </data>
+  <data name="Fld_Billingterms" xml:space="preserve">
+    <value>Billing terms</value>
+  </data>
+  <data name="Fld_Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="Fld_ContactNo" xml:space="preserve">
+    <value>Contact No</value>
+  </data>
+  <data name="Fld_ContactPerson" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="Fld_ContractDate" xml:space="preserve">
+    <value>Contract Date</value>
+  </data>
+  <data name="Fld_Contracted" xml:space="preserve">
+    <value>Contracted</value>
+  </data>
+  <data name="Fld_Copy" xml:space="preserve">
+    <value>Copy Offer</value>
+  </data>
+  <data name="Fld_CostEstimation" xml:space="preserve">
+    <value>Cost Estimation</value>
+  </data>
+  <data name="Fld_CrNo" xml:space="preserve">
+    <value>CR No.</value>
+  </data>
+  <data name="Fld_CustCompResp" xml:space="preserve">
+    <value>Cust / Comp Resp</value>
+  </data>
+  <data name="Fld_CustomerInformation" xml:space="preserve">
+    <value>Customer Information</value>
+  </data>
+  <data name="Fld_CustomerNameA" xml:space="preserve">
+    <value>Customer Name A</value>
+  </data>
+  <data name="Fld_CustomerNameE" xml:space="preserve">
+    <value>Customer Name E</value>
+  </data>
+  <data name="Fld_CustomerPay" xml:space="preserve">
+    <value>Customer Pay</value>
+  </data>
+  <data name="Fld_DeliveryDate" xml:space="preserve">
+    <value>Delivery Date</value>
+  </data>
+  <data name="Fld_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Fld_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Fld_Maintenancework" xml:space="preserve">
+    <value>Maintenance work</value>
+  </data>
+  <data name="Fld_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Fld_OffrGCondterms" xml:space="preserve">
+    <value>Conditions and terms</value>
+  </data>
+  <data name="Fld_Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Fld_Penalties" xml:space="preserve">
+    <value>Penalties</value>
+  </data>
+  <data name="Fld_PhaseNo" xml:space="preserve">
+    <value>Phase  No</value>
+  </data>
+  <data name="Fld_PrintQuotation" xml:space="preserve">
+    <value>Print Quotation</value>
+  </data>
+  <data name="Fld_PrintSubmittal" xml:space="preserve">
+    <value>Print Submittal</value>
+  </data>
+  <data name="Fld_ProductionStage" xml:space="preserve">
+    <value>Production Stage</value>
+  </data>
+  <data name="Fld_ProjectNo" xml:space="preserve">
+    <value>Project No</value>
+  </data>
+  <data name="Fld_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Fld_RefNumber" xml:space="preserve">
+    <value>Ref Number</value>
+  </data>
+  <data name="Fld_Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="Fld_SalesMan" xml:space="preserve">
+    <value>Sales Man</value>
+  </data>
+  <data name="Fld_SendTocustomer" xml:space="preserve">
+    <value>Send to customer</value>
+  </data>
+  <data name="Fld_Specification" xml:space="preserve">
+    <value>Specification</value>
+  </data>
+  <data name="Fld_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Fld_Technicalspecifications" xml:space="preserve">
+    <value>Technical specifications</value>
+  </data>
+  <data name="Fld_WarranteeAmount" xml:space="preserve">
+    <value>Warrantee Amount</value>
+  </data>
+  <data name="Off_Desc" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Off_PaymentId" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Off_Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Off_Reposibility" xml:space="preserve">
+    <value>Reposibility</value>
+  </data>
+  <data name="Off_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Off_StageCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Off_StageDescA" xml:space="preserve">
+    <value>Name Ar</value>
+  </data>
+  <data name="Off_StageDescE" xml:space="preserve">
+    <value>Name En</value>
+  </data>
+  <data name="Off_StTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Cost_Act_Code" xml:space="preserve">
+    <value>Act.Code</value>
+  </data>
+  <data name="Fld_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Fld_Bra" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Fld_Categ" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Fld_Class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="def_Finished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="def_new" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="def_stoped" xml:space="preserve">
+    <value>Stoped</value>
+  </data>
+  <data name="def_Suspned" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="def_UnderProc" xml:space="preserve">
+    <value>Under Proc</value>
+  </data>
+  <data name="other_info" xml:space="preserve">
+    <value>Other Information</value>
+  </data>
+  <data name="def_actqty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="def_Caleander" xml:space="preserve">
+    <value>Caleander</value>
+  </data>
+  <data name="def_contrqty" xml:space="preserve">
+    <value>Contr Qty</value>
+  </data>
+  <data name="def_enginer" xml:space="preserve">
+    <value>Engineer</value>
+  </data>
+  <data name="def_itemname" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="def_itemno" xml:space="preserve">
+    <value>Item No</value>
+  </data>
+  <data name="def_phasedescriptiona" xml:space="preserve">
+    <value>Phase description A</value>
+  </data>
+  <data name="def_phasedescriptionb" xml:space="preserve">
+    <value>Phase description B</value>
+  </data>
+  <data name="def_prodQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="def_remainqty" xml:space="preserve">
+    <value>Remain Qty</value>
+  </data>
+  <data name="def_schedqty" xml:space="preserve">
+    <value>Sched Qty</value>
+  </data>
+  <data name="def_schprod" xml:space="preserve">
+    <value>Sch Prod</value>
+  </data>
+  <data name="def_scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="def_scprodqty" xml:space="preserve">
+    <value>Sc Prod Qty</value>
+  </data>
+  <data name="def_scqty" xml:space="preserve">
+    <value>Sc Qty</value>
+  </data>
+  <data name="def_StartDate" xml:space="preserve">
+    <value>StartDate</value>
+  </data>
+  <data name="def_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Act_ProdQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="Act_WastPrc" xml:space="preserve">
+    <value>WastPrc</value>
+  </data>
+  <data name="def_umo" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="sub_contact" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="sub_downpay" xml:space="preserve">
+    <value>Down Payment</value>
+  </data>
+  <data name="sub_duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="sub_equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="sub_labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="sub_material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="sub_offer" xml:space="preserve">
+    <value>Conditions and Terms</value>
+  </data>
+  <data name="sub_penalites" xml:space="preserve">
+    <value>Penalites</value>
+  </data>
+  <data name="sub_specification" xml:space="preserve">
+    <value>Technical Specifications</value>
+  </data>
+  <data name="sub_specificationanditem" xml:space="preserve">
+    <value>Specification and Term</value>
+  </data>
+  <data name="sub_techniqal" xml:space="preserve">
+    <value>Technical</value>
+  </data>
+  <data name="sub_warrantp" xml:space="preserve">
+    <value>Warranty Period</value>
+  </data>
+  <data name="sub_warranty" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="serv_closedate" xml:space="preserve">
+    <value>Close Date</value>
+  </data>
+  <data name="serv_closereason" xml:space="preserve">
+    <value>Close Reason</value>
+  </data>
+  <data name="serv_genral_material" xml:space="preserve">
+    <value>Genral Naterial</value>
+  </data>
+  <data name="serv_po" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="serv_relase" xml:space="preserve">
+    <value>Service Order</value>
+  </data>
+  <data name="serv_total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Cost_UnitCost" xml:space="preserve">
+    <value>Unit Cost</value>
+  </data>
+  <data name="Eve_issuedate" xml:space="preserve">
+    <value>Issue Date</value>
+  </data>
+  <data name="Eve_prodvalue" xml:space="preserve">
+    <value>Prod Value</value>
+  </data>
+  <data name="Eve_siteenginer" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Eve_sono" xml:space="preserve">
+    <value>SO No</value>
+  </data>
+  <data name="Eve_sovalue" xml:space="preserve">
+    <value>SO Value</value>
+  </data>
+  <data name="Eve_Tech" xml:space="preserve">
+    <value>Tech</value>
+  </data>
+  <data name="Eve_time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Eve_TotalEval" xml:space="preserve">
+    <value>Total Eval</value>
+  </data>
+  <data name="Eve_transno" xml:space="preserve">
+    <value>Trans No.</value>
+  </data>
+  <data name="Prod_entryno" xml:space="preserve">
+    <value>Entry No</value>
+  </data>
+  <data name="Prod_sitesuper" xml:space="preserve">
+    <value>Site Supervisor</value>
+  </data>
+  <data name="Prod_sonumber" xml:space="preserve">
+    <value>SO Number</value>
+  </data>
+  <data name="project_amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="project_Beneficial" xml:space="preserve">
+    <value>Beneficial</value>
+  </data>
+  <data name="project_expdesc" xml:space="preserve">
+    <value>Exp. Description</value>
+  </data>
+  <data name="project_expno" xml:space="preserve">
+    <value>Exp No.</value>
+  </data>
+  <data name="project_phaseno" xml:space="preserve">
+    <value>Phase No</value>
+  </data>
+  <data name="project_RefNo" xml:space="preserve">
+    <value>Ref No</value>
+  </data>
+  <data name="Fld_ProfitRation" xml:space="preserve">
+    <value>Profit Markup</value>
+  </data>
+  <data name="work_sec_sched" xml:space="preserve">
+    <value>Sched No</value>
+  </data>
+  <data name="work_sec_sched_arbianame" xml:space="preserve">
+    <value>Work Description</value>
+  </data>
+  <data name="work_sec_sched_englishname" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="work_assign_Equi" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="work_assign_labor" xml:space="preserve">
+    <value>Assign Labor</value>
+  </data>
+  <data name="work_fromperiod" xml:space="preserve">
+    <value>From Period</value>
+  </data>
+  <data name="work_general" xml:space="preserve">
+    <value>Material Req</value>
+  </data>
+  <data name="work_item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="work_toperiod" xml:space="preserve">
+    <value>To Period</value>
+  </data>
+  <data name="wrok_period_Hours" xml:space="preserve">
+    <value>Prod Hours</value>
+  </data>
+  <data name="work_activityqty" xml:space="preserve">
+    <value>Activity Qty</value>
+  </data>
+  <data name="work_assigneqyp" xml:space="preserve">
+    <value>Assign Equipment</value>
+  </data>
+  <data name="work_availqty" xml:space="preserve">
+    <value>Avail Qty</value>
+  </data>
+  <data name="work_classdec" xml:space="preserve">
+    <value>Class Desc</value>
+  </data>
+  <data name="work_classdesc" xml:space="preserve">
+    <value>Class Description</value>
+  </data>
+  <data name="work_equipcode" xml:space="preserve">
+    <value>Equip Code</value>
+  </data>
+  <data name="work_equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="work_equipmentclass" xml:space="preserve">
+    <value>Equipment Class</value>
+  </data>
+  <data name="work_equipname" xml:space="preserve">
+    <value>Equip Name</value>
+  </data>
+  <data name="work_equipno" xml:space="preserve">
+    <value>No.Equipment</value>
+  </data>
+  <data name="work_exp_leave_date" xml:space="preserve">
+    <value>Exp Leave Date</value>
+  </data>
+  <data name="work_finishqty" xml:space="preserve">
+    <value>Finish Qty</value>
+  </data>
+  <data name="work_joindate" xml:space="preserve">
+    <value>Join Date</value>
+  </data>
+  <data name="work_join_name" xml:space="preserve">
+    <value>Join Name</value>
+  </data>
+  <data name="work_labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="work_laborclass" xml:space="preserve">
+    <value>Labor Class</value>
+  </data>
+  <data name="work_laborno" xml:space="preserve">
+    <value>No.Labor</value>
+  </data>
+  <data name="work_labors" xml:space="preserve">
+    <value>Labors</value>
+  </data>
+  <data name="work_labor_name" xml:space="preserve">
+    <value>Labor Name</value>
+  </data>
+  <data name="work_leave_date" xml:space="preserve">
+    <value>Leave Date</value>
+  </data>
+  <data name="work_producedbefore" xml:space="preserve">
+    <value>Produced Before</value>
+  </data>
+  <data name="work_scqty" xml:space="preserve">
+    <value>SC Before Qty</value>
+  </data>
+  <data name="Contract_actno" xml:space="preserve">
+    <value>Act No</value>
+  </data>
+  <data name="Contract_approvedprodvalue" xml:space="preserve">
+    <value>Approved Prod Value</value>
+  </data>
+  <data name="Contract_avprice" xml:space="preserve">
+    <value>Av Price</value>
+  </data>
+  <data name="Contract_ClosedValue" xml:space="preserve">
+    <value>Closed Value</value>
+  </data>
+  <data name="Contract_closesos" xml:space="preserve">
+    <value>Closed Sos</value>
+  </data>
+  <data name="Contract_entryvalue" xml:space="preserve">
+    <value>Entry Value</value>
+  </data>
+  <data name="Contract_eval" xml:space="preserve">
+    <value>Eval</value>
+  </data>
+  <data name="Contract_finishdate" xml:space="preserve">
+    <value>Finish Date</value>
+  </data>
+  <data name="Contract_invapp_no" xml:space="preserve">
+    <value>Inv.App.No</value>
+  </data>
+  <data name="Contract_invoiceno" xml:space="preserve">
+    <value>Invoice No</value>
+  </data>
+  <data name="Contract_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Contract_opensos" xml:space="preserve">
+    <value>Open Sos</value>
+  </data>
+  <data name="Contract_OpenValue" xml:space="preserve">
+    <value>Open Value</value>
+  </data>
+  <data name="Contract_Prod" xml:space="preserve">
+    <value>Prod %</value>
+  </data>
+  <data name="Contract_proddate" xml:space="preserve">
+    <value>Prod date</value>
+  </data>
+  <data name="Contract_prodvalue" xml:space="preserve">
+    <value>Prod Value</value>
+  </data>
+  <data name="Contract_remvalue" xml:space="preserve">
+    <value>Rem Value</value>
+  </data>
+  <data name="Contract_sos" xml:space="preserve">
+    <value>Sos</value>
+  </data>
+  <data name="Contract_Sovalue" xml:space="preserve">
+    <value>So Value</value>
+  </data>
+  <data name="Contract_uprice" xml:space="preserve">
+    <value>U Price</value>
+  </data>
+  <data name="Eve_Ssname" xml:space="preserve">
+    <value>SS Name</value>
+  </data>
+  <data name="Eve_Ssno" xml:space="preserve">
+    <value>SS No</value>
+  </data>
+  <data name="work_desc" xml:space="preserve">
+    <value>Work  Descr</value>
+  </data>
+  <data name="work_Esthour" xml:space="preserve">
+    <value>Est.hours</value>
+  </data>
+  <data name="work_Evalutionform" xml:space="preserve">
+    <value>Evaluation From</value>
+  </data>
+  <data name="work_Evalutionformto" xml:space="preserve">
+    <value>Evaluation To</value>
+  </data>
+  <data name="work_fromsubcontr" xml:space="preserve">
+    <value>From Sub Contr</value>
+  </data>
+  <data name="work_grade" xml:space="preserve">
+    <value>Grade</value>
+  </data>
+  <data name="work_schedule_qtu" xml:space="preserve">
+    <value>Schedule Qty</value>
+  </data>
+  <data name="work_so" xml:space="preserve">
+    <value>SO</value>
+  </data>
+  <data name="work_subcontr" xml:space="preserve">
+    <value>Sub Contr</value>
+  </data>
+  <data name="work_tosubcontr" xml:space="preserve">
+    <value>To Sub Contr</value>
+  </data>
+  <data name="work_unprodhours" xml:space="preserve">
+    <value>Un Prod.Hours</value>
+  </data>
+  <data name="work_unprodreason" xml:space="preserve">
+    <value>Un Prod Reason</value>
+  </data>
+  <data name="parentitem" xml:space="preserve">
+    <value>parentitem</value>
+  </data>
+  <data name="SalesItem_CalcUnitPrice" xml:space="preserve">
+    <value>Calc Unit Price</value>
+  </data>
+  <data name="SalesItem_DescA" xml:space="preserve">
+    <value>DescA</value>
+  </data>
+  <data name="SalesItem_DescE" xml:space="preserve">
+    <value>DescE</value>
+  </data>
+  <data name="SalesItem_MinUnitPrice" xml:space="preserve">
+    <value>Min Unit Price</value>
+  </data>
+  <data name="SalesItem_SystemCode" xml:space="preserve">
+    <value>System Code</value>
+  </data>
+  <data name="SalesItem_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="SalesItem_VendorID" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="pre_Scope" xml:space="preserve">
+    <value>Load...</value>
+  </data>
+  <data name="Fld_IsDetail" xml:space="preserve">
+    <value>IsDetail</value>
+  </data>
+  <data name="OffStagI_Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="OffStagI_IsOfferItem" xml:space="preserve">
+    <value>Is Offer</value>
+  </data>
+  <data name="OffStagI_ItemName" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="OffStagI_ItemNo" xml:space="preserve">
+    <value>Item No</value>
+  </data>
+  <data name="OffStagI_Qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="OffStagI_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="OffStagI_Ser" xml:space="preserve">
+    <value>Line Code</value>
+  </data>
+  <data name="OffStagI_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="OffStagI_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="OffStagI_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="OffStagI_UOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="FldWorkStartOrderno" xml:space="preserve">
+    <value>Work Start Order no</value>
+  </data>
+  <data name="Fld_AddtoExistingProject" xml:space="preserve">
+    <value>Add to Existing Project</value>
+  </data>
+  <data name="Fld_AuthorizeCreateProject" xml:space="preserve">
+    <value>Authorize Create Project</value>
+  </data>
+  <data name="Fld_contractDays" xml:space="preserve">
+    <value>Contract Days</value>
+  </data>
+  <data name="Fld_Newproject" xml:space="preserve">
+    <value>New project</value>
+  </data>
+  <data name="Fld_Phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="work_HourCost" xml:space="preserve">
+    <value>HourCost</value>
+  </data>
+  <data name="work_Eq_HourCost" xml:space="preserve">
+    <value>HourCost</value>
+  </data>
+  <data name="Fld_ComputeProductionprice" xml:space="preserve">
+    <value>Compute Production Price</value>
+  </data>
+  <data name="CustomerCardRP" xml:space="preserve">
+    <value>Customer Card</value>
+  </data>
+  <data name="CustomerListRP" xml:space="preserve">
+    <value>Customer List</value>
+  </data>
+  <data name="Fld_all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="FromCustomerRP" xml:space="preserve">
+    <value>From Customer</value>
+  </data>
+  <data name="TempCustomer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="TOCustomerRP" xml:space="preserve">
+    <value>TO Customer</value>
+  </data>
+  <data name="work_ActCode" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="work_ActivityName" xml:space="preserve">
+    <value>Activity Name</value>
+  </data>
+  <data name="work_Sched" xml:space="preserve">
+    <value>Sched Qty</value>
+  </data>
+  <data name="work_UOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="project_Exp_ExpCode" xml:space="preserve">
+    <value>ExpCode</value>
+  </data>
+  <data name="project_Phase_Code" xml:space="preserve">
+    <value>Phase_No</value>
+  </data>
+  <data name="chkFriday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="chkMonday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="chkOneShift" xml:space="preserve">
+    <value>One Shift</value>
+  </data>
+  <data name="chkSaturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="chkSunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="chkThursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="chkTuseday" xml:space="preserve">
+    <value>Tuseday</value>
+  </data>
+  <data name="chkWednsday" xml:space="preserve">
+    <value>Wednsday</value>
+  </data>
+  <data name="Fld_EndTime" xml:space="preserve">
+    <value>End Time</value>
+  </data>
+  <data name="OffSpec_ACT" xml:space="preserve">
+    <value>ACT</value>
+  </data>
+  <data name="OffSpec_Act_DescA" xml:space="preserve">
+    <value>Name Ar</value>
+  </data>
+  <data name="OffSpec_Act_DescE" xml:space="preserve">
+    <value>Name En</value>
+  </data>
+  <data name="OffSpec_IsFixedSystem" xml:space="preserve">
+    <value>FixedSystem</value>
+  </data>
+  <data name="OffSpec_Item_DescA" xml:space="preserve">
+    <value>Item DescA</value>
+  </data>
+  <data name="OffSpec_Item_DescE" xml:space="preserve">
+    <value>Item DescE</value>
+  </data>
+  <data name="OffSpec_Item_ItemCode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="OffSpec_ProductionIncluded" xml:space="preserve">
+    <value>Prod. Inc</value>
+  </data>
+  <data name="OffSpec_ProductionPrc" xml:space="preserve">
+    <value>Prod. Prc</value>
+  </data>
+  <data name="OffSpec_Qty" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="OffSpec_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="OffSpec_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="OffSpec_StdUnitPrice" xml:space="preserve">
+    <value>Std Unit Price</value>
+  </data>
+  <data name="OffSpec_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="OffSpec_TotalPrice" xml:space="preserve">
+    <value>Total Price</value>
+  </data>
+  <data name="OffSpec_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="OffSpec_UOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="OffSpec_Uom_UomCode" xml:space="preserve">
+    <value>Uom</value>
+  </data>
+  <data name="Mat_issueno" xml:space="preserve">
+    <value>Issue No</value>
+  </data>
+  <data name="Mat_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Mat_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Mat_req_approvedBy" xml:space="preserve">
+    <value>Approved By</value>
+  </data>
+  <data name="Mat_req_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Mat_req_issuestore" xml:space="preserve">
+    <value>Issue Store</value>
+  </data>
+  <data name="Mat_req_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Mat_req_prodsched" xml:space="preserve">
+    <value>Prod. Sched</value>
+  </data>
+  <data name="Mat_req_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Mat_req_remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Mat_req_RequestedBy" xml:space="preserve">
+    <value>Requested By</value>
+  </data>
+  <data name="Mat_req_requestno" xml:space="preserve">
+    <value>Request No.</value>
+  </data>
+  <data name="Mat_req_scsoreder" xml:space="preserve">
+    <value>Scs Order</value>
+  </data>
+  <data name="Mat_req_siteenginer" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Mont_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Mont_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Mont_sercviceorder" xml:space="preserve">
+    <value>Sc Service Order</value>
+  </data>
+  <data name="Mont_siteeng" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Mont_workschead" xml:space="preserve">
+    <value>Work Sched</value>
+  </data>
+  <data name="Men_BillOfMaterial" xml:space="preserve">
+    <value>Bill Of Material</value>
+  </data>
+  <data name="Men_Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="Men_EquipmentAssign" xml:space="preserve">
+    <value>Equipment Assign</value>
+  </data>
+  <data name="Men_EquipmentMonitoring" xml:space="preserve">
+    <value>Equipment Monitoring</value>
+  </data>
+  <data name="Men_EquipmentRequest" xml:space="preserve">
+    <value>Equipment Request</value>
+  </data>
+  <data name="Men_Labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="Men_LaborAssign" xml:space="preserve">
+    <value>Labor Assign</value>
+  </data>
+  <data name="Men_LaborMonitoring" xml:space="preserve">
+    <value>Labor Monitoring</value>
+  </data>
+  <data name="Men_LaborRequest" xml:space="preserve">
+    <value>Labor Request</value>
+  </data>
+  <data name="Men_LateandAbsence" xml:space="preserve">
+    <value>Lateand Absence</value>
+  </data>
+  <data name="Men_Material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Men_MaterialIssuance" xml:space="preserve">
+    <value>Material Issuance</value>
+  </data>
+  <data name="Men_MaterialMonitoring" xml:space="preserve">
+    <value>Material Monitoring</value>
+  </data>
+  <data name="Men_MaterialRequest" xml:space="preserve">
+    <value>Material Request</value>
+  </data>
+  <data name="Men_MaterialReturn" xml:space="preserve">
+    <value>Material Return</value>
+  </data>
+  <data name="Men_OverTimeSheet" xml:space="preserve">
+    <value>OverTime Sheet</value>
+  </data>
+  <data name="Prod_ActCode" xml:space="preserve">
+    <value>ActCode</value>
+  </data>
+  <data name="Prod_ActivityName" xml:space="preserve">
+    <value>ActivityName</value>
+  </data>
+  <data name="Prod_Class_Code" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="Prod_Class_DescA" xml:space="preserve">
+    <value>Class Labor</value>
+  </data>
+  <data name="Prod_Equip_Code" xml:space="preserve">
+    <value> Equip Code</value>
+  </data>
+  <data name="Prod_Equip_Desc" xml:space="preserve">
+    <value>Equip Description</value>
+  </data>
+  <data name="Prod_FinishQty" xml:space="preserve">
+    <value>FinishQty</value>
+  </data>
+  <data name="Prod_HourCost" xml:space="preserve">
+    <value>HourCost</value>
+  </data>
+  <data name="Prod_Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Prod_Lab_DescA" xml:space="preserve">
+    <value>Labor Name</value>
+  </data>
+  <data name="Prod_ProdBeforeQty" xml:space="preserve">
+    <value>ProdBeforeQty</value>
+  </data>
+  <data name="Prod_Prod_Lab_Code" xml:space="preserve">
+    <value>Lab Code</value>
+  </data>
+  <data name="Prod_RemainQty" xml:space="preserve">
+    <value>Remain Qty</value>
+  </data>
+  <data name="Prod_ScheduleQty" xml:space="preserve">
+    <value>ScheduleQty</value>
+  </data>
+  <data name="Prod_UnProdHours" xml:space="preserve">
+    <value>UnProd. Hours</value>
+  </data>
+  <data name="Fld_CloseSchedule" xml:space="preserve">
+    <value>Close Schedule</value>
+  </data>
+  <data name="Prod_EstHours" xml:space="preserve">
+    <value>EstHours</value>
+  </data>
+  <data name="Prod_Lab_Code" xml:space="preserve">
+    <value>Lab Code</value>
+  </data>
+  <data name="Prod_WorkHours" xml:space="preserve">
+    <value>WorkHours</value>
+  </data>
+  <data name="work_AddQty" xml:space="preserve">
+    <value>AddQty</value>
+  </data>
+  <data name="work_BalanceQty" xml:space="preserve">
+    <value>BalanceQty</value>
+  </data>
+  <data name="work_IssuedQty" xml:space="preserve">
+    <value>IssuedQty</value>
+  </data>
+  <data name="work_Itm_Desc" xml:space="preserve">
+    <value>Itm Description</value>
+  </data>
+  <data name="work_Itm_ItemCode" xml:space="preserve">
+    <value>ItemCode</value>
+  </data>
+  <data name="work_ReqQty" xml:space="preserve">
+    <value>ReqQty</value>
+  </data>
+  <data name="work_ReturnQty" xml:space="preserve">
+    <value>ReturnQty</value>
+  </data>
+  <data name="Eng_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Contr_Totamount" xml:space="preserve">
+    <value>Tot Amount</value>
+  </data>
+  <data name="Contr_TotalAmount" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="ServiceOrder_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="ServiceOrder_Act_ActivityCode" xml:space="preserve">
+    <value>Activity Code</value>
+  </data>
+  <data name="ServiceOrder_Act_DescA" xml:space="preserve">
+    <value>Act Name</value>
+  </data>
+  <data name="ServiceOrder_AppQty" xml:space="preserve">
+    <value>App Qty</value>
+  </data>
+  <data name="ServiceOrder_ProjectQty" xml:space="preserve">
+    <value>Proj Qty</value>
+  </data>
+  <data name="ServiceOrder_RemainQty" xml:space="preserve">
+    <value>Remain Qty</value>
+  </data>
+  <data name="ServiceOrder_SOQty" xml:space="preserve">
+    <value>SOQty</value>
+  </data>
+  <data name="ServiceOrder_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="ServiceOrder_UnitPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ServiceOrder_uom_DescA" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Fld_Defined" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ServiceOrder_ContractQty" xml:space="preserve">
+    <value>ContractQty</value>
+  </data>
+  <data name="Fld_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="FromItemRP1" xml:space="preserve">
+    <value>From Item</value>
+  </data>
+  <data name="ItemCardRP1" xml:space="preserve">
+    <value>Item Card</value>
+  </data>
+  <data name="ItemListRP1" xml:space="preserve">
+    <value>Item List</value>
+  </data>
+  <data name="parentitemRp" xml:space="preserve">
+    <value>Parent</value>
+  </data>
+  <data name="ToItemRP2" xml:space="preserve">
+    <value>To Item</value>
+  </data>
+  <data name="Resm_Bill_material_itemcode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Resm_Bill_material_itemdesc" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Resm_Bill_material_netissued" xml:space="preserve">
+    <value>Net Issued Qty</value>
+  </data>
+  <data name="Resm_Bill_material_remainqty" xml:space="preserve">
+    <value>Remain Qty</value>
+  </data>
+  <data name="Resm_Bill_material_totalrequired" xml:space="preserve">
+    <value>Total Required Qty</value>
+  </data>
+  <data name="Resm_Bill_material_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="ResM_fld_laborasign" xml:space="preserve">
+    <value>Labors</value>
+  </data>
+  <data name="ResM_fld_laborrequest_freelabors" xml:space="preserve">
+    <value>Free Labors</value>
+  </data>
+  <data name="ResM_fld_laborrequest_fromdate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="ResM_fld_laborrequest_laborclass" xml:space="preserve">
+    <value>Labor Requirment</value>
+  </data>
+  <data name="ResM_fld_laborrequest_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="ResM_fld_laborrequest_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ResM_fld_laborrequest_requestdate" xml:space="preserve">
+    <value>Request Date</value>
+  </data>
+  <data name="ResM_fld_laborrequest_requestno" xml:space="preserve">
+    <value>Request No</value>
+  </data>
+  <data name="ResM_fld_laborrequest_scheduleno" xml:space="preserve">
+    <value>Schedule No</value>
+  </data>
+  <data name="ResM_fld_laborrequest_showfree" xml:space="preserve">
+    <value>Show Free</value>
+  </data>
+  <data name="ResM_fld_laborrequest_siteeng" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="ResM_fld_laborrequest_todate" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="ResM_Fld_MaterialOvertime_overtimeno" xml:space="preserve">
+    <value>OverTime No</value>
+  </data>
+  <data name="ResM_Fld_MaterialOvertime_projecteng" xml:space="preserve">
+    <value>Project Eng</value>
+  </data>
+  <data name="ResM_fld_MatLabor_category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ResM_fld_MatLabor_class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ResM_fld_MatLabor_delayed" xml:space="preserve">
+    <value>Show Delayed</value>
+  </data>
+  <data name="ResM_fld_MatLabor_laborclassreq" xml:space="preserve">
+    <value>Labor Class Requirment</value>
+  </data>
+  <data name="ResM_fld_MatLabor_laborlist" xml:space="preserve">
+    <value>Labor List</value>
+  </data>
+  <data name="ResM_fld_MatLabor_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="ResM_fld_MatLabor_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ResM_fld_MatLabor_showall" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="ResM_fld_MatLabor_showcurrent" xml:space="preserve">
+    <value>Show Current</value>
+  </data>
+  <data name="ResM_fld_MatLabor_siteenginer" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="ResM_fld_MatLabor_worksched" xml:space="preserve">
+    <value>Work Sched</value>
+  </data>
+  <data name="Resm_fld_mat_issue_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Resm_fld_mat_issue_issueno" xml:space="preserve">
+    <value>Issue No</value>
+  </data>
+  <data name="Resm_fld_mat_issue_issuestore" xml:space="preserve">
+    <value>Isssue Store</value>
+  </data>
+  <data name="Resm_fld_mat_issue_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Resm_fld_mat_issue_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_mat_issue_remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Resm_fld_mat_issue_requestno" xml:space="preserve">
+    <value>Request No.</value>
+  </data>
+  <data name="Resm_fld_Mat_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Resm_fld_Mat_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_Mat_req_approvedBy" xml:space="preserve">
+    <value>Approved By</value>
+  </data>
+  <data name="Resm_fld_Mat_req_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Resm_fld_Mat_req_issuestore" xml:space="preserve">
+    <value>Issue Store</value>
+  </data>
+  <data name="Resm_fld_Mat_req_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Resm_fld_Mat_req_prodsched" xml:space="preserve">
+    <value>Prod. Sched</value>
+  </data>
+  <data name="Resm_fld_Mat_req_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_Mat_req_remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Resm_fld_Mat_req_RequestedBy" xml:space="preserve">
+    <value>Requested By</value>
+  </data>
+  <data name="Resm_fld_Mat_req_requestno" xml:space="preserve">
+    <value>Request No.</value>
+  </data>
+  <data name="Resm_fld_Mat_req_scsoreder" xml:space="preserve">
+    <value>Scs Order</value>
+  </data>
+  <data name="Resm_fld_Mat_req_siteenginer" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Resm_fld_mat_return_createdby" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="Resm_fld_mat_return_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Resm_fld_mat_return_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Resm_fld_mat_return_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_mat_return_remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Resm_fld_mat_return_requestno" xml:space="preserve">
+    <value>Request No</value>
+  </data>
+  <data name="Resm_fld_mat_return_retno" xml:space="preserve">
+    <value>Ret No</value>
+  </data>
+  <data name="Resm_fld_mat_return_tostore" xml:space="preserve">
+    <value>To Store</value>
+  </data>
+  <data name="Resm_fld_mat_return_updateby" xml:space="preserve">
+    <value>Update By</value>
+  </data>
+  <data name="Resm_fld_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Resm_fld_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_request" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="Resm_fld_Resm_fld_Mat_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Resm_fld_schedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Resm_fld_sercviceorder" xml:space="preserve">
+    <value>Sc Service Order</value>
+  </data>
+  <data name="Resm_fld_siteeng" xml:space="preserve">
+    <value>Site Engineer</value>
+  </data>
+  <data name="Resm_fld_workschead" xml:space="preserve">
+    <value>Work Sched</value>
+  </data>
+  <data name="ResM_Materiallabor_absdays" xml:space="preserve">
+    <value>Abs Days</value>
+  </data>
+  <data name="ResM_Materiallabor_Absence" xml:space="preserve">
+    <value>Absence</value>
+  </data>
+  <data name="ResM_Materiallabor_Absencedec" xml:space="preserve">
+    <value>Absence Description</value>
+  </data>
+  <data name="ResM_Materiallabor_actualleavedate" xml:space="preserve">
+    <value>Actual Leave Date</value>
+  </data>
+  <data name="ResM_Materiallabor_assigndate" xml:space="preserve">
+    <value>Assign Date</value>
+  </data>
+  <data name="ResM_Materiallabor_assigned" xml:space="preserve">
+    <value>Assigned</value>
+  </data>
+  <data name="ResM_Materiallabor_category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ResM_Materiallabor_categorycode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="ResM_Materiallabor_class" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ResM_Materiallabor_classcode" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="ResM_Materiallabor_classname" xml:space="preserve">
+    <value>Class Name</value>
+  </data>
+  <data name="ResM_Materiallabor_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ResM_Materiallabor_hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="ResM_Materiallabor_labclass" xml:space="preserve">
+    <value>Lab Class</value>
+  </data>
+  <data name="ResM_Materiallabor_labor" xml:space="preserve">
+    <value>Labor</value>
+  </data>
+  <data name="ResM_Materiallabor_laborcode" xml:space="preserve">
+    <value>Labor code</value>
+  </data>
+  <data name="ResM_Materiallabor_Laborname" xml:space="preserve">
+    <value>Labor Name</value>
+  </data>
+  <data name="ResM_Materiallabor_latehour" xml:space="preserve">
+    <value>Late Hours</value>
+  </data>
+  <data name="ResM_Materiallabor_leavedate" xml:space="preserve">
+    <value>Leave Date</value>
+  </data>
+  <data name="ResM_Materiallabor_name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ResM_Materiallabor_overtime" xml:space="preserve">
+    <value>OverTime Type</value>
+  </data>
+  <data name="ResM_Materiallabor_overtimedesc" xml:space="preserve">
+    <value>OverTime Description</value>
+  </data>
+  <data name="ResM_Materiallabor_phasecode" xml:space="preserve">
+    <value>Phase Code</value>
+  </data>
+  <data name="ResM_Materiallabor_phaseno" xml:space="preserve">
+    <value>Phase No</value>
+  </data>
+  <data name="ResM_Materiallabor_planeleavedate" xml:space="preserve">
+    <value>Plane Leave Date</value>
+  </data>
+  <data name="ResM_Materiallabor_projectcode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="ResM_Materiallabor_remain" xml:space="preserve">
+    <value>Remain</value>
+  </data>
+  <data name="ResM_Materiallabor_remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredhrs" xml:space="preserve">
+    <value>Required Hrs</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredlabors" xml:space="preserve">
+    <value>Req.Labors</value>
+  </data>
+  <data name="ResM_Materiallabor_schedno" xml:space="preserve">
+    <value>Sched No</value>
+  </data>
+  <data name="ResM_Materiallabor_schno" xml:space="preserve">
+    <value>Sch No.</value>
+  </data>
+  <data name="ResM_Materiallabor_startdate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="ResM_Materiallabor_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Resm_mat_issue_avqty" xml:space="preserve">
+    <value>Av Qty</value>
+  </data>
+  <data name="Resm_mat_issue_issuedqty" xml:space="preserve">
+    <value>Issued Qty</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemcode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemdesc" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Resm_mat_issue_reqbalanceqty" xml:space="preserve">
+    <value>Req Balance Qty</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_assigned" xml:space="preserve">
+    <value>Assigned</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_categorycode" xml:space="preserve">
+    <value>Category Code</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_classcode" xml:space="preserve">
+    <value>Class Code</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_classname" xml:space="preserve">
+    <value>Class Name</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_labclass" xml:space="preserve">
+    <value>Lab Class</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_laborcode" xml:space="preserve">
+    <value>Labor Code</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_laborname" xml:space="preserve">
+    <value>Labor Name</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_phasecode" xml:space="preserve">
+    <value>Phase Code</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_planedate" xml:space="preserve">
+    <value>Plane Leave Date</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_projectcode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_remain" xml:space="preserve">
+    <value>Remain</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_reqlabor" xml:space="preserve">
+    <value>Req.Labors</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_requiredhrs" xml:space="preserve">
+    <value>Required Hrs</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_schno" xml:space="preserve">
+    <value>Sch.no</value>
+  </data>
+  <data name="ResM_Mat_laborrequest_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Resm_Mat_mon_enddate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Resm_Mat_mon_phaseno" xml:space="preserve">
+    <value>Phase No</value>
+  </data>
+  <data name="Resm_Mat_mon_projno" xml:space="preserve">
+    <value>Project No</value>
+  </data>
+  <data name="Resm_Mat_mon_reqno" xml:space="preserve">
+    <value>Request No</value>
+  </data>
+  <data name="Resm_Mat_mon_request" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="Resm_Mat_mon_secdule" xml:space="preserve">
+    <value>Secdule</value>
+  </data>
+  <data name="Resm_Mat_mon_sso" xml:space="preserve">
+    <value>Sched / SS SO No</value>
+  </data>
+  <data name="Resm_Mat_mon_startdate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Resm_Mat_mon_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Resm_Mat_mon_workdesc" xml:space="preserve">
+    <value>Work Description</value>
+  </data>
+  <data name="Resm_Mat_req__approvedqty" xml:space="preserve">
+    <value>Approved Qty</value>
+  </data>
+  <data name="Resm_Mat_req__balancedqty" xml:space="preserve">
+    <value>Balance Qty</value>
+  </data>
+  <data name="Resm_Mat_req__itemcode" xml:space="preserve">
+    <value>ITem Code</value>
+  </data>
+  <data name="Resm_Mat_req__itemdesc" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Resm_Mat_req__requestbefore" xml:space="preserve">
+    <value>Request Before</value>
+  </data>
+  <data name="Resm_Mat_req__requiredqty" xml:space="preserve">
+    <value>Required Qty</value>
+  </data>
+  <data name="Resm_Mat_req__scheadremain" xml:space="preserve">
+    <value>Sched Remain</value>
+  </data>
+  <data name="Resm_Mat_req__schedqty" xml:space="preserve">
+    <value>Sched Qty</value>
+  </data>
+  <data name="Resm_Mat_req__unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Resm_mat_return_itemcode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Resm_mat_return_itemdesc" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Resm_mat_return_netissuedqty" xml:space="preserve">
+    <value>Net Issued Qty</value>
+  </data>
+  <data name="Resm_mat_return_returnqty" xml:space="preserve">
+    <value>Return Qty</value>
+  </data>
+  <data name="Resm_mat_return_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="ProjDef_BilledQty" xml:space="preserve">
+    <value>Billed Qty</value>
+  </data>
+  <data name="ProjDef_Caleander" xml:space="preserve">
+    <value>Calender</value>
+  </data>
+  <data name="ProjDef_ContrQty" xml:space="preserve">
+    <value>Contr Qty</value>
+  </data>
+  <data name="ProjDef_EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ProjDef_Enginer" xml:space="preserve">
+    <value>Enginer</value>
+  </data>
+  <data name="ProjDef_ItemName" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="ProjDef_ItemNo" xml:space="preserve">
+    <value>Item No.</value>
+  </data>
+  <data name="ProjDef_ItemQty" xml:space="preserve">
+    <value>Item Qty</value>
+  </data>
+  <data name="ProjDef_Itemser" xml:space="preserve">
+    <value>Item Ser.</value>
+  </data>
+  <data name="ProjDef_PhaseDescriptionA" xml:space="preserve">
+    <value>Phase Name Arabic</value>
+  </data>
+  <data name="ProjDef_PhaseDescriptionB" xml:space="preserve">
+    <value>Phase Name English</value>
+  </data>
+  <data name="ProjDef_PhaseNo" xml:space="preserve">
+    <value>Phase No.</value>
+  </data>
+  <data name="ProjDef_ProdQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="ProjDef_Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="ProjDef_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="ProjDef_ScopeName" xml:space="preserve">
+    <value>Scope Name</value>
+  </data>
+  <data name="ProjDef_StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="ProjDef_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ProjDef_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="ProjDef_UntilPrice" xml:space="preserve">
+    <value>Until Price</value>
+  </data>
+  <data name="Fld_Finished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="Fld_Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="Fld_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="Fld_working" xml:space="preserve">
+    <value>Working</value>
+  </data>
+  <data name="ResM_fld_MatLabor_Left" xml:space="preserve">
+    <value>Show Left</value>
+  </data>
+  <data name="ChkStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Men_OfferList" xml:space="preserve">
+    <value>OfferList</value>
+  </data>
+  <data name="ServiceOrder_ProdBeforeQty" xml:space="preserve">
+    <value>ProdBeforeQty</value>
+  </data>
+  <data name="ServiceOrder_FinishQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="Men_MaterialList" xml:space="preserve">
+    <value>Material List</value>
+  </data>
+  <data name="Resm_Equip_FldEquipemtns" xml:space="preserve">
+    <value>Equipments</value>
+  </data>
+  <data name="Resm_Equip_FldEquipemtnsclassrequi" xml:space="preserve">
+    <value>Equipments class Requirment</value>
+  </data>
+  <data name="Resm_Equip_FldReeEquipemtns" xml:space="preserve">
+    <value>Free Equipments</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipclass" xml:space="preserve">
+    <value>Equip Class</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipcode" xml:space="preserve">
+    <value>Equip Code</value>
+  </data>
+  <data name="ResM_Materiallabor_Equipname" xml:space="preserve">
+    <value>Equip Name</value>
+  </data>
+  <data name="ResM_Materiallabor_requiredequip" xml:space="preserve">
+    <value>Req. Equip</value>
+  </data>
+  <data name="rpApproved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="rpBillingterms" xml:space="preserve">
+    <value>Billing terms</value>
+  </data>
+  <data name="rpCanceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="rpContracted" xml:space="preserve">
+    <value>Contracted</value>
+  </data>
+  <data name="rpCostEstimation" xml:space="preserve">
+    <value>Cost Estimation</value>
+  </data>
+  <data name="rpNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="rpRejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="rpSendTocustomer" xml:space="preserve">
+    <value>Send To customer</value>
+  </data>
+  <data name="rpSpecification" xml:space="preserve">
+    <value>Specification</value>
+  </data>
+  <data name="ResM_Fld_accepte" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="Resm_Fld_categorycode" xml:space="preserve">
+    <value>Category Code </value>
+  </data>
+  <data name="ResM_Fld_load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="ResM_Fld_reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ResM_Fld_showall" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="ResM_Fld_showCurrent" xml:space="preserve">
+    <value>Show Current</value>
+  </data>
+  <data name="ResM_Fld_showdelayed" xml:space="preserve">
+    <value>Show delayed</value>
+  </data>
+  <data name="ResM_Fld_showfree" xml:space="preserve">
+    <value>Show Free</value>
+  </data>
+  <data name="Resm_Material_Materiallistcost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="Resm_Material_Materiallistdesca" xml:space="preserve">
+    <value>Desc a</value>
+  </data>
+  <data name="Resm_Material_Materiallistdescb" xml:space="preserve">
+    <value>Desc b</value>
+  </data>
+  <data name="Resm_Material_Materiallistmatcode" xml:space="preserve">
+    <value>Mat Code</value>
+  </data>
+  <data name="Resm_Material_Materiallistunit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_assigned" xml:space="preserve">
+    <value>Assigned</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_classcode" xml:space="preserve">
+    <value>Class code</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_classname" xml:space="preserve">
+    <value>Class Name</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipclass" xml:space="preserve">
+    <value>Equip Class</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipcode" xml:space="preserve">
+    <value>Equip Code</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_equipname" xml:space="preserve">
+    <value>Equip Name</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_planeleavedate" xml:space="preserve">
+    <value>Plane Leave Date</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_projectcode" xml:space="preserve">
+    <value>Project Code</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_projectphase" xml:space="preserve">
+    <value>Phase Code</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_remain" xml:space="preserve">
+    <value>Remain</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_requiredhrs" xml:space="preserve">
+    <value>Required Hrs</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_requiredlabors" xml:space="preserve">
+    <value>Req.labors</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_schno" xml:space="preserve">
+    <value>Sch. No</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RDByCustomer" xml:space="preserve">
+    <value>By Customer</value>
+  </data>
+  <data name="RDByEng" xml:space="preserve">
+    <value>By Engineer</value>
+  </data>
+  <data name="RDByProject" xml:space="preserve">
+    <value>By Project</value>
+  </data>
+  <data name="RDCustBlanc" xml:space="preserve">
+    <value>Custumer Balance</value>
+  </data>
+  <data name="RDProdcutList" xml:space="preserve">
+    <value>Production List</value>
+  </data>
+  <data name="RDProjBlanc" xml:space="preserve">
+    <value>Project Balance</value>
+  </data>
+  <data name="SMB_FromDate" xml:space="preserve">
+    <value>FromDate</value>
+  </data>
+  <data name="SMB_IsFinal" xml:space="preserve">
+    <value>IsFinal</value>
+  </data>
+  <data name="SMB_ProdTotal" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="SMB_ToDate" xml:space="preserve">
+    <value>ToDate</value>
+  </data>
+  <data name="SMB_TrDate" xml:space="preserve">
+    <value>Prod Date</value>
+  </data>
+  <data name="SMB_TrNo" xml:space="preserve">
+    <value>Prod No</value>
+  </data>
+  <data name="Fld_IncludedinBonus" xml:space="preserve">
+    <value>Included in Bonus</value>
+  </data>
+  <data name="Fld_MiantenanceWork" xml:space="preserve">
+    <value>Maintenance Work</value>
+  </data>
+  <data name="Fld_StartWork" xml:space="preserve">
+    <value>Start Work</value>
+  </data>
+  <data name="Fld_Suspend" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="Fld_Tobeinvoiced" xml:space="preserve">
+    <value>To be invoiced</value>
+  </data>
+  <data name="ProjSpec_ActivQty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="ProjSpec_act_Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="ProjSpec_act_ActivityCode" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="ProjSpec_act_DescE" xml:space="preserve">
+    <value>Activity Name</value>
+  </data>
+  <data name="ProjSpec_BilledQty" xml:space="preserve">
+    <value>Billed Qty</value>
+  </data>
+  <data name="ProjSpec_ContrQty" xml:space="preserve">
+    <value>Contr Qty</value>
+  </data>
+  <data name="ProjSpec_ItemQty" xml:space="preserve">
+    <value>Item Qty</value>
+  </data>
+  <data name="ProjSpec_ItSys_Code" xml:space="preserve">
+    <value>Sys Code</value>
+  </data>
+  <data name="ProjSpec_ProdQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="ProjSpec_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="ProjSpec_SchedProdQty" xml:space="preserve">
+    <value>Sched Prod Qty</value>
+  </data>
+  <data name="ProjSpec_SchedQty" xml:space="preserve">
+    <value>Sched Qty</value>
+  </data>
+  <data name="ProjSpec_SConProdQty" xml:space="preserve">
+    <value>SC. Prod Qty</value>
+  </data>
+  <data name="ProjSpec_SCon_Qty" xml:space="preserve">
+    <value>SC. Qty</value>
+  </data>
+  <data name="ProjSpec_Scp_DescE" xml:space="preserve">
+    <value>Scop Name</value>
+  </data>
+  <data name="ProjSpec_Serial" xml:space="preserve">
+    <value>Line Code</value>
+  </data>
+  <data name="ProjSpec_SlsITm_DescE" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ProjSpec_SlsITm_ItemCode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="ProjSpec_TotalProdQty" xml:space="preserve">
+    <value>Total Prod. Qty</value>
+  </data>
+  <data name="ProjSpec_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="ProjSpec_UOM_DescE" xml:space="preserve">
+    <value>Uom</value>
+  </data>
+  <data name="SMB_InvQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="SMB_ToBillQty" xml:space="preserve">
+    <value>ToBillQty</value>
+  </data>
+  <data name="ResM_Materiallabor_IsAbsence" xml:space="preserve">
+    <value>IsAbsence</value>
+  </data>
+  <data name="Men_LaborSchedule" xml:space="preserve">
+    <value>Labor Schedule</value>
+  </data>
+  <data name="Men_LaborScheduleUtilization" xml:space="preserve">
+    <value>Labor Schedule Utilization</value>
+  </data>
+  <data name="Men_ProjectExpenses" xml:space="preserve">
+    <value>Project Expenses</value>
+  </data>
+  <data name="Men_ProjectProgress" xml:space="preserve">
+    <value>Project Progress</value>
+  </data>
+  <data name="Men_ProjectStatus" xml:space="preserve">
+    <value>Project Status</value>
+  </data>
+  <data name="Eng_Fld_projectexpCustomer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Eng_Fld_projectexpdistribution" xml:space="preserve">
+    <value>Distribution by</value>
+  </data>
+  <data name="Eng_Fld_projectexpexpcat" xml:space="preserve">
+    <value>Exp. Cat</value>
+  </data>
+  <data name="Eng_Fld_projectexpexpcode" xml:space="preserve">
+    <value>Exp. Code</value>
+  </data>
+  <data name="Eng_Fld_projectexpFromproject" xml:space="preserve">
+    <value>From Project</value>
+  </data>
+  <data name="Eng_Fld_projectexpproject" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Eng_Fld_projectexpscope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Eng_Fld_projectexpscopeclass" xml:space="preserve">
+    <value>Scope Class</value>
+  </data>
+  <data name="Eng_Fld_projectexpToproject" xml:space="preserve">
+    <value>To Project</value>
+  </data>
+  <data name="Eng_Res_projectexpAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Eng_Res_projectexpDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Eng_Res_projectexpExpenses" xml:space="preserve">
+    <value>Expenses </value>
+  </data>
+  <data name="Eng_Res_projectexpExpensesCode" xml:space="preserve">
+    <value>Expenses Code</value>
+  </data>
+  <data name="Eng_Res_projectexpExpensesname" xml:space="preserve">
+    <value>Expenses Name</value>
+  </data>
+  <data name="Eng_Res_projectexpPhase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Eng_Res_projectexpphaseTotal" xml:space="preserve">
+    <value>Phase Total</value>
+  </data>
+  <data name="Eng_Res_projectexpProject" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Eng_Res_projectexpprojectTotal" xml:space="preserve">
+    <value>Project Total</value>
+  </data>
+  <data name="Eng_Res_projectexpTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Eng_Res_projectexpTrdate" xml:space="preserve">
+    <value>Tr  Date.</value>
+  </data>
+  <data name="Eng_Res_projectexpTrno" xml:space="preserve">
+    <value>Tr  No.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_act" xml:space="preserve">
+    <value>Act</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_actprod" xml:space="preserve">
+    <value>Act Prod</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_allproject" xml:space="preserve">
+    <value>All Project</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_bonus" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_bonusfactor" xml:space="preserve">
+    <value>Bonus Factor</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customer" xml:space="preserve">
+    <value>Customer </value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customercat" xml:space="preserve">
+    <value>Customer Cat.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_customerclass" xml:space="preserve">
+    <value>Customer Class</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_descr" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_descri" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_diff" xml:space="preserve">
+    <value>Diff</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_engco" xml:space="preserve">
+    <value>Eng. Co</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_grandtotal" xml:space="preserve">
+    <value>Grand Total</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_include" xml:space="preserve">
+    <value>include</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_labcost" xml:space="preserve">
+    <value>Lab Cost</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_nonrepair" xml:space="preserve">
+    <value>Non Repair</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_prod" xml:space="preserve">
+    <value>Prod</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_projeng" xml:space="preserve">
+    <value>Project Engineer</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_repair" xml:space="preserve">
+    <value>Repair</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scope" xml:space="preserve">
+    <value>Scope </value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scopecat" xml:space="preserve">
+    <value>Scope Cat.</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_scopeclass" xml:space="preserve">
+    <value>Scope Class</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_stdlabor" xml:space="preserve">
+    <value>Std. Labor</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_stdprod" xml:space="preserve">
+    <value>Std. Prod</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_unprod" xml:space="preserve">
+    <value>Un Prod.hrs</value>
+  </data>
+  <data name="Eng_Rep_Dailyworkprod_work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="Eng_Rep_Projectprogaccqty" xml:space="preserve">
+    <value>ACC.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogAct" xml:space="preserve">
+    <value>Act.</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbalqty" xml:space="preserve">
+    <value>BAL QTY</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbstatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbtotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Eng_Rep_Projectprogbuprice" xml:space="preserve">
+    <value>U Price</value>
+  </data>
+  <data name="Eng_Rep_Projectprogcur" xml:space="preserve">
+    <value>CUR</value>
+  </data>
+  <data name="Eng_Rep_Projectprogdescrip" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Eng_Rep_Projectprogitem" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Eng_Rep_Projectprogitemcode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Eng_Rep_Projectprogphase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Eng_Rep_Projectprogprvqty" xml:space="preserve">
+    <value>PRV.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogReqqty" xml:space="preserve">
+    <value>REQ.QTY</value>
+  </data>
+  <data name="Eng_Rep_ProjectprogUOM" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscontrvalue" xml:space="preserve">
+    <value>Contr Value</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscurrentvalue" xml:space="preserve">
+    <value>Current Value</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscustomer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatuscustomerclass" xml:space="preserve">
+    <value>Customer Class</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusincome" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusinvoiceremain" xml:space="preserve">
+    <value>Invoice Remain</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusProdRemain" xml:space="preserve">
+    <value>Prod Remain</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusProductionValue" xml:space="preserve">
+    <value>Production Value</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusproj" xml:space="preserve">
+    <value>Proj</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusprojectdesc" xml:space="preserve">
+    <value>Project Description</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatussalescode" xml:space="preserve">
+    <value>Sales Code</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatusvariance" xml:space="preserve">
+    <value>Variance</value>
+  </data>
+  <data name="Eng_RepDailySuperVisorbouns" xml:space="preserve">
+    <value>Supervisor Bonus</value>
+  </data>
+  <data name="Eng_RepDailyWork" xml:space="preserve">
+    <value>Daily Work</value>
+  </data>
+  <data name="Eng_RepSubContractivity" xml:space="preserve">
+    <value>Sub Contractor Activity</value>
+  </data>
+  <data name="Eng_RepSubContrList" xml:space="preserve">
+    <value>Sub Contractor List</value>
+  </data>
+  <data name="Off_CompanyResposibility" xml:space="preserve">
+    <value>Company resposibility</value>
+  </data>
+  <data name="Off_CustomerResposibility" xml:space="preserve">
+    <value>Customer resposibility</value>
+  </data>
+  <data name="Fld_Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="Fld_PhaseItems" xml:space="preserve">
+    <value>Phase Items</value>
+  </data>
+  <data name="Fld_ProjectFreeItems" xml:space="preserve">
+    <value>Project Free Items</value>
+  </data>
+  <data name="ProjSpec_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Sales_SalesItemlib_techdesca" xml:space="preserve">
+    <value>Tech Desc A</value>
+  </data>
+  <data name="Sales_SalesItemlib_techdesce" xml:space="preserve">
+    <value>Tech Desc E</value>
+  </data>
+  <data name="Sales_SalesItem_minsalesprice" xml:space="preserve">
+    <value>Min Sales Price</value>
+  </data>
+  <data name="Sales_SalesItem_stdsalesprice" xml:space="preserve">
+    <value>Std Sales Price</value>
+  </data>
+  <data name="Sales_SalesItem_unitsellingprice" xml:space="preserve">
+    <value>Unit Sales Price</value>
+  </data>
+  <data name="Fld_IsEditable" xml:space="preserve">
+    <value>Is Editable</value>
+  </data>
+  <data name="Sales_Fld_Salesprice" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="Sales_Fld_Salestechdesca" xml:space="preserve">
+    <value>Tech Desc</value>
+  </data>
+  <data name="OffStagI_MinUnitPrice" xml:space="preserve">
+    <value>Min Unit Price</value>
+  </data>
+  <data name="OffStagI_TechDescA" xml:space="preserve">
+    <value>Tech Name Ar</value>
+  </data>
+  <data name="OffStagI_TechDescE" xml:space="preserve">
+    <value>Tech Name En</value>
+  </data>
+  <data name="Cleander_Fld_friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="Cleander_Fld_Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Cleander_Fld_Starday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Cleander_Fld_Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Cleander_Fld_thersday" xml:space="preserve">
+    <value>   Thursday</value>
+  </data>
+  <data name="Cleander_Fld_Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Cleander_Fld_wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="Fld_ContractNet" xml:space="preserve">
+    <value>Contract Net</value>
+  </data>
+  <data name="Fld_ContractPrice" xml:space="preserve">
+    <value>Contract Price</value>
+  </data>
+  <data name="Fld_DiscountAmount" xml:space="preserve">
+    <value>Discount Amt</value>
+  </data>
+  <data name="Fld_DiscountPrc" xml:space="preserve">
+    <value>Discount Prc</value>
+  </data>
+  <data name="Fld_DownPaymentPrc" xml:space="preserve">
+    <value>Down Pay Prc</value>
+  </data>
+  <data name="Fld_WarrntyPrc" xml:space="preserve">
+    <value>Warrnty Prc</value>
+  </data>
+  <data name="DiscountPrc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fld_ContractNetPrice" xml:space="preserve">
+    <value>ContractNet</value>
+  </data>
+  <data name="Fld_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Fld_ComputeTotal" xml:space="preserve">
+    <value>Compute Total</value>
+  </data>
+  <data name="Fld_Contract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="Fld_OfferItem" xml:space="preserve">
+    <value>Offer Item</value>
+  </data>
+  <data name="Fld_PrintOffer" xml:space="preserve">
+    <value>Print Offer</value>
+  </data>
+  <data name="Fld_Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="PManag_MPOH" xml:space="preserve">
+    <value>Mat P OH</value>
+  </data>
+  <data name="PManag_DescE" xml:space="preserve">
+    <value>Desc</value>
+  </data>
+  <data name="PManag_EPOH" xml:space="preserve">
+    <value>EQ P OH</value>
+  </data>
+  <data name="PManag_LPOH" xml:space="preserve">
+    <value>Lab P OH</value>
+  </data>
+  <data name="PManag_FromDate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="PManag_ExPOH" xml:space="preserve">
+    <value>Exp P OH</value>
+  </data>
+  <data name="PManag_SPOH" xml:space="preserve">
+    <value>Sub P OH</value>
+  </data>
+  <data name="PManag_OHCost" xml:space="preserve">
+    <value>OH Cost</value>
+  </data>
+  <data name="PManag_PeriodCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="PManag_ProdBudget" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="PManag_ProductionOHCost" xml:space="preserve">
+    <value>Prod OH Cost</value>
+  </data>
+  <data name="PManag_StdOHLabor" xml:space="preserve">
+    <value>OH %</value>
+  </data>
+  <data name="PManag_StdProdOHLabor" xml:space="preserve">
+    <value>Prod OH %</value>
+  </data>
+  <data name="PManag_SubContractorCost" xml:space="preserve">
+    <value>Sub Contr. Cost</value>
+  </data>
+  <data name="PManag_ToDate" xml:space="preserve">
+    <value>ToDate</value>
+  </data>
+  <data name="PManag_btnClc" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="PManag_btnClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="PManag_btnOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="PManag_closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="Fld_Stage" xml:space="preserve">
+    <value>Stage</value>
+  </data>
+  <data name="Fld_LogOut" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Fld_ProfitMargin" xml:space="preserve">
+    <value>Proft Mrgn%</value>
+  </data>
+  <data name="Fld_SubContractorCode" xml:space="preserve">
+    <value>SubContractor Code</value>
+  </data>
+  <data name="Fld_ContractTerms" xml:space="preserve">
+    <value>Contract Terms</value>
+  </data>
+  <data name="ResMat_Itemcode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="ResMat_SchedType" xml:space="preserve">
+    <value>Sched Type</value>
+  </data>
+  <data name="ResMat_ssso" xml:space="preserve">
+    <value>ss so</value>
+  </data>
+  <data name="ResmMat_SContractor" xml:space="preserve">
+    <value>S. Contractor</value>
+  </data>
+  <data name="ResmMat_WorkSch" xml:space="preserve">
+    <value>Work Sch</value>
+  </data>
+  <data name="Resm_Bill_material_ApprovedQty" xml:space="preserve">
+    <value>Approved Qty</value>
+  </data>
+  <data name="Resm_Bill_material_BalanceQty" xml:space="preserve">
+    <value>Balance Qty</value>
+  </data>
+  <data name="Resm_Bill_material_IssuedQty" xml:space="preserve">
+    <value>Issued Qty</value>
+  </data>
+  <data name="Resm_Bill_material_RequiredQty" xml:space="preserve">
+    <value>Required Qty</value>
+  </data>
+  <data name="Resm_Bill_material_ReturnQty" xml:space="preserve">
+    <value>Return Qty</value>
+  </data>
+  <data name="Resm_Bill_material_SchedRemain" xml:space="preserve">
+    <value>Sched. Remain</value>
+  </data>
+  <data name="Resm_Material_balanceQty" xml:space="preserve">
+    <value>Balance Qty</value>
+  </data>
+  <data name="Resm_Material_desc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Resm_Material_issuedQty" xml:space="preserve">
+    <value>Issued Qty</value>
+  </data>
+  <data name="Resm_Material_issueNo" xml:space="preserve">
+    <value>Issue No</value>
+  </data>
+  <data name="Resm_Material_Reqdate" xml:space="preserve">
+    <value>Req. Date</value>
+  </data>
+  <data name="Resm_Material_ReqNo" xml:space="preserve">
+    <value>Req .No</value>
+  </data>
+  <data name="Resm_Material_ReqQty" xml:space="preserve">
+    <value>Req. Qty</value>
+  </data>
+  <data name="Resm_Material_returnNo" xml:space="preserve">
+    <value>Return No</value>
+  </data>
+  <data name="Resm_Material_returnQty" xml:space="preserve">
+    <value>Return Qty</value>
+  </data>
+  <data name="Resm_Material_SechQty" xml:space="preserve">
+    <value>Sech. Qty</value>
+  </data>
+  <data name="Resm_Material_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Resm_Material_trdate" xml:space="preserve">
+    <value>TR Date</value>
+  </data>
+  <data name="Resm_Bill_material_total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Resm_Bill_material_unitcost" xml:space="preserve">
+    <value>Unit Cost</value>
+  </data>
+  <data name="ResM_Mat_ScheduleNo" xml:space="preserve">
+    <value>Schedule No.</value>
+  </data>
+  <data name="ResM_Mat_Unauthorized" xml:space="preserve">
+    <value>Unauthorized</value>
+  </data>
+  <data name="ResM_Leave" xml:space="preserve">
+    <value>Leave</value>
+  </data>
+  <data name="Fld_WaranteePrd" xml:space="preserve">
+    <value>Warntee period</value>
+  </data>
+  <data name="OffStagI_SystemName_ar" xml:space="preserve">
+    <value>System Name Ar</value>
+  </data>
+  <data name="OffStagI_SystemName_en" xml:space="preserve">
+    <value>System Name En</value>
+  </data>
+  <data name="Def_Additions" xml:space="preserve">
+    <value>Additions</value>
+  </data>
+  <data name="Def_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Def_projectnet" xml:space="preserve">
+    <value>project net</value>
+  </data>
+  <data name="Def_warrentyperiod" xml:space="preserve">
+    <value>Warrenty Period</value>
+  </data>
+  <data name="Work_RequiredNo" xml:space="preserve">
+    <value>Req No</value>
+  </data>
+  <data name="Resm_Scserviceorder" xml:space="preserve">
+    <value>service order</value>
+  </data>
+  <data name="Resm_WorkSchedule" xml:space="preserve">
+    <value>Work Schedule</value>
+  </data>
+  <data name="Resm_AttendanceSheet" xml:space="preserve">
+    <value>Attendance Sheet</value>
+  </data>
+  <data name="Resm_Equipmentmovement" xml:space="preserve">
+    <value>Equipment movement</value>
+  </data>
+  <data name="Resm_Equipmentutilization" xml:space="preserve">
+    <value>Equipment utilization</value>
+  </data>
+  <data name="Resm_LaborMovement" xml:space="preserve">
+    <value>Labor Movement</value>
+  </data>
+  <data name="Resm_Laborutilization" xml:space="preserve">
+    <value>Labor utilization</value>
+  </data>
+  <data name="Resm_LaborWork" xml:space="preserve">
+    <value>Labor Work</value>
+  </data>
+  <data name="Resm_MaterialUsage" xml:space="preserve">
+    <value>Material Usage</value>
+  </data>
+  <data name="Resm_ProjectRequirements" xml:space="preserve">
+    <value>Project Requirements</value>
+  </data>
+  <data name="Resm_UnprodHour" xml:space="preserve">
+    <value>Un prod. Hour</value>
+  </data>
+  <data name="Resm_all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Resm_bonusheet" xml:space="preserve">
+    <value>Bonus Sheet</value>
+  </data>
+  <data name="Resm_branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="Resm_Byitem" xml:space="preserve">
+    <value>By Item</value>
+  </data>
+  <data name="Resm_Byphase" xml:space="preserve">
+    <value>By Phase</value>
+  </data>
+  <data name="Resm_detailseng" xml:space="preserve">
+    <value>Details By Engineer</value>
+  </data>
+  <data name="Resm_finish" xml:space="preserve">
+    <value>finish</value>
+  </data>
+  <data name="Resm_FreeLabor" xml:space="preserve">
+    <value>Free Labor</value>
+  </data>
+  <data name="Resm_fromequip" xml:space="preserve">
+    <value>From Equip</value>
+  </data>
+  <data name="Resm_fromlabor" xml:space="preserve">
+    <value>From Labor</value>
+  </data>
+  <data name="Resm_frommat" xml:space="preserve">
+    <value>From Mat</value>
+  </data>
+  <data name="Resm_hold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="Resm_itemcode" xml:space="preserve">
+    <value>item code</value>
+  </data>
+  <data name="Resm_items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="Resm_materialcat" xml:space="preserve">
+    <value>Material Cat</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemcode1" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Resm_mat_issue_remarks_itemdesc1" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Resm_PhaseStatus" xml:space="preserve">
+    <value>Phase Status</value>
+  </data>
+  <data name="Resm_reporttype" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="Resm_summarybyproject" xml:space="preserve">
+    <value>Summary by project</value>
+  </data>
+  <data name="Resm_toequip" xml:space="preserve">
+    <value>To Equip</value>
+  </data>
+  <data name="Resm_tolabor" xml:space="preserve">
+    <value>To Labor</value>
+  </data>
+  <data name="Resm_tomat" xml:space="preserve">
+    <value>To Mat</value>
+  </data>
+  <data name="Resm_Utilization" xml:space="preserve">
+    <value>Utilization</value>
+  </data>
+  <data name="Men_ResourceReports" xml:space="preserve">
+    <value>Resource Reports</value>
+  </data>
+  <data name="SEngCat_Rate" xml:space="preserve">
+    <value>Yearly Target</value>
+  </data>
+  <data name="Project_eng_ActCode" xml:space="preserve">
+    <value>Act Code</value>
+  </data>
+  <data name="Project_eng_ActDesc" xml:space="preserve">
+    <value>Act Description</value>
+  </data>
+  <data name="Project_eng_ActName" xml:space="preserve">
+    <value>Act Name</value>
+  </data>
+  <data name="Project_eng_ActQty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="Project_eng_ActualQty" xml:space="preserve">
+    <value>Actual Qty</value>
+  </data>
+  <data name="Project_eng_DiffQty" xml:space="preserve">
+    <value>Diff Qty</value>
+  </data>
+  <data name="Project_eng_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Project_eng_Durationhh" xml:space="preserve">
+    <value>Duration DD : HH</value>
+  </data>
+  <data name="Project_eng_EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Project_eng_Isnew" xml:space="preserve">
+    <value>Is new</value>
+  </data>
+  <data name="Project_eng_ItemCode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Project_eng_ItemDescription" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="Project_eng_ItemQty" xml:space="preserve">
+    <value>Item Qty</value>
+  </data>
+  <data name="Project_eng_ItemSer" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Project_eng_Lag" xml:space="preserve">
+    <value>Lag</value>
+  </data>
+  <data name="Project_eng_newqty" xml:space="preserve">
+    <value>New Qty</value>
+  </data>
+  <data name="Project_eng_oldqty" xml:space="preserve">
+    <value>Old  Qty</value>
+  </data>
+  <data name="Project_eng_OrgQty" xml:space="preserve">
+    <value>Org Qty</value>
+  </data>
+  <data name="Project_eng_OrgRate" xml:space="preserve">
+    <value>Org. Rate</value>
+  </data>
+  <data name="Project_eng_PhaseDesc" xml:space="preserve">
+    <value>Phase Description</value>
+  </data>
+  <data name="Project_eng_ProdQty" xml:space="preserve">
+    <value>Prod. Qty</value>
+  </data>
+  <data name="Project_eng_ProdRate" xml:space="preserve">
+    <value>Prod. Rate</value>
+  </data>
+  <data name="Project_eng_ProductionQty" xml:space="preserve">
+    <value>Production Qty</value>
+  </data>
+  <data name="Project_eng_RelationActivity" xml:space="preserve">
+    <value>Relation Activity</value>
+  </data>
+  <data name="Project_eng_RelationItem" xml:space="preserve">
+    <value>Relation Item</value>
+  </data>
+  <data name="Project_eng_Relationphase" xml:space="preserve">
+    <value>Relation phase</value>
+  </data>
+  <data name="Project_eng_Relationtype" xml:space="preserve">
+    <value>Relation type</value>
+  </data>
+  <data name="Project_eng_StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Project_eng_system" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Project_eng_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Project_eng_UnitPrice" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="Project_eng_uom" xml:space="preserve">
+    <value>UOM</value>
+  </data>
+  <data name="Project_eng_phaseno" xml:space="preserve">
+    <value>Phase No.</value>
+  </data>
+  <data name="Projec_eng_ActivityVariation" xml:space="preserve">
+    <value>Activity Variation</value>
+  </data>
+  <data name="Project_eng_lineCode" xml:space="preserve">
+    <value>line Code</value>
+  </data>
+  <data name="OpProExp_Change_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="OpProExp_Cost_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="OpProExp_project_amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="OpProExp_project_Beneficial" xml:space="preserve">
+    <value>Beneficial</value>
+  </data>
+  <data name="OpProExp_project_expdesc" xml:space="preserve">
+    <value>Expenses Name</value>
+  </data>
+  <data name="OpProExp_project_expno" xml:space="preserve">
+    <value>Expenses No.</value>
+  </data>
+  <data name="OpProExp_project_Phase_Code" xml:space="preserve">
+    <value>Phase Code</value>
+  </data>
+  <data name="OpProExp_project_RefNo" xml:space="preserve">
+    <value>Refrance No.</value>
+  </data>
+  <data name="Eng_ByActivity" xml:space="preserve">
+    <value>By Activity</value>
+  </data>
+  <data name="Eng_ByProject" xml:space="preserve">
+    <value>By Project</value>
+  </data>
+  <data name="ResM_Mat_EquipRequest_requiredEqup" xml:space="preserve">
+    <value>Req.Equipment</value>
+  </data>
+  <data name="SMB_RejectedQty" xml:space="preserve">
+    <value>Rejected Qty</value>
+  </data>
+  <data name="Eng_Rep_ProjectStatussalescode1" xml:space="preserve">
+    <value>Sales Engineer</value>
+  </data>
+  <data name="Eng_ItemActivities" xml:space="preserve">
+    <value>Item  Activities</value>
+  </data>
+  <data name="Eng_PhaseItems" xml:space="preserve">
+    <value>Phase  Items</value>
+  </data>
+  <data name="Eng_ProjectPhases" xml:space="preserve">
+    <value>Project Phases</value>
+  </data>
+  <data name="Project_eng_OldProductionPrc" xml:space="preserve">
+    <value>Old Production Prc.</value>
+  </data>
+  <data name="Project_eng_ProductionPrc" xml:space="preserve">
+    <value>Production Prc.</value>
+  </data>
+  <data name="Project_eng_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Project_eng_ItemNameAr" xml:space="preserve">
+    <value>Item Name Ar</value>
+  </data>
+  <data name="Project_eng_ItemNameEn" xml:space="preserve">
+    <value>Item Name En</value>
+  </data>
+  <data name="Print__Activity" xml:space="preserve">
+    <value>Print Activity</value>
+  </data>
+  <data name="Eng_budget_BudgetApirl" xml:space="preserve">
+    <value>Budget Apirl</value>
+  </data>
+  <data name="Eng_budget_Budgetaug" xml:space="preserve">
+    <value>Budget Aug</value>
+  </data>
+  <data name="Eng_budget_BeforeJan" xml:space="preserve">
+    <value>Before Jan</value>
+  </data>
+  <data name="Eng_budget_BudgetDec" xml:space="preserve">
+    <value>Budget Dec</value>
+  </data>
+  <data name="Eng_budget_BudgetFeb" xml:space="preserve">
+    <value>Budget Feb</value>
+  </data>
+  <data name="Eng_budget_budgetJan" xml:space="preserve">
+    <value>Budget Jan</value>
+  </data>
+  <data name="Eng_budget_Budgetjuly" xml:space="preserve">
+    <value>Budget July</value>
+  </data>
+  <data name="Eng_budget_Budgetjune" xml:space="preserve">
+    <value>Budget June</value>
+  </data>
+  <data name="Eng_budget_BudgetMarch" xml:space="preserve">
+    <value>Budget March</value>
+  </data>
+  <data name="Eng_budget_Budgetmay" xml:space="preserve">
+    <value>Budget May</value>
+  </data>
+  <data name="Eng_budget_BudgetNov" xml:space="preserve">
+    <value>Budget Nov</value>
+  </data>
+  <data name="Eng_budget_Budgetoct" xml:space="preserve">
+    <value>Budget Oct</value>
+  </data>
+  <data name="Eng_budget_PhaseNo" xml:space="preserve">
+    <value>Phase No</value>
+  </data>
+  <data name="Eng_budget_ProjNo" xml:space="preserve">
+    <value>Proj No</value>
+  </data>
+  <data name="Eng_budget_Budgetsept" xml:space="preserve">
+    <value>Budget Sept</value>
+  </data>
+  <data name="Eng_budget_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Eng_budget_Budgetytod" xml:space="preserve">
+    <value>Budget YTOD</value>
+  </data>
+  <data name="Eng_Budg_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Spec_Equipmentwork" xml:space="preserve">
+    <value>Equipment work</value>
+  </data>
+  <data name="Spec_MaterialUsageitem" xml:space="preserve">
+    <value>Material Usage By item</value>
+  </data>
+  <data name="Spec_MaterialUsageproject" xml:space="preserve">
+    <value>Material Usage By project</value>
+  </data>
+  <data name="Spec_ProjectEngineer" xml:space="preserve">
+    <value>Project Engineer</value>
+  </data>
+  <data name="Spec_summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Spec_UnProdCat" xml:space="preserve">
+    <value>UnProd Cat.</value>
+  </data>
+  <data name="Spec_UnProdReason" xml:space="preserve">
+    <value>UnProd Reason</value>
+  </data>
+  <data name="Eng_budget_Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="Eng_budget_ActQty" xml:space="preserve">
+    <value>Act Qty</value>
+  </data>
+  <data name="Eng_budget_ActualApirl" xml:space="preserve">
+    <value>Actual Apirl</value>
+  </data>
+  <data name="Eng_budget_Actualaug" xml:space="preserve">
+    <value>Actual Aug</value>
+  </data>
+  <data name="Eng_budget_ActualDec" xml:space="preserve">
+    <value>Actual Dec</value>
+  </data>
+  <data name="Eng_budget_ActualFeb" xml:space="preserve">
+    <value>Actual Feb</value>
+  </data>
+  <data name="Eng_budget_ActualJan" xml:space="preserve">
+    <value>Actual Jan</value>
+  </data>
+  <data name="Eng_budget_Actualjuly" xml:space="preserve">
+    <value>Actual July</value>
+  </data>
+  <data name="Eng_budget_Actualjune" xml:space="preserve">
+    <value>Actual June</value>
+  </data>
+  <data name="Eng_budget_ActualMarch" xml:space="preserve">
+    <value>Actual March</value>
+  </data>
+  <data name="Eng_budget_Actualmay" xml:space="preserve">
+    <value>Actual May</value>
+  </data>
+  <data name="Eng_budget_ActualNov" xml:space="preserve">
+    <value>Actual Nov</value>
+  </data>
+  <data name="Eng_budget_Actualoct" xml:space="preserve">
+    <value>Actual Oct</value>
+  </data>
+  <data name="Eng_budget_Actualsept" xml:space="preserve">
+    <value>Actual Sept</value>
+  </data>
+  <data name="Eng_budget_Actualytod" xml:space="preserve">
+    <value>Actual YTOD</value>
+  </data>
+  <data name="Eng_budget_budgetActualCurrentMonth" xml:space="preserve">
+    <value>Current Month Actual</value>
+  </data>
+  <data name="Eng_budget_budgetactualJan" xml:space="preserve">
+    <value>Before Jan Actual</value>
+  </data>
+  <data name="Eng_budget_budgetActualLastMonth" xml:space="preserve">
+    <value>Last Month Actual</value>
+  </data>
+  <data name="Eng_budget_budgetBeforeJan" xml:space="preserve">
+    <value>Before Jan Budget</value>
+  </data>
+  <data name="Eng_budget_budgetBudgetCurrentMonth" xml:space="preserve">
+    <value>Current Month Budget</value>
+  </data>
+  <data name="Eng_budget_budgetBudgetLastMonth" xml:space="preserve">
+    <value>Last Month Budget</value>
+  </data>
+  <data name="Eng_budget_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Eng_budget_phase" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="Eng_budget_project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Spec_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Resm_Laborbonus" xml:space="preserve">
+    <value>Labor Bonus</value>
+  </data>
+  <data name="Men_ProjectBandFollowUp" xml:space="preserve">
+    <value>Project Band Follow Up</value>
+  </data>
+  <data name="Men_ProjectDistribution" xml:space="preserve">
+    <value>Project Distribution</value>
+  </data>
+  <data name="Men_ProjectFollowUp" xml:space="preserve">
+    <value>Project Follow Up</value>
+  </data>
+  <data name="Men_ProjectPhaseDistribution" xml:space="preserve">
+    <value>Project Phase Distribution</value>
+  </data>
+  <data name="Men_ProjectWorking" xml:space="preserve">
+    <value>Project Working</value>
+  </data>
+  <data name="REP_Monitoring" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="Men_RepEquipCostVariance" xml:space="preserve">
+    <value>Equip Cost Variance</value>
+  </data>
+  <data name="Men_RepLaborCostVariance" xml:space="preserve">
+    <value>Labor Cost Variance</value>
+  </data>
+  <data name="Men_RepLaborEvaluation" xml:space="preserve">
+    <value>Labor Evaluation</value>
+  </data>
+  <data name="Men_RepMaterialCoverage" xml:space="preserve">
+    <value>Material Coverage</value>
+  </data>
+  <data name="Men_RepProjectCost" xml:space="preserve">
+    <value>Project Cost</value>
+  </data>
+  <data name="Men_RepProjectCostVarian" xml:space="preserve">
+    <value>Project Cost Variance</value>
+  </data>
+  <data name="Men_RepProjectEvaluation" xml:space="preserve">
+    <value>Project Evaluation</value>
+  </data>
+  <data name="Men_RepSiteEngineerBonus" xml:space="preserve">
+    <value>Site Engineer Bonus &amp; Eff</value>
+  </data>
+  <data name="RepVariance" xml:space="preserve">
+    <value>Variance</value>
+  </data>
+  <data name="REP_RepEvaluation" xml:space="preserve">
+    <value>Evaluation</value>
+  </data>
+  <data name="Eng_fld_LaborEvaluation" xml:space="preserve">
+    <value>Labor Evaluation</value>
+  </data>
+  <data name="Ger_Rep_fld_Included" xml:space="preserve">
+    <value>Included</value>
+  </data>
+  <data name="Ger_Rep_fld_salesengcode" xml:space="preserve">
+    <value>sales engineer code</value>
+  </data>
+  <data name="Ger_Rep_fld_scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Ger_Rep_fld_SiteEngCode" xml:space="preserve">
+    <value>Site Engineer Code</value>
+  </data>
+  <data name="Eng_fld_Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Eng_fld_ItemsCode" xml:space="preserve">
+    <value>Items Code</value>
+  </data>
+  <data name="Men_BranchComparison" xml:space="preserve">
+    <value>BranchComparison</value>
+  </data>
+  <data name="Men_ByActivity" xml:space="preserve">
+    <value>By Activity</value>
+  </data>
+  <data name="Men_ByBranch" xml:space="preserve">
+    <value>By Branch</value>
+  </data>
+  <data name="Men_ByCustomerClass" xml:space="preserve">
+    <value>By Customer Class</value>
+  </data>
+  <data name="Men_ByItem" xml:space="preserve">
+    <value>By Item</value>
+  </data>
+  <data name="Men_ByProject" xml:space="preserve">
+    <value>By Project</value>
+  </data>
+  <data name="Men_ByScope" xml:space="preserve">
+    <value>By Scope</value>
+  </data>
+  <data name="Men_ByScopeCategory" xml:space="preserve">
+    <value>By Scope Category</value>
+  </data>
+  <data name="Men_CompanyCollectiveWor" xml:space="preserve">
+    <value>CompanyCollectiveWor</value>
+  </data>
+  <data name="Men_DirectCostComparison" xml:space="preserve">
+    <value>DirectCostComparison</value>
+  </data>
+  <data name="Men_EvaluationComparison" xml:space="preserve">
+    <value>EvaluationComparison</value>
+  </data>
+  <data name="Men_IncomeComparison" xml:space="preserve">
+    <value>Billing Comparison</value>
+  </data>
+  <data name="Men_NormsVariationReport" xml:space="preserve">
+    <value>NormsVariationReport</value>
+  </data>
+  <data name="Men_ProductionComparison" xml:space="preserve">
+    <value>Production Comparison</value>
+  </data>
+  <data name="Men_SalesComparison" xml:space="preserve">
+    <value>Sales Comparison</value>
+  </data>
+  <data name="Men_SubContractorWork" xml:space="preserve">
+    <value>SubContractorWork</value>
+  </data>
+  <data name="Dss_fld_AdditionalWork" xml:space="preserve">
+    <value>Additional Work</value>
+  </data>
+  <data name="Dss_fld_ContractPrice" xml:space="preserve">
+    <value>Contract Price</value>
+  </data>
+  <data name="Dss_fld_NewProjects" xml:space="preserve">
+    <value>New Projects</value>
+  </data>
+  <data name="Dss_fld_ProjectChange" xml:space="preserve">
+    <value>Project Change</value>
+  </data>
+  <data name="Dss_fld_Projectincluded" xml:space="preserve">
+    <value>Project included</value>
+  </data>
+  <data name="Dss_fld_SalesValueSelection" xml:space="preserve">
+    <value>Sales Value  Selection</value>
+  </data>
+  <data name="Dss_fld_ByCustomerBill" xml:space="preserve">
+    <value>By Customer Bill</value>
+  </data>
+  <data name="Dss_fld_ByProductionInvoice" xml:space="preserve">
+    <value>By Production Invoice</value>
+  </data>
+  <data name="Dss_fld_BySalesPrice" xml:space="preserve">
+    <value>By Sales Price</value>
+  </data>
+  <data name="Dss_fld_ByStdPrice" xml:space="preserve">
+    <value>By Std Price</value>
+  </data>
+  <data name="Dss_fld_IncomeValueSelection" xml:space="preserve">
+    <value>Income Value  Selection</value>
+  </data>
+  <data name="Dss_fld_InternalProd" xml:space="preserve">
+    <value>Internal Prod.</value>
+  </data>
+  <data name="Dss_fld_ProductionType" xml:space="preserve">
+    <value>Production Type</value>
+  </data>
+  <data name="Dss_ProductionValueSelection" xml:space="preserve">
+    <value>Production Value  Selection</value>
+  </data>
+  <data name="DSS_by_Region" xml:space="preserve">
+    <value>By Region</value>
+  </data>
+  <data name="Dss_fld_FromBranch" xml:space="preserve">
+    <value>From Branch</value>
+  </data>
+  <data name="Dss_fld_tobranch" xml:space="preserve">
+    <value>to branch</value>
+  </data>
+  <data name="DSS_byRegion" xml:space="preserve">
+    <value>ByRegion</value>
+  </data>
+  <data name="serv_MaterialRequest" xml:space="preserve">
+    <value>Mat. Req.</value>
+  </data>
+  <data name="Work_DesA" xml:space="preserve">
+    <value>Work_DesA</value>
+  </data>
+  <data name="Work_DescE" xml:space="preserve">
+    <value>Work_DescE</value>
+  </data>
+  <data name="Cost_LineCode" xml:space="preserve">
+    <value>Line Code</value>
+  </data>
+  <data name="OffBil_DueAmount" xml:space="preserve">
+    <value>DueAmount</value>
+  </data>
+  <data name="OffBil_DueDate" xml:space="preserve">
+    <value>DueDate</value>
+  </data>
+  <data name="OffBil_DuePrc" xml:space="preserve">
+    <value>DuePrc</value>
+  </data>
+  <data name="OffBil_ItemDesc" xml:space="preserve">
+    <value>ItemDesc</value>
+  </data>
+  <data name="OffBil_OfferItemId" xml:space="preserve">
+    <value>OfferItemId</value>
+  </data>
+  <data name="OffBil_PayDescA" xml:space="preserve">
+    <value>PayDescA</value>
+  </data>
+  <data name="OffBil_PayDescE" xml:space="preserve">
+    <value>PayDescE</value>
+  </data>
+  <data name="OffBil_Prodprc" xml:space="preserve">
+    <value>Prodprc</value>
+  </data>
+  <data name="OffBil_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="OffBil_Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="work_PlanQty" xml:space="preserve">
+    <value>Plan Qty</value>
+  </data>
+  <data name="Fld_Start_Work" xml:space="preserve">
+    <value>Start Work</value>
+  </data>
+  <data name="Contr_ProjQty" xml:space="preserve">
+    <value>ProjQty</value>
+  </data>
+  <data name="Contr_SoQty" xml:space="preserve">
+    <value>SoQty</value>
+  </data>
+  <data name="Resm_fld_Issue" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="SMB_LineCode" xml:space="preserve">
+    <value>Line Code</value>
+  </data>
+  <data name="SMB_Prod_TrNo" xml:space="preserve">
+    <value>Prod_TrNo</value>
+  </data>
+  <data name="Fld_Validty" xml:space="preserve">
+    <value>Validity Mnth</value>
+  </data>
+  <data name="Fld_ApprovedBy" xml:space="preserve">
+    <value>ApprovedBy</value>
+  </data>
+  <data name="ResM_Materiallabor_Labname" xml:space="preserve">
+    <value>Labor Name</value>
+  </data>
+  <data name="Old_Project" xml:space="preserve">
+    <value>Enter Project</value>
+  </data>
+  <data name="Fld_Additional" xml:space="preserve">
+    <value>Hour Cost</value>
+  </data>
+  <data name="SMB_PrevBillQty" xml:space="preserve">
+    <value>Billed Qty</value>
+  </data>
+  <data name="SMB_ProdQty" xml:space="preserve">
+    <value>Prod Qty</value>
+  </data>
+  <data name="SMB_ProjQty" xml:space="preserve">
+    <value>Proj Qty</value>
+  </data>
+  <data name="SMB_UomCode" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="ByLabor" xml:space="preserve">
+    <value>By Labor</value>
+  </data>
+  <data name="FreeLAbor" xml:space="preserve">
+    <value>Free LAbor</value>
+  </data>
+  <data name="Men_UsersSetting" xml:space="preserve">
+    <value>User Privildges</value>
+  </data>
+  <data name="URS_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="URS_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="URS_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="URS_CopyFrom" xml:space="preserve">
+    <value>Member Of</value>
+  </data>
+  <data name="URS_CUSTOM1" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="URS_CUSTOM1_DESC" xml:space="preserve">
+    <value>C1_DESC</value>
+  </data>
+  <data name="URS_CUSTOM2" xml:space="preserve">
+    <value>C2</value>
+  </data>
+  <data name="URS_CUSTOM2_DESC" xml:space="preserve">
+    <value>C2_DESC</value>
+  </data>
+  <data name="URS_CUSTOM3" xml:space="preserve">
+    <value>C3</value>
+  </data>
+  <data name="URS_CUSTOM3_DESC" xml:space="preserve">
+    <value>C3_DESC</value>
+  </data>
+  <data name="URS_CUSTOM4" xml:space="preserve">
+    <value>C4</value>
+  </data>
+  <data name="URS_CUSTOM4_DESC" xml:space="preserve">
+    <value>C4_DESC</value>
+  </data>
+  <data name="URS_CUSTOM5" xml:space="preserve">
+    <value>C5</value>
+  </data>
+  <data name="URS_CUSTOM5_DESC" xml:space="preserve">
+    <value>C5_DESC</value>
+  </data>
+  <data name="URS_CUSTOM6" xml:space="preserve">
+    <value>C6</value>
+  </data>
+  <data name="URS_CUSTOM6_DESC" xml:space="preserve">
+    <value>C6_DESC</value>
+  </data>
+  <data name="URS_CUSTOM7" xml:space="preserve">
+    <value>C7</value>
+  </data>
+  <data name="URS_CUSTOM7_DESC" xml:space="preserve">
+    <value>C7_DESC</value>
+  </data>
+  <data name="URS_CUSTOM8" xml:space="preserve">
+    <value>C8</value>
+  </data>
+  <data name="URS_CUSTOM8_DESC" xml:space="preserve">
+    <value>C8_DESC</value>
+  </data>
+  <data name="URS_CUSTOM9" xml:space="preserve">
+    <value>C9</value>
+  </data>
+  <data name="URS_CUSTOM9_DESC" xml:space="preserve">
+    <value>C9_DESC</value>
+  </data>
+  <data name="URS_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="URS_Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="URS_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="URS_EditImg" xml:space="preserve">
+    <value>Edit Image</value>
+  </data>
+  <data name="URS_EXECUTE" xml:space="preserve">
+    <value>EXECUTE</value>
+  </data>
+  <data name="URS_FILTER" xml:space="preserve">
+    <value>FILTER STRING</value>
+  </data>
+  <data name="URS_Job" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="URS_KeepRelation" xml:space="preserve">
+    <value>Keep Relation</value>
+  </data>
+  <data name="URS_Operate" xml:space="preserve">
+    <value>Access</value>
+  </data>
+  <data name="URS_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="URS_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="URS_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="URS_Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="URS_ShowImg" xml:space="preserve">
+    <value>Show Image</value>
+  </data>
+  <data name="URS_SUBSYSTEM" xml:space="preserve">
+    <value>SUB SYSTEM Code</value>
+  </data>
+  <data name="URS_SYSTEMCODE" xml:space="preserve">
+    <value>SYSTEMCODE</value>
+  </data>
+  <data name="URS_UserCode" xml:space="preserve">
+    <value>User Code</value>
+  </data>
+  <data name="URS_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="RDBillingList" xml:space="preserve">
+    <value>Billing List</value>
+  </data>
+  <data name="RDProdVsBill" xml:space="preserve">
+    <value>Production VS Billing</value>
+  </data>
+  <data name="By_Engineer" xml:space="preserve">
+    <value>By Engineer</value>
+  </data>
+  <data name="By_SubContractor" xml:space="preserve">
+    <value>By SubContractor</value>
+  </data>
+  <data name="Fld_NetAmount" xml:space="preserve">
+    <value>Net Amount</value>
+  </data>
+  <data name="ProjSpec_ProdPRc" xml:space="preserve">
+    <value>Prod%</value>
+  </data>
+  <data name="ProjItemsInventory" xml:space="preserve">
+    <value>Project Items Inventory</value>
+  </data>
+  <data name="Men_EngReports" xml:space="preserve">
+    <value>Engineering Reports</value>
+  </data>
+  <data name="ByScope" xml:space="preserve">
+    <value>By Scope</value>
+  </data>
+  <data name="Rpt_Grouping" xml:space="preserve">
+    <value>Group By</value>
+  </data>
+  <data name="Fld_Reopen" xml:space="preserve">
+    <value>ReOpen</value>
+  </data>
+  <data name="Fld_VatPrc" xml:space="preserve">
+    <value>VAT %</value>
+  </data>
+  <data name="Def_VatPrc" xml:space="preserve">
+    <value>VAT%</value>
+  </data>
+  <data name="PManag_EOH" xml:space="preserve">
+    <value>EQ OH</value>
+  </data>
+  <data name="PManag_ExOH" xml:space="preserve">
+    <value>Exp OH</value>
+  </data>
+  <data name="PManag_LOH" xml:space="preserve">
+    <value>Lab OH</value>
+  </data>
+  <data name="PManag_MOH" xml:space="preserve">
+    <value>Mat OH</value>
+  </data>
+  <data name="PManag_SOH" xml:space="preserve">
+    <value>Sub C OH</value>
+  </data>
+  <data name="Eng_Summary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Spec_MaterialUsageSummary" xml:space="preserve">
+    <value>Material Usage Summary</value>
+  </data>
+  <data name="By_Material" xml:space="preserve">
+    <value>By Material</value>
+  </data>
+  <data name="By_Transaction" xml:space="preserve">
+    <value>By Transaction</value>
+  </data>
+  <data name="Fld_TotalAllowance" xml:space="preserve">
+    <value>Total Allowance</value>
+  </data>
+  <data name="rpByInvoice" xml:space="preserve">
+    <value>By Invoice</value>
+  </data>
+  <data name="rpByPhase" xml:space="preserve">
+    <value>By Phase</value>
+  </data>
+  <data name="RpVatType" xml:space="preserve">
+    <value>Vat Type</value>
+  </data>
+  <data name="Men_PeriodBudget" xml:space="preserve">
+    <value>Monthly Production Budget</value>
+  </data>
+  <data name="ResM_Materiallabor_LateNo" xml:space="preserve">
+    <value>Absence No</value>
+  </data>
+  <data name="Eng_Rep_RedinternalWork" xml:space="preserve">
+    <value>Internal Production</value>
+  </data>
+  <data name="Eng_Rep_RedSubWork" xml:space="preserve">
+    <value>Sub Contractor Prod</value>
+  </data>
+  <data name="work_SchTarget" xml:space="preserve">
+    <value>PP Day</value>
+  </data>
+  <data name="ItemCodeLike" xml:space="preserve">
+    <value>Item No Contains</value>
+  </data>
+  <data name="ItemNameLike" xml:space="preserve">
+    <value>Name Contains</value>
+  </data>
+  <data name="Resm_ProdVSProgress" xml:space="preserve">
+    <value>Prod VS Progress</value>
+  </data>
+  <data name="Men_Techvariationorder" xml:space="preserve">
+    <value>Technical Variation Order</value>
+  </data>
+  <data name="Men_Projectvaliation" xml:space="preserve">
+    <value>Project Variation</value>
+  </data>
+  <data name="CRMReport" xml:space="preserve">
+    <value>CRM Report</value>
+  </data>
+  <data name="TaxInvoicelist" xml:space="preserve">
+    <value>Tax Invoice list</value>
+  </data>
+  <data name="Men_CreditDebitNote" xml:space="preserve">
+    <value>CreditDebitNote</value>
+  </data>
+</root>

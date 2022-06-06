@@ -1,0 +1,135 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "PrepareIndex";
+    ViewBag.Title = "Prepare";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="col-xs-12 dir" id="effects">
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtAreaCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Cust_BraCode </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm " disabled name="" id="txtAreaCode">
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" style="display:none" class="src-btn btn btn-warning fst_serach_proj" id="btnArea">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled name="" id="txtAreaName">
+                        </div>
+                        <label for="txtLoginYear" class="col-sm-2 col-xs-12 control-label text-right"> login Year </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm " disabled name="" id="txtLoginYear">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Budg_Month </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 181px;">
+                            @*<input type="month" class="form-control input-sm" name="" id="txtMonth">*@
+                            <select style="width: 100px;" id="txtMonth">
+                                <option value="01"> 01 </option>
+                                <option value="02"> 02 </option>
+                                <option value="03"> 03 </option>
+                                <option value="04"> 04 </option>
+                                <option value="05"> 05 </option>
+                                <option value="06"> 06 </option>
+                                <option value="07"> 07 </option>
+                                <option value="08"> 08 </option>
+                                <option value="09"> 09 </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <button type="button" class="src-btn btn btn-dark" id="btnLoadDetails"> Display Budget </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.def_enginer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="hidden" name="SiteEngineerId" id="txtSiteEngineerId">
+                            <input type="hidden" name="ProjectPhaseId" id="txtProjectPhaseId">
+                            <input type="hidden" name="ProjectID" id="txtProjectID">
+                            <input type="hidden" name="ProjectPhaseItemActivId" id="txtProjectPhaseItemActivId">
+
+                            <input type="text" class="form-control input-sm " disabled name="" id="txtEngCode">
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning  fst_serach_proj" id="btnEng">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm " disabled name="" id="txtEngName">
+                        </div>
+                        <button class="btn btn-warning budget_breakdown" type="button" id="btnShowRequired"> Budget break down </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="defination" style="margin-top:2%">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 200px !important;
+                            width: 103%;
+                            /*background-color: #fff;*/
+                        }
+                    </style>
+
+                    <table id="GridPhase"></table>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="Budgetbreak" style="margin-top:2%">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 200px !important;
+                            /*background-color: #fff;*/
+                        }
+                    </style>
+
+                    <table id="GridActivity"></table>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    <script src="~/ClientApp/Components/Engineer/budget/Prepare.js"></script>
+</div>
+
+<style>
+    .jsgrid-grid-body {
+        height: 385px !important;
+        max-height: 436px !important;
+    }
+
+    #GridPhase .jsgrid-table {
+        width: 360%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+
+    .jsgrid-grid-header {
+    }
+
+    #Budgetbreak .jsgrid-grid-body {
+        margin-top: -13px;
+    }
+</style>

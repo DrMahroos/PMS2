@@ -1,0 +1,163 @@
+﻿@using PMS.WebUI.Resources;
+<script>
+    $(document).ready(function () {
+        $("#btnRepClose").click(function () {
+            $("#ReportsPopupDialog").modal("hide");
+		});
+
+    })
+</script>
+<style>
+    .form-group {
+        margin-bottom: 0px;
+    }
+</style>
+<head>
+	<script src="~/ClientApp/GeneralReports/GeneralReports.js"></script>
+	@*<link href="~/css/icon.css" rel="stylesheet" />*@
+	@*<link href="~/css/font-awesome.min.css" rel="stylesheet" />*@
+	<style>
+		.panel-group1 .panel-heading {
+			border-bottom: 2px solid #FFFFFF;
+			background: #243023;
+			color: white;
+			margin-left: 1px;
+		}
+	</style>
+</head>
+<!--..............................MessageBox dialog..................................................-->
+<div class="modal fade" id="ReportsPopupDialog" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#d86e48;padding: 0px;">
+                <div class="col-xs-12 color1">
+                  
+                    <div class="col-md-7 col-xs-12">
+                        <span class="span_pic" id="QueryIconSpan">
+                            <button data-toggle="modal" data-target="#myModal" style="BACKGROUND: TRANSPARENT;BORDER: NONE;PADDING: 0PX; left: 46px;" class="col-xs-1">
+                                <img src="~/images/top.png" style="width: 35px;height: 30px;margin-top: 4px;margin-right: 450%;margin-left: -38px;" />
+                            </button>
+                        </span>
+                        <h4 id="TitleSpanRep" class="h4_header col-md-5" style="margin-right:2%"></h4>
+                    </div>
+
+                    <div class="col-md-5 head_menu" id="en-menu">
+                        <div class="menu text-right menu_partial">
+                            <a href="#" type="button" class="item home_ro " id="btnHomeRep">
+                                <div class="link icon_home"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">الرئيسية</h2>
+                                    <h2 class="language en">Home</h2>
+                                </div>
+                            </a>
+                            <a href="#" class="item new_ro" id="AddButton" onclick="GeneralReports.Clear();">
+                                <div class="link icon_delete"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">حذف</h2>
+                                    <h2 class="language en">Delete</h2>
+                                </div>
+                            </a>
+                            <a href="#" class="item print_ro" data-toggle="modal" id="btnPrint" onclick="GeneralReports.Print();">
+                                <div class="link icon_print"></div>
+                                <div class="item_content">
+                                    <h2 class="language ar">طباعة</h2>
+                                    <h2 class="language en">Print</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="modal-body modal_report">
+                <div class="fancy-collapse-panel ">
+					<div class="panel-group1" id="accordion" role="tablist">
+						<div id="collapseOne" class="panel-collapse collapse in mrgcent " role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body1" id="ReportPopupBody">
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body1">
+							</div>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            $('.item').hover(
+                function () {
+                    var $this = $(this);
+                    expand($this);
+                },
+                function () {
+                    var $this = $(this);
+                    collapse($this);
+                }
+            );
+            function expand($elem) {
+                var angle = 0;
+                var t = setInterval(function () {
+                    if (angle == 1440) {
+                        clearInterval(t);
+                        return;
+                    }
+                    angle += 40;
+                    $('.link', $elem).stop().animate({ rotate: '+=-40deg' }, 0);
+                }, 10);
+                $elem.stop().animate({ width: '110px' }, 1000)
+                    .find('.item_content').fadeIn(400, function () {
+                        $(this).find('p').stop(true, true).fadeIn(600);
+                    });
+            }
+            function collapse($elem) {
+                var angle = 1440;
+                var t = setInterval(function () {
+                    if (angle == 0) {
+                        clearInterval(t);
+                        return;
+                    }
+                    angle -= 40;
+                    $('.link', $elem).stop().animate({ rotate: '+=40deg' }, 0);
+                }, 10);
+                $elem.stop().animate({ width: '37px' }, 1000)
+                    .find('.item_content').stop(true, true).fadeOut().find('p').stop(true, true).fadeOut();
+            }
+            $("#btnHomeRep").click(function () {
+                debugger
+                $("#spnFav").css("display", "none");
+                $("#ReportsPopupDialog").modal("hide");
+            @*var homePage = '@Url.Action("HomeIndex","Home")';
+            window.open(homePage, "_self");*@
+
+        });
+    </script>
+</div>
+
+@*<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>*@
+@*<script src="~/Scripts/DataTables/dataTables.bootstrap.js"></script>*@
+@*<script src="~/ClientApp/DataTable.js"></script>*@
+
+<div class="help-pop modal fade in" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">@SystemResource.Fld_Help</h4>
+            </div>
+            <div class="modal-body content content-8" id="modalHelpRep">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">@SystemResource.Fld_Close</button>
+            </div>
+        </div>
+    </div>
+</div>

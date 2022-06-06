@@ -1,0 +1,134 @@
+﻿@using PMS.WebUI.Resources
+
+
+<div class="row">
+	<div class="clear"></div>
+	<div class="col-xs-12 dir dir_workdaily" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="date" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_ToDate </label>
+						<div class="col-md-2 col-sm-4 col-xs-5 bonusdate">
+							<input type="date" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpFromproject </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpToproject </label>
+						<div class="col-md-2 col-sm-4 col-xs-5 bonusdate">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_Dailyworkprod_customerclass </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_Dailyworkprod_customer </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="col-md-2 col-xs-5">
+							<input type="radio" name="reparir" class="dailwork_input" checked />
+							<label class="dailwork_label">@SystemResource.Eng_Rep_Dailyworkprod_allproject</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_Dailyworkprod_scopeclass </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="col-md-2 col-xs-5">
+							<input name="reparir" type="radio" class="dailwork_input" />
+							<label class="dailwork_label">@SystemResource.Eng_Rep_Dailyworkprod_nonrepair</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_Dailyworkprod_scope </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="col-md-2 col-xs-5">
+							<input type="radio" name="reparir" class="dailwork_input" />
+							<label class="dailwork_label">@SystemResource.Eng_Rep_Dailyworkprod_repair</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_Dailyworkprod_bonusfactor </label>
+						<div class="col-md-5 col-sm-4 col-xs-5" style="width: 430px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+

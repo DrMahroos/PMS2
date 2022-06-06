@@ -1,0 +1,55 @@
+﻿ @using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ScopeDefinitionIndex";
+    ViewBag.Title = SystemResource.Men_ScopeDefinition;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+
+        <div class="clear"></div>
+        <form style="margin-bottom:5%">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_ScopeCategoryID</label>
+                        <div class="col-sm-2 col-xs-6">
+                            <input type="hidden" class="form-control input-sm" disabled="disabled" id="txtScopeCategoryID" name="ScopeCategoryID"> 
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtScopeCategorycod" name="ScopeCategoryID">
+
+                        </div>
+                        <div class="col-xs-1">
+                            <button type="button" class="btn btn-info" id="btnSearchScopCat">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtScopeCategoryName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 250px !important;
+            }
+        </style>
+
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/06_SubActivityInformationBank/ScopeDefinition.js"></script>
+</div>
+

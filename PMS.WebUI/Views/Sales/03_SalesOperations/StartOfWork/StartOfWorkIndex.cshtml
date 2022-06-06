@@ -1,0 +1,231 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "StartOfWorkIndexIndex";
+    ViewBag.Title = SystemResource.Men_StartOfWork;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-7">
+                <div class="rtop">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferNo </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="TrNo" id="txtTrNo">
+                                <input type="hidden" class="form-control input-sm" disabled="disabled" name="OfferID">
+                            </div>
+                            <div class="info-btn" style="margin-right:2%;">
+                                <button class="btn btn-info xeditable" type="button" id="btnSearchOffer">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferSerial</label>
+                            <div class="col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="TrSerial" id="txtTrSerial">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right:0%;">@SystemResource.Fld_OfferDate:</label>
+                            <div class="col-sm-4 col-xs-5">
+                                <input type="date" class="form-control input-sm"disabled="disabled" name="TrDate" id="txtTrDate">
+                            </div>
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right: 0%;">@SystemResource.Fld_DeliveryDate:</label>
+                            <div class="col-sm-4 col-xs-5">
+                                <input type="date" class="form-control input-sm" disabled="disabled" name="SendDate" id="txtSendDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferDescL:</label>
+                            <div class="col-xs-10">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="DescL" id="txtDescL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Customer:</label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="cus_CustomerCode" id="txtcus_CustomerCode">
+                            </div>
+                            <div class="col-md-6 col-xs-2" style="padding-right:0%;">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="Cus_DescE" id="txtCus_DescE">
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bleft" style="margin-top:2%">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-xs-3">
+                                <input type="radio" class="editable" name="IsNewProject" id="RdNewProject" />
+                                <label class="work_radio"> @SystemResource.Fld_Newproject</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="radio" class="editable" name="IsNewProject" id="RdExistProject" />
+                                <label class="work_radio">@SystemResource.Fld_AddtoExistingProject</label>
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="radio" class="editable" name="IsNewProject" id="redOldProject" />
+                                <label class="work_radio"> @SystemResource.Old_Project</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Area:</label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="ProjectBranch" id="txtProjectBranch">
+                                <input type="hidden" class="form-control input-sm" disabled="disabled" name="BraCode">
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info editable" type="button" id="btnSearchArea">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-6 col-xs-2">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="" id="txtProjectBranchName">
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Project:</label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="ProjectCode" id="txtProjectCode">
+                                <input type="hidden" class="form-control input-sm" disabled="disabled" name="ProjectID">
+                                <input type="hidden" class="form-control input-sm" disabled="disabled" name="PhaseID">
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info" disabled="disabled" type="button" id="btnSearchProject">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;padding-left:1.5%;"> @SystemResource.Fld_Phase :</label>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="PhaseCode" id="txtPhaseCode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-5">
+                <div class="ltop">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right"> @SystemResource.Def_contractno</label>
+                            <div class="col-sm-5 col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="ContractCode" id="txtContractCode">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right"> @SystemResource.Fld_contractDays</label>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control input-sm editable" name="ContractPeriod" id="txtContractPeriod">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right"> @SystemResource.Fld_ContractDate</label>
+                            <div class="col-xs-5">
+                                <input type="date" class="form-control input-sm editable" name="ContractDate" id="txtContractDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right"> @SystemResource.Def_contract_val</label>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="ContractPrice" id="txtContractPrice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right">  @SystemResource.Fld_VatPrc </label>
+                            <div class="col-xs-5">
+                              
+                                <select id="txtVatPrc" class="form-control   editable " name="VatPrc">
+                                    <option value="0">Zero Vat</option>
+                                    <option value="5">5%</option>
+                                    <option value="15">15%</option>                                
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bright">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-xs-5">
+                                <button type="button" class="btn btn-warning" id="btnAuthorize"> @SystemResource.Fld_AuthorizeCreateProject </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label text-right"> @SystemResource.FldWorkStartOrderno </label>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control input-sm" disabled="disabled" name="WorkStartId" id="txtWorkStartId">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-xs-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;margin-right:0%;"> Updated by </label>
+                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                            <div class="col-md-2 col-xs-2">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                            <label class="col-sm-2 col-xs-12 control-label" style="text-align:center!important;"> Created by </label>
+                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                            <div class="col-md-2 col-xs-2">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </form>
+    </div>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/03_SalesOperations/StartOfWork.js"></script>
+</div>
+<style>
+    .form-group {
+        margin-bottom:0%!important;
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+

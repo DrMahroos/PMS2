@@ -1,0 +1,81 @@
+﻿
+@using PMS.WebUI.Resources
+
+<link href="~/css/main.css" rel="stylesheet" />
+<div class="clear"></div>
+
+<label for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_LaborDefinition</label>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="LaborCategoryId" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Categ </label>
+		<div class="col-md-1 col-sm-4 col-xs-5">
+			<input type="text" class="form-control input-sm xaddable xeditable" id="txtLaborCategoryIdRp" name="LaborCategoryId" readonly>
+		</div>
+        <div class="info-btn">
+            <button type="button" class="btn btn-info addable editable" id="btnCategoryCodeRp">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </div>
+		<div class="catin col-md-2 col-sm-4 col-xs-5">
+			<input type="text" class="form-control inpt-sm xaddable xeditable" id="txtLaborCategoryNameRp" name="LaborCategoryName" readonly>
+		</div>
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="LaborClassId" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Class  </label>
+		<div class="col-md-1 col-sm-4 col-xs-5">
+			<input type="text" class="form-control input-sm xaddable xeditable" id="txtLaborClassIdRp" name="LaborClassId" readonly>
+		</div>
+        <div class="info-btn">
+            <button type="button" class="btn btn-info addable editable" id="btnClassCodeRp">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </div>
+		<div class="catin col-md-2 col-sm-4 col-xs-5">
+			<input type="text" class="form-control inpt-sm xaddable xeditable" id="txtLaborClassNameRp" name="LaborClassName" readonly>
+		</div>
+    </div>
+</div>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Bra </label>
+        <div class="col-md-1 col-sm-4 col-xs-5">
+            <input type="text" class="form-control input-sm" disabled="disabled" name="BraCode" id="txtBraCodeRp">
+        </div>
+        <div class="info-btn">
+            <button type="button" class="btn btn-info src-btn btn btn-warning addable editable" id="btnAreaRp">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </div>
+        <div class="catin col-md-2 col-sm-4 col-xs-5">
+            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtAreaNameRp" name="AreaName">
+        </div>
+    </div>
+</div>
+<div class="col-xs-9">
+
+	<div class="col-xs-12 form-group radio_sec">
+		<label class="area_label"> @SystemResource.Fld_Active </label>
+		<div class="col-lg-2 col-xs-3" style="color:#1cb3f9;">
+			<input type="radio" id="ActiveRp" name="Active" value="option1">
+			<label class="radio_report">@SystemResource.Fld_isActive</label>
+		</div>
+		<div class="col-lg-2 col-xs-3" style="color:green;">
+			<input type="radio" id="NoActiveRp" name="Active" value="option1">
+			<label class="radio_report">@SystemResource.Fld_isNoActive</label>
+		</div>
+		<div class="col-lg-2 col-xs-3" style="color:red;">
+			<input type="radio" id="AllRp" name="Active" value="Active" checked="checked">
+			<label class="radio_report">@SystemResource.Fld_allActive</label>
+		</div>
+	</div>
+</div>
+<script src="~/ClientApp/JsGrid.js"></script>
+<script src="~/ClientApp/GeneralReports/LaborReport.js"></script>
+<script>
+	$(document).ready(function () {
+        LaborReport.InitalizeComponent();
+	})
+</script>

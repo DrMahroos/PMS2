@@ -1,0 +1,93 @@
+﻿
+
+
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Men_SalesComparison</label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+              
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+
+                            <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Eng_fld_Region</label>
+                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" id="txtRegionID" name="Region2" disabled>
+                             </div>
+                            <div class="info-btn">
+                                <button type="button" class="btn btn-warning" id="btnRegionID">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm" id="txtRegionDes" name="Region4" disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 ">
+                            <div class="col-md-5 ">
+                            </div>
+                            <button type="button" class="btn btn-warning" id="btnPrintEXEL">
+                                <i class="glyphicon glyphicon-export"></i>Export EXEL
+                            </button>
+                        </div>
+                    </div>
+
+
+                    </div>
+                 <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7"> 
+
+                            <label class="col-sm-3 col-xs-12 control-label text-right">@SystemResource.Resm_branch</label>
+                            <div class="col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm" id="txtBranchCod" name="Region2" disabled>
+                            </div>
+                            <div class="info-btn">
+                                <button type="button" class="btn btn-warning" id="btnBranch">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm" id="txtBranchDes" name="Region4" disabled>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div> 
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.PManag_FromDate </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                <input type="date" class="form-control input-sm addable editable" name="EngCode" id="FromDate">
+                            </div>
+                            <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right" style="width: 90px;"> @SystemResource.ResM_fld_laborrequest_todate </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 145px;">
+                                <input type="date" class="form-control input-sm addable editable" name="EngCode" id="ToDate">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+               
+
+            
+             
+        </form>
+    </div>
+</div>
+
+<script src="~/ClientApp/Components/DecisionSupport/01_BranchComparison/ProjectBillingSteaus.js"></script>
+ 

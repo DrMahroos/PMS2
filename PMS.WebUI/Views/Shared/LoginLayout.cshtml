@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/js/jquery3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/component.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800|Clicker+Script' rel='stylesheet' type='text/css'>
+    <link href="~/css/background.css" rel="stylesheet" />
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/login.js"></script>
+
+    <script src="~/js/waitMe.js"></script>
+    <script src="~/ClientApp/CustomEntities.js"></script>
+    <script src="~/ClientApp/App.js"></script>
+    @*<script src="~/ClientApp/IgGrid.js"></script>*@
+    <script src="~/ClientApp/SystemTools.js"></script>
+    <script src="~/ClientApp/Entities.js"></script>
+    <script src="~/ClientApp/Shared.js"></script>
+    <script src="~/ClientApp/AjaxCaller.js"></script>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script>
+        $(document).ready(function (e) {
+            setTimeout(function () {
+                debugger
+                $(".container_login").removeClass("flip");
+                $(".container_login").addClass("flip_re");
+            });
+
+        });
+    </script>
+
+    <!--.............................clock...........................-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Create two variable with the names of the months and days in an array
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+            // Create a newDate() object
+            var newDate = new Date();
+            // Extract the current date from Date object
+            newDate.setDate(newDate.getDate());
+            // Output the day, date, month and year
+            $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+            setInterval(function () {
+                // Create a newDate() object and extract the seconds of the current time on the visitor's
+                var seconds = new Date().getSeconds();
+                // Add a leading zero to seconds value
+                $("#sec").html((seconds < 10 ? "0" : "") + seconds);
+            }, 1000);
+
+            setInterval(function () {
+                // Create a newDate() object and extract the minutes of the current time on the visitor's
+                var minutes = new Date().getMinutes();
+                // Add a leading zero to the minutes value
+                $("#min").html((minutes < 10 ? "0" : "") + minutes);
+            }, 1000);
+
+            setInterval(function () {
+                // Create a newDate() object and extract the hours of the current time on the visitor's
+                var hours = new Date().getHours();
+                // Add a leading zero to the hours value
+                $("#hours").html((hours < 10 ? "0" : "") + hours);
+            }, 1000);
+
+        });
+    </script>
+
+    <input type="hidden" id="GetActionUrl" name="name" value="@Url.Action("GetActionUrl","ClientTools")" />
+</body>
+</html>

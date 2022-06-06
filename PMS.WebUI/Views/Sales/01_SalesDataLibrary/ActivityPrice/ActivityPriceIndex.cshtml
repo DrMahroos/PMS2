@@ -1,0 +1,105 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ActivityPriceIndex";
+    ViewBag.Title = SystemResource.Men_ActivityPrice;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="dir col-xs-12">
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_TRNumber </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="TrNo" id="txtTrNo">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info xaddable xeditable" type="button" id="btnSearchTrNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_TRDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="margin-left: -41px;">
+                            <input type="date" class="form-control input-sm addable editable Dateable" name="TrDate" id="txtTrDate">
+                        </div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_Authorize </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="margin-top: 9px;">
+                            <input type="checkbox" class="checkdef  col-xs-5 editable addable" style="" id="ChkStatus" name="Status">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Parentactivity </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="M_ActivityCode" id="txtParentActivityID">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info addable editable" type="button" id="btnParentActivity">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 21.5%;">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtParentActivityName">
+                        </div>
+                        <div class="col-md-1 col-sm-2 col-xs-6">
+                            <button class="btn btn-info addable editable" type="button" id="btnloadActivity"> @SystemResource.Fld_loadActivity </button>
+                        </div>
+                        <div class="col-md-1 col-sm-2 col-xs-6" style="margin: 0px 10px;">
+                            <button class="btn btn-warning" disabled="disabled" type="button" id="btnCalculate"
+                                    style="background-color:#cb8725!important; border-color:#f0ad4e!important" >
+                                Calculate
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 col-xs-2 control-label text-right">@SystemResource.Fld_Remarks </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <textarea class="form-control col-xs-12 addable editable" rows="4" name="Remarks" id="txtRemarks"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="Activitygrid" class="form-group">
+                    <div  style="height: 410px;padding: 0px;margin-top: -3px;">
+                        <table id="Grid"></table>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <div class="clear"></div>
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 307px!important;
+            }
+            .jsgrid-grid-header {
+                height: 67px;
+            }
+            .jsgrid-table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 0;
+                overflow: scroll;
+            }
+        </style>
+          
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    <script src="~/ClientApp/App.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/01_SalesDataLibrary/ActivityPrice.js"></script>
+</div>

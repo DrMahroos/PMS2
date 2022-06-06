@@ -1,0 +1,99 @@
+﻿@using PMS.WebUI.Resources
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" style="width:" name="FromDate" id="FromDate">
+
+
+                        </div>
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width:103px"> @SystemResource.Fld_ToDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" name="ToDate" id="ToDate">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eve_siteenginer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input hidden="hidden" type="text" class="  "  name="txtSiteEngid" id="txtSiteEngid" disabled>
+                            <input type="text" class="form-control input-sm addable editable"  name="txtSiteEngcode" id="txtSiteEngcode" disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butSiteEng" name="butSiteEng">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="txtDescE" id="txtDescE" disabled>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Men_SalesEngineer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input hidden="hidden" type="text" class=" " name="txtSalesEngineerId" id="txtSalesEngineerId">
+                            <input type="text" class="form-control input-sm addable editable" name="txtSalesEngineercode" id="txtSalesEngineercode">
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="txtDescESalesEngineer" id="txtDescESalesEngineer" disabled>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="radio" name="type" class="progress_input" id="ByProject" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.RDByProject </label>
+                        <input type="radio" name="type" class="progress_input" id="ByPhase" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.rpByPhase </label>
+                        <input type="radio" name="type" class="progress_input" id="Byitem" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_Byitem </label>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <input type="radio" name="summary" class="progress_input" id="all" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> All Projects </label>
+
+                        <input type="radio" name="summary" class="progress_input" id="ProdNo" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> No Production </label>
+
+                        <input type="radio" name="summary" class="progress_input" id="Bydiff" />
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> With Difference </label>
+
+                        <input type="radio" name="summary" class="progress_input" id="MatchingProduction" /> 
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12   text-right"style="font-size: 14px !important;top: 8px;width: 159px;right: 1px;">   Matching Production </label>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="~/ClientApp/Components/Engineer/05_Reports/Prodvsprogress.js"></script>

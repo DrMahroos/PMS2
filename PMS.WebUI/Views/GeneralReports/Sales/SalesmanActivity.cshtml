@@ -1,0 +1,111 @@
+﻿@using PMS.WebUI.Resources
+<div class="row">
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form class="col-xs-12">
+			<div class="col-xs-12">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_FromDate</label>
+						<div class="col-md-2 col-sm-4 col-xs-5" style="width: 164px;">
+							<input type="date" class="form-control input-sm" id="FromDate" name="FromDate">
+						</div>
+						<label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_ToDate</label>
+						<div class="col-md-2 col-sm-4 col-xs-5" style="width: 164px;">
+							<input type="date" class="form-control input-sm" id="ToDate" name="ToDate">
+						</div>
+						@*<div class="col-xs-2"></div>
+							<div class="col-xs-3">
+								<button class="col-xs-9 btn btn-warning" type="button"> New Project </button>
+							</div>*@
+					</div>
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">
+
+						<label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_SalesEngineerId </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 120px;">
+							<input class="form-control input-sm " disabled="disabled" name="SalesEngineerId" id="txtSalesEngineerIdRP">
+							<input type="hidden" class="form-control input-sm " disabled="disabled" name="SalesEngineerId" id="txtSalesEngineerIdHRP">
+						</div>
+						<div class="info-btn">
+							<button type="button" class="src-btn btn btn-warning" id="butEngCodeRP">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="catin col-md-2 col-sm-4 col-xs-5" style="width: 250px;">
+							<input type="text" class="form-control inpt-sm " disabled="disabled" id="txtDescECatRP">
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+
+					<div class="form-group">
+						<label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Men_CustomerCategory </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 120px;">
+							<input type="text" class="form-control input-sm " disabled="disabled" id="txtCustomercCodeRP" name="CustomerCategoryID">
+							<input type="hidden" class="form-control input-sm " disabled="disabled" id="txtCustomercIDRP" name="CustomerCategoryID">
+
+						</div>
+						<div class="info-btn">
+
+							<button type="button" class="btn btn-info" id="btnCustomerCatRP" name="btnCustomerCatRP">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-5" style="width: 250px;">
+
+							<input type="text" class="form-control inpt-sm" disabled="disabled" id="txtCustomerName1RP">
+						</div>
+
+					</div>
+
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Def_customer </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 120px;">
+							<input type="text" class="form-control input-sm" disabled="disabled" id="txtCustomerCodeRP" name="CustomerCode">
+							<input type="hidden" class="form-control input-sm" name="CustomerID" id="txtCustomerIDRP">
+						</div>
+						<div class="info-btn">
+							<button class="btn btn-info" type="button" id="btnCustomerCodeRP">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-5" style="width: 250px;">
+
+							<input type="text" class="form-control inpt-sm" disabled="disabled" id="txtCustomerNameRP">
+						</div>
+
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+
+					<div class="form-group">
+						<label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Area </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 120px;">
+							<input type="text" class="form-control input-sm" disabled="disabled" name="BraCode" id="txtBraCodeRP">
+						</div>
+						<div class="info-btn">
+							<button type="button" class="btn btn-info src-btn btn btn-warning" id="btnAreaRP" name="btnAreaRP">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="catin col-md-2 col-sm-4 col-xs-5" style="width: 250px;">
+							<input type="text" class="form-control inpt-sm " disabled="disabled" id="txtAreaNameRP" name="AreaName">
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</form>
+	</div>
+</div>

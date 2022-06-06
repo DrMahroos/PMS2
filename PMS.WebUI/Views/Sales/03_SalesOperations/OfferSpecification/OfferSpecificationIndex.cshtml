@@ -1,0 +1,110 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "OfferSpecification";
+    ViewBag.Title = SystemResource.Men_OfferSpecification;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferNo </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" name="TrNo" disabled="disabled" class="form-control input-sm clearable">
+                            <input type="hidden" name="OfferID" disabled="disabled" class="form-control input-sm clearable">
+                        </div>
+                        <div class="info-btn">
+                            <button id="btnTr" class="btn btn-info xeditable" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferSerial </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 13%;">
+                            <input type="text" name="TrSerial" disabled="disabled" class="form-control input-sm clearable">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" name="TrDate" id="txtTrDate" disabled="disabled" class="form-control input-sm Dateable">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_Authorize </label>
+                        <div class="col-xs-2">
+                            <input type="checkbox" disabled="disabled" class="checkdef special_check col-xs-2 editable clearable" style="" id="ChkStatus" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferDescA </label>
+                        <div class="col-xs-5">
+                            <input type="text" name="DescA" disabled="disabled" class="form-control input-sm clearable">
+                        </div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Costumer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="padding-right:0%!important;">
+                            <input type="text" name="cus_CustomerCode" disabled="disabled" class="form-control input-sm clearable">
+                        </div>
+                        <div class="col-md-4 col-xs-2">
+                            <input type="text" name="cus_DescA" disabled="disabled" class="form-control input-sm clearable">
+                        </div>
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-2">
+                            @*<button type="button" id="btnComputePro" class="btn btn-warning addable editable" style="background-color:#cb8725!important;border-color:#f0ad4e!important"> @SystemResource.Fld_ComputeProductionprice </button>*@
+                        </div>
+                        <div class="col-xs-1">
+                            <button type="button" id="btnBuild" disabled="disabled" class="btn btn-warning editable" style="background-color:#cb8725!important;border-color:#f0ad4e!important; width:200px"> Build Activity </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                #grid {
+                    height: 250px !important;
+                }
+
+                .jsgrid-grid-body {
+                    height: 250px !important;
+                }
+                .jsgrid-table {
+                    width: 110%;
+                    table-layout: fixed;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+                .jsgrid-grid-body {
+                    height: 180px !important;
+                    margin-top: -25px;
+                }
+              
+            </style>
+            <table id="GridParentSpecification" style="margin-top:12%;"></table>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <input type="text" id="txtItemId" disabled="disabled" style="border:1px solid red" class="form-control input-sm clearable" />
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" id="txtItemName" disabled="disabled" style="border:1px solid red" class="form-control input-sm clearable" />
+                    </div>
+
+                </div>
+            </div>
+            <table id="GridChild" ></table>
+        </form>
+    </div>
+        <script src="~/ClientApp/JsGrid.js"></script>
+        @Html.Partial("../Partial/Navigator")
+        <script src="~/ClientApp/Components/Sales/03_SalesOperations/OfferSpecification.js"></script>
+</div>
+

@@ -1,0 +1,132 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "CalendarDefinitionIndex";
+    ViewBag.Title = SystemResource.Men_CalendarDefinition;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-lg-6 col-md-7 col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Code </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm addable editable" id="txtCalendercode" name="Calendercode">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescA </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtDescA" name="DescA">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescE </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtDescE" name="DescE">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_DailyWorkHours </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm addable editable" id="txtDailyWorkHours" name="DailyWorkHours">
+                        </div>
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_StartTime </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm addable editable" id="txtStartTime" name="StartTime">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group cleander_check">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.chkOneShift </label>
+
+                        <div class="col-xs-2">
+                            <input type="checkbox" class="checkdef addable editable col-xs-5" style="margin-left:13%;height: 0px;margin-top: 12px;" id="chkShift" name="IsOneShift" value="IsOneShift">
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_BreakStart  </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm addable editable" id="txtBreakStart" name="BreakStart">
+                        </div>
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_BreakEnd  </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm addable editable" id="txtBreakEnd" name="BreakEnd">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_EndTime </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtEndTime" name="EndTime">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label text-right">  @SystemResource.Fld_WorkingDays </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="6" class="addable editable" id="chkSaturday" name="WorkingDay" /> 
+                                <label class="cleander_label">@SystemResource.chkSaturday</label> 
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="0" class="addable editable" id="chkSunday" name="WorkingDay" />
+                                <label class="cleander_label">@SystemResource.chkSunday</label>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="1" class="addable editable" id="chkMonday" name="WorkingDay" /> 
+                                <label class="cleander_label">@SystemResource.chkMonday</label>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="2" class="addable editable" id="chkTuseday" name="WorkingDay" /> 
+                                <label class="cleander_label">@SystemResource.chkTuseday</label>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="3" class="addable editable" id="chkWednsday" name="WorkingDay" />  
+                                <label class="cleander_label">@SystemResource.chkWednsday</label>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="4" class="addable editable" id="chkThursday" name="WorkingDay" />  
+                                <label class="cleander_label">@SystemResource.chkThursday</label>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <input type="checkbox" value="5" class="addable editable" id="chkFriday" name="WorkingDay" />  
+                                <label class="cleander_label">@SystemResource.chkFriday</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/07_SubOtherDefinition/CalendarDefinition.js"></script>
+</div>
+

@@ -1,0 +1,94 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "MaterialListIndex";
+    ViewBag.Title = SystemResource.Men_MaterialList;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_Fld_categorycode :</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="hidden" class="form-control input-sm" name="CatID" id="txtCatID">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="CatCode" id="txtCatCode" />
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butCatCode" name="butCatCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-sm-3 col-xs-12 project_labor_input">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescA" id="txtDescA" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right">item Code :</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  xaddable xeditable" name="CatCode" id="txtitmCode" />
+                        </div>
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> Descr :</label>
+                        <div class="col-sm-2 col-xs-12 project_labor_input">
+                            <input type="text" maxlength="100" class="form-control input-sm  xaddable xeditable " name="DescA" id="txtitmDesc" />
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable " id="butview" name="butCatCode">View </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-12 form-horizontal" id="MaterialList">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 550px !important;
+                            max-height: 550px !important;
+                        }
+                    </style>
+
+                    <div class="" style="height:520px;overflow:unset;">
+                        <table id="GridParent" class="material_table"></table>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="h_UnitId" />
+            <input type="hidden" id="h_CatID" />
+        </form>
+	</div>
+
+	<script src="~/ClientApp/JsGrid.js"></script>
+	@*@Html.Partial("../Partial/Navigator")*@
+	<script src="~/ClientApp/Components/ResourceManagement/01_Material/MaterialList.js"></script>
+</div>
+
+
+
+<style>
+    .jsgrid-grid-body {
+        height: 400px !important;
+        max-height: 450px !important;
+    }
+    .material_table .jsgrid-grid-header {
+        height: 60px!important;
+    }
+
+</style>
+
+

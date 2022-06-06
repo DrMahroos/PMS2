@@ -1,0 +1,188 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ProjectDefinationIndex";
+    ViewBag.Title = SystemResource.Men_ProjectChange;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="col-xs-12 dir" id="effects">
+        <form>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6" style="padding:0px;">
+                        <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right "> @SystemResource.Chang_variant_no </label>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm xaddable xeditable clearable" name="TrNo" id="txtTrNo">
+                            <input type="hidden" class="form-control input-sm addable editable clearable" name="VariationIdVariationId">
+                        </div>
+                        <div class="info-btn spec_search master_search">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchTrNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Change_date </label>
+                        <div class="col-md-2 " style="padding: 0px;width: 136px;">
+                            <input type="date" class="form-control input-sm addable editable" name="TrDate" id="txtTrDate">
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="width: 49px;"></div>
+                    <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Change_Refno </label>
+                    <div class="col-md-3" style="width: 170px;">
+                        <input type="text" class="form-control input-sm addable editable clearable" name="RefNo" id="txtRefNo">
+                    </div>
+                    <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width: 116px;"> @SystemResource.Fld_Authorize </label>
+                    <div class="col-sm-2 col-xs-12" style="width: 66px;margin-top: 9px;">
+                        <input type="checkbox" class="checkdef work_checkbox editable addable" style="" name="Status" id="ChkAuthorize">
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6" style="padding:0px;">
+                        <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Mont_project</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:144px;">
+                            <input type="text" class="addable editable form-control input-sm clearable" name="Proj_ProjectCode" id="txtProj_ProjectCode">
+                            <input type="hidden" class="form-control input-sm clearable" name="ProjectID">
+                            <input type="hidden" class="form-control input-sm clearable" name="ProjectPhaseId">
+                        </div>
+                        <div class="info-btn spec_search master_search" style="width: 0px;">
+                            <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchProject">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2" style="width: 258px;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" style="width: 243px;" name="Proj_DescL" id="txtProj_DescL">
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="width: 49px;"></div>
+                    <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Chang_RefDate </label>
+                    <div class="col-md-2" style="width: 170px;">
+                        <input type="date" class="form-control input-sm addable editable" name="RefDate" id="txtRefDate">
+                    </div>
+                    <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width: 116px;"> Sales Approval </label>
+                    <div class="col-sm-2 col-xs-12" style="width: 66px;margin-top: 9px;">
+                        <input type="checkbox" class="checkdef work_checkbox editable addable" style="" id="ChkIsSalesApprove" name="IsSalesApprove">
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6" style="padding:0px;">
+                        <label for="txtDescA" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Chang_variant_desc </label>
+                        <div class="col-sm-8 col-xs-12" style="width: 444px;">
+                            <textarea type="text" maxlength="100" style="height: 40px;width: 429px;" class="form-control input-sm addable editable clearable" name="VariationDescr" id="txtVariationDescr"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-1" style="width: 47px;"></div>
+                    <label for="txtDescA" class="col-sm-2 col-xs-12 control-label text-right" style="width: 139px;"> @SystemResource.Change_varvalue </label>
+                    <div class="col-sm-3 col-xs-12 art_sec" style="width: 170px;">
+                        <input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="VariationValue" id="txtVariationValue" />
+                    </div>
+                    <button type="button" class="change_btn addable editable" style="width: 209px;" id="btnGeneratActivity">Save item and generate Activity</button>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6" style="padding:0px;">
+                        <label for="txtDescA" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Change_Remarks </label>
+                        <div class="col-sm-7 col-xs-12">
+                            <input type="text" maxlength="100" style="width: 433px;height: 40px;" class="form-control input-sm addable editable clearable" name="Remarks" id="txtRemarks" />
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn Activitybtn" style="width:120px;margin: 0px 37px;padding:0px 3px" type="button"> Show/Hide Activity </button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn Activitybtn" style="width:120px;margin: 0px 99px;padding:0px 3px" id="btnprintActivity" type="button"> @SystemResource.Print__Activity </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 form-horizontal" id="parentgrid">
+                <style>
+                    #grid {
+                        height: 330px;
+                    }
+                </style>
+                <div class="form-group" style="height: 350px;overflow:unset" ; margin-top: 0px;>
+                    <table id="GridItems"></table>
+                </div>
+            </div>
+
+            <div class="col-xs-12 form-horizontal" id="activity">
+                <style>
+                    #grid {
+                        height: 300px;
+                    }
+                </style>
+
+                <div class="form-group" style="height: 335px;overflow:unset" ; margin-top: 0px;>
+                    <div class="col-xs-2" style="padding-bottom: 20px;">
+                        <input type="text" style="height: 50px; border: 1px solid red" maxlength="100" class="form-control input-sm" disabled="disabled" id="txtItemCode" />
+                    </div>
+                    <div class="col-sm-5 col-xs-12">
+                        <textarea type="text" style="height: 50px; width: 200%; border:1px solid red" disabled="disabled" class="form-control input-sm" id="txtItemName"></textarea>
+                    </div>
+                    <div class="col-xs-12" style="left: -1%;overflow:unset; margin-top: 0px;padding-bottom: 20px;">
+                        <label for="txtDescA" class="col-sm-1 col-xs-1 control-label text-right"> Item.Prod.Qty </label>
+
+                        <div class="col-xs-1"style="padding-right:0px;padding-left:0px;">
+                            <input type="text" style=" border: 1px solid red" maxlength="100" class="form-control input-sm" disabled="disabled" id="txtItemProdQty" />
+                        </div>
+                        <label for="txtDescA" class="col-sm-1 col-xs-1 control-label text-right"> Item.Prog.Qty </label>
+
+                        <div class="col-xs-1"style="padding-right:0px;padding-left:0px;">
+                            <input type="text" style=" border: 1px solid red" maxlength="100" class="form-control input-sm" disabled="disabled" id="txtItemProgQty" />
+                        </div>
+                        <label for="txtDescA" class="col-sm-2 col-xs-2 control-label text-right"style="padding-right:0px;"> Total Item.Prod.Qty </label>
+
+                        <div class="col-xs-1"style="padding-right:0px;padding-left:0px;">
+                            <input type="text" style=" padding-right:0px;padding-left:0px;border: 1px solid red" maxlength="100" class="form-control input-sm" disabled="disabled" id="txtTotalItemProdQty" />
+                        </div>
+                        <label for="txtDescA" class="col-sm-2 col-xs-2 control-label text-right">NewItem Prd.Qty </label>
+                        <div class="col-xs-1"style="padding-right:0px;padding-left:0px;">
+                            <input type="text" style=" border: 1px solid red" maxlength="100" class="form-control input-sm" disabled="disabled" id="txtNewItemPrdQty" />
+                        </div>
+                    </div>
+                    <table id="GridActivity"></table>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/01_Projects/Projectvaliation.js"></script></div>
+<style>
+    #parentgrid .form-group {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        display: block !important;
+    }
+
+    .jsgrid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+
+    #parentgrid .jsgrid-grid-body {
+        height: 271px !important;
+        max-height: 450px !important;
+        margin-top: -16px;
+    }
+
+    #activity .jsgrid-grid-body {
+        height: 255px !important;
+        max-height: 450px !important;
+    }
+
+    #activity .form-group {
+        background-color: #FFF !important;
+        box-shadow: none !important;
+    }
+</style>

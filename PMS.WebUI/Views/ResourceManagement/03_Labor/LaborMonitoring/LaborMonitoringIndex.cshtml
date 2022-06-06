@@ -1,0 +1,199 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "LaborMonitoringIndex";
+    ViewBag.Title = SystemResource.Men_LaborMonitoring;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_project</label>
+						<div class="col-sm-1 col-xs-12">
+                            <input type="hidden" class="form-control input-sm" name="ProjectID" id="txtProjectID">
+							<input type="text" maxlength="100" class="form-control input-sm xaddable xeditable" name="Proj_Code" id="txtProj_Code" />
+						</div>
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-sm-3 col-xs-12 project_labor_input">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="Proj_DescA" id="txtProj_Desc" />
+						</div>
+
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-warning Montioring_sec_btns loadbutton" id="butLoad">Load</button>
+                        </div>
+
+
+                        </div>
+				</div>
+
+
+				
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_phase</label>
+						<div class="col-sm-1 col-xs-12">
+                            <input type="hidden" class="form-control input-sm" name="ProjectPhaseId" id="txtProjectPhaseId">
+
+							<input type="text" maxlength="100" class="form-control input-sm xaddable xeditable" name="ProjectPhaseCode" id="txtProjectPhaseCode" />
+						</div>
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProjectPhaseCode" name="butProjectPhaseCode">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-sm-3 col-xs-12 project_labor_input">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="Phase_DescA" id="txtPhase_Desc" />
+						</div>
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_class</label>
+                            <div class="col-sm-2 col-xs-12">
+                                <input type="hidden" class="form-control input-sm" name="LaborClassId" id="txtLaborClassId">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable " name="LClass_CalssCode" id="txtLClass_CalssCode" />
+                            </div>
+                            <div class="info-btn col-md-1">
+                                <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butLClass_CalssCode" name="butLClass_CalssCode">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="LClass_DescA" id="txtLClass_Desc" />
+                            </div>
+
+                        </div>
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_worksched</label>
+						<div class="col-sm-1 col-xs-12">
+                            <input type="hidden" class="form-control input-sm" name="ScheduleId" id="txtScheduleId">
+
+							<input type="text" maxlength="100" class="form-control input-sm xaddable xeditable" name="Schedule_Code" id="txtSchedule_Code" />
+						</div>
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butSchedule_Code" name="butSchedule_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-sm-3 col-xs-12 project_labor_input">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="Schedule_DescA" id="txtSchedule_Desc" />
+						</div>
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_category</label>
+                            <div class="col-sm-2 col-xs-12">
+                                <input type="hidden" class="form-control input-sm" name="LaborCategoryId" id="txtLaborCategoryId">
+
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="CategCode" id="txtCategCode" />
+                            </div>
+                            <div class="info-btn col-md-1">
+                                <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butCategCode" name="butCategCode">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 ">
+                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Cat_DescA" id="txtCat_Desc" />
+                            </div>
+
+                        </div>
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_siteenginer</label>
+						<div class="col-sm-1 col-xs-12">
+                            <input type="hidden" class="form-control input-sm" name="SiteEngineerId" id="txtSiteEngineerId">
+
+							<input type="text" maxlength="100" class="form-control input-sm xaddable xeditable" name="SiteEngineer_Code" id="txtSiteEngineer_Code" />
+						</div>
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butSiteEngineer_Code" name="butSiteEngineer_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-sm-3 col-xs-12 project_labor_input">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="SiteEngineer_DescA" id="txtSiteEngineer_Desc" />
+						</div>
+
+                        <div class="col-md-6">
+                            <label for="showall" class="showall_label">@SystemResource.ResM_fld_MatLabor_showall</label>
+                            <input type="radio" name="Stat_desc" id="showall" />
+                            <label for="showcurrent" class="showcurrent_label">@SystemResource.ResM_fld_MatLabor_showcurrent</label>
+                            <input type="radio"name="Stat_desc" id="showcurrent" />
+							<label for="delayed" class="showcurrent_label">@SystemResource.ResM_fld_MatLabor_delayed</label>
+							<input type="radio" name="Stat_desc" id="showdelayed" />
+
+                            <label for="delayed" class="showcurrent_label">@SystemResource.ResM_fld_MatLabor_Left</label>
+                            <input type="radio" name="Stat_desc" id="ShowLeft" />
+
+                        </div>
+					</div>
+				</div>
+                <div class="col-xs-12 form-horizontal" id="laborlistsec">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 490px !important;
+                            max-height: 490px !important;
+                        }
+                    </style>
+                    <div class="" style="height:430px;overflow:unset;">
+                        <table id="GridParent"></table>
+                    </div>
+                </div>
+
+
+					</div>
+				</div>
+			</div>
+
+            @*<div class="col-xs-12 form-horizontal" id="laborclass">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 450px !important;
+                    }
+                </style>
+                <div class="form-group" style="height:330px">
+                    <table id="GridChild"></table>
+                </div>
+                </div>*@
+</form>
+</div>
+
+<script src="~/ClientApp/JsGrid.js"></script>
+	@*@Html.Partial("../Partial/Navigator")*@
+	<script src="~/ClientApp/Components/ResourceManagement/03_Labor/LaborMonitoring.js"></script>
+</div>
+
+
+<style>
+    .jsgrid-grid-body {
+        height: 400px !important;
+        max-height: 550px !important;
+    }
+</style>
+
+

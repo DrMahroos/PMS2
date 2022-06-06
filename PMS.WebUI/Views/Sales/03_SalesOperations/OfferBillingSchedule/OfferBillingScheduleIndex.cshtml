@@ -1,0 +1,190 @@
+﻿@using PMS.WebUI.Resources;
+    @{
+        ViewBag.ScreenKey = "OfferBillingScheduleIndex";
+        ViewBag.Title = SystemResource.Men_OfferBillingSchedule;
+        Layout = "~/Views/Shared/Layout.cshtml";
+    }
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferNo </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm xeditable" name="TrNo" id="txtTrNo">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info xeditable" type="button" id="btnSerchOffer">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferSerial </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:13%;">
+                            <input type="text" class="form-control input-sm editable" name="TrSerial" id="txtTrSerial">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferPrice </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="ContractPrice" id="txtContractPrice" disabled="disabled">
+                        </div>
+                        @*<label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"></label>*@
+                        <div class="col-xs-2">
+                            @*<input type="checkbox" class="checkdef  col-xs-5 editable" style="" id="ChkStatus" name="" value="">*@
+                            <button class="auth_button editable btn btn-warning" type="button" id="btnAuthorize">@SystemResource.Fld_Authorize</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;">@SystemResource.Fld_OfferDate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm editable" name="TrDate" id="txtTrDate">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right offerbilling" style="padding-right:0%;"> @SystemResource.Fld_DiscountPrc </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="DiscountPrc" id="txtDiscountPrc"> 
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferStatus </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            @*<input type="text" class="form-control input-sm editable" name="Status" id="txtStatus">*@
+                            <select id="txtStatus" name="Status" class="Custeditable addable">
+                                <option value="0">@SystemResource.Fld_New</option>
+                                <option value="1">@SystemResource.Fld_Defined</option>
+                                <option value="2">@SystemResource.Fld_Billingterms</option>
+                                <option value="3">@SystemResource.Fld_SendTocustomer</option>
+                                <option value="4">@SystemResource.Fld_Contracted</option>
+                                <option value="5">@SystemResource.Fld_Specification</option>
+                                <option value="6">@SystemResource.Fld_CostEstimation</option>
+                                <option value="8">@SystemResource.Fld_StartWork</option>
+                                <option value="10">@SystemResource.Fld_Canceled</option>
+                                <option value="11">@SystemResource.Fld_Rejected</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferDescA </label>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="DescA" id="txtDescA">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_DiscountAmount </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" name="DiscountAmount" id="txtDiscountAmount" disabled="disabled">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_WaranteePrd </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="ContractWarantyPrd" id="txtWaranteePrd">
+                        </div>
+                        <button type="button" style="display:none;" id="btnApprove" class="btn btn-warning editable">Approve</button>
+                        <button type="button" style="display:none;" id="btnSendToCust" class="btn btn-warning editable">Send To customer</button>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferDescL </label>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="DescL" id="txtDescL">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%; font-size:12px;"> @SystemResource.Fld_ContractNetPrice </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ContractNetPrice" id="txtContractNetPrice">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%; font-size:12px;"> @SystemResource.Fld_WarrantyPrc </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="WarrntyPaymentPrc" id="txtWarrntyPaymentPrc">
+                        </div>
+                        <button type="button" style="display:none;" id="btnCancel" class="btn btn-warning editable">Cancel</button>
+                        <button type="button" style="display:none;" id="btnReject" class=" btn btn-warning editable">Reject</button>
+                        @*<button type="button"  id="btnContract" class=" btn btn-warning editable">Contract</button>*@
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_Customer </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="padding-right:0%;">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="cus_CustomerCode" id="txtcus_CustomerCode">
+                        </div>
+                        <div class="col-md-3 col-xs-2">
+                            <input type="text" class="form-control input-sm" disabled="disabled" style="width: 249px;" name="Cus_DescE" id="txtCus_DescE">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%; font-size:12px;"> @SystemResource.Fld_DownPrc </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm editable" name="DownPaymentPrc" id="txtDownPaymentPrc">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%; font-size:12px;"> @SystemResource.Fld_WarrantyAmt </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="WarrntyPaymentAmount" id="txtWarrntyPaymentAmount">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Paymentmethod </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="radio" name="PaymentMethod" disabled="disabled" id="RdProductivity" />
+                            <label class="onproductivity offerbliing_onproductivity"> @SystemResource.Fld_OnProductivity</label>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="radio" name="PaymentMethod" disabled="disabled" id="RdInstallment" />
+                            <label class="installment"> @SystemResource.Fld_Installment</label>
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right instmt" style="padding-right:0%; font-size:12px;"> @SystemResource.Fld_DownAmt </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" name="DownPaymentAmount" id="txtDownPaymentAmount" disabled="disabled">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%; font-size:12px;"> Inst. Amt </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 184px;">
+                            <input type="text" class="form-control input-sm" name="" id="txtInstalAmount" disabled="disabled">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="offer_Billingsecdule" class="form-group" style="margin-top:21%;">
+                <div style="height: 340px;">
+                    <table id="Grid"></table>
+                </div>
+            </div>
+        </form>
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 228px!important;
+                margin-top: -28px;
+            }
+            .jsgrid-grid-header {
+                height: 102px;
+            }
+            .jsgrid-table {
+                width: 150%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 0;
+                overflow: scroll;
+            }
+        </style>
+      
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    <script src="~/ClientApp/App.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/03_SalesOperations/OfferBillingSchedule.js"></script>
+</div>
+
+
+
+
+
+

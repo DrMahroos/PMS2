@@ -1,0 +1,184 @@
+﻿@using PMS.WebUI.Resources
+
+<div class="row">
+
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right" style="width: 91px;"> @SystemResource.Fld_FromDate </label>
+						<div class="col-sm-2 col-xs-12" style="width: 173px;">
+							<input type="date" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+						</div>
+
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right sub_contr_date"> @SystemResource.Fld_ToDate </label>
+						<div class="col-sm-2 col-xs-12 laboractivitylist_todatesect">
+							<input type="date" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+						</div>
+
+						<div class="col-md-6 activity_scope_def">
+							<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Mast_project</label>
+							<div class="col-sm-2 col-xs-12" style="width: 120px;">
+								<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+							</div>
+
+							<div class="info-btn col-md-1" style="width: 52px;">
+								<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+
+							<div class="col-md-5 col-sm-4 col-xs-12" style="width: 216px;">
+								<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right" style="width: 91px;"> @SystemResource.work_subcontr</label>
+						<div class="col-sm-1 col-xs-12" style="width: 141px;">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+						</div>
+
+						<div class="info-btn col-md-1 laboractivitylist_seacrh">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12" style="width: 144px;">
+							<input type="text" style="width: 173px!important;" maxlength="20" class="form-control input-sm addable editable sub_contr_sub" name="offerno" id="offerno" />
+						</div>
+
+						<div class="col-md-6">
+							<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projecphase</label>
+							<div class="col-sm-2 col-xs-12" style="width: 120px;">
+								<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+							</div>
+
+							<div class="info-btn col-md-1" style="width: 52px;">
+								<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+
+							<div class="col-md-5 col-sm-4 col-xs-12" style="width: 216px;">
+								<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-5" style="padding-top: 4px; width: 427px;">
+							<div class="col-md-3" style="padding: 0px;">
+								<input type="radio" class="subcontrctor_input" checked name="radio">
+								<label class="subcontract_label">Show Contract</label>
+							</div>
+
+							<div class="col-md-5" style="padding: 0px;">
+								<input type="radio" class="subcontrctor_input showservice_label" name="radio">
+								<label class="subcontract_label "> Show Service Order</label>
+							</div>
+						</div>
+
+						<div class="col-md-6 activites_sec">
+							<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_UpdatedBy</label>
+							<div class="col-sm-2 col-xs-12" style="width: 120px;">
+								<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+							</div>
+
+							<div class="info-btn col-md-1" style="width: 52px;">
+								<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+
+							<div class="col-md-5 col-sm-4 col-xs-12" style="width: 216px;">
+								<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-5" style="width: 427px;">
+							<div class="col-md-5" style="padding: 0px;">
+								<input type="radio" class="subcontrctor_input" name="radio">
+								<label class="subcontract_label">Show Production entry</label>
+							</div>
+						</div>
+
+						<div class="col-md-6 activites_sec">
+							<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.work_so</label>
+							<div class="col-sm-2 col-xs-12" style="width: 120px;">
+								<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+							</div>
+
+							<div class="info-btn col-md-1" style="width: 52px;">
+								<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+
+							<div class="col-md-5 col-sm-4 col-xs-12" style="width: 216px;">
+								<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-5">
+						</div>
+
+						@*<div class="col-md-6 activites_sec">
+								<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.def_scope</label>
+								<div class="col-sm-2 col-xs-12">
+									<input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+								</div>
+
+								<div class="info-btn col-md-1">
+									<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEngCode" name="butEngCode">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</div>
+
+								<div class="col-md-5 col-sm-4 col-xs-12">
+									<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+								</div>
+							</div>*@
+
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+</div>
+

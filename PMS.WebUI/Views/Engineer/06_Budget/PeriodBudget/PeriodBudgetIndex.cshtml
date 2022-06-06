@@ -1,0 +1,85 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "PeriodBudgetIndex";
+    ViewBag.Title = SystemResource.Men_PeriodBudget;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12" style="height:650px;">
+        <form class="col-xs-12">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-1 col-xs-12 control-label text-right">@SystemResource.Fld_Year</label>
+                    <div class="col-sm-2 col-xs-5">
+                        <input type="text" class="form-control input-sm addable" name="YearID" id="txtYearID">
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-1 col-xs-12 control-label text-right">@SystemResource.Cust_BraCode</label>
+                    <div class="col-sm-1 col-xs-5">
+                        <input type="text" class="form-control input-sm addable" name="Areacode" id="txtAreacode">
+                    </div>
+                    @*<div class="info-btn">
+                        <button class="btn btn-info" type="button"  hidden="hidden"  id="btnAreacode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>*@
+
+                    <div class="col-sm-4 col-xs-5">
+                        <input type="text" class="form-control input-sm addable" name="Braname" id="txtBraname">
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group" style="height:400px;">
+                    <table id="Grid"></table>
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class="clear"></div>
+        <style>
+            #grid {
+                height: 400px!important;
+            }
+
+            .jsgrid-grid-body {
+                height: 467px!important;
+                max-height: 490px!important;
+            }
+    </style>
+
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @*@Html.Partial("../Partial/Navigator")*@
+    <script src="~/ClientApp/Components/Engineer/budget/PeriodBudget.js"></script>
+    
+</div>
+
+
+
+<style>
+    .jsgrid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+</style>

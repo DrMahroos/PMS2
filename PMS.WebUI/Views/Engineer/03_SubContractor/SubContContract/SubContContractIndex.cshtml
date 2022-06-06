@@ -1,0 +1,392 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "SubContContractIndex";
+    ViewBag.Title = SystemResource.Men_SubContContract;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <div class="col-xs-6">
+
+            <div class="form-group col-xs-12">
+                <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Contr_no </label>
+                <div class="col-md-2 col-sm-4 col-xs-5">
+                    <input type="hidden" class="form-control input-sm clearable" name="SubContractId" id="txtSubContractId">
+                    <input type="text" class="xeditable xaddable form-control input-sm  clearable " name="TrNo" id="txtTrNo">
+                </div>
+                <div class="info-btn ">
+                    <button type="button" class="src-btn btn btn-warning " id="butTrNo" name="butTrNo">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+
+                <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right  "> @SystemResource.Change_date </label>
+                <div class="col-md-5 col-sm-4 col-xs-5 ">
+                    <input type="date" class="form-control input-sm addable editable Dateable " name="TrDate" id="txtTrDate">
+                </div>
+            </div>
+            <div class="form-group col-xs-12">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Contr_subcont </label>
+                <div class="col-sm-2 col-xs-12">
+                    <input type="hidden" class="form-control input-sm clearable" name="SubContractorID" id="txtSubContractorID">
+                    <input type="text" maxlength="100" class="addable editable form-control input-sm clearable" name="Sc_Code" id="txtSc_Code" />
+                </div>
+
+                <div class="info-btn">
+                    <button type="button" class="src-btn btn btn-warning   addable editable " id="butSc_Code" name="butSc_Code">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+
+
+                </div>
+
+                <div class="col-md-6 col-sm-4 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="20" class="form-control input-sm  clearable  " name="Sc_DescA" id="txtSc_Desc" />
+                </div>
+
+            </div>
+            <div class="form-group col-xs-12">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Fld_Scope </label>
+                <div class="col-sm-2 col-xs-12">
+                    <input type="hidden" class="form-control input-sm clearable" name="ScopeID" id="txtScopeID">
+                    <input type="text"  maxlength="100" class="form-control input-sm clearable"  disabled ="disabled" name="Scope_Code" id="txtScope_Code" />
+                </div>
+                <div class="info-btn">
+                    <button type="button" class="src-btn btn btn-warning addable editable" id="butScope_Code" name="butScope_Code">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+                <div class="col-md-6 col-sm-4 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="20" class="form-control input-sm clearable " name="Scope_DescA" id="txtScope_Desc" />
+                </div>
+            </div>
+            <div class="form-group col-xs-12  ">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Fld_Description </label>
+                <div class="info-btn">
+
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <input type="text" maxlength="100" class="form-control input-sm addable editable clearable" name="DescE" id="txtDescA" />
+                </div>
+
+            </div>
+            <div class="form-group col-xs-12">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Fld_Project </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="hidden" class="form-control input-sm clearable" name="ProjectID" id="txtProjectID">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm addable editable clearable " name="Proj_Code" id="txtProj_Code" />
+                </div>
+
+
+
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right  "> @SystemResource.Def_projecphase </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="hidden" class="form-control input-sm clearable" name="ProjectPhaseId" id="txtProjectPhaseId">
+                    <input type="text"  maxlength="100" class="addable editable form-control input-sm clearable  " name="Phase_Code" id="txtPhase_Code" />
+                </div>
+
+                <div class="info-btn">
+                    <button type="button" class="src-btn btn btn-warning addable editable clearable " id="butPhase_Code" name="butPhase_Code">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group col-xs-12  ">
+
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Contr_issue_sos </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm clearable" name="Tot_IssueSo" id="txtTot_IssueSo" />
+                </div>
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right  "> @SystemResource.Contr_finished_sos </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm clearable" name="Tot_FinishSo" id="txtTot_FinishSo" />
+                </div>
+            </div>
+            <div class="form-group col-xs-12  ">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.sub_downpay %  </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm addable editable clearable" name="DownpaymentPrc" id="txtDownpaymentPrc" />
+                </div>
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right  " style="padding-left:0px;padding-right:0px"> @SystemResource.sub_warranty % </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm addable editable clearable" name="WarranlyPrc" id="txtWarranlyPrc" />
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group col-xs-12">
+                <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.Mast_start_date </label>
+                <div class="col-md-3 col-sm-4 col-xs-5 ">
+                    <input type="date" class="form-control input-sm addable editable Dateable" name="StartDate" id="txtStartDate">
+                </div>
+                <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right   "> Approve</label>
+                <div class="col-md-2 col-sm-4 col-xs-5 ">
+                    <input type="checkbox" class="checkdef " id="ChkIsApproved" name="IsApproved" value="">
+
+                </div>
+            </div>
+
+
+            <div class="form-group col-xs-12">
+
+                <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel"> @SystemResource.End_Date </label>
+                <div class="col-md-3 col-sm-4 col-xs-5">
+                    <input type="date" class="form-control input-sm addable editable" name="EndDate" id="txtEndDate">
+                </div>
+                <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right   "> Close</label>
+
+                <div class="col-md-3 col-sm-4 col-xs-5">
+                    <input type="checkbox" class="checkdef  " id="ChkIsClosed" name="IsClosed" value="">
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group col-xs-12">
+                <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right padinglepel">@SystemResource.Contr_TotalAmount  </label>
+                <div class="col-md-3 col-sm-4 col-xs-5 ">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm clearable" name="TotalAmount" id="txtTotalAmount" />
+                </div>
+                <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right   "> Material By Subcontr</label>
+                <div class="col-md-2 col-sm-4 col-xs-5 ">
+                    <input type="checkbox" class="checkdef editable" id="ChkISMaterialIncluded" name="ISMaterialIncluded" value="">
+
+                </div>
+            </div>
+
+
+            <div class="form-group col-xs-12">
+
+
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right  padinglepel ">is Blank</label>
+                <div class="col-md-2" style="top:7px">
+                    <input type="checkbox" class="checkdef   col-xs-2 editable" id="ChkIsBlank" name="IsBlank" value="">
+
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12">
+
+
+
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label padinglepel" style="color: red;">Contract Limit</label>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control clearable" style="color: red;" name="Sc_Limit" id="txtSc_Limit" />
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12">
+
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right padinglepel "> @SystemResource.Contr_open_sos </label>
+                <div class="col-sm-3 col-xs-12">
+                    <input type="text" disabled="disabled" maxlength="100" class="form-control input-sm clearable" name="Tot_OpenSo" id="txtTot_OpenSo" />
+                </div>
+
+                @*<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right  ">is Flex Qty</label>*@
+                <div class="col-md-2">
+                    <input type="hidden" class="checkdef editable " id="ChkISFlexQty" name="ISFlexQty" value="">
+                    @*<input type="checkbox" class="checkdef editable" id="ChkISFlexQty" name="ISFlexQty" value="">*@
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-xs-12">
+           
+         
+
+            <div class="col-xs-12">
+                <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a; " class="col-xs-12">
+                <div class="col-xs-4">
+                    <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-4">
+                </div>
+                <div class="col-xs-4">
+                    <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                </div>
+
+
+                <div class="col-xs-12">
+
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def" type="button" data-toggle="modal" data-target="#specificationsmodel"> @SystemResource.sub_specification </button>
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item" type="button" data-toggle="modal" data-target="#contactinfo"> @SystemResource.sub_contact </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="specificationsmodel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">@SystemResource.sub_specificationanditem</h4>
+                        </div>
+                        <div class="modal-body" style="height: 252px;">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.sub_techniqal </label>
+                                        <div class="col-sm-8 col-xs-12">
+                                            <textarea type="text" maxlength="100" class="form-control input-sm addable editable" name="Technical" id="txtTechnical"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.sub_offer </label>
+                                        <div class="col-sm-8 col-xs-12">
+                                            <textarea type="text" maxlength="100" class="form-control input-sm addable editable" name="Terms" id="txtTerms"></textarea>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.sub_penalites </label>
+                                        <div class="col-sm-8 col-xs-12">
+                                            <textarea type="text" maxlength="100" class="form-control input-sm addable editable" name="Penalty" id="txtPenalty"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="contactinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">@SystemResource.sub_specificationanditem</h4>
+                        </div>
+                        <div class="modal-body" style="height: 262px;">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_labor </label>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="LaborRemarks" id="txtLaborRemarks" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_material </label>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="MaterialRemarks" id="txtMaterialRemarks" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_equipment </label>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="EquipmentRemarks" id="txtEquipmentRemarks" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_duration </label>
+                                        <div class="col-sm-3 col-xs-12">
+                                            <input type="number" maxlength="100" class="form-control input-sm addable editable" name="Duration" id="txtDuration" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.sub_warrantp </label>
+                                            <div class="col-sm-3 col-xs-12">
+                                                <input type="number" maxlength="100" class="form-control input-sm addable editable" name="WarrantyPeriod" id="txtWarrantyPeriod" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_downpay % </label>
+                                        <div class="col-sm-3 col-xs-12">
+                                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DownpaymentPrc" id="txtDownpaymentPrc" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.sub_warranty </label>
+                                            <div class="col-sm-3 col-xs-12">
+                                                <input type="text" maxlength="100" class="form-control input-sm addable editable" name="WarranlyPrc" id="txtWarranlyPrc" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 form-horizontal" id="subcontract">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 193px !important;
+                        margin-top: -13px;
+                    }
+                </style>
+                <div class="form-group" style="height: 200px;">
+                    <table id="subcontrgrid"></table>
+                </div>
+            </div>
+            <input type="hidden" id="h_ActivityId" />
+            <input type="hidden" id="h_ProjectPhaseItemActivId" />
+        </div>
+    </div>
+    <div>
+        <table></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/03_SubContractor/SubContContract.js"></script>
+</div>
+<style>
+
+    
+    
+    
+    #subcontract .form-group {
+        overflow: unset;
+        background-color: unset;
+        box-shadow: unset;
+    }
+
+    .form-group {
+        margin-top: 4px;
+    }
+    .padinglepel {
+        padding: 6px 0 0 0;
+    }
+</style>

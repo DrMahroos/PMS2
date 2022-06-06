@@ -1,0 +1,65 @@
+﻿
+
+
+
+@using PMS.WebUI.Resources
+
+<label class="col-md-2" for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_RepSiteEngineerBonus</label>
+
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir dir_workdaily" id="effects">
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+
+                            <label for="txtLoginYear" class="col-sm-2 col-xs-12 control-label text-right"> login Year </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                                <input type="text" class="form-control input-sm " disabled name="" id="txtLoginYear">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Budg_Month </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 181px;">
+                                @*<input type="month" class="form-control input-sm" name="" id="txtMonth">*@
+                                <select style="width: 100px;" id="txtMonth">
+                                    <option value="01"> 01 </option>
+                                    <option value="02"> 02 </option>
+                                    <option value="03"> 03 </option>
+                                    <option value="04"> 04 </option>
+                                    <option value="05"> 05 </option>
+                                    <option value="06"> 06 </option>
+                                    <option value="07"> 07 </option>
+                                    <option value="08"> 08 </option>
+                                    <option value="09"> 09 </option>
+                                    <option value="10"> 10 </option>
+                                    <option value="11"> 11 </option>
+                                    <option value="12"> 12 </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="~/ClientApp/Components/GeneralReport/02_Evaluation/SiteEngineerBonus.js"></script>

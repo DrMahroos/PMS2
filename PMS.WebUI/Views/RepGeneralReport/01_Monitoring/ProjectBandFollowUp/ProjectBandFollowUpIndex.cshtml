@@ -1,0 +1,52 @@
+﻿
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Resm_LaborWork</label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.ResM_fld_laborrequest_fromdate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+
+                            <input type="date" class="form-control input-sm" id="FromDate" name="txtFromDate">
+                        </div>
+
+                        <label class="col-sm-2 col-xs-12 control-label text-right" style="width: 93px;">@SystemResource.ResM_fld_laborrequest_todate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:19.9%">
+                            <input type="date" class="form-control inpt-sm" id="ToDate" name="txtToDate">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Mont_project</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="txtProject">
+                            <input type="text" class="form-control input-sm" id="txtProjectCod" name="txtProjectEngineerRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnProject">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:25.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtProjectDes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="~/ClientApp/Components/GeneralReport/01_Monitoring/ProjectBandFollowUp.js"></script>

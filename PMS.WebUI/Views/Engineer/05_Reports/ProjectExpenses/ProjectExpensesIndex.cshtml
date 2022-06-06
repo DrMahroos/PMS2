@@ -1,0 +1,113 @@
+﻿@using PMS.WebUI.Resources
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" style="width:" name="FromDate" id="FromDate">
+                            <input type="hidden" name="ProjID" id="txtProjID">
+                            <input type="hidden" name="PhaseID" id="txtPhaseID">
+                            <input type="hidden" name="CatID" id="txtCatID">
+                            <input type="hidden" name="ExpID" id="txtExpCodeID">
+
+                        </div>
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width:103px"> @SystemResource.Fld_ToDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" name="ToDate" id="ToDate">
+                        </div>
+                        @*<div class="col-md-2" style="width: 142px;">
+                                <input type="radio" class="progress_input"/>
+                                <label>@SystemResource.Eng_Fld_projectexpdistribution</label>
+                            </div>*@
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpproject </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm addable editable" name="txtProjCode" id="txtProjCode">
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnProjCode" name="btnProjCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="txtProjDesc" id="txtProjDesc" disabled>
+                        </div>
+                        <div class="col-md-2" style="width: 115px;">
+                            <input type="radio" checked name="summary" class="progress_input" id="txtsummary" />
+                            <label style="margin: 4px 4px 0px 6px;">Summary</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projecphase </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm addable editable" style="width:" name="txtPhaseCode" id="txtPhaseCode" disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnPhaseCode" name="btnPhaseCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" style="width:" name="txtPhaseDesc" id="txtPhaseDesc" disabled>
+                        </div>
+                        <div class="col-md-2" style="width: 97px;">
+                            <input type="radio" name="summary" class="progress_input" id="txtdetail" />
+                            <label style="margin: 4px 4px 0px 6px;">Detail</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpexpcat </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm addable editable" style="width:" name="txtCatCode" id="txtCatCode" disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnCatCode" name="btnCatCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="txtCatDesc" id="txtCatDesc" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpexpcode </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+                            <input type="text" class="form-control input-sm addable editable" style="width:" name="txtExpCode" id="txtExpCode" disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnExpCodeCode" name="btnProjCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" name="txtExpCodeDesc" id="txtExpCodeDesc" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="~/ClientApp/Components/Engineer/05_Reports/ProjectExpenses.js"></script>

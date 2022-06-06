@@ -1,0 +1,466 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ProjectDefinationIndex";
+    ViewBag.Title = SystemResource.Spec_projectspec;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+            <div class="col-xs-12">
+                @*<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtProjectID" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projectno </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="EngProj_ProjectCode" id="txtProjectID">
+                        </div>
+
+                        <div class="info-btn spec_search">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnProjectCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <label for="txtProjectPhaseCode" class="col-sm-1 col-xs-12 control-label text-right projectspecif_labelphase"> @SystemResource.Def_projecphase </label>
+                        <div class="col-md-1 phase_project">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ProjectPhaseCode" id="txtProjectPhaseCode">
+                        </div>
+                        <div class="info-btn spec_search">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnPhaseCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-2 col-xs-6 ">
+                            <label for="txtOfferTrNo" class="col-sm-3 col-xs-12 control-label text-right labeled_offer"> @SystemResource.Def_offno </label>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input type="text" maxlength="20" class="form-control input-sm" name="OfferTrNo" disabled="disabled" id="txtOfferTrNo" />
+                            </div>
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right stats_label">@SystemResource.Fld_Status</label>
+                            <div class="col-md-3">
+                                <select id="SelectStatus" name="Status" class="form-control form-control-sm" style="height: 30px;width: 149px;" disabled="disabled">
+                                    <option selected="selected" value="0">@SystemResource.def_new</option>
+                                    <option value="1">@SystemResource.Fld_working</option>
+                                    <option value="2">@SystemResource.Fld_Stopped</option>
+                                    <option value="3">@SystemResource.Fld_Suspended</option>
+                                    <option value="4">@SystemResource.Fld_Finished</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescA" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projnamea </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  editable" name="DescA" id="txtDescA" />
+                        </div>
+                        <label for="txtOfferTrSerial" class="col-sm-3 col-xs-12 control-label text-right offerserial_label"> @SystemResource.Def_offerserial </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12" style="width: 180px;">
+                            <input type="text" maxlength="20" class="form-control input-sm" name="OfferTrSerial" disabled="disabled" id="txtOfferTrSerial" />
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-12 startworklabel">
+                            <button type="button" id="btnStartWork" class="btn btn-warning">@SystemResource.Fld_working </button>
+                        </div>
+                        <div class="col-md-1 col-sm-4 col-xs-12 projectspecbtuuonsright">
+                            <button type="button" id="btnSuspend" class="btn btn-warning">@SystemResource.Fld_Suspend</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescL" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projnamee </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  editable" name="DescL" id="txtDescL" />
+                        </div>
+                        <label for="ChkIsMaintenanceWork" class="col-sm-3 col-xs-12 control-label text-right projectspeclabelcheck margin_right" style="padding-right:0%;"> @SystemResource.Fld_MiantenanceWork </label>
+                        <div class="col-xs-2">
+                            <input type="checkbox" id="ChkIsMaintenanceWork" name="IsMaintenanceWork" class="checkdef projectsepccheck overtimecheck col-xs-4 editable" style="margin-left:-13%;height: 0px;margin-top: 12px;">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12  stopedbtnsec">
+                            <button type="button" id="btnStopped" class="btn btn-warning">@SystemResource.Fld_Stopped</button>
+                        </div>
+                        <div class="col-md-1 col-sm-4 col-xs-12 projectspecbtuuonsfinish">
+                            <button type="button" id="btnFinished" class="btn btn-warning">@SystemResource.Fld_Finished</button>
+                        </div>
+
+                    </div>
+                </div>*@
+
+
+
+                <div class="form-group col-lg-6 pading_left">
+                    <div class="form-group col-lg-12 pading_left">
+                        <label for="txtProjectID" class="col-sm-3 col-xs-12 control-label pading_left"> Project Number </label>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="text" class="xaddable xeditable form-control input-sm"   name="EngProj_ProjectCode" id="txtProjectID">
+                        </div>
+
+                        <div class="info-btn spec_search ">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnProjectCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <label for="txtProjectPhaseCode" class="col-sm-1 col-xs-12 control-label  "> Phase </label>
+                        <div class="col-md-3  ">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ProjectPhaseCode" id="txtProjectPhaseCode">
+                        </div>
+                        <div class="info-btn spec_search">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnPhaseCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 pading_left">
+                        <label for="txtDescA" class="col-sm-3 col-xs-12 control-label  pading_left"> Phase Name A </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  editable" name="DescA" id="txtDescA" disabled="disabled">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group col-lg-12 pading_left">
+
+                        <label for="txtDescL" class="col-sm-3 col-xs-12 control-label  pading_left"> Phase Name E </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm  editable" name="DescL" id="txtDescL" disabled="disabled">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div class="form-group col-lg-6">
+                    <div class="form-group col-lg-12">
+                        <label for="txtOfferTrNo" class="col-sm-3 col-xs-12 control-label  "> Offer No </label>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm" name="OfferTrNo" disabled="disabled" id="txtOfferTrNo">
+                        </div>
+                        <label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right margintop ">Status</label>
+                        <div class="col-md-4">
+                            <select id="SelectStatus" name="Status" class="form-control form-control-sm" style="/* height: 30px; *//* width: 149px; */" disabled="disabled">
+                                <option selected="selected" value="0">New</option>
+                                <option value="1">Working</option>
+                                <option value="2">Stopped</option>
+                                <option value="3">Suspended</option>
+                                <option value="5">Finished</option>
+                            </select>
+
+
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="txtOfferTrSerial" class="col-sm-3 col-xs-12 control-label "> Offer Serial </label>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" class="form-control input-sm" name="OfferTrSerial" disabled="disabled" id="txtOfferTrSerial">
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-12 " style="left:8.1%">
+                            <button type="button" id="btnStartWork" class="btn btn-warning" disabled="">Working </button>
+                        </div>
+                        <div class="col-md-1 col-sm-4 col-xs-12  "style="left:8.1%">
+                            <button type="button" id="btnSuspend" class="btn btn-warning" disabled="">Suspend</button>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="ChkIsMaintenanceWork" class="col-sm-3 col-xs-12 control-label margintop"> Maintenance Work </label>
+                        <div class="col-xs-5 margintop">
+                            <input type="checkbox" id="ChkIsMaintenanceWork" name="IsMaintenanceWork" class="checkdef projectsepccheck overtimecheck col-xs-4 editable" @*style="margin-left:-13%;height: 0px;margin-top: 12px;"*@ disabled="disabled" value="">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12   ">
+                            <button type="button" id="btnStopped" class="btn btn-warning" disabled="">Stopped</button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12  ">
+                            <button type="button" id="btnFinished" class="btn btn-warning" disabled="">Finished</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="ani col-xs-12 form-group" style="margin-bottom:0%;">
+                    <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a;" class="col-xs-12">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                </div>
+                <div class="col-xs-12 form-group" style="margin-top:1%;margin-bottom:1%;">
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def projectphase" type="button" id="btnDefination"> @SystemResource.Fld_PhaseItems </button>
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn" type="button" id="def_item_btn"> @SystemResource.Fld_Activity </button>
+                    </div>
+                </div>
+
+              
+                <div class="form-group col-lg-6 pading_left">
+                    <div class="form-group col-lg-12 pading_left">
+
+                        <label for="txtSpeciality" class="col-sm-3 col-xs-12 control-label pading_left margintop">@SystemResource.Def_customer</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" name="Cust_CustomerCode" class="form-control input-sm" disabled="disabled" id="txtCust_CustomerCode">
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-12">
+                            <input type="text" maxlength="20" style="" class="form-control input-sm  " disabled="disabled" name="Cust_DescE" id="txtCust_DescE">
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group col-lg-12 pading_left">
+
+                        <label for="txtTotalAllow" class="col-sm-3 col-xs-12 control-label pading_left margintop">@SystemResource.Spec_projectDesc</label>
+                        <div class="col-md-8 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="" id="txtprojectDesc">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group col-lg-12 pading_left">
+
+                        <label for="txtSpeciality" class="col-sm-3 col-xs-12 control-label pading_left margintop">@SystemResource.Spec_costcenter</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" name="CC_CODE" class="form-control input-sm " disabled="disabled" id="txtcostcenter">
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="form-group col-lg-12 pading_left">
+
+
+
+                        <label for="txtSpeciality" class="col-sm-3 col-xs-12 control-label pading_left margintop">@SystemResource.spec_eng</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" name="Eng_EngCode" class="editable addable form-control input-sm"  id="txtEng_EngCode">
+                        </div>
+                        <div class="info-btn  ">
+                            <button type="button" class="src-btn btn btn-warning editable def_btn_cust" id="btnEng_EngCode" disabled="disabled" value="">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="info-btn  ">
+
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-12  " style="padding-right:53px">
+                            <input type="text" maxlength="20"  class="form-control input-sm custom def_customer" disabled="disabled" name="Eng_DescA" id="txtEng_DescA">
+                        </div>
+
+
+                    </div>
+                    <div class="form-group col-lg-12 pading_left">
+
+                        <label for="txtStartDate" class="col-sm-3 col-xs-12 control-label pading_left margintop"> @SystemResource.Start_date </label>
+                        <div class="col-md-3 col-sm-4 col-xs-5  "style="padding-right:0px">
+
+                            <input name="StartDate" id="txtStartDate" type="date" maxlength="20" class="form-control input-sm custom def_customer " disabled="disabled">
+
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5 margintop  " style="padding-left:20px">
+                            <label for="txtEndDate" class=" margintop" > @SystemResource.End_Date</label>
+                            </div>
+                            <div class="col-md-3 " style="padding-left: 0;">
+
+                                <input name="EndDate" id="txtEndDate" type="date" maxlength="20" class="form-control input-sm  " disabled="disabled">
+
+                            </div>
+                        </div>
+
+                </div>
+
+
+
+                <div class="form-group col-lg-6">
+
+                    <div class="form-group col-lg-12">
+                        <label for="ChkToBeInvoiced" class="col-sm-3 col-xs-12 control-label   ">@SystemResource.Fld_Tobeinvoiced  </label>
+                        <div class="col-xs-4">
+                            <input type="checkbox" id="ChkToBeInvoiced" name="ToBeInvoiced" class="checkdef  overtimecheck projectsepccheck col-xs-4 editable"  disabled="disabled" value="">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group col-lg-12">
+
+                        <label class="col-sm-3 col-xs-12 control-label  margintop "> @SystemResource.Fld_IncludedinBonus</label>
+                        <div class="col-xs-4 margintop">
+                            <input type="checkbox" class="checkdef overtimecheck projectsepccheck col-xs-4 editable  "    id="ChkIsBonusIncluded" name="IsBonusIncluded" disabled="disabled" value="">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-lg-12 margintop">
+                        <label for="txtScop_ScopeCode" class="col-sm-3 col-xs-12 control-label  margintop">@SystemResource.Spec_scope</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" name="Scop_ScopeCode" class="addable editable form-control input-sm " id="txtScop_ScopeCode">
+                        </div>
+                        <div class="info-btn  ">
+                            <button type="button" class="src-btn btn btn-warning editable" id="btnScop_ScopeCode" disabled="disabled" value="">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-12  ">
+                            <input type="text" maxlength="20" class="form-control input-sm custom def_customer" disabled="disabled" name="Scop_DescA" id="txtScop_DescA">
+                        </div>
+
+                    </div>
+                    <div class="form-group col-lg-12 margintop">
+
+                        <label for="txtSpeciality" class="col-sm-3 col-xs-12 control-label  margintop">@SystemResource.Spec_Cleander</label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" name="Cal_Calendercode" disabled="disabled" class="form-control input-sm " id="txtCal_Calendercode">
+                        </div>
+                        <div class="info-btn  ">
+                            <button type="button" class="src-btn btn btn-warning editable def_btn_cust" id="btnCal_Calendercode" disabled="disabled" value="">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-12  ">
+                            <input type="text" maxlength="20" class="form-control input-sm custom def_customer" disabled="disabled" name="Cal_DescA" id="txtCal_DescA">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-lg-12 margintop">
+                        
+                             
+
+                            <label for="txtCal_DailyWorkHours" class="col-sm-3 col-xs-12 control-label  margintop">@SystemResource.Spec_Workhours </label>
+                            <div class="col-md-2 col-sm-4 col-xs-12 ">
+                                <input type="text" maxlength="20" class="form-control input-sm " disabled="disabled" name="Cal_DailyWorkHours" id="txtCal_DailyWorkHours">
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12"style="left:40px">
+                                <button type="button" id="btnItems" class="btn btn-danger  margintop">@SystemResource.Fld_ProjectFreeItems</button>
+                            </div>
+
+                        
+
+                </div>
+
+
+                </div>
+              
+
+                <div class="col-xs-12 form-horizontal" id="projectactivityphase" style="margin-top: -186px;">
+                    <style>
+                        #grid {
+                            height: 428px !important;
+                        }
+
+                        .jsgrid-grid-body {
+                            height: 355px !important;
+                            max-height: 500px !important;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 350px;">
+                        <table id="GridItem"></table>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal Project_specification" id="Project_specification" style="margin-top: -186px;">
+
+                    <style>
+                        #grid {
+                            height: 350px !important;
+                        }
+
+                        .jsgrid-grid-body {
+                            height: 335px !important;
+                            max-height: 500px !important;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 350px;">
+                        <table id="GridActivity"></table>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/01_Projects/ProjectSpecification.js"></script>
+ 
+
+<style>
+    .pading_left {
+        padding-left: 0px;
+    }
+    .pading_left2 {
+        padding-left: 0px;
+        padding-right:0px
+    }
+    .margintop{
+        top: 6px;
+    }
+    .jsgrid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+
+    .jsgrid-grid-body {
+        height: 300px !important;
+        max-height: 400px !important;
+    }
+
+    #Project_specification .form-group, #projectactivityphase .form-group {
+        overflow: unset;
+    }
+ 
+
+    .startworklabel {
+        margin-left: 60px!important;
+    }
+    .margin_left3 {
+        margin-left: 16px;
+    }
+    .margin_left4 {
+        margin-left: 37px;
+    }
+
+    
+    
+    .margin_righ_0px {
+        margin-right: 0px !important
+    }
+    /*.form-group {
+        margin-top: 4px;
+    }*/
+
+    .labeled_offer {
+        margin-left: -11px;
+        padding-left: 61px!important;
+    }
+    .stats_label {
+        margin-right: unset!important;
+        margin-left: unset!important;
+    }
+</style>

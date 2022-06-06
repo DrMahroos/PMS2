@@ -1,0 +1,152 @@
+﻿@using PMS.WebUI.Resources
+
+<div class="row">
+    <div class="col-xs-12 color1">
+
+    </div>
+    <div class="clear"></div>
+    <label for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_Evaluation</label>
+    <form class="col-xs-12">
+        <div class="col-xs-12">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+                    <div class="col-sm-2 col-xs-12" style="width:142px;">
+                        <input type="Date" maxlength="100" class="form-control input-sm addable editable" name="FromDate" id="FromDate" />
+                    </div>
+
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right sub_contr_date"> @SystemResource.Fld_ToDate </label>
+                    <div class="col-sm-2 col-xs-12" style="width:142px;">
+                        <input type="Date" maxlength="100" class="form-control input-sm addable editable" name="ToDate" id="ToDate" />
+                    </div>
+
+                </div>
+            </div>
+
+           
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Fld_projectexpproject</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 100px;">
+                        <input type="hidden" class="form-control input-sm" name="txtProjectID" id="txtProjectID">
+                        <input type="text" class="form-control input-sm" disabled="disabled" id="txtProjectRP" name="txtProjectRP">                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 42px;">
+                        <button  style= "margin-left: -15px;" type="button" class="btn btn-warning" id="btnProjectRP" name="btnProjectRP">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtProject1RP">
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Men_SubContractor </label>
+                    <div class="col-sm-1 col-xs-12" style="width: 100px;">
+                        <input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="SubContrID" id="txtSubContrID" disabled />
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="SubContrRP" id="txtSubContrRP" disabled />
+
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 42px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butSubContrCodeRP" name="butSubContrCodeRP">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="SubContr1RP" id="txtSubContr1RP" disabled/>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.def_enginer</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 100px;">
+                        <input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="EnginerRP" id="txtEnginerID" disabled />
+
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="EnginerRP" id="txtEnginerRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 42px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butEnginerRPCode" name="butEnginerRPCode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Enginer1RP" id="txtEnginer1RP" disabled/>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_UpdatedBy </label>
+                    <div class="col-sm-1 col-xs-12" style="width: 100px;">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="ContactRP" id="txtContactRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 42px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butContactRP" name="butContactRP">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="Contact1RP" id="txtContact1RP" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6" style="padding: 0px;width: 505px;">
+                    <div class="col-md-2 col-xs-12" style="width: 188px;">
+                        <label style=" padding: 7px;" class="control-label text-right subcontractor_label"> @SystemResource.By_SubContractor</label>
+                        <input checked type="radio" name="RDProdcVsBill" id="RdBySub" value="1"  />
+                    </div>
+                    <div class="col-md-2 col-xs-12" style="width: 150px;">
+                        <label style=" padding: 7px;" class="control-label text-right subcontractor_label"> @SystemResource.By_Engineer</label>
+                        <input type="radio" name="RDProdcVsBill" id="RdByEngineer" value="2" />
+                    </div>
+                    <div class="col-md-2 col-xs-12" style="width: 150px;">
+                        <label style=" padding: 7px;" class="control-label text-right subcontractor_label">@SystemResource.Men_ByScope</label>
+                        <input type="radio" name="RDProdcVsBill" id="RdByScope" value="2" />
+                    </div>
+                </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" id="evaluation">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 450px !important;
+                            background-color: #ddd;
+                        }
+                    </style>
+
+                    <table id="evaluationslist"></table>
+                </div>
+
+            </div>
+    </form>
+</div>
+		<script src="~/ClientApp/Components/Engineer/04_SubContractorReports/Evaluation.js"></script>
+
+

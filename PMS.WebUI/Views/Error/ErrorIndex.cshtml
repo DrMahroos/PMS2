@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "ErrorIndex";
+    Layout = "~/Views/Shared/_ErrorPage.cshtml";
+}
+
+<h1 style="color:red;">
+    Some Errors has Ocured
+</h1>
+
+@Html.ActionLink("Home", "HomeIndex", "Home", null, new { @class = "btn btn-default" })
+@Html.ActionLink("Logout", "Logout", "Home", null, new { @class = "btn btn-warning" })

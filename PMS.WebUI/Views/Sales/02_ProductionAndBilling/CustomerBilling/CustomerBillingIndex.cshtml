@@ -1,0 +1,362 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "CustomerBillingIndex";
+    ViewBag.Title = SystemResource.Men_CustomerBilling;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    input[type=checkbox] {
+        margin: 10px 0 0;
+       
+    }
+    .div_lapel {
+        padding: 10px;
+        border-bottom: solid 1px;
+    }
+
+    .display_none {
+        display: none !important;
+    }
+    #tebel input {
+        width: 100% !important;
+        font-size: 12px;
+    }
+    .marginleft {
+        margin-left: -3.5%;
+    }
+    .width_right {
+        width: 167px;
+        right: 9px;
+    }
+    .authorize {
+        width: 115px;
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> Bill No </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 16%;">
+                            <input type="text" class="form-control input-sm xaddable xeditable clearable" name="TrNo" id="txtTrNo">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info xaddable xeditable" type="button" id="btnSearchBill">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> Do.No  </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5 marginleft">
+                            <input type="text" class="form-control input-sm " disabled="disabled" name="DocNo" id="txtDoNo">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> Authorize </label>
+                        <div class="col-xs-1  ">
+                            <input type="checkbox" class="checkdef  col-xs-5" disabled="disabled" style="" id="ChkStatus" name="Status" value="">
+                        </div>
+                        <label class="info-btn" style="padding-top:0.5%">  Final </label>
+                        <div class="col-sm-1 col-xs-5">
+                            <input type="checkbox" class="checkdef  col-xs-5 editable addable" style="" id="ChkIsFinal" name="IsFinal">
+                        </div>
+
+
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> Down payment  </label>
+                        <div class="col-xs-1 ">
+                            <input type="checkbox" class="checkdef  col-xs-5 editable addable" disabled="disabled" style="" id="ChkDownpayment" name="IsDownpayment">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> Project </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="    width: 16%;">
+                            <input type="hidden" name="ProjectID" id="txtProjectID">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="ProjCode" id="txtProjCode">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info addable editable" type="button" id="btnSearchProject">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:21.5%;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Proj_DescL" id="txtProj_DescL">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right customerbilling_customiselabel" style="padding-right:0%;"> Date </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 167px;">
+                            <input type="date" class="form-control input-sm addable editable" name="TrDate" id="txtTrDate">
+                        </div>
+
+                        <label class="col-sm-1 col-xs-12 control-label text-right customerbilling_customise"style="left: 27px;"> From Date </label>
+                        <div class="col-sm-2 col-xs-5"style="width: 152px;">
+                            <input type="date" class="form-control input-sm addable editable"  name="FromDate" id="txtFromDate">
+                        </div>
+                        <label class="col-xs-1 info-btn " style="width: 9%;right: 1%;">  To Date </label>
+                        <div class="col-sm-2 col-xs-5" style="right: 5.3%;width: 8%;">
+                            <input type="date" class="form-control input-sm addable editable" style=" width: 176%;" name="ToDate" id="txtToDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> Costumer </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:16%;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Cust_CustomerCode" id="txtCust_CustomerCode">
+                        </div>
+                        <div class="col-md-3 col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Cust_DescE" id="txtCust_DescE">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right customerbilling_customiselabel" style="padding-right:0%;"> Ref.No </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5 width_right">
+                            <input type="text" class="form-control input-sm addable editable clearable" name="RefCode" id="txtRefCode">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 txtVatAmounttext-center" style="right:1%;"> VAT% </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5"style="right: 4.3%;width: 10%;">
+                            <select id="txtVatPrc" class="form-control " style="right: 7%;height: 29px;" disabled="disabled" name="VatPrc">
+                                <option value="0">Zero Vat</option>
+                                <option value="5">5%</option>
+                                <option value="15">15%</option>
+                            </select>
+                        </div>
+                       
+
+                       
+                        
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                       
+                       
+                       
+                       
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> Work Discription </label>
+                        <div class="col-md-7 col-sm-4 col-xs-5" style="left: -32px">
+                            <input type="text" class="form-control input-sm addable editable" style="width:99%;" name="WorkDiscription" id="txtWorkDiscription">
+                        </div>
+                        <button type="button" class="authorize editable" id="btnCalc">Calculate invoice</button>
+                        <button class="authorize" id="btnReopen" type="button" disabled="disabled"> @SystemResource.Fld_Reopen </button>
+
+                        <button class=" authorize" style="background-color: #0B6B9E;display:none" type="button" id="def_item_btn"> Production </button>
+                        <button type="button" class=" authorize" style="display:none" id="btnLoadProdution">Load Production</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" id="production">
+                    <style>
+                        #grid {
+                            height: 222px !important;
+                        }
+
+                        #production .jsgrid-grid-body {
+                            height: 235px !important;
+                            background-color: #ddd;
+                            margin-top: -1px !important;
+                        }
+                    </style>
+                    <div class="form-group" style="height: 315px;">
+                        <table id="GridSales"></table>
+                    </div>
+                </div>
+
+                @*<div class="col-xs-12 form-horizontal" id="billitems">
+            <style>
+                #grid {
+                    height: 222px !important;
+                }
+
+                #billitems .jsgrid-grid-body {
+                    height: 265px !important;
+                    background-color: #ddd;
+                    margin-top: -19px !important;
+                }
+            </style>
+            <div class="form-group" style="height: 315px;">
+                <table id="GridProd"></table>
+            </div>
+        </div>*@
+
+
+
+
+                <div class="form-horizontal col-lg-12" style="margin-top: 320px;">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right">  Total </label>
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="TotalAmount" id="txtTotalAmount" />
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right">  Discount </label>
+                        <div class="col-sm-2 col-xs-5">
+                            <input type="number" class="form-control input-sm clearable" disabled="disabled" name="Discount" id="txtDiscount">
+                        </div>
+                        <div class="col-sm-1 col-xs-5">
+                            <input type="number" class="form-control input-sm clearable" disabled="disabled" min="0" max="100" name="DiscountPrc" id="txtDiscountPrc">
+                        </div>
+                        <label class="info-btn" style="padding-top:0.5%">  Net </label>
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="NetAmount" id="txtNetAmount" />
+                        </div>
+                    </div>
+                </div>
+                <div id="tebel" class="form-horizontal  col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10">
+
+
+                    <div class="form-group" style="border: solid 1px;border-radius: 14px;">
+                        <div id="div_lapel2" class=" col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  "></div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign"> Amount </label>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign"> Vat  </label>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign"> Net With VAT  </label>
+                            </div>
+                        </div>
+                        <div id="lien1" class="div_lapel col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10" style="padding-bottom: 2px;padding-top: 2px;">
+                            <div class="  col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign"> Invoice  </label>
+                            </div>
+                            <div class="  col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input  disabled="disabled" class=" pading_lep centeralign" id="l1_InvoiceAmount" name="TotalAmount"/>  
+                            </div>
+                            <div class="  col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  ">
+                                <input  disabled="disabled"  class=" pading_lep    centeralign" name="VatAmount" id="l1_InvoiceVat"/>   
+                            </div>
+                            <div class="  col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="" disabled="disabled"  class=" pading_lep    centeralign" id="l1_InvoiceNetVAT"/>  
+                            </div>
+                        </div>
+                        <div id="lien5" class=" display_none div_lapel col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10" style="padding-bottom: 2px;padding-top: 2px;">
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign ">ConsumptionPrc </label>
+                            </div>
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input    class=" pading_lep    centeralign addable editable"   name="AdvanceConsumPrc"  id="li5AdvanceConsumPrc"/>       
+                            </div>
+                            <div class=" col-lg-1 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign " id=""> Used Amount  </label>
+                            </div>
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="UsedDownpayment"  disabled="disabled" class=" pading_lep    centeralign" id="li5UsedAmount"/> 
+                            </div>
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign" id=""> Remain Amount   </label>
+                            </div>
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="RemainDownpayment" disabled="disabled"  class=" pading_lep    centeralign" id="li5RemainAmount"/> 
+                            </div>
+                        </div>
+                        <div id="lien2" class="div_lapel col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10" style="padding-bottom: 2px;padding-top: 2px;">
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign"> Advance Consumption   </label>
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="AdvDeduction" disabled="disabled" class=" pading_lep   centeralign addable editable"  id="li2_AdvAmount" />
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  ">
+                                <input name="AdvVatAmount" disabled="disabled" class=" pading_lep    centeralign" id="li2_AdvVat" />
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="" disabled="disabled" class=" pading_lep    centeralign" id="li2_AdvNet" />
+                            </div>
+                            <div class=" col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  ">
+                                <input name="" disabled="disabled" class=" pading_lep    centeralign" id="li2_AdvPrc" />
+                            </div>
+                        </div>
+                        <div id="lien3" class="div_lapel col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10" style="padding-bottom: 2px;padding-top: 2px;">
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign ">Taxable Total  </label>
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="TaxableAmount"  disabled="disabled"  class=" pading_lep centeralign  " id="li3TaxableTotalAmount"/>   
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  ">
+                                <input name="NetTax"  disabled="disabled" class=" pading_lep    centeralign" id="li3TaxableTotalVAT"/>   
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input   disabled="disabled" class=" pading_lep    centeralign" id="li3TaxableTotalNetVAT"/>  
+                            </div>
+                        </div>
+                        <div id="lien4" class=" div_lapel col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10" style="padding-bottom: 2px;padding-top: 2px;">
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <label class=" pading_lep    centeralign ">Retention Amount</label>
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="RetentionAmount"  class=" pading_lep    centeralign addable editable" id="li4RetentionAmount"/>   
+                            </div>
+                            <div class=" col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2   ">
+                                <label class=" pading_lep    centeralign" id=""> Payable Amount  </label>
+                            </div>
+                            <div class=" col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3  ">
+                                <input name="DueAmount"  disabled="disabled" class=" pading_lep    centeralign" id="li4ayablemount"/>   
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                @*<div class="form-horizontal col-lg-12">
+                    <div class="form-group">
+                         <label class="col-sm-1 col-xs-12 control-label text-right">  Vat </label>
+
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="VatAmount" id="txtVatAmount" />
+                        </div>
+
+                        <label class="info-btn" style="padding-top:0.5%;margin-left: 19px;">  Net after Vat </label>
+                        <div class="col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="" id="txtNetafterAmount" />
+                        </div>
+                        
+                    </div>
+                </div>*@
+                <div class="form-horizontal col-lg-12">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right">  Remarks </label>
+                        <div class="col-xs-5">
+                            <textarea class="form-control input-sm addable editable clearable" name="Remarks" id="txtRemarks" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</form>
+        </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+            @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/02_ProductionAndBilling/CustomerBilling.js"></script>
+    </div>
+
+    <style>
+        #production .form-group{
+            display:block!important;
+            overflow:unset;
+            box-shadow:unset!important;
+            background-color:unset!important
+        }
+
+        #billitems .form-group {
+            overflow: unset;
+            box-shadow: unset !important;
+            background-color: unset !important;
+        }
+        
+
+        .form-group {
+            margin-top: 6px;
+        }
+
+    </style>
+
+

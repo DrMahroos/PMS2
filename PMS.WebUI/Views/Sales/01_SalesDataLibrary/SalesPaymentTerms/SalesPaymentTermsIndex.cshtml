@@ -1,0 +1,33 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "SalesPaymentTermsIndex";
+    ViewBag.Title = SystemResource.Men_SalesPaymentTerms;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+
+        <div class="clear"></div>
+        <style>
+            #Grid {
+                height: 550px !important;
+            }
+            .jsgrid-grid-body {
+                max-height: 500px !important;
+                height: 500px !important;
+            }
+        </style>
+
+        <table id="Grid"></table>
+    </div>
+
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @*@Html.Partial("../Partial/Navigator")*@
+    <script src="~/ClientApp/Components/Sales/01_SalesDataLibrary/SalesPaymentTerms.js"></script>
+</div>

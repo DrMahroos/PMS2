@@ -1,0 +1,53 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "ExpensesIndex";
+    ViewBag.Title = SystemResource.Men_Expenses;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="expenses  col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_ExpCatID </label>
+                        <div class="col-sm-2 col-xs-6">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtExpCatID">
+                        </div>
+                        <div class="col-sm-1">
+                            <button type="button" class="btn btn-info" id="btnSearchExpenceCat">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-sm-5 col-xs-6">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtExpCatName">
+                        </div>
+                        <div class="col-md-1 col-sm-2 col-xs-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form><br /><br />
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 250px !important;
+            }
+        </style>
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/04_SubExpenses/Expenses.js"></script>
+</div>
+

@@ -1,0 +1,204 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "EquipmentAssignIndex";
+    ViewBag.Title = SystemResource.Men_EquipmentAssign;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_requestno</label>
+                        <div class="col-sm-2 col-xs-12" style="width:168px;">
+                            <input type="hidden" name="RequestEquipmentId" id="txtRequestEquipmentId" />
+                            <input type="hidden" name="ScheduleId" id="txtScheduleId" />
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="TrNo" id="txtTrNo" />
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchRequest">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 labor_request_section">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_scheduleno</label>
+                        <div class="col-sm-2 col-xs-12" style="width:234px;">
+                            <input type="text" maxlength="100" style="width:140px;" class="form-control input-sm" disabled="disabled" name="WorkDescr" id="txtWorkDescr" />
+                            <input type="hidden" maxlength="100"   class="form-control input-sm" name="ScheduleId" />
+                        </div>
+                        <div class="col-md-1" style="width: 146px;"></div>
+                        <div class="col-md-6 ">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_fromdate</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm" disabled="disabled" name="StartDateTime" id="txtStartDateTime" />
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="time" maxlength="100" class="form-control input-sm" name="StartDateTime" disabled="disabled" id="txtStartTime" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_project</label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="Prj_ProjectCode" id="txtPrj_ProjectCode" />
+                            <input type="hidden" maxlength="100" class="form-control input-sm" name="ProjectID" />
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12 ">
+                            <input type="text" maxlength="20" class="form-control input-sm" disabled="disabled" name="Prj_DescE" id="txtPrj_DescE" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_todate</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm" disabled="disabled" name="EndDateTime" id="txtEndDateTime" />
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="time" maxlength="100" class="form-control input-sm" name="EndDateTime" disabled="disabled" id="txtEndTime" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_phase</label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="Phase_ProjectPhaseCode" id="txtPhase_ProjectPhaseCode" />
+                            <input type="hidden" maxlength="100" class="form-control input-sm" name="ProjectPhaseId" />
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12 ">
+                            <input type="text" maxlength="20" class="form-control input-sm" disabled="disabled" name="Phase_DescE" id="txtPhase_DescE" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal">
+                    <div class="form-group">
+                        <div class="ani col-xs-12 form-group" style="margin-bottom:0%;">
+                            <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a;" class="col-xs-12">
+                            <div class="col-xs-4">
+                                <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-4">
+                                <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-4">
+                                <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 form-group" style="margin-top:0%;margin-bottom:0%;">
+                            <div class="col-xs-4">
+                                <button class="col-xs-12 btn btn-info btnlaborequipment" type="button">@SystemResource.Resm_Equip_FldEquipemtns </button>
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="col-xs-12 btn btn-info btnlaborequipmentclass" type="button">@SystemResource.Resm_Equip_FldEquipemtnsclassrequi </button>
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="col-xs-12 btn btn-info btnlaborfreeequipment" type="button">@SystemResource.Resm_Equip_FldReeEquipemtns </button>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+                <div class="col-xs-12 form-horizontal" style="height:430px;">
+                    <div class="col-xs-12 form-horizontal" id="Equipments">
+                        <div class="form-group" style="height: 400px;overflow:unset;">
+                            <table id="GridEquip"></table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="Equipmentclassrequirment">
+                        <div class="form-group" style="height: 400px;overflow:unset;">
+                            <table id="GridClass"></table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="freequipment">
+                     
+                        <div class="form-group" style="height: 400px;overflow:unset;">
+                            <div class="searchdate">
+                                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right" style="margin-bottom: 18px;"> @SystemResource.ResM_fld_laborrequest_fromdate</label>
+                                <div class="col-md-2 col-sm-4 col-xs-12 ">
+                                    <input type="datetime-local" maxlength="20" class="form-control input-sm addable editable" style="width:215px" name="StartDateTime" id="txtSearchStartDateTime" />
+                                </div>
+                                <div class="info-btn col-md-1">
+                                </div>
+                                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_todate</label>
+                                <div class="col-md-2 col-sm-4 col-xs-12 ">
+                                    <input type="datetime-local" maxlength="20" class="form-control input-sm addable editable" style="width:215px" name="EndDateTime" id="txtSearchEndDateTime" />
+                                </div>
+                                <div class="info-btn col-md-1">
+                                </div>
+                                <div class="searchcode col-xs-12" style="padding: 0px;">
+                                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_class</label>
+                                    <div class="col-md-2 col-sm-4 col-xs-12 ">
+                                        <input type="text" maxlength="20" class="form-control input-sm" disabled="disabled" id="txtSearchClass" />
+                                    </div>
+                                    <div class="info-btn col-md-1">
+                                        <button type="button" class="src-btn btn btn-primary  addable editable fst_serach_proj" style="background-color:#190d11!important;" id="btnSearchClass">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </div>
+                                    @*<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.SMB_SalesEngineerId</label>*@
+                                    <div class="col-md-2 col-sm-4 col-xs-12 ">
+                                        <input type="hidden" maxlength="20" class="form-control input-sm" disabled="disabled" id="txtSearchCode" />
+                                    </div>
+                                    <div class="info-btn col-md-1">
+                                        <button type="button" class="src-btn btn btn-primary addable editable fst_serach_proj" style="background-color:#190d11!important;display:none" id="btnSearchCode">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </div>
+                                    <button type="button" class="src-btn btn btn-primary fst_serach_proj editable" style="background-color:#840e29!important;width:150px" id="btnLoad">
+                                        @SystemResource.pre_Scope
+                                    </button>
+                                </div>
+                            </div>
+                            <table id="GridFree"></table>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+<script src="~/ClientApp/JsGrid.js"></script>
+@Html.Partial("../Partial/Navigator")
+<script src="~/ClientApp/Components/ResourceManagement/02_Equipment/EquipmentAssign.js"></script>
+</div>
+
+<style>
+    #Equipments .jsgrid-grid-body {
+        height: 319px !important;
+        max-height: 450px !important;
+    }
+    #Equipmentclassrequirment .jsgrid-grid-body {
+        height: 358px!important;
+        max-height: 450px!important;
+    }
+    #freequipment .jsgrid-grid-body {
+        height: 253px!important;
+        max-height: 450px!important;
+    }
+
+    #Equipments .form-group, #Equipmentclassrequirment .form-group, #freequipment .form-group {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: 0px !important;
+    }
+
+    #Equipments .jsgrid-grid-header{
+        height: 60px !important;
+    }
+    #freequipment .jsgrid-grid-header{
+        height:23px!important;
+    }
+
+</style>

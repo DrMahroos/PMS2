@@ -1,0 +1,185 @@
+﻿@using PMS.WebUI.Resources
+
+<div class="row">
+    <div style="height:5px"></div>
+    <div class="clear"></div>
+    <label for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_Production</label>
+    <form class="col-xs-12">
+        <div class="col-xs-12">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+                    <div class="col-sm-1 col-xs-12" style="width: 199px;">
+                        <input type="Date" maxlength="100" class="form-control input-sm addable editable" style="width:140px;" name="FromDate" id="FromDate" />
+                    </div>
+
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right sub_contr_date" style="width: 93px;"> @SystemResource.Fld_ToDate </label>
+                    <div class="col-sm-2 col-xs-12" style="width:158px;">
+                        <input type="Date" maxlength="100" class="form-control input-sm addable editable" name="ToDate" id="ToDate" />
+                    </div>
+                    <div class="col-md-6 activity_scope_def">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.work_subcontr</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 120px;">
+                        <input type="hidden" class="form-control input-sm" name="subcontrID" id="txtsubcontrID">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="txtsubcontrRP" id="txtsubcontrRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 46px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butsubcontrCode" name="butsubcontrCode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-12" style="width: 239px;">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="txtsubcontr1RP" id="txtsubcontr1RP" disabled/>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="radio" name="RDProdcVsBill" id="RDByShowProject" value="1"   style="height:20px;"/>
+                        <label class="control-label text-right reportproductinput">@SystemResource.Eng_ByProject</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_project</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 120px;">
+                        <input type="hidden" class="form-control input-sm" name="subcontrID" id="txtprojectID">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="txtprojectRP" id="txtprojectRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 46px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butprojectCode" name="butprojectCode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-12 " style="width: 239px;">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="txtproject1RP" id="txtproject1RP" disabled />
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="radio" name="RDProdcVsBill" id="RDByShowPhase" value="2"  style="height:20px;"/>
+                        <label class="control-label text-righ reportproductinputt">@SystemResource.Resm_Byphase</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projecphase</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 120px;">
+                        <input type="hidden" class="form-control input-sm" name="subcontrID" id="txtprojecphaseID">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="txtprojecphaseRP" id="txtprojecphaseRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 46px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butprojecphaseCode" name="butprojecphaseCode">
+                            <i class="glyphicon glyphicon-search"></i> 
+                        </button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-12" style="width: 239px;">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="txtprojecphase1RP" id="txtprojecphase1RP" disabled/>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="radio" name="RDProdcVsBill" id="RDByShowActivity" value="3"  style="height:20px;"/>
+                        <label class="control-label text-right reportproductinput">@SystemResource.Eng_ByActivity</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.sub_contact</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 120px;">
+                        <input type="hidden" class="form-control input-sm" name="subcontrID" id="txtcontactID">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="txtcontactRP" id="txtcontactRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 45px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butcontactCode" name="butcontactCode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-12 " style="width: 239px;">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="txtcontact1RP" id="txtcontact1RP" disabled/>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.work_so</label>
+                    <div class="col-sm-1 col-xs-12" style="width: 120px;">
+                        <input type="hidden" class="form-control input-sm" name="subcontrID" id="txtsoID">
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="txtwork_soRP" id="txtwork_soRP" disabled/>
+                    </div>
+
+                    <div class="info-btn col-md-1" style="width: 45px;">
+                        <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butwork_soCode" name="butwork_soCode">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4 col-xs-12 " style="width: 239px;">
+                        <input type="text" maxlength="20" class="form-control input-sm addable editable" name="txtwork_so1RP" id="txtwork_so1RP" disabled/>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-xs-12 form-horizontal" id="byprojectsec">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 450px !important;
+                        background-color: #ddd;
+                    }
+                </style>
+
+                <table id="byprojectgrid"></table>
+            </div>
+            <div class="col-xs-12 form-horizontal" id="byphasesec">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 450px !important;
+                        background-color: #ddd;
+                    }
+                </style>
+
+                <table id="byphasegrid"></table>
+            </div>
+            <div class="col-xs-12 form-horizontal" id="byactivitysec">
+                <style>
+                    .jsgrid-grid-body {
+                        height: 450px !important;
+                        background-color: #ddd;
+                    }
+                </style>
+
+                <table id="byactivitygrid"></table>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="~/ClientApp/Components/Engineer/04_SubContractorReports/Production.js"></script>
+
+
+
+

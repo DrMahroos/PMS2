@@ -1,0 +1,2111 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D5AA0F9-7C00-4416-B032-239A74263A3E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.ApiService</RootNamespace>
+    <AssemblyName>PMS.ApiService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Electronic_Sending, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Electronic_Sending.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToSqlConverter">
+      <HintPath>..\..\Projects\PMS\PMS.ServiceConnector\bin\Debug\LinqToSqlConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Backup\PMS\PMS.WebService\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Backup\PMS\PMS.WebService\bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\Projects\PMS\PMS.ApiService\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="StringFormater">
+      <HintPath>..\..\Projects\PMS\PMS.ServiceConnector\bin\Debug\StringFormater.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Electronic_Sending.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\LinqToSqlConverter.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\PMS.ApiService.dll" />
+    <Content Include="bin\PMS.ApiService.pdb" />
+    <Content Include="bin\PMS.ServiceConnector.pdb" />
+    <Content Include="bin\ReportingLibrary.dll" />
+    <Content Include="bin\Security.dll" />
+    <Content Include="bin\StringFormater.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.ValueTuple.dll" />
+    <Content Include="bin\System.ValueTuple.xml" />
+    <Content Include="bin\System.Web.Cors.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Http.Cors.dll" />
+    <Content Include="bin\System.Web.Http.Cors.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Forms\ReportsForm.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\SysModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SysModel.edmx</DependentUpon>
+      <LastGenOutput>SysModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SysModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SysModel.edmx</DependentUpon>
+      <LastGenOutput>SysModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Definitions\IQ_SrchItemController.cs" />
+    <Compile Include="Controllers\Definitions\PQ_GetActivityEquipmentClassController.cs" />
+    <Compile Include="Controllers\Definitions\PQ_GetActivityLaborClassController.cs" />
+    <Compile Include="Controllers\Definitions\PQ_GetActivityMaterialClassController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngExpensesController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngExpensesDetailController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngproductionActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProductionController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProductionEquipmentController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProductionLabourController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProjectActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProjectController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProjectItemController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngProjectPhaseController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngServiceOrderActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubCandidateScopeController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubContractActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubContractController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubContractorScopeController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubProductionActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubProductionController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngSubServiceOrderController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleEquipClassController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleEquipController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleLaborClassController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleLaborController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_GetEngWorkSchduleMaterialController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_LoadEngSubSOContractActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_SrchActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_SrchEngProjectActivityController.cs" />
+    <Compile Include="Controllers\Engineer\PQ_SrchEngProjectPhaseController.cs" />
+    <Compile Include="Controllers\Engineer\P_D_SubCandidateController.cs" />
+    <Compile Include="Controllers\Engineer\P_D_SubCandidateScopeController.cs" />
+    <Compile Include="Controllers\Engineer\P_D_SubContractorController.cs" />
+    <Compile Include="Controllers\Engineer\P_G_BudgetController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngExpensesEntryController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngExpensesEntryDetailController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProductionActivController.cs" />
+    <Compile Include="Controllers\Engineer\P_Tr_EngProductionController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProductionEquipController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProductionLabourController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProjectActivityController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProjectController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProjectItemController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngProjectPhaseController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleActivController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleEquipClassController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleEquipController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleLaborClassController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngScheduleLaborController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngVariationActivityController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngVariationController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_EngVariationItemController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_SubContractController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_SubProductionActivityController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_SubProductionController.cs" />
+    <Compile Include="Controllers\Engineer\P_TR_SubServiceOrderController.cs" />
+    <Compile Include="Controllers\GQ_GetUserBranchController.cs" />
+    <Compile Include="Controllers\GQ_GetUserSubsystemController.cs" />
+    <Compile Include="Controllers\GQ_UserFavoriteController.cs" />
+    <Compile Include="Controllers\P_G_RegionController.cs" />
+    <Compile Include="Controllers\G_COST_CENTERController.cs" />
+    <Compile Include="Controllers\G_ModuleHelpController.cs" />
+    <Compile Include="Controllers\G_MODULESController.cs" />
+    <Compile Include="Controllers\G_NationalityController.cs" />
+    <Compile Include="Controllers\G_SearchFormController.cs" />
+    <Compile Include="Controllers\G_SearchFormModuleController.cs" />
+    <Compile Include="Controllers\G_SearchFormSettingController.cs" />
+    <Compile Include="Controllers\DatabaseChangeController.cs" />
+    <Compile Include="Controllers\G_BRANCHController.cs" />
+    <Compile Include="Controllers\G_USERSController.cs" />
+    <Compile Include="Controllers\G_USER_BRANCHController.cs" />
+    <Compile Include="Controllers\G_USER_COMPANYController.cs" />
+    <Compile Include="Controllers\G_USER_FAVORITEController.cs" />
+    <Compile Include="Controllers\G_USER_LOGController.cs" />
+    <Compile Include="Controllers\G_USER_MODULEController.cs" />
+    <Compile Include="Controllers\G_USER_SUB_SYSTEMController.cs" />
+    <Compile Include="Controllers\G_USER_SYSTEMController.cs" />
+    <Compile Include="Controllers\I_ItemController.cs" />
+    <Compile Include="Controllers\I_Pay_VendorController.cs" />
+    <Compile Include="Controllers\P_tol_GetMessageController.cs" />
+    <Compile Include="Controllers\P_ControlController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ActivityController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ActivityEquipClassController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ActivityIMaterialController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ActivityLaborClassController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_CalenderController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_CalenderDaysController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_EquipmentClassController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_EquipmentController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ExpencesCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ExpencesController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborAbsenceTypeController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborClassController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborLaborClassController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LaborOverTimeTypeController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_LocationController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_SalesEgineerController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_SalesEngCateoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ScopeCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_ScopeController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_SiteEngCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_SiteEngineerController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_UnProdCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_UnProdReasonController.cs" />
+    <Compile Include="Controllers\Definitions\P_D_UOMController.cs" />
+    <Compile Include="Controllers\Definitions\P_G_PeriodController.cs" />
+    <Compile Include="Controllers\Definitions\P_G_WorkStatusController.cs" />
+    <Compile Include="Controllers\P_D_StatusController.cs" />
+    <Compile Include="Controllers\ResourceManagement\IQ_GetItemListController.cs" />
+    <Compile Include="Controllers\ResourceManagement\I_D_CategoryController.cs" />
+    <Compile Include="Controllers\ResourceManagement\I_D_UOMController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetEngVariationActivityController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetEngVariationController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetEngVariationItemController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResEquipAssignController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResLabourAbsenceController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResLabourAbsenceDetailController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResLabourAssignController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResLabourOverTimeController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResLabourOverTimeDetailController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResMaterialIssueController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResMaterialIssueDetailsController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResMaterialReturnedController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResMaterialReturnedDetailsController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResReqLabourController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestEquipmentController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestLaborDetailsController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestLaboursController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestMaterialController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestMaterialDetailsController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_GetResRequestMaterialMontoringController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_SearchSchduleMaterialController.cs" />
+    <Compile Include="Controllers\ResourceManagement\PQ_SrcSchduleController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_TR_ResAbsenceController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_TR_ResMaterialIssueController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_TR_ResOverTimeController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_TR_ResRequestEquipmentController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_Tr_ResRequestLabourController.cs" />
+    <Compile Include="Controllers\ResourceManagement\P_TR_ResRequestMaterialController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesActivityPriceController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesActivityPriceDetailsController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesDbCrDetailController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesFillInvoiceProdController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesDbCrController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesInvoiceController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesInvoiceDetailController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesInvoiceProdController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesIssueProductionController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesIssueProductionDetailsController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GETSalesItemActivityController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesItemController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesManBonusController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesOfferController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsCustomerController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferActivityController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferBillingController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferPaymentController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferResponsibilityController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferStageController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSlsOfferStageItemController.cs" />
+    <Compile Include="Controllers\Sales\PQ_GetSalesCustomerDocController.cs" />
+    <Compile Include="Controllers\Sales\PQ_SalesInvoiceDetailController.cs" />
+    <Compile Include="Controllers\Sales\PQ_Sales_SrchOfferItemController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesCustomerCategoryController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesCustomerController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesItemsActivityController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesItemsController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesPaymentTermsController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesResponsibilityController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesActivtyPriceController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesActivtyPriceDetailController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesBonusController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesDbCrController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesInvoiceController.cs" />
+    <Compile Include="Controllers\Sales\P_D_SalesCustomerDocController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesInvoiceDetailController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesInvoiceProdController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesOfferBillingController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesOfferController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesOfferPaymentController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesOfferResponsibilityController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesOfferStageController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesOfferStageItemActivityController.cs" />
+    <Compile Include="Controllers\Sales\P_Tr_SalesOfferStageItemController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesProductionController.cs" />
+    <Compile Include="Controllers\Sales\P_TR_SalesProductionDetailController.cs" />
+    <Compile Include="Controllers\Sales\StartWorkController.cs" />
+    <Compile Include="Controllers\Reports_pdfController.cs" />
+    <Compile Include="Controllers\Shared\QRGenerator.cs" />
+    <Compile Include="Controllers\Shared\SystemToolsController.cs" />
+    <Compile Include="Forms\ReportsForm.aspx.cs">
+      <DependentUpon>ReportsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.aspx.designer.cs">
+      <DependentUpon>ReportsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ACTIVITY.cs" />
+    <Compile Include="Models\BaseResponse.cs" />
+    <Compile Include="Models\CustomEntities\M_D_CustomerDbCr.cs" />
+    <Compile Include="Models\CustomEntities\P_D_SalesCustomerDocModel.cs" />
+    <Compile Include="Models\CustomEntities\M_D_SalesCustomer.cs" />
+    <Compile Include="Models\MyTimeViewModel.cs" />
+    <Compile Include="Models\PProc_Prnt_sls_DbCr_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_Invoice_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_CRM_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProject.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesDbCr.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesDbCrDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesDbCr.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesDbCrDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesInvoiceViewModel.cs" />
+    <Compile Include="Models\CustomEntities\CustomEntites.cs" />
+    <Compile Include="Models\CustomEntities\M_D_Activites.cs" />
+    <Compile Include="Models\CustomEntities\M_D_CostEstimation.cs" />
+    <Compile Include="Models\CustomEntities\M_D_ActivityPrice.cs" />
+    <Compile Include="Models\CustomEntities\M_D_ProjectPhase.cs" />
+    <Compile Include="Models\CustomEntities\M_D_SubContract.cs" />
+    <Compile Include="Models\CustomEntities\M_D_SubProduction.cs" />
+    <Compile Include="Models\CustomEntities\M_D_RequestLabor.cs" />
+    <Compile Include="Models\CustomEntities\M_D_CustomerBilling.cs" />
+    <Compile Include="Models\CustomEntities\M_D_OfferDefDetails.cs" />
+    <Compile Include="Models\CustomEntities\M_D_Productions.cs" />
+    <Compile Include="Models\CustomEntities\M_D_ServiceOrder.cs" />
+    <Compile Include="Models\CustomEntities\M_D_WorkSchdule.cs" />
+    <Compile Include="Models\CustomEntities\P_tol_GetMessage.cs" />
+    <Compile Include="Models\CustomEntities\ReportParameters.cs" />
+    <Compile Include="Models\CustomEntities\UserPrivilege.cs" />
+    <Compile Include="Models\GetSystemsSubsByUserCode_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GFunc_GetPrivilage_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GFun_Companies_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GFun_UserCompanyBranch_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GQ_GetUserBranch.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GQ_GetUserModule.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GQ_GetUserSubsystem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GQ_UserFavorite.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_AlertControl.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_AlertLog.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_AlertType.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_BRANCH.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_COMPANY.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_CONTROL.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_COST_CENTER.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_ModuleHelp.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_MODULES.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_Nationality.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_REGION.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_REGION_BRANCH.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_ReportWebSetting.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SearchForm.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SearchFormModule.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SearchFormSetting.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SMSControl.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SMSLog.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_STORE.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SUB_SYSTEMS.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_SYSTEM.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_TransCounter.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_TransCounterSetting.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USERS.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_BRANCH.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_COMPANY.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_FAVORITE.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_LOG.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_MODULE.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_SUB_SYSTEM.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\G_USER_SYSTEM.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IQ_GetItemList.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IQ_SrchItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_Category.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_Specification.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_SpecificationValues.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_UnitGroup.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_UnitGroupUom.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_D_UOM.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_G_CostMethods.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_G_ItemType.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_G_StockMethods.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_Item.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_ItemBatch.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_ItemSpecsValue.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_ItemStore.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_ItemStoreBatch.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_Pay_Vendor.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\I_Pay_VendorItemCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\m.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseBilling_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseEquipUsage_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseExpenses_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseLaborUsage_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseMaterialTotUsage_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseMaterialUsage_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseProduction_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseProgress_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseSubContract_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseValue_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_EngProjectPhaseVariation_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PFunc_ResProjectPhaseReq_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PMSEntities.cs" />
+    <Compile Include="Models\PPrc_Res_MaterialRequired_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngLoadProductionActivity_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngLoadProductionEquipment_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngLoadProductionLabor_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngMonitorScheduleEquipClass_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngMonitorScheduleEquip_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngMonitorScheduleLabourClass_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngMonitorScheduleLabour_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_EngVariationLoadItem_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Eng_BudgetEngineerActiv_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Eng_BudgetEngineerActiv_Result1.cs" />
+    <Compile Include="Models\PProc_Eng_BudgetEngineer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_Activity_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_EquipmentClass_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_Equipment_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_Expenses_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_LaborClass_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_Labor_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_Location_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_SalesEngineerCategory_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_SalesEngineer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_SalesEngineer_Result1.cs" />
+    <Compile Include="Models\PProc_Prnt_def_Scope_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_SiteEngineerCategory_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_SiteEngineer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_def_UnProdReason_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Eng_Budget_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Eng_Expenses_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_eng_OpProductionEntry_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_eng_ServiceOrder_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_eng_SubContContract_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_eng_SubProduction_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Eng_VariationDet_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Eng_VariationSum_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_eng_WorkSchedule_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_EquipmentAssign_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_EquipmentRequest_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_LaborAbsenceLate_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_LaborAssign_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_LaborOverTime_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_LaborRequest_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_Materialissue_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_MaterialRequest_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_Res_MaterialReturn_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_ActivityChangePRice_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_Customercard_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_CustomerList_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_Itemcard_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_ItemList_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_OfferSpecification_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_OfferSubmittals_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_Production_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Prnt_sls_WorkStart_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_BillingBranch_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_BillingStatus_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_CollectiveWork_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_ProductionBranch_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_ProjectEvaluationproject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_ProjectEvaluation_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_ProjectPhaseEvaluation_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_SalesBranch_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_SubContractorWorkDetail_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_DSS_SubContractorWorkSummary_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_BudgetBranch_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_BudgetCompany_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_BudgetEngineer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_BudgetRequirement_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_ExpensesDetail_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_ExpensesSummary_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_eng_ProductionVSPRogress_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_ProgressActivity_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_ProgressItem_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Eng_ProjectStatus_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_DistributionArea_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_DistributionPaseByEngineer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_DistributionPaseByScope_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_DistributionProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_LabourEvaluationByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_MeterialCoverageItem_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_MeterialCoveragePhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectBandFollow_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectCostByPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectCostByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectCostVarianceByPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectCostVarianceByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectEvaluationByPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectEvaluationByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectFollow_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectLabEquipVarianceByPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectLabEquipVarianceByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_ProjectWork_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_SalesEngineerBonus_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_GRP_SiteEngineerBonus_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_EquipmentMovement_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_Equipmentwork_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_LabourAttendance_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_LabourBounus_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_LabourFree_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_LabourMovementByProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_LabourMovement_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_Labourwork_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseItemDet_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseItemSum_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseProjectDet_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseProjectSum_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseSumMaterial_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_MaterialUseSumTrans_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_RequirmentItem_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_RequirmentPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_RequirmentProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_UnprodDetail_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_Res_UnprodSum_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_BillingByinvoice_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_BillingByPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_Contract_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_EngineerActivity_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_invoices_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_Offer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_ProductionCustomer_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_ProductionProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_ProductionVSBilling_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_Production_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sls_ProjectItemStock_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ActivityContract_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ActivityProduction_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ActivityServiceOrder_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_EvaluationScope_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_Evaluation_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ProductionActivity_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ProductionPhase_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_ProductionProject_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Rep_sub_SubcontractList_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_ResGetFreeEquip_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_ResGetFreeLabor_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_ResGetMaterialissueReturn_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PProc_Sales_Production_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_Calc_ActivityCost.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_Calc_ActivityLocalCost.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetActivityEquipmentClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetActivityLaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetActivityMaterialClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngExpenses.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngExpensesDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngproductionActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProductionEquipment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProductionItems.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProductionLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProjectActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProjectItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngProjectPhase.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngServiceOrderActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubCandidateScope.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubContract.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubContractActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubContractorScope.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubProductionActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubProductionItems.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngSubServiceOrder.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngVariation.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngVariationActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngVariationItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchdule.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleEquip.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleEquipClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleLabor.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleLaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetEngWorkSchduleMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetProjCustomer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResEquipAssign.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResLabourAbsence.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResLabourAbsenceDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResLabourAssign.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResLabourOverTime.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResLabourOverTimeDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResMaterialIssue.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResMaterialIssueDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResMaterialReturned.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResMaterialReturnedDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResReqLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestEquipment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestLaborDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestLabours.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestMaterialDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetResRequestMaterialMontoring.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesActivityPrice.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesActivityPriceDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesCustomer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesCustomerDoc.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesFillInvoiceProd.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesInvoice.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesInvoiceDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesInvoiceProd.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesIssueProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesIssueProductionDetails.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GETSalesItemActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesItemSystem.cs" />
+    <Compile Include="Models\PQ_GETSalesItemSystemAct.cs" />
+    <Compile Include="Models\PQ_GetSalesManBonus.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSalesOffer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsCustomer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferBilling.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferPayment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferResponsibility.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferStage.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_GetSlsOfferStageItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_G_Budget.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_LoadEngSubSOContractActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_ResEquipmentWork.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_ResLabourWork.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SalesInvoiceDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_Sales_SrchOfferItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SearchSchduleMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrchActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrchEngProjectActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrchEngProjectPhase.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrchSalesOffer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrchSlsItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PQ_SrcSchdule.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Calc_BuildActivityTree_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Calc_BuildLocationTree_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Control.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Activity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ActivityEquipClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ActivityIMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ActivityLaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Calender.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_CalenderDays.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Equipment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_EquipmentClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Expences.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ExpencesCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Labor.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_LaborAbsenceType.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_LaborCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_LaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_LaborLaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_LaborOverTimeType.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Location.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesCustomer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesCustomerCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesCustomerDoc.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesEgineer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesEngCateory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesItems.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesItemsActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesItemsSystem.cs" />
+    <Compile Include="Models\P_D_SalesItemsSystemActivity.cs" />
+    <Compile Include="Models\P_D_SalesPaymentTerms.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesResponsibility.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Scope.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ScopeCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SiteEngCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SiteEngineer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_Status.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SubCandidate.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SubCandidateScope.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SubContractor.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SubContractorScope.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_UnProdCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_UnProdReason.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_UOM.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_G_Budget.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_G_Period.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_G_Region.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_G_WorkStatus.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_G_YearControl.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngExpensesEntry.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngExpensesEntryDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_EngProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProductionActiv.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProductionActiv1102.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProductionEquip.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProductionLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProject.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProjectActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProjectItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngProjectPhase.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngSchedule.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleActiv.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleEquip.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleEquipClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleLabor.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleLaborClass.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngScheduleMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngVariation.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngVariationActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_EngVariationItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResAbsence.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResAbsenceLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResMaterialIssue.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResMaterialIssueDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResMaterialReturn.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResMaterialReturnDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResOverTime.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResOverTimeLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResRequestEquipment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_ResRequestLabour.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResRequestMaterial.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_ResRequestMaterialDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesActivtyPrice.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesActivtyPriceDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesBonus.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesBonusDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesInvoice.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesInvoiceDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesInvoiceProd.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesOffer.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesOfferBilling.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesOfferPayment.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesOfferResponsibility.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesOfferStage.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesOfferStageItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_Tr_SalesOfferStageItemActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SalesProductionDetail.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubContract.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubContractActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubProduction.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubProductionActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubServiceOrder.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_TR_SubServiceOrderActivity.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ResponseResult.cs" />
+    <Compile Include="Models\SessionRecord.cs" />
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SysModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SysModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SysModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SysModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BaseController.cs" />
+    <Compile Include="Tools\CompainesData.cs" />
+    <Compile Include="Tools\CustomReportCredentials.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\IBaseController.cs" />
+    <Compile Include="Tools\SecuritySystem.cs" />
+    <Compile Include="Tools\Shared.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <EntityDeploy Include="Models\SysModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SysModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SysModel.edmx.diagram">
+      <DependentUpon>SysModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="bin\PMS.ApiService.dll.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\SlsReport\PRep_sls_ProductionProjectEN.rdlc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\ar\" />
+    <Folder Include="bin\roslyn\" />
+    <Folder Include="Models\ReportsEntities\" />
+    <Folder Include="Reports\ResReport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMS.ServiceConnector\PMS.ServiceConnector.csproj">
+      <Project>{AD9D6219-25CC-4282-B783-A8C99C89E308}</Project>
+      <Name>PMS.ServiceConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_EuqipClasAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_EuqipClasEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_ExpensesAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_ExpensesEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_LobClasAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_LobClasEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_LocationAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_LocationEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_SalesEngCatAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_SalesEngCatEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_ScopeAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_ScopeEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_SiteEngCatAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_SiteEngCatEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_UnPrdReonAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PPrnt_def_UnPrdReonEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_BillingStatusEn.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRpt_def_ActivityAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRpt_def_ActivityEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_EquipmentAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_EquipmentEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_LaborAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_LaborEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_SalesEngAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_SalesEngEN.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_SiteEngAR.rdlc" />
+    <EmbeddedResource Include="Reports\DefReport\PRpt_def_SiteEngEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_BillingBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_ProductionBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_ProductionBranchEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopeAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_BillingBranchEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SalesBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SalesBranchEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkDetailBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkDetailScopeAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkSummaryAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkSummaryEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkDetailScopeEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_SubContractorWorkDetailBranchEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByBranchEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopCat_BranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopCat_BranchEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopeCatAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopeCat_EN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_CollectiveWorkByScopeEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_ProjectEvaluationAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\PProc_Rep_DSS_ProjectEvaluationEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PPrnt_Eng_BudgetAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_Eng_BudgetEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_Eng_ExpensesAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_Eng_ExpensesEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_OpProductionEntryAr.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_OpProductionEntryEn.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_ServiceOrderAr.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_ServiceOrderEn.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_SubContContractAr.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_SubContContractEn.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_WorkScheduleAr.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PPrnt_eng_WorkScheduleEn.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYEngAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYEngEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYScopeAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYScopeEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYSubAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_EvaluationBYSubEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ProductionPhaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PProc_sub_ProductionActivityAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ProductionActivityEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ProductionPhaseAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ProductionProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ProductionProjectEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityContractAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityContractEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityProductionAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityProductionEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityServiceOrderAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_sub_ActivityServiceOrderEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_Sub_ContractorListAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\PRep_Sub_ContractorListEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Prnt_Eng_VariationDetAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Prnt_Eng_VariationDetEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Prnt_Eng_VariationSumAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Prnt_Eng_VariationSumEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ExpensesDetailAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ExpensesDetailEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ExpensesSummaryAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ExpensesSummaryEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYitemAr.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYphaseAr.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYprojAr.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYprojEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYphaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProgressActivityAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_eng_ProductionVSPRogressBYitemEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProgressActivityEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProgressItemAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProgressItemEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProjectStatusAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_ProjectStatusEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\rep_eng_SubProductionAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\rep_eng_SubProductionEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetBranchAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetBranchEN.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\Rep_Eng_BudgetCompanyAR.rdlc" />
+    <EmbeddedResource Include="Reports\DSS\Rep_Eng_BudgetCompanyEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetEngineerAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetEngineerEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetRequirementAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Eng_BudgetRequirementEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborWorkScheduleEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseSumMaterialAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseSumMaterialEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseSumTransAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseSumTransEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_sls_IssueProductionAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_sls_IssueProductionEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectEvaluationByProjectEN - Copy.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationByLaborAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationByLaborEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationByProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationSumByLaborAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationSumByLaborEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectEquipmentVarianceByPhaseAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectEquipmentVarianceByPhaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectEquipmentVarianceByProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectEquipmentVarianceByProjectEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\rep_GRPMaterialCoverageByitemAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\rep_GRPMaterialCoverageByitemEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\rep_GRPMaterialCoverageByPhaseAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\rep_GRPMaterialCoverageByPhaseEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\rep_GRP_ProjectCostprojectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionAreaAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionAreaEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionPaseByScopeAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionPaseByScopeEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionSalesmanAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_DistributionSalesmanEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\rep_GRP_ProjectCostphaseAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\rep_GRP_ProjectCostphaseEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\rep_GRP_ProjectCostprojectEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectEvaluationByphaseAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectEvaluationByphaseEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectEvaluationByProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectEvaluationByProjectEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectFollowAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectFollowDyCustomerAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectFollowDyCustomerEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_GRP_ProjectFollowEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectBandsFollowupAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectBandsFollowupEN.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectCostVarianceByPhaseAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectCostVarianceByPhaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectCostVarianceByProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectCostVarianceByProjectEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectLaborVarianceByPhaseAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectLaborVarianceByPhaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectLaborVarianceByProjectAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectLaborVarianceByProjectEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectphaseByEngineerAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectphaseByEngineerEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectWorkingAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_ProjectWorkingEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_AssignEquipmentAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_AssignEquipmentEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_AssignLaborAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_AssignLaborEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentMovementAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentMovementEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentRequestAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentRequestEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentworkAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_EquipmentworkEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborAbsenceLateAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborAbsenceLateEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborOverTimeAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborOverTimeEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborRequestAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborRequestEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LaborWorkScheduleAR.rdlc" />
+    <EmbeddedResource Include="Reports\GRP\Rep_LaborEvaluationByProjectEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourAttendanceAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourAttendanceEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourBounusAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourBounusEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourMovementAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourMovementEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourMovementFreeAborAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourMovementFreeAborEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourworkAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_LabourworkEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialissueAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialissueEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialRequestAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialRequestEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialReturnAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialReturnEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseItemDetailAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseItemDetailEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseItemSumAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseItemSumEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseProjectDetAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseProjectDetEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseProjectSumAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_MaterialUseProjectSumEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_RequirmentItemAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_RequirmentItemEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_RequirmentPhaseAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_RequirmentPhaseeAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_RequirmentPhaseEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_UnprodDetailAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_UnprodDetailEN.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_UnprodSumAR.rdlc" />
+    <EmbeddedResource Include="Reports\Eng\Rep_Res_UnprodSumEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_sls_InvoiceDbCrEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_sls_InvoiceSimplifiedAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_sls_InvoiceSimplifiedEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PProc_Rep_sls_invoicesDownPaymentAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PProc_Rep_sls_invoicesDownPaymentEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PProc_Rep_sls_invoicesProgressAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PProc_Rep_sls_invoicesProgressEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_BillingListPhaseEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_BillingListInvoiceEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_CRMReportAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_CRMReportEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\Rep_SalesEngineerBonusAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\Rep_SalesEngineerBonusEn.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_SiteEngineerBonusAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GRP\Rep_SiteEngineerBonusEn.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_Rep_sls_Production_BillAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PRep_Rep_sls_Production_BillEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PRep_Rep_sls_Production_invoicesAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_Rep_sls_Production_invoicesEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ActivityChangePRiceAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ActivityChangePRiceEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_CustomerCardAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_CustomerCardEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_CustomerListAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_CustomerListEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_sls_InvoiceAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_sls_InvoiceEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ItemCardAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ItemCardEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ItemListAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_ItemListEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_StartOfWork.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PPrnt_Sls_StartOfWorkAr.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ContractAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ContractEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_EngineerActivityAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_EngineerActivityEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferSpecificationAR.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferSpecificationEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferSubmittalsAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_OfferSubmittalsEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionCustBalanceAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionCustBalanceEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionEngAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionEngEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionListAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionListEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionProjBalanceAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\PRep_sls_ProductionProjBalanceEN.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\Rep_sls_ProjectItemsInventoryAR.rdlc" />
+    <EmbeddedResource Include="Reports\SlsReport\Rep_sls_ProjectItemsInventoryEN.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52026</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost:61388/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

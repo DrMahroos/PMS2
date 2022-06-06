@@ -1,0 +1,142 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "SalesItemPlanIndex";
+    ViewBag.Title = SystemResource.Men_SalesItemPlan;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_salesItemCode </label>
+                        <div class="col-md-2 col-sm-2 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtItemCode" name="ItemCode">
+                        </div>
+                        <div class="col-xs-1 seles_search">
+                            <button class="btn btn-info" type="button" id="btnSearchcode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-1 hidden-xs hidden-sm"></div>
+                        <div class="col-md-1 col-sm-2 col-xs-5">
+							<label class="switch">
+								<label class="is_active">@SystemResource.Fld_isActive</label>
+								<input type="checkbox" class="addable editable" id="chkIsActive" name="IsActive" /> 
+								<span class="slider round"></span>
+							</label>
+                            @*<button class="btn btn-info" type="button">Active</button>*@
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right salesitem_levellabel"> @SystemResource.Fld_Level </label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtItemLevel" name="ItemLevel">
+                        </div>
+                    </div>
+                </div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-md-2 col-xs-2 control-label text-right"> @SystemResource.Fld_Description </label>
+						<div class="col-sm-6 col-xs-12">
+							<textarea class="form-control col-xs-12 editable" style="height: 66px;" id="txtDescE" name="DescE" rows="5"></textarea>
+						</div>
+						<label class="col-md-2 col-xs-2 control-label text-right"> @SystemResource.Sales_SalesItem_stdsalesprice </label>
+						<div class="col-sm-2 col-xs-12">
+							<input type="text" class="form-control input-sm" disabled="disabled" id="txtStdPrice" name="StdPrice"/>
+						</div><br /><br />
+						<label class="col-md-1 col-sm-2 col-xs-12 control-label text-right salese_price sellingprice_label" style="padding:0%;">  @SystemResource.Fld_SellingPrice </label>
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<input type="text" class="form-control input-sm editable" id="txtUnitPrice" name="UnitPrice">
+						</div>
+
+						</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-md-2 col-xs-2 control-label text-right"> @SystemResource.Sales_Fld_Salestechdesca </label>
+						<div class="col-sm-6 col-xs-12">
+							<input class="form-control col-xs-12 editable" id="txtTechDescE" name="TechDescE" rows="5">
+						</div>
+						<label class="col-md-2 col-xs-2 control-label text-right"> @SystemResource.Sales_SalesItem_minsalesprice </label>
+						<div class="col-sm-2 col-xs-12">
+							<input type="text" class="form-control input-sm editable" id="txtMinUnitPrice" name="MinUnitPrice" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Scope </label>
+						<div class="col-md-6 col-sm-4 col-xs-12" style="width: 569px;">
+							<input type="text" class="form-control input-sm"  disabled="disabled" id="txtScopeCode" name="ScopeDescE">
+						</div>
+						<label class="col-md-1 col-sm-2 col-xs-12 control-label text-right salesitem_uomllabel"> @SystemResource.Fld_UOM </label>
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<input type="text" class="form-control input-sm clearable" disabled="disabled" id="txtUomCode" name="UomDescE">
+						</div>
+
+					</div>
+				</div>
+
+
+
+                @*<div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_SystemCode </label>
+                        <div class="col-sm-2 col-xs-12">
+                            <input type="text" class="form-control input-sm " disabled="disabled" id="txtSystemCode" name="SystemCode">
+                        </div>
+                        <div class="col-xs-3"></div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right salese_price" style="padding:0%;">  @SystemResource.Fld_SellingPrice </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtUnitPrice" name="UnitPrice">
+                        </div>
+                    </div>
+                </div>*@
+                @*<div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_DescE</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtDescE" name="DescE">
+                        </div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right" style="padding:0%;"> @SystemResource.Fld_MinSPrice  </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtMinUnitPrice" name="MinUnitPrice">
+                        </div>
+                    </div>
+                </div>*@
+                @*<div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_Vendor</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" id="txtNAMEA" name="NAMEA">
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </form>
+        <div class="clear"></div>
+
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 250px !important;
+            }
+        </style>
+
+        <table id="Grid"></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/01_SalesDataLibrary/SalesItemPlan.js"></script>
+</div>

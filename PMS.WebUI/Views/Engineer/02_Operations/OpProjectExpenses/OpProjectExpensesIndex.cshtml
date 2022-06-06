@@ -1,0 +1,178 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "OpProjectExpensesIndex";
+    ViewBag.Title = SystemResource.Men_OpProjectExpenses;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir dir_expense" id="effects">
+
+		<div class="modal fade" id="myModalPrint" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="menu text-left menu_site_eng">
+							<button id="btnHome" class="item home_ro pageload-link addable editable">
+								<div class="link icon_home"></div>
+								<div class="item_content">
+									<h2 class="language ar">الرئيسية</h2>
+									<h2 class="language en">Home</h2>
+								</div>
+							</button>
+							<button class="item delete_ro" id="DeleteButton" data-target="#myModal2">
+								<div class="link icon_delete"></div>
+								<div class="item_content">
+									<h2 class="language ar">حذف</h2>
+									<h2 class="language en">Delete</h2>
+								</div>
+							</button>
+							<button class="item print_ro" id="PrintButton" data-toggle="modal" data-target="#myModalPrint">
+								<div class="link icon_print"></div>
+								<div class="item_content">
+									<h2 class="language ar">طباعة</h2>
+									<h2 class="language en">Print</h2>
+								</div>
+							</button>
+						</div>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eve_transno </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5 project_expense">
+                            <input type="hidden" class="form-control input-sm" name="ExpensesEntryId" id="txtExpensesEntryId">
+                            <input type="text"  class="xaddable xeditable form-control input-sm clearable" name="TrNo" id="txtTrNo">
+                        </div>
+
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butTrNo" name="butTrNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right trans_btn op_date_label"> @SystemResource.Fld_Date </label>
+                        <div class="col-md-3 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable Dateable" style="width: 135px;" name="TrDate" id="txtTrDate">
+                            <input type="checkbox" class="checkdef onprojec_check col-xs-5 editable" style="margin-left:-13%;height: 0px;margin-top: 12px;" id="ChkStatus" name="Status" value="">
+                            
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <button class="authorize" id="btnReopen" type="button" disabled="disabled"  style="margin-left: 32px;" > @SystemResource.Fld_Reopen </button>
+                           
+                        </div>
+                    </div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_project </label>
+						<div class="col-sm-1 col-xs-12 project_expense">
+                            <input type="hidden" class="form-control input-sm" name="ProjectID" id="txtProjectID">
+							<input type="text" maxlength="100"  class="addable editable form-control input-sm clearable" name="Proj_Code" id="txtProj_Code" />
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<input type="text" maxlength="20" disabled="disabled" style="width: 448px!important;" class="form-control input-sm sub_contr_sub clearable op_project_input" name="Proj_DescE" id="txtProj_Desc" />
+						</div>
+
+                       
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projecphase</label>
+						<div class="col-sm-1 col-xs-12 project_expense">
+                            <input type="hidden" class="form-control input-sm" name="ProjectPhaseId" id="txtProjectPhaseId">
+							<input type="text" maxlength="100"  class="addable editable form-control clearable input-sm " name="Phase_code" id="txtPhase_code" />
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="butPhase_code" name="butPhase_code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12">
+							<input type="text" maxlength="20" disabled="disabled" style="width: 448px!important;" class="form-control input-sm sub_contr_sub clearable op_project_input" name="Phase_DescE" id="txtPhase_Desc" />
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
+				<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Off_Remark </label>
+                        <div class="col-sm-4 col-xs-12" style="width: 407px;">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="Remarks" id="txtRemarks" />
+                        </div>
+
+                        <div class="col-md-6 total_expense">
+                            <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right trans_btn op_total_label"> @SystemResource.Off_StTotal </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" disabled="disabled" class="form-control input-sm" style="width: 135px;" name="TotalAmount" id="txtTotalAmount">
+                            </div>
+                        </div>
+                        
+                    </div>
+				</div>
+
+
+				<div class="col-xs-12 form-horizontal" id="Projectexpense">
+					<style>
+                        .jsgrid-grid-body {
+                            margin-top: -12px;
+                            height: 325px !important;
+                            max-height: 330px !important;
+                            margin-top: -12px;
+                        }
+					</style>
+                    <div class="form-group">
+                        <table id="evaluationslist"></table>
+                    </div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<div>
+        <input type="hidden" id="h_ExpencesID" />
+        <input type="hidden" id="h_ProjectPhaseId" />
+		<table></table>
+	</div>
+	<script src="~/ClientApp/JsGrid.js"></script>`1`
+	@Html.Partial("../Partial/Navigator")
+	<script src="~/ClientApp/Components/Engineer/02_Operations/OpProjectExpenses.js"></script>
+</div>
+
+

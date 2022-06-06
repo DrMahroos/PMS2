@@ -1,0 +1,1064 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BCF026B-2D34-4677-8CBE-4C571660781C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.WebUI</RootNamespace>
+    <AssemblyName>PMS.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>Unknown</TypeScriptTarget>
+    <TypeScriptJSXEmit>-1</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=1.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.3.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.min.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.min.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.min.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\select.foundation.css" />
+    <Content Include="Content\DataTables\css\select.foundation.min.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.min.css" />
+    <Content Include="Content\DataTables\images\details_close.png" />
+    <Content Include="Content\DataTables\images\details_open.png" />
+    <Content Include="Content\DataTables\images\sort_asc.png" />
+    <Content Include="Content\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables\images\sort_both.png" />
+    <Content Include="Content\DataTables\images\sort_desc.png" />
+    <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="css\animation.css" />
+    <Content Include="css\background.css" />
+    <Content Include="css\bootstrap-arabic.css" />
+    <Content Include="css\bootstrap-arabic.min.css" />
+    <Content Include="css\bootstrap-rtl.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.vertical-tabs.css" />
+    <Content Include="css\bootstrap_vertical_tabs_en.css" />
+    <Content Include="css\component.css" />
+    <Content Include="css\arabic-style.css" />
+    <Content Include="css\favourite.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\hover.css" />
+    <Content Include="css\icon.css" />
+    <Content Include="css\jqpagination.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.slidepanel.css" />
+    <Content Include="css\lightbox.min.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\magic.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mainUsers.css" />
+    <Content Include="css\users.css" />
+    <Content Include="css\waitMe.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\GE_SS_Text_Light.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fonts.json" />
+    <Content Include="fonts\GE_SS_Text_Light.eot" />
+    <Content Include="fonts\GE_SS_Text_Light.ttf" />
+    <Content Include="fonts\GE_SS_Text_Light.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Help\HelpAr.html" />
+    <Content Include="Help\HelpEn.html" />
+    <Content Include="images\background\sales1.jpg" />
+    <Content Include="images\circle.png" />
+    <Content Include="images\delete_pop.gif" />
+    <Content Include="images\header_login.png" />
+    <Content Include="images\icon_edit.png" />
+    <Content Include="images\pass.png" />
+    <Content Include="images\printer.gif" />
+    <Content Include="images\project-logo.png" />
+    <Content Include="images\safe.png" />
+    <Content Include="images\sales1.jpg" />
+    <Content Include="images\social-icons.png" />
+    <Content Include="images\user.png" />
+    <Content Include="js\effect.js" />
+    <Content Include="js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\jquery.slidepanel.js" />
+    <Content Include="js\jquery3.3.1.min.js" />
+    <Content Include="Content\DataTables\css\mixins.scss" />
+    <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="File\OfferArabic.docx" />
+    <Content Include="File\OfferEnglish.docx" />
+    <Content Include="File\ContractArabic.docx" />
+    <Content Include="File\ContractEnglish.docx" />
+    <Content Include="File\ContractTermsArabic.docx" />
+    <Content Include="File\ContractTermsEnglish.docx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="images\add.png" />
+    <Content Include="images\add_icon.png" />
+    <Content Include="images\aside_icon.png" />
+    <Content Include="images\aside_icon2.png" />
+    <Content Include="images\bottom_icon.png" />
+    <Content Include="images\bottom_save.png" />
+    <Content Include="images\camera_icon.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\deletee.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edite_icon.png" />
+    <Content Include="images\favourit.gif" />
+    <Content Include="images\favourit2.gif" />
+    <Content Include="images\girl_.jpg" />
+    <Content Include="images\help.png" />
+    <Content Include="images\home_icon.png" />
+    <Content Include="images\icon_add.png" />
+    <Content Include="images\icon_edite.png" />
+    <Content Include="images\icon_show.png" />
+    <Content Include="images\lang.png" />
+    <Content Include="images\logo_safe.png" />
+    <Content Include="images\open.png" />
+    <Content Include="images\panel_close_default.png" />
+    <Content Include="images\panel_close_default2.png" />
+    <Content Include="images\print_icon.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\que_icon.png" />
+    <Content Include="images\refresh_icon.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\save_icon.png" />
+    <Content Include="images\setting_icon.png" />
+    <Content Include="images\top.png" />
+    <Content Include="images\undo.png" />
+    <Content Include="images\undo_icon.png" />
+    <Content Include="images\word_home.png" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="js\bootstrap-arabic.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.panelslider.min.js" />
+    <Content Include="js\lightbox-plus-jquery.min.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\my_js.js" />
+    <Content Include="js\waitMe.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.min.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.min.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.min.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.min.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.print.js" />
+    <Content Include="Scripts\DataTables\buttons.print.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.min.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.min.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
+    <Content Include="Scripts\help\js\highlight.min.js" />
+    <Content Include="Scripts\help\js\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\help\js\jquery-loader.js" />
+    <Content Include="Scripts\help\js\jquery.easing.1.3.js" />
+    <Content Include="Scripts\help\js\jquery.fittext.js" />
+    <Content Include="Scripts\help\js\jquery.lettering.js" />
+    <Content Include="Scripts\help\js\jquery.smartmenus.js" />
+    <Content Include="Scripts\help\js\jquery.smartmenus.min.js" />
+    <Content Include="Scripts\help\js\jquery.textillate.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-de.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-es.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-fr.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-he.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-ja.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-ka.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-pl.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-pt-br.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-pt.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-ru.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-tr.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-zh-cn.js" />
+    <Content Include="Scripts\jsgrid\i18n\jsgrid-zh-tw.js" />
+    <Content Include="Scripts\jsgrid\jsgrid-theme.css" />
+    <Content Include="Scripts\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="Scripts\jsgrid\jsgrid.css" />
+    <Content Include="Scripts\jsgrid\jsgrid.js" />
+    <Content Include="Scripts\jsgrid\jsgrid.min.css" />
+    <Content Include="Scripts\jsgrid\jsgrid.min.js" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\DirectCostComparison.cshtml" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\IncomeComparison.cshtml" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\ProductionComparison.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\ByBranch.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\ByCustomerClass.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\ByItem.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\ByProject.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\ByScopeCategory.cshtml" />
+    <Content Include="Views\DecisionSupport\02_EvaluationComparison\EC_ByScope.cshtml" />
+    <Content Include="Views\DecisionSupport\03_CompanyCollectiveWork\Activity.cshtml" />
+    <Content Include="Views\DecisionSupport\03_CompanyCollectiveWork\NormsVariationReport.cshtml" />
+    <Content Include="Views\DecisionSupport\03_CompanyCollectiveWork\CC_ByScope.cshtml" />
+    <Content Include="Views\DecisionSupport\03_CompanyCollectiveWork\SubContractorWork.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\AttendanceSheet\AttendanceSheet.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\Equipmentmovement\Equipmentmovement.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\Equipmentutilization\Equipmentutilization.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\LaborMovement\LaborMovement.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\LaborSchedule\LaborSchedule.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\Laborutilization\Laborutilization.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\LaborWork\LaborWork.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\MaterialUsage\MaterialUsage.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\MaterialUsage\MaterialUsageproject.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\ProjectRequirements\ProjectRequirements.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\UnprodHour\UnprodHour.cshtml" />
+    <Content Include="Views\Packages\main_menu1.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DecisionSupport\01_BranchComparison\DirectCostComparisController.cs" />
+    <Compile Include="Controllers\DecisionSupport\01_BranchComparison\IncomeComparisonController.cs" />
+    <Compile Include="Controllers\DecisionSupport\01_BranchComparison\ProductionComparisController.cs" />
+    <Compile Include="Controllers\DecisionSupport\01_BranchComparison\SalesComparisonController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\ByBranchController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\ByCustomerClassController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\ByItemController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\ByProjectController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\ByScopeCategoryController.cs" />
+    <Compile Include="Controllers\DecisionSupport\02_EvaluationComparison\EC_ByScopeController.cs" />
+    <Compile Include="Controllers\DecisionSupport\03_CompanyCollective Work\ActivityController.cs" />
+    <Compile Include="Controllers\DecisionSupport\03_CompanyCollective Work\C_ScopeCategoryController.cs" />
+    <Compile Include="Controllers\DecisionSupport\03_CompanyCollective Work\NormsVariationRepController.cs" />
+    <Compile Include="Controllers\DecisionSupport\03_CompanyCollective Work\CC_ByScopeController.cs" />
+    <Compile Include="Controllers\DecisionSupport\03_CompanyCollective Work\SubContractorWorkController.cs" />
+    <Compile Include="Controllers\Definitions\07_SubOtherDefinition\CalendarDefinitionController.cs" />
+    <Compile Include="Controllers\ClientToolsController.cs" />
+    <Compile Include="Controllers\ControlController.cs" />
+    <Compile Include="Controllers\Definitions\03_SubEquipToolsDefinition\EquipmentCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\03_SubEquipToolsDefinition\EquipmentDefinitionController.cs" />
+    <Compile Include="Controllers\Definitions\04_SubExpenses\ExpensesCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\04_SubExpenses\ExpensesController.cs" />
+    <Compile Include="Controllers\Definitions\07_SubOtherDefinition\UsersSettingController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\ProjectvaliationController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\ProjectChangeController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\ProjectDefinationController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\ProjectMasterPlanController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\ProjectSpecificationController.cs" />
+    <Compile Include="Controllers\Engineer\02_Operations\OpProductionEntryController.cs" />
+    <Compile Include="Controllers\Engineer\02_Operations\OpProjectExpensesController.cs" />
+    <Compile Include="Controllers\FindByNoController.cs" />
+    <Compile Include="Controllers\Engineer\02_Operations\WorkScheduleController.cs" />
+    <Compile Include="Controllers\Engineer\03_SubContractor\DefinitionController.cs" />
+    <Compile Include="Controllers\Engineer\03_SubContractor\PrequalificationController.cs" />
+    <Compile Include="Controllers\Engineer\03_SubContractor\ProductionEntryController.cs" />
+    <Compile Include="Controllers\Engineer\03_SubContractor\ServiceOrderController.cs" />
+    <Compile Include="Controllers\Engineer\03_SubContractor\SubContContractController.cs" />
+    <Compile Include="Controllers\Engineer\04_SubContractorReports\EvaluationController.cs" />
+    <Compile Include="Controllers\Engineer\04_SubContractorReports\ProductionController.cs" />
+    <Compile Include="Controllers\Engineer\04_SubContractorReports\SubContractorActivityController.cs" />
+    <Compile Include="Controllers\Engineer\04_SubContractorReports\SubContractorListingController.cs" />
+    <Compile Include="Controllers\Engineer\05_Reports\ProjectExpensesController.cs" />
+    <Compile Include="Controllers\Engineer\05_Reports\ProjectProgressController.cs" />
+    <Compile Include="Controllers\Engineer\05_Reports\ProjectStatusController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\BudgetRequirementsController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\MonthBudgetByEngController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\MonthBudgetForBranchController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\MonthBudgetForCompController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\PeriodBudgetController.cs" />
+    <Compile Include="Controllers\Engineer\06_Budget\PrepareController.cs" />
+    <Compile Include="Controllers\GeneralReport\01_Monitoring\ProjectBandFollowUpController.cs" />
+    <Compile Include="Controllers\GeneralReport\01_Monitoring\ProjectDistributionController.cs" />
+    <Compile Include="Controllers\GeneralReport\01_Monitoring\ProjectFollowUpController.cs" />
+    <Compile Include="Controllers\GeneralReport\01_Monitoring\ProjectPhaseDistributionController.cs" />
+    <Compile Include="Controllers\GeneralReport\01_Monitoring\ProjectWorkingController.cs" />
+    <Compile Include="Controllers\GeneralReport\02_Evaluation\LaborEvaluationController.cs" />
+    <Compile Include="Controllers\GeneralReport\02_Evaluation\ProjectEvaluationController.cs" />
+    <Compile Include="Controllers\GeneralReport\02_Evaluation\SiteEngineerBonusController.cs" />
+    <Compile Include="Controllers\GeneralReport\03_Variance\EquipCostVarianceController.cs" />
+    <Compile Include="Controllers\GeneralReport\03_Variance\LaborCostVarianceController.cs" />
+    <Compile Include="Controllers\GeneralReport\03_Variance\MaterialCoverageController.cs" />
+    <Compile Include="Controllers\GeneralReport\03_Variance\ProjectCostController.cs" />
+    <Compile Include="Controllers\GeneralReport\03_Variance\ProjectCostVarianController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\LaborAbsenceReasonsController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\LaborCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\LaborClassController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\LaborDefinitionController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\LaborOvertimetypesController.cs" />
+    <Compile Include="Controllers\Definitions\05_SubAreaDefinition\LocationDefinitionController.cs" />
+    <Compile Include="Controllers\Definitions\07_SubOtherDefinition\NationalityController.cs" />
+    <Compile Include="Controllers\Definitions\05_SubAreaDefinition\PeriodManagementController.cs" />
+    <Compile Include="Controllers\Definitions\01_SubEngineers\SalesEngCategoryController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GeneralReportsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\Path.cs" />
+    <Compile Include="Controllers\PrintTransactionController.cs" />
+    <Compile Include="Controllers\Definitions\01_SubEngineers\SalesEngineerController.cs" />
+    <Compile Include="Controllers\Definitions\06_SubActivityInformationBank\ScopeClassandCatController.cs" />
+    <Compile Include="Controllers\Definitions\06_SubActivityInformationBank\ScopeDefinitionController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\BillOfMaterialController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\MaterialIssuanceController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\MaterialListController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\MaterialMonitoringController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\MaterialRequestController.cs" />
+    <Compile Include="Controllers\ResourceManagement\01_Material\MaterialReturnController.cs" />
+    <Compile Include="Controllers\ResourceManagement\02_Equipment\EquipmentAssignController.cs" />
+    <Compile Include="Controllers\ResourceManagement\02_Equipment\EquipmentMonitoringController.cs" />
+    <Compile Include="Controllers\ResourceManagement\02_Equipment\EquipmentRequestController.cs" />
+    <Compile Include="Controllers\ResourceManagement\03_Labor\LaborAssignController.cs" />
+    <Compile Include="Controllers\ResourceManagement\03_Labor\LaborMonitoringController.cs" />
+    <Compile Include="Controllers\ResourceManagement\03_Labor\LaborRequestController.cs" />
+    <Compile Include="Controllers\ResourceManagement\03_Labor\LateandAbsenceController.cs" />
+    <Compile Include="Controllers\ResourceManagement\03_Labor\OverTimeSheetController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\AttendanceSheetController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\EquipmentmovementController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\EquipmentworkController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\LaborMovementController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\LaborScheduleController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\LaborutilizationController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\LaborWorkController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\MaterialUsageController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\MaterialUsageprojectController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\MaterialUsageSummaryController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\ProjectRequirementsController.cs" />
+    <Compile Include="Controllers\ResourceManagement\05_Reports\UnprodHourController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\ActivityPriceController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\CompanyRespItemController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\CustomerCategoryController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\CustomerRespItemsController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\CustomersController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\SalesItemLibraryController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\SalesItemPlanController.cs" />
+    <Compile Include="Controllers\Sales\01_SalesDataLibrary\SalesPaymentTermsController.cs" />
+    <Compile Include="Controllers\Sales\02_ProductionAndBilling\CustomerDbCrController.cs" />
+    <Compile Include="Controllers\Sales\02_ProductionAndBilling\CustomerBillingController.cs" />
+    <Compile Include="Controllers\Sales\02_ProductionAndBilling\IssueProductionController.cs" />
+    <Compile Include="Controllers\Sales\02_ProductionAndBilling\SalesManBonusController.cs" />
+    <Compile Include="Controllers\Sales\03_SalesOperations\OfferBillingScheduleController.cs" />
+    <Compile Include="Controllers\Sales\03_SalesOperations\OfferCostEstimationController.cs" />
+    <Compile Include="Controllers\Sales\03_SalesOperations\OfferDefinitionController.cs" />
+    <Compile Include="Controllers\Sales\03_SalesOperations\OfferSpecificationController.cs" />
+    <Compile Include="Controllers\Sales\03_SalesOperations\StartOfWorkController.cs" />
+    <Compile Include="Controllers\Sales\04_Reports\ContractListController.cs" />
+    <Compile Include="Controllers\Sales\04_Reports\OfferListController.cs" />
+    <Compile Include="Controllers\Sales\04_Reports\ProductionVsBillingController.cs" />
+    <Compile Include="Controllers\Sales\04_Reports\ProjItemsInventoryController.cs" />
+    <Compile Include="Controllers\Sales\04_Reports\SalesmanActivityController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\Definitions\01_SubEngineers\SiteEngCategoryController.cs" />
+    <Compile Include="Controllers\Definitions\01_SubEngineers\SiteEngineerController.cs" />
+    <Compile Include="Controllers\Definitions\07_SubOtherDefinition\SystemSettingController.cs" />
+    <Compile Include="Controllers\Definitions\07_SubOtherDefinition\UnitsOfMeasureController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\UnProductioncategoryController.cs" />
+    <Compile Include="Controllers\Definitions\02_SubLaborDefinition\UnProductionreasonsController.cs" />
+    <Compile Include="Controllers\Engineer\01_Projects\WorkActivitiesController.cs" />
+    <Compile Include="Filter\AuthorizeUserAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomModels\CustomEntites.cs" />
+    <Compile Include="Models\CustomModels\M_D_Activites.cs" />
+    <Compile Include="Models\CustomModels\M_D_ActivityPrice.cs" />
+    <Compile Include="Models\CustomModels\M_D_CostEstimation.cs" />
+    <Compile Include="Models\CustomModels\M_D_Expenses.cs" />
+    <Compile Include="Models\CustomModels\M_D_items.cs" />
+    <Compile Include="Models\CustomModels\M_D_OfferDefDetails.cs" />
+    <Compile Include="Models\CustomModels\M_D_Productions.cs" />
+    <Compile Include="Models\CustomModels\M_D_ServiceOrder.cs" />
+    <Compile Include="Models\CustomModels\M_D_SubCandidate.cs" />
+    <Compile Include="Models\CustomModels\M_D_SubContract.cs" />
+    <Compile Include="Models\CustomModels\M_D_SubContractor.cs" />
+    <Compile Include="Models\CustomModels\M_D_WorkSchdule.cs" />
+    <Compile Include="Models\CustomModels\Privileges.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\SystemResource.ar.Designer.cs">
+      <DependentUpon>SystemResource.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\SystemResource.Designer.cs">
+      <DependentUpon>SystemResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Tools\GeneralHtmlHelper.cs" />
+    <Compile Include="Tools\IMasterManyDetails.cs" />
+    <Compile Include="Tools\IController.cs" />
+    <Compile Include="Tools\Shared.cs" />
+    <Compile Include="Tools\StaticTools.cs" />
+    <Compile Include="Tools\SystemEnvironment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="tsconfig.json" />
+    <Content Include="Views\Definitions\01_SubEngineers\SalesEngCategory\SalesEngCategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\01_SubEngineers\SalesEngineer\SalesEngineerIndex.cshtml" />
+    <Content Include="Views\Definitions\01_SubEngineers\SiteEngCategory\SiteEngCategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\01_SubEngineers\SiteEngineer\SiteEngineerIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\LaborAbsenceReasons\LaborAbsenceReasonsIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\LaborCategory\LaborCategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\LaborClass\LaborClassIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\LaborDefinition\LaborDefinitionIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\LaborOvertimetypes\LaborOvertimetypesIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\UnProductioncategory\UnProductioncategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\02_SubLaborDefinition\UnProductionreasons\UnProductionreasonsIndex.cshtml" />
+    <Content Include="Views\Definitions\03_SubEquipToolsDefinition\EquipmentCategory\EquipmentCategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\03_SubEquipToolsDefinition\EquipmentDefinition\EquipmentDefinitionIndex.cshtml" />
+    <Content Include="Views\Definitions\04_SubExpenses\ExpensesCategory\ExpensesCategoryIndex.cshtml" />
+    <Content Include="Views\Definitions\04_SubExpenses\Expenses\ExpensesIndex.cshtml" />
+    <Content Include="Views\Definitions\05_SubAreaDefinition\LocationDefinition\LocationDefinitionIndex.cshtml" />
+    <Content Include="Views\Definitions\05_SubAreaDefinition\PeriodManagement\PeriodManagementIndex.cshtml" />
+    <Content Include="Views\Definitions\06_SubActivityInformationBank\ScopeClassandCat\ScopeClassandCatIndex.cshtml" />
+    <Content Include="Views\Definitions\06_SubActivityInformationBank\ScopeDefinition\ScopeDefinitionIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\WorkActivities\WorkActivitiesIndex.cshtml" />
+    <Content Include="Views\Definitions\07_SubOtherDefinition\CalendarDefinition\CalendarDefinitionIndex.cshtml" />
+    <Content Include="Views\Definitions\07_SubOtherDefinition\Nationality\NationalityIndex.cshtml" />
+    <Content Include="Views\Definitions\07_SubOtherDefinition\SystemSetting\SystemSettingIndex.cshtml" />
+    <Content Include="Views\Definitions\07_SubOtherDefinition\UnitsOfMeasure\UnitsOfMeasureIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\ProjectChange\ProjectChangeIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\ProjectDefination\ProjectDefinationIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\ProjectMasterPlan\ProjectMasterPlanIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\ProjectSpecification\ProjectSpecificationIndex.cshtml" />
+    <Content Include="Views\Engineer\02_Operations\OpProductionEntry\OpProductionEntryIndex.cshtml" />
+    <Content Include="Views\Engineer\02_Operations\OpProjectExpenses\OpProjectExpensesIndex.cshtml" />
+    <Content Include="Views\Engineer\02_Operations\WorkSchedule\WorkScheduleIndex.cshtml" />
+    <Content Include="Views\Engineer\03_SubContractor\Definition\DefinitionIndex.cshtml" />
+    <Content Include="Views\Engineer\03_SubContractor\Prequalification\PrequalificationIndex.cshtml" />
+    <Content Include="Views\Engineer\03_SubContractor\ProductionEntry\ProductionEntryIndex.cshtml" />
+    <Content Include="Views\Engineer\03_SubContractor\ServiceOrder\ServiceOrderIndex.cshtml" />
+    <Content Include="Views\Engineer\03_SubContractor\SubContContract\SubContContractIndex.cshtml" />
+    <Content Include="Views\Engineer\04_SubContractorReports\Evaluation\EvaluationIndex.cshtml" />
+    <Content Include="Views\Engineer\04_SubContractorReports\Production\ProductionIndex.cshtml" />
+    <Content Include="Views\Engineer\04_SubContractorReports\SubContractorActivity\SubContractorActivityIndex.cshtml" />
+    <Content Include="Views\Engineer\04_SubContractorReports\SubContractorListing\SubContractorListingIndex.cshtml" />
+    <Content Include="Views\Engineer\05_Reports\ProjectExpenses\ProjectExpensesIndex.cshtml" />
+    <Content Include="Views\Engineer\05_Reports\ProjectProgress\ProjectProgressIndex.cshtml" />
+    <Content Include="Views\Engineer\05_Reports\ProjectStatus\ProjectStatusIndex.cshtml" />
+    <Content Include="Views\Engineer\06_Budget\BudgetRequirements\BudgetRequirements.cshtml" />
+    <Content Include="Views\Engineer\06_Budget\Prepare\PrepareIndex.cshtml" />
+    <Content Include="Views\Error\ErrorIndex.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\BudgetRequirements\BudgetRequirements.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\Evaluation.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\LaborScheduleUtz.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\MonthBudgetByEng\MonthBudgetByEng.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\MonthBudgetForBranch\MonthBudgetForBranch.cshtml" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\MonthBudgetForComp.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\Prepare\PrepareIndex.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\Production.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\ProjectExpensesRep.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\ProjectProgress.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\ProjectStatus.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\SubContrActivity.cshtml" />
+    <Content Include="Views\GeneralReports\Engineer\SubContractorListing.cshtml" />
+    <Content Include="Views\GeneralReports\Sales\ContractList.cshtml" />
+    <Content Include="Views\GeneralReports\Sales\OfferList.cshtml" />
+    <Content Include="Views\GeneralReports\Sales\ProductionVsBilling.cshtml" />
+    <Content Include="Views\GeneralReports\Sales\SalesmanActivity.cshtml" />
+    <Content Include="Views\GeneralReports\_ActivityReport.cshtml" />
+    <Content Include="Views\GeneralReports\_EquipmentReport.cshtml" />
+    <Content Include="Views\GeneralReports\_LaborReport.cshtml" />
+    <Content Include="Views\GeneralReports\_SiteEngReport.cshtml" />
+    <Content Include="Views\GeneralReports\_SLsCustomerCard.cshtml" />
+    <Content Include="Views\GeneralReports\_SlsEngReport.cshtml" />
+    <Content Include="Views\GeneralReports\_SLsItemReport.cshtml" />
+    <Content Include="Views\Home\DecisionSupportIndex.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
+    <Content Include="Views\Home\HomeEngineerIndex.cshtml" />
+    <Content Include="Views\Home\HomeIndex.cshtml" />
+    <Content Include="Views\Home\HomeMonitoringIndex.cshtml" />
+    <Content Include="Views\Home\HomeResourceIndex.cshtml" />
+    <Content Include="Views\Home\HomeSalesIndex.cshtml" />
+    <Content Include="Views\Login\LoginIndex.cshtml" />
+    <Content Include="Views\Packages\PackageIndex.cshtml" />
+    <Content Include="Views\Package\Package.cshtml" />
+    <Content Include="Views\Partial\ControlsButtons.cshtml" />
+    <Content Include="Views\Partial\FavoriteList.cshtml" />
+    <Content Include="Views\Partial\ImagePopup.cshtml" />
+    <Content Include="Views\Partial\Navigator.cshtml" />
+    <Content Include="Views\Partial\ReportsPopup.cshtml" />
+    <Content Include="Views\Partial\RightSlidePanel.cshtml" />
+    <Content Include="Views\RepGeneralReport\01_Monitoring\ProjectBandFollowUp\ProjectBandFollowUpIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\01_Monitoring\ProjectDistribution\ProjectDistributionIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\01_Monitoring\ProjectFollowUp\ProjectFollowUpIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\01_Monitoring\ProjectPhaseDistribution\ProjectPhaseDistributionIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\01_Monitoring\ProjectWorking\ProjectWorkingIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\02_Evaluation\RepLaborEvaluationIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\02_Evaluation\RepProjectEvaluationIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\02_Evaluation\RepSiteEngineerBonusIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\03_Variance\RepEquipCostVarianceIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\03_Variance\RepLaborCostVarianceIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\03_Variance\RepMaterialCoverageIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\03_Variance\RepProjectCostIndex.cshtml" />
+    <Content Include="Views\RepGeneralReport\03_Variance\RepProjectCostVarianIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\BillOfMaterial\BillOfMaterialIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\MaterialIssuance\MaterialIssuanceIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\MaterialList\MaterialListIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\MaterialMonitoring\MaterialMonitoringIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\MaterialRequest\MaterialRequestIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\01_Material\MaterialReturn\MaterialReturnIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\02_Equipment\EquipmentAssign\EquipmentAssignIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\02_Equipment\EquipmentMonitoring\EquipmentMonitoringIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\02_Equipment\EquipmentRequest\EquipmentRequestIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\03_Labor\LaborAssign\LaborAssignIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\03_Labor\LaborMonitoring\LaborMonitoringIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\03_Labor\LaborRequest\LaborRequestIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\03_Labor\LateandAbsence\LateandAbsenceIndex.cshtml" />
+    <Content Include="Views\ResourceManagement\03_Labor\OverTimeSheet\OverTimeSheetIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\ActivityPrice\ActivityPriceIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\CompanyRespItem\CompanyRespItemIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\CustomerCategory\CustomerCategoryIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\CustomerRespItems\CustomerRespItemsIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\Customers\CustomersIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\SalesItemLibrary\SalesItemLibraryIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\SalesItemPlan\SalesItemPlanIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\SalesPaymentTerms\SalesPaymentTermsIndex.cshtml" />
+    <Content Include="Views\Sales\01_SalesDataLibrary\SalesPayTerms\SalesPayTermsIndex.cshtml" />
+    <Content Include="Views\Sales\02_ProductionAndBilling\CustomerBilling\CustomerBillingIndex.cshtml" />
+    <Content Include="Views\Sales\02_ProductionAndBilling\IssueProduction\IssueProductionIndex.cshtml" />
+    <Content Include="Views\Sales\02_ProductionAndBilling\SalesManBonus\SalesManBonusIndex.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\OfferBillingSchedule\OfferBillingScheduleIndex.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\OfferCostEstimation\OfferCostEstimationIndex.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\OfferDefinition\OfferDefinitionIndex.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\OfferDefinition\_OfferStageItem.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\OfferSpecification\OfferSpecificationIndex.cshtml" />
+    <Content Include="Views\Sales\03_SalesOperations\StartOfWork\StartOfWorkIndex.cshtml" />
+    <Content Include="Views\Sales\04_Reports\ContractList\ContractListIndex.cshtml" />
+    <Content Include="Views\Sales\04_Reports\OfferList\OfferListIndex.cshtml" />
+    <Content Include="Views\Sales\04_Reports\ProductionVsBilling\ProductionVsBillingIndex.cshtml" />
+    <Content Include="Views\Sales\04_Reports\SalesmanActivity\SalesmanActivityIndex.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Shared\LoginLayout.cshtml" />
+    <Content Include="Views\Shared\_ErrorPage.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\SalesComparison.cshtml" />
+    <Content Include="Views\Definitions\07_SubOtherDefinition\UsersSetting\UsersSettingIndex.cshtml" />
+    <Content Include="Views\Sales\04_Reports\ProjectItemsInventory\ProjectItemsInventory.cshtml" />
+    <Content Include="Views\DecisionSupport\03_CompanyCollectiveWork\C_ScopeCategory.cshtml" />
+    <Content Include="Views\GeneralReports\ResourceManagement\MaterialUsage\MaterialUsageSummary.cshtml" />
+    <Content Include="Views\Sales\04_Reports\BillingList\BillingList.cshtml" />
+    <Content Include="Views\Engineer\06_Budget\PeriodBudget\PeriodBudgetIndex.cshtml" />
+    <Content Include="Views\Engineer\01_Projects\Projectvaliation\ProjectvaliationIndex.cshtml" />
+    <Content Include="Views\Engineer\05_Reports\Prodvsprogress\ProdvsprogressIndex.cshtml" />
+    <Content Include="Views\DecisionSupport\01_BranchComparison\ProjectBillingSteaus.cshtml" />
+    <Content Include="Views\Sales\04_Reports\CRMReport\CRMReport.cshtml" />
+    <Content Include="Views\Sales\04_Reports\TaxInvoicelist\TaxInvoicelist.cshtml" />
+    <Content Include="Views\Sales\02_ProductionAndBilling\CustomerDbCr\CustomerDbCrIndex.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ClientApp\Components\ResourceManagement\04_StockControl\" />
+    <Folder Include="Controllers\ResourceManagement\04_StockControl\" />
+    <Folder Include="Views\Log\" />
+    <Folder Include="Views\PrintTransaction\" />
+    <Folder Include="Views\ResourceManagement\04_StockControl\" />
+    <Folder Include="Views\ResourceManagement\05_Reports\" />
+    <Folder Include="Views\Session\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\AjaxCaller.ts" />
+    <TypeScriptCompile Include="ClientApp\App.ts" />
+    <TypeScriptCompile Include="ClientApp\ClientGeneralTools.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\ProjectBillingSteaus.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\DirectCostComparison.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\ProductionComparison.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\SalesComparison.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\03_CompanyCollectiveWork\Activity.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\03_CompanyCollectiveWork\C_ScopeCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\03_CompanyCollectiveWork\CC_ByScope.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\03_CompanyCollectiveWork\NormsVariationReport.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\03_CompanyCollectiveWork\SubContractorWork.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\ByBranch.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\ByCustomerClass.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\ByItem.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\ByProject.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\ByScopeCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\02_EvaluationComparison\EC_ByScope.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\01_SubEngineers\SalesEngCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\01_SubEngineers\SalesEngineer.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\01_SubEngineers\SiteEngCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\01_SubEngineers\SiteEngineer.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\LaborAbsenceReasons.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\LaborCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\LaborClass.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\LaborDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\LaborOvertimetypes.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\UnProductioncategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\02_SubLaborDefinition\UnProductionreasons.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\03_SubEquipToolsDefinition\EquipmentCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\03_SubEquipToolsDefinition\EquipmentDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\04_SubExpenses\Expenses.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\04_SubExpenses\ExpensesCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\05_SubAreaDefinition\LocationDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\05_SubAreaDefinition\PeriodManagement.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\06_SubActivityInformationBank\ScopeClassandCat.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\06_SubActivityInformationBank\ScopeDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\Projectvaliation.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\WorkActivities.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\07_SubOtherDefinition\CalendarDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\07_SubOtherDefinition\G_USERS.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\07_SubOtherDefinition\Nationality.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\07_SubOtherDefinition\SystemSetting.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Definitions\07_SubOtherDefinition\UnitsOfMeasure.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\ProjectChange.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\ProjectDefination.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\ProjectMasterPlan.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\01_Projects\ProjectSpecification.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\02_Operations\OnProductionEntry.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\02_Operations\OpProjectExpenses.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\02_Operations\WorkSchedule.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\03_SubContractor\DefinitionIndex.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\03_SubContractor\PrequalificationIndex.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\03_SubContractor\ProductionEntry.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\03_SubContractor\ServiceOrder.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\03_SubContractor\SubContContract.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\04_SubContractorReports\Evaluation.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\04_SubContractorReports\Production.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\04_SubContractorReports\SubContractorActivity.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\04_SubContractorReports\SubContractorListing.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\05_Reports\Prodvsprogress.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\05_Reports\ProjectExpenses.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\05_Reports\ProjectProgress.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\05_Reports\ProjectStatus.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\budget\BudgetRequirements.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\budget\MonthBudgetByEng.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\budget\MonthBudgetForBranch.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\MonthBudgetForComp.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\budget\PeriodBudget.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Engineer\budget\Prepare.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\01_Monitoring\ProjectBandFollowUp.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\01_Monitoring\ProjectDistribution.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\01_Monitoring\ProjectFollowUp.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\01_Monitoring\ProjectPhaseDistribution.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\01_Monitoring\ProjectWorking.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\02_Evaluation\LaborEvaluation.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\02_Evaluation\ProjectEvaluation.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\02_Evaluation\SiteEngineerBonus.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\03_Variance\EquipCostVariance.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\03_Variance\LaborCostVariance.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\03_Variance\MaterialCoverage.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\03_Variance\ProjectCost.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\GeneralReport\03_Variance\ProjectCostVarian.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\BillOfMaterial.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\MaterialIssuance.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\MaterialList.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\MaterialMonitoring.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\MaterialRequest.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\01_Material\MaterialReturn.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\02_Equipment\EquipmentAssign.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\02_Equipment\EquipmentMonitoring.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\02_Equipment\EquipmentRequest.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\03_Labor\LaborAssign.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\03_Labor\LaborMonitoring.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\03_Labor\LaborRequest.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\03_Labor\LateandAbsence.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\03_Labor\OverTimeSheet.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\AttendanceSheet.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\Equipmentmovement.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\Equipmentwork.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\LaborMovement.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\LaborSchedule.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\Laborutilization.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\LaborWork.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\MaterialUsage.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\MaterialUsageproject.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\MaterialUsageSummary.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\ProjectRequirements.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\ResourceManagement\05_Reports\Unprod.Hour.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\ActivityPrice.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\CompanyRespItem.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\CustomerCategory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\CustomerRespItems.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\Customers.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\SalesItemLibrary.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\SalesItemPlan.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\01_SalesDataLibrary\SalesPaymentTerms.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\02_ProductionAndBilling\CustomerDbCr.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\02_ProductionAndBilling\CustomerBilling.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\02_ProductionAndBilling\IssueProduction.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\02_ProductionAndBilling\SalesManBonus.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\OfferBillingSchedule.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\OfferCostEstimation.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\OfferDefinition.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\OfferSpecification.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\StartOfWork.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\03_SalesOperations\_OfferStageItem.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\ContractList.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\BillingList.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\OfferList.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\ProductionVsBilling.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\ProjItemsInventory.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\CRMReport.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\TaxInvoicelist.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\Sales\04_Reports\SalesmanActivity.ts" />
+    <TypeScriptCompile Include="ClientApp\CustomEntities.ts" />
+    <TypeScriptCompile Include="ClientApp\DataTable.ts" />
+    <TypeScriptCompile Include="ClientApp\Entities.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\ActivityReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\EquipmentReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\GeneralReports.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\LaborReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\SiteEngReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\SlsCustomerReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\SlsEngReport.ts" />
+    <TypeScriptCompile Include="ClientApp\GeneralReports\SlsItemReport.ts" />
+    <TypeScriptCompile Include="ClientApp\HomeComponent.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\LoginComponent.ts" />
+    <TypeScriptCompile Include="ClientApp\Components\DecisionSupport\01_BranchComparison\IncomeComparison.ts" />
+    <TypeScriptCompile Include="ClientApp\JsGrid.ts" />
+    <TypeScriptCompile Include="ClientApp\MessageBox.ts" />
+    <TypeScriptCompile Include="ClientApp\Partial\AppMenu.ts" />
+    <TypeScriptCompile Include="ClientApp\Partial\ControlsButtons.ts" />
+    <TypeScriptCompile Include="ClientApp\Partial\ImageButtons.ts" />
+    <TypeScriptCompile Include="ClientApp\Partial\Navigator.ts" />
+    <TypeScriptCompile Include="ClientApp\Partial\Sessiontimeout.ts" />
+    <TypeScriptCompile Include="ClientApp\Shared.ts" />
+    <TypeScriptCompile Include="ClientApp\SharedPMS.ts" />
+    <TypeScriptCompile Include="ClientApp\SystemTools.ts" />
+    <TypeScriptCompile Include="ClientApp\TreeView.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMS.ServiceConnector\PMS.ServiceConnector.csproj">
+      <Project>{ad9d6219-25cc-4282-b783-a8c99c89e308}</Project>
+      <Name>PMS.ServiceConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SystemResource.ar.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>SystemResource.ar.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SystemResource.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>SystemResource.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61563</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61563/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,138 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.Title = "DecisionSupportIndex";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<ul class="nav navbar-nav">
+    <li class="liItem disabledLi dropdown" id="btnBranchComparison">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_BranchComparison <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi"><a id="btnSalesComparison" href="#">@SystemResource.Men_SalesComparison</a></li>
+            <li class="liItem disabledLi"><a id="btnProductionComparis" href="#">@SystemResource.Men_ProductionComparison</a></li>
+            <li class="liItem disabledLi"><a id="btnIncomeComparison" href="#">@SystemResource.Men_IncomeComparison</a></li>
+            <li class="liItem disabledLi"><a id="btnMonthBudgetForComp" href="#">MonthBudgetForComp</a></li>
+            <li class="liItem disabledLi"><a id="btnDirectCostComparis" href="#"></a></li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="nav navbar-nav">
+    <li class="liItem disabledLi dropdown" id="btnEvaluationCompar">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_EvaluationComparison <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi"><a id="btnByScopeCategory" href="#">@SystemResource.Men_ByScopeCategory</a></li>
+            <li class="liItem disabledLi"><a id="btnEC_ByScope" href="#">@SystemResource.Men_ByScope</a></li>
+            <li class="liItem disabledLi"><a id="btnByCustomerClass" href="#">@SystemResource.Men_ByCustomerClass</a></li>
+            <li class="liItem disabledLi"><a id="btnByBranch" href="#">@SystemResource.Men_ByBranch</a></li>
+            <li class="liItem disabledLi"><a id="btnByProject" href="#">@SystemResource.Men_ByProject</a></li>
+            <li class="liItem disabledLi"><a id="btnByItem" href="#">@SystemResource.DSS_byRegion</a></li>
+
+        </ul>
+    </li>
+</ul>
+
+<ul class="nav navbar-nav">
+    <li class="liItem disabledLi dropdown" id="btnCompanyCollectiveW">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @SystemResource.Men_CompanyCollectiveWor <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li class="liItem disabledLi"><a id="btnC_ByScopeCategory" href="#">@SystemResource.Men_ByScopeCategory</a></li>
+            <li class="liItem disabledLi"><a id="btnCC_ByScope" href="#">@SystemResource.Men_ByScope</a></li>
+            <li class="liItem disabledLi"><a id="btnNormsVariationRep" href="#">@SystemResource.Men_NormsVariationReport</a></li>
+            <li class="liItem disabledLi"><a id="btnSubContractorWork" href="#">@SystemResource.Men_SubContractorWork</a></li>
+            <li class="liItem disabledLi"><a id="btnProjectBillingSteaus" href="#">ProjectBillingStatus</a></li>
+
+        </ul>
+    </li>
+</ul>
+@*//------------------------------------------------------NewSession---------------------------------------*@
+<div class="modal fade messagealert" id="modalSession" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="MessageBoxTitle">الوقت!!</h4>
+            </div>
+            <div class="modal-body" style="max-height:200px; overflow:auto;">
+                <div class="col-xs-7"> <h3 id="MessageBoxMessage">لقد استنفذت وقت الجلسة هل تريد الاستمرار </h3></div>
+                <div class="col-xs-5 text-center">
+                    <i class="glyphicon btn-danger"></i>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="SessionBoxOk" class="btn btn-danger">نعم</button>
+                <button type="button" id="SessionBoxCancel" class="btn btn-warning" data-dismiss="modal">لا</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .display_none {
+        display: none
+    }
+</style>
+<span id="timeLeft" class="admin-name display_none" style="color: red;font-weight: bold;     margin-right: 76%;font-size: 20px;"></span>
+<input id="idSession" value="10" class="display_none" />
+<select id="SelectSession" class="display_none">
+    <option value="0">off</option>
+    <option value="1">on</option>
+    <option value="2">out</option>
+</select>
+<script>
+    debugger
+    var timeInSecondsAfterSessionOut = 0;
+    $(function () {
+        $("body").on('mousemove', function () {
+            $("#timeLeft").addClass('display_none');
+            ResetThisSession();
+        });
+    });
+    $('#SelectSession').on('change', function () {
+        timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+        $("#timeLeft").html(timeInSecondsAfterSessionOut);
+    });
+    timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+    $("#timeLeft").html(timeInSecondsAfterSessionOut);
+    var secondTick = 0;
+    StartThisSessionTimer();
+    function ResetThisSession() {
+        secondTick = 0;
+    }
+    var SessionBoxOk = document.getElementById("SessionBoxOk");
+    var SessionBoxCancel = document.getElementById("SessionBoxCancel");
+    function StartThisSessionTimer() {
+        secondTick++;
+        var timeLeft = ((timeInSecondsAfterSessionOut - secondTick) / 60).toFixed(0); // in minutes
+        timeLeft = timeInSecondsAfterSessionOut - secondTick; // override, we have 30 secs only
+        if (timeLeft == 9) {
+            $("#timeLeft").removeClass('display_none')
+        }
+        $("#timeLeft").html(timeLeft);
+        if (secondTick > timeInSecondsAfterSessionOut) {
+            clearTimeout(tick);
+            var chak = false;
+            $("#modalSession").modal("show");
+            $("#timeLeft").addClass('display_none');
+            $("#" + SessionBoxOk.id).click(() => {
+                $("#timeLeft").addClass('display_none')
+                secondTick = 0;
+                $("#modalSession").modal("hide");
+                chak = true;
+            });
+            $("#" + SessionBoxCancel.id).click(() => {
+                $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                $("#modalSession").modal("hide");
+                chak = false;
+            });
+            setTimeout(function () {
+                if (chak == false) {
+                    $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                }
+            }, 10000);
+        }
+        tick = setTimeout("StartThisSessionTimer()", 1000);
+    }
+</script>
+@*//---------------------------------------------------------------------------------------------------------------*@

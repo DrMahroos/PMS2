@@ -1,0 +1,143 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "LocationDefinitionIndex";
+    ViewBag.Title = SystemResource.Men_LocationDefinition;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@*Style TreeView*@
+@*<style>
+    .rootColor {
+        color: #04252f;
+        line-height: 2em;
+    }
+    .parentColor {
+        color: #09495c;
+        line-height: 2.2em;
+    }
+    .leafColor {
+        color: #0b6d8a;
+        line-height: 2.4em;
+    }
+    .selectedLi {
+        background-color: darkgray;
+        color: black;
+    }
+    .close {
+        margin-top: -5px !important;
+    }
+    .modal-header {
+        height: 41px;
+    }
+</style>*@
+@*Style TreeView*@
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    @*Code TreeView*@
+    @*<script src="~/ClientApp/TreeView.js"></script>*@
+    @*End Code TreeView*@
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="expenses  col-xs-12" style="margin-bottom:2%">
+
+            </div>
+            <div class="col-lg-6 col-md-7 col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_LocationId </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="hidden" class="form-control input-sm" name="LocationId" id="txtLocationId">
+                            <input type="text" class="form-control input-sm addable editable" name="LocCode" id="txtLocCode">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-info src-btn btn btn-warning xaddable xeditable" id="butLocCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-4 col-sm-2 col-xs-6 checks" style="float:right;margin-right:0%;">
+                            <span class="label">Is Detail</span>
+                            <label class="switch">
+                                <input type="checkbox" id="chkIsDetail" disabled="disabled" name="IsDetail" />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescE </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescE" id="txtDescE" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_DescA </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="DescA" id="txtDescA" />
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_SalesEngineerId </label>
+                        <div class="col-md-3 col-xs-4">
+
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="SalesEngineerId" id="txtSalesEngineerId">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="src-btn btn btn-warning addable editable" id="butEngCode" name="butEngCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-5 col-xs-4" style="padding-right:1%">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtDescEEng" name="DescE">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_ParentLocationId </label>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ParentLocationId" id="txtParentLocationId">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="src-btn btn btn-warning addable editable" id="butParentLocation" name="butParentLocation">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-5 col-xs-4" style="padding-right:1%">
+                            <input type="text" class="form-control inpt-sm " disabled="disabled" id="txtDescEPa" name="DescE">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 col-xs-12 control-label text-right">  @SystemResource.Fld_Remarks  </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <textarea class="form-control col-xs-12 form-control input-sm addable editable" rows="5" name="Remarks" id="txtRemarks"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-xs-12">
+
+            </div>
+        </form>
+    </div>
+
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/05_SubAreaDefinition/LocationDefinition.js"></script>
+</div>
+

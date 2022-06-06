@@ -1,0 +1,234 @@
+﻿
+
+@using PMS.WebUI.Resources
+
+<label class="col-md-2" for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_Customers</label>
+
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir dir_workdaily" id="effects">
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.PManag_FromDate </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                <input type="date" class="form-control input-sm addable editable" name="EngCode" id="FromDate">
+                            </div>
+                            <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right" style="width: 90px;"> @SystemResource.ResM_fld_laborrequest_todate </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                <input type="date" class="form-control input-sm addable editable" name="EngCode" id="ToDate">
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 col-xs-5 text-center">
+                            <label style="margin: 6px 0px;" class="labelpopup">@SystemResource.Eng_Fld_projectexpdistribution</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <div class="col-md-12" style="padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpFromproject </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtFromProject">
+
+                                </div>
+                                <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right" style="width: 90px;"> @SystemResource.Eng_Fld_projectexpToproject </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 151px;">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtToProject">
+                                </div>
+                            </div>
+                             @*------------Seles-----------------*@
+                            <div class="col-md-12" style="margin:8px 0px;padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_ProjectStatussalescode </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                    <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtSel">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtSelCod"disabled>
+                                </div>
+                                <div class="info-btn col-md-1" style="width: 44px;">
+                                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSalesID" name="butProj_Code6">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtSalDesc"disabled>
+                                </div>
+                            </div>
+
+
+
+                            @*------------custClass-----------------*@
+                            <div class="col-md-12" style="margin:4px 0px;padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_ProjectStatuscustomerclass </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                    <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtCustClass">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtCustClassCod"disabled>
+                                </div>
+                                <div class="info-btn col-md-1" style="width: 44px;">
+                                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnCustClassID" name="butProj_Code">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtCustClassDes"disabled>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 popsection">
+                            <div class="col-md-12">
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" checked name="reparir" class="dailwork_input" id="RedNew" />
+                                    <label style="margin: 3px 16px;">@SystemResource.rpNew</label>
+                                </div>
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="reparir" class="dailwork_input" id="Redworking" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Fld_working</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="reparir" class="dailwork_input" id="RedHold" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Resm_hold</label>
+                                </div>
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="reparir" class="dailwork_input" id="RedSuspended" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Fld_Suspended</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="reparir" class="dailwork_input" id="Redfinish" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Resm_finish</label>
+                                </div>
+                                <div class="col-md-6 col-xs-5">
+                                    <input type="radio" name="reparir" class="dailwork_input" id="RedAll" />
+                                    <label style="margin: 3px 16px;">@SystemResource.Fld_all</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                @*------------- Custumer---------------*@
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7" style="margin-top: -4px;">
+                            <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Costumer </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtCust">
+                                <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtCustCod"disabled>
+                            </div>
+                            <div class="info-btn col-md-1" style="width: 44px;">
+                                <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnCustID" name="butProj_Code">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtCustIDDes"disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-5 text-center">
+                            <label style="margin: 6px 0px;" class="labelpopup">@SystemResource.Eng_Rep_Dailyworkprod_include</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-7" style="margin-top: -11px;">
+                         
+
+                            <div class="col-md-12" style="margin:6px 0px;padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpscopeclass </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                    <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtScopeCatID">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtScopeCatCod"disabled>
+                                </div>
+                                <div class="info-btn col-md-1" style="width: 44px;">
+                                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnScopeCatID" name="butProj_Code">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtScopeCatDes"disabled>
+                                </div>
+                            </div>
+
+                            @*-------------------Scop---------------*@
+                            <div class="col-md-12" style="margin:4px 0px;padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_Scope </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                    <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtScopeID">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtScopeCode"disabled>
+                                </div>
+                                <div class="info-btn col-md-1" style="width: 44px;">
+                                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butScope_Code" name="butProj_Code">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtScopeCodeDes"disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="margin:4px 0px;padding: 0px;">
+                                <label for="txtEngCode" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Ger_Rep_fld_SiteEngCode </label>
+                                <div class="col-md-1 col-sm-4 col-xs-5" style="width: 126px;">
+                                    <input type="hidden" class="form-control input-sm addable editable" name="EngCode" id="txtSiteEngID">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtSiteEngCode"disabled>
+                                </div>
+                                <div class="info-btn col-md-1" style="width: 44px;">
+                                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSiteEngID" name="butProj_Code">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-5">
+                                    <input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtSiteEngCodeDes"disabled>
+                                </div>
+                            </div>
+                        </div>
+                     
+
+                        <div class="col-md-5 popsection">
+                            <div class="col-md-12">
+                                <div class="col-md-4 col-xs-5">
+                                    <input type="radio" name="reparir1" class="dailwork_input" id="RedAllProject" />
+                                    <label class="pouplabel">@SystemResource.Eng_Rep_Dailyworkprod_allproject</label>
+                                </div>
+                                <div class="col-md-4 col-xs-5">
+                                    <input name="reparir1" type="radio" class="dailwork_input" id="RedNonRepair" />
+                                    <label class="pouplabel">@SystemResource.Eng_Rep_Dailyworkprod_nonrepair</label>
+                                </div>
+                                <div class="col-md-4 col-xs-5">
+                                    <input name="reparir1" type="radio" class="dailwork_input" id="RedRepair" />
+                                    <label class="pouplabel">@SystemResource.Eng_Rep_Dailyworkprod_repair</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/ClientApp/Components/GeneralReport/01_Monitoring/ProjectWorking.js"></script>

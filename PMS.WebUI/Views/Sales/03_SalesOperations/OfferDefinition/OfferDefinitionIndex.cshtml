@@ -1,0 +1,490 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "OfferDefinitionIndex";
+    ViewBag.Title = SystemResource.Men_OfferDefinition;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="col-xs-6">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-lg-2 col-md-3 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferNo </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input type="text" name="TrNo" id="txtTrNo" disabled="disabled" class="form-control input-sm clearable">
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info xaddable xeditable" type="button" id="btnTrNo">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <label class="col-sm-2 col-xs-12 control-label text-right" style="padding-right:0%;padding-left:1%;"> @SystemResource.Fld_OfferSerial </label>
+                            <div class="col-sm-4 col-xs-5">
+                                <input name="TrSerial" id="txtTrSerial" type="text" disabled="disabled" class="form-control input-sm clearable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferDescA </label>
+                            <div class="col-sm-10 col-xs-5">
+                                <input name="DescA" id="txtDescA" type="text" class="form-control input-sm Custeditable addable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_OfferDescL </label>
+                            <div class="col-sm-10 col-xs-5">
+                                <input name="DescL" id="txtDescL" type="text" class="form-control input-sm Custeditable addable">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="col-xs-12 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_RefNumber </label>
+                            <div class="col-xs-5">
+                                <input name="RefCode" id="txtRefCode" type="text" class="form-control input-sm Custeditable addable">
+                            </div>
+                            <div class="col-xs-2 btnNew_btn">
+                                <button id="btnPrintSubm" class="col-xs-12 btn btn-warning" style="width: 103px;" type="button"> @SystemResource.Fld_PrintOffer </button>
+                            </div>
+                            <div class="col-xs-2 btnCopy_btn">
+                                <button id="btnContractWord" class="col-xs-12 btn btn-warning" style="width: 114px;" type="button"> @SystemResource.Fld_Contract </button>
+                            </div>
+                            @*xxx
+        <div class="col-xs-2 btnCopy_btn">
+            <button id="btnCalcTotal" class="col-xs-12 btn btn-warning" style="width: 114px;" disabled="disabled" type="button"> @SystemResource.Fld_ComputeTotal </button>
+        </div>*@
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferDate </label>
+                            <div class="col-xs-5">
+                                <input name="TrDate" id="txtTrDate" type="date" class="form-control input-sm Custeditable addable Dateable">
+                            </div>
+                            <div class="col-xs-2 btnNew_btn">
+                                <button id="btnNew" class="col-xs-12 btn btn-warning " style="width: 103px;" disabled="disabled" type="button"> @SystemResource.Fld_New </button>
+                            </div>
+                            <div class="col-xs-2 btnCopy_btn">
+                                <button id="btnCopy" class="col-xs-12 btn btn-warning " style="width: 114px;" disabled="disabled" type="button"> @SystemResource.Fld_Copy </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_DeliveryDate </label>
+                            <div class="col-xs-5">
+                                <input name="SendDate" id="txtSendDate" type="date" class="form-control input-sm Custeditable addable">
+                            </div>
+                            <div class="col-xs-2 btnNew_btn">
+                                <button id="btnCalcTotal" class="col-xs-12 btn btn-warning" style="width: 103px;" disabled="disabled" type="button"> @SystemResource.Fld_ComputeTotal </button>
+                            </div>
+                            @*<div class="col-xs-2 btnNew_btn">
+                                <button id="btnContractTerms" class="col-xs-12 btn btn-warning" style="width: 103px;" type="button"> @SystemResource.Fld_ContractTerms </button>
+                            </div>*@
+                            @*<div class="col-xs-2 btnCopy_btn">
+                                <button id="btnContractWord" class="col-xs-12 btn btn-warning" style="width: 114px;" type="button"> @SystemResource.Fld_Contract </button>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-horizontal">
+                <div class="form-group" style="margin-top: -8px;">
+                    <div class="ani col-xs-12 form-group" style="margin-bottom:0%;">
+                        <hr style="padding:0%;margin:0%;border-top: 1px dotted #0b6d8a;" class="col-xs-12">
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="col-xs-12 fa fa-hand-o-down off" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-group" style="margin-top:0%;margin-bottom:0%;">
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-stage" type="button">  @SystemResource.Fld_ProductionStage  </button>
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-offeritem" type="button">  @SystemResource.Fld_OfferItem  </button>
+                        </div>
+                       
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-specification" type="button">  @SystemResource.Fld_Specification </button>
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-custresp" type="button"> @SystemResource.Fld_CustCompResp </button>
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-payment" type="button"> @SystemResource.Fld_Payment </button>
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="col-xs-12 btn btn-info btn-custinformation" type="button">  @SystemResource.Fld_CustomerInformation  </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="stage">
+                        <div class="col-xs-12 form-group parent_grid" style="height: 416px;margin-top: 5px;">
+                            <style>
+                                .parent_grid .jsgrid-grid-body {
+                                    height: 287.563px !important;
+                                }
+                            </style>
+                            <table id="GridParent"></table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="offeritem">
+                        <div class="col-xs-12 form-group" style="height: 416px;margin-top: 5px;">
+                            @Html.Partial("../Sales/03_SalesOperations/OfferDefinition/_OfferStageItem")
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="specification" style="margin-top: 4px;">
+                        <div class="col-xs-12 form-group" style="margin-top:0%;height: 416px;">
+                            <table class="table-striped table table-bordered" style="margin-top:2%;margin-bottom:0%;margin-top: 2%;">
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_Technicalspecifications </td>
+                                    <td class="col-xs-8">
+                                        <textarea name="ProjTechnicalSpecs" class="form-control input-sm Custeditable addable" rows="2"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_OffrGCondterms </td>
+                                    <td class="col-xs-8">
+                                        <textarea name="ProjectTermsCond" class="form-control input-sm Custeditable addable" rows="2"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_Penalties </td>
+                                    <td class="col-xs-8"><textarea name="ProjectPenalties" class="form-control input-sm Custeditable addable" rows="2"></textarea>
+                                </tr>
+                            </table>
+                            <table class="table-striped table table-bordered" style="float:left;">
+                                <tr>
+                                    <td class="col-xs-1"> <label class="offerDef_label"> @SystemResource.Fld_ContractPrice </label> </td>
+                                    <td class="col-xs-2" style="width: 155px;"> <input name="ContractPrice" disabled="disabled" id="txtContractPrice" class="col-xs-12 clearable" type="text" /> </td>
+                                    <td class="col-xs-1"><label class="offerDef_label"> @SystemResource.Fld_ContractNet </label></td>
+                                    <td class="col-xs-2" style="width: 155px;"> <input name="ContractNetPrice" id="txtContractNetPrice" disabled="disabled" class="col-xs-12 clearable" type="text" /> </td>
+                                    <td class="col-xs-1"><label class="offerDef_label">@SystemResource.Fld_ContactNo</label></td>
+                                    <td class="col-xs-2" style="width: 155px;"> <input name="ContractCode" disabled="disabled" id="txtContractCode" class="col-xs-12 clearable" type="text" /> </td>
+                                    <td class="col-xs-1"><label class="offerDef_label">@SystemResource.Fld_ProjectNo</label></td>
+                                    <td class="col-xs-2" style="width: 155px;"> <input name="ProjectCode" disabled="disabled" id="txtProjectCode" class="col-xs-12 clearable" type="text" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-1">  <label class="offerDef_label">@SystemResource.Fld_DiscountPrc</label></td>
+                                    <td class="col-xs-2"> <input name="DiscountPrc" id="txtDiscountPrc" class="col-xs-12 addable Custeditable" type="text" /> </td>
+                                    <td class="col-xs-1">  <label class="offerDef_label"> @SystemResource.Fld_DownPaymentPrc </label></td>
+                                    <td class="col-xs-2"> <input name="DownPaymentPrc" id="txtDownPaymentPrc" class="col-xs-12 addable Custeditable" type="text" /> </td>
+                                    <td class="col-xs-1">  <label class="offerDef_label">@SystemResource.Fld_ContractDate</label> </td>
+                                    <td class="col-xs-2"> <input name="ContractDate" disabled="disabled" id="txtContractDate" class="col-xs-12 clearable" type="date" /> </td>
+                                    <td class="col-xs-1">  <label class="offerDef_label">@SystemResource.Fld_PhaseNo</label></td>
+                                    <td class="col-xs-2"> <input name="PhaseCode" disabled="disabled" id="txtPhaseCode" class="col-xs-12 clearable" type="text" /> </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-1">  <label class="offerDef_label"> @SystemResource.Fld_DiscountAmount</label></td>
+                                    <td class="col-xs-2"> <input name="DiscountAmount" disabled="disabled" id="txtDiscountAmount" class="col-xs-12  clearable" type="text" /> </td>
+                                    <td class="col-xs-1">  <label class="offerDef_label"> @SystemResource.Fld_WarrntyPrc</label></td>
+                                    <td class="col-xs-2"> <input name="WarrntyPaymentPrc" id="txtWarrntyPaymentPrc" class="col-xs-12 addable Custeditable" type="text" /> </td>
+                                    <td class="col-xs-1"> <label class="offerDef_label">@SystemResource.Fld_Validty</label> </td>
+                                    <td class="col-xs-2"> <input name="ContractPeriod" id="txtContractPeriod" class="col-xs-12 clearable addable editable" type="text" /> </td>
+                                    <td class="col-xs-1">  <label class="offerDef_label">@SystemResource.Fld_WaranteePrd</label></td>
+                                    <td class="col-xs-2"> <input name="ContractWarantyPrd" id="txtWaranteePrd" class="col-xs-12 addable editable" type="text" /> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="custresp">
+                        <div class="col-xs-12 form-group custresp" style="padding-top:-1%;margin-top:0%;height: 416px;">
+                            <style>
+                                .custresp .jsgrid-table {
+                                    margin-top: 0px;
+                                }
+                            </style>
+                            <table id="GridChild1CompResp"></table>
+                            <table id="GridChild2CompResp"></table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="custinformation">
+                        <div class="col-xs-12 form-group" style="margin-top:0%;height: 416px;">
+                            <table class="table-striped table table-bordered">
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_CrNo </td>
+                                    <td class="col-xs-9">
+                                        <input id="txtCustCrNo" disabled="disabled" class="col-xs-3 editable addable ClearCustomer" type="text" />
+                                        <button id="btnCustClear" class=" btn btn-outline-success" type="button"> Clear </button>
+                                        <button id="btnCustSave" class=" btn btn-outline-success" type="button">Save</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3">  @SystemResource.Fld_CustomerNameE </td>
+                                    <td class="col-xs-3"> <input id="txtCustCustomerNameE" disabled="disabled" class="col-xs-6 editable addable ClearCustomer" type="text" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3">  @SystemResource.Fld_CustomerNameA </td>
+                                    <td class="col-xs-3"> <input id="txtCustCustomerNameA" disabled="disabled" class="col-xs-6 editable addable ClearCustomer" type="text" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_ContactPerson </td>
+                                    <td class="col-xs-3"> <input id="txtCustContactPerson" disabled="disabled" class="col-xs-6 editable addable ClearCustomer" type="text" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3">  @SystemResource.Fld_Email </td>
+                                    <td class="col-xs-3"> <input id="txtCustEmail" disabled="disabled" class="col-xs-6 editable addable ClearCustomer" type="text" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_Mobile </td>
+                                    <td class="col-xs-3"> <input id="txtCustMobile" disabled="disabled" class="col-xs-3 editable addable ClearCustomer" type="number" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3"> @SystemResource.Fld_Tel</td>
+                                    <td class="col-xs-3"> <input id="txtCustTel" disabled="disabled" class="col-xs-3 editable addable ClearCustomer" type="number" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3">  @SystemResource.Fld_fax</td>
+                                    <td class="col-xs-3"> <input id="txtCustfax" disabled="disabled" class="col-xs-3 editable addable ClearCustomer" type="number" /> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 form-horizontal" id="payment">
+                        <div class="col-xs-12 form-group payment" style="padding-top:0%;margin-top:0%;height: 416px;">
+                            <style>
+                                .payment .jsgrid-grid-body {
+                                    height: 287.563px !important;
+                                }
+                            </style>
+                            <table id="GridChild3Pay"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12" style="margin-top:1%;">
+                <div class="col-xs-6">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Location </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input name="OfferId" id="txtOfferId" type="hidden" class="clearable">
+                                <input name="txtDownPaymentAmount" id="txtDownPaymentAmount" type="hidden" class="clearable">
+                                <input name="txtWarrntyPaymentAmount" id="WarrntyPaymentAmount" type="hidden" class="clearable">
+                                <input name="LocationId" id="txtLocationId" disabled="disabled" type="hidden" class="form-control input-sm clearable">
+                                <input name="LocCode" id="txtLocCode" disabled="disabled" type="text" class="form-control input-sm clearable">
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info Custeditable addable" type="button" id="btnLocation">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-6 col-xs-2">
+                                <input name="Loc_DescA" id="txtLoctionName" disabled="disabled" type="text" class="form-control input-sm clearable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Address </label>
+                            <div class="col-sm-10 col-xs-5">
+                                <input name="ProjAddress" id="txtProjAddress" type="text" class="form-control input-sm Custeditable addable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_SalesMan </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input name="SalesEngineerId" id="txtSalesEngineerId" type="hidden" class="form-control input-sm clearable">
+                                <input name="EngCode" id="txtEngCode" disabled="disabled" type="text" class="form-control input-sm clearable">
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info Custeditable addable" type="button" id="btnSalesEngineer">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-6 col-xs-2">
+                                <input name="Eng_DescA" id="txtSalesEngineerName" disabled="disabled" type="text" class="form-control input-sm clearable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Costumer </label>
+                            <div class="col-md-3 col-sm-4 col-xs-5">
+                                <input name="CustomerID" id="txtCustomerID" type="hidden" class="form-control input-sm clearable">
+                                <input type="hidden" id="txtScopeID">
+                                <input name="CustomerCode" id="txtCustomerCode" disabled="disabled" type="text" class="form-control input-sm clearable">
+                                
+                            </div>
+                            <div class="info-btn">
+                                <button class="btn btn-info Custeditable addable" type="button" id="btnCustomer">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-6 col-xs-2">
+                                <input name="cus_DescA" id="txtCustomerName" disabled="disabled" type="text" class="form-control input-sm clearable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Remarks </label>
+                            <div class="col-sm-10 col-xs-5">
+                                <textarea id="txtRemarks" name="Remarks" class="form-control input-sm editable addable" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-5 col-xs-12 control-label text-right" style="padding-right:0%;">  @SystemResource.Fld_AreaM2 </label>
+                            <div class="col-md-7 col-sm-4 col-xs-5">
+                                <input name="ProjArea" id="txtProjArea" type="text" class="form-control input-sm editable addable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @*<label class="col-sm-5 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_OfferPrice </label>
+                            <div class="col-md-7 col-sm-4 col-xs-5">
+                                <input name="ContractPrice" id="txtContractPrice" type="text" class="form-control input-sm addable">
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="form-horizontal" style="margin-bottom: 4%;margin-top:20px">
+                        <div class="form-group">
+                            <label class="col-sm-7 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_Maintenancework </label>
+                            <div class="col-md-5 col-sm-4 col-xs-5">
+                                <input name="IsMaintenanceWork" id="txtIsMaintenanceWork" type="checkbox" class="checkdef offercheck col-xs-5 editable addable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal" style="margin-bottom: 4%;">
+                        <div class="form-group">
+                            <label class="col-sm-7 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_CustomerPay </label>
+                            <div class="col-xs-5">
+                                <input name="IsMainCustomerPay" id="txtIsMainCustomerPay" type="checkbox" class="checkdef offercheck col-xs-5 editable addable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal" style="margin-bottom: 4%;">
+                        <div class="form-group section_btns">
+                            <div class="approved_sec">
+                                <button type="button" id="btnApprove" class="btn btn-warning editable"> @SystemResource.Fld_Approve</button>
+                                <button type="button" id="btnSendToCust" class="btn btn-warning editable"> @SystemResource.Fld_SendTocustomer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal" style="margin-bottom: 4%;">
+                        <div class="form-group section_btns">
+                            <div class="reject_sec">
+                                <button type="button" id="btnCancel" class="btn btn-warning addable editable">@SystemResource.Fld_Cancel</button>
+                                <button type="button" id="btnReject" class=" btn btn-warning editable">@SystemResource.Fld_Reject</button>
+                                <button type="button" id="btnContract" class=" btn btn-warning editable">@SystemResource.Fld_Contract</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="text-center status offer_status" style="margin-top: -6%;">
+                        <h4>@SystemResource.Fld_Status</h4>
+                        <select id="txtStatus" name="Status" disabled="disabled" >@*class="Custeditable"*@
+                            <option value="0">@SystemResource.Fld_New</option>
+                            <option value="1">@SystemResource.Fld_Defined</option>
+                            <option value="2">@SystemResource.Fld_Billingterms</option>
+                            <option value="3">@SystemResource.Fld_SendTocustomer</option>
+                            <option value="4">@SystemResource.Fld_Contracted</option>
+                            <option value="5">@SystemResource.Fld_Specification</option>
+                            <option value="6">@SystemResource.Fld_CostEstimation</option>
+                            <option value="8">@SystemResource.Fld_StartWork</option>
+                            <option value="10">@SystemResource.Fld_Canceled</option>
+                            <option value="11">@SystemResource.Fld_Rejected</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <style>
+        .form-horizontal .control-label {
+            padding-right: 0%;
+            padding-left: 0%;
+        }
+        .form-horizontal .form-group {
+            margin-bottom: 0% !important;
+        }
+        #custresp .jsgrid-grid-body {
+            max-height: 250px!important;
+            height: 143px!important;
+        }
+
+        .parent_grid .jsgrid-grid-body{
+            height: 345.563px!important;
+            max-height: 344px!important;
+        }
+
+        .parent_grid, .custresp, .payment, #specification .form-group{
+            overflow: auto !important;
+        }
+
+        #GridChild .jsgrid-grid-body {
+            max-height: 278px !important;
+            height: 286px !important;
+        }
+
+        .payment .jsgrid-grid-body {
+            height: 344.563px !important;
+            max-height: 344px !important;
+        }
+
+        #custinformation table td input {
+            height: 35px;
+        }
+        #custinformation table {
+            margin-top: 13px!important;
+        }
+        #custinformation table td {
+            padding: 6px 8px;
+        }
+        #custinformation .form-group{
+            overflow: hidden;
+        }
+
+    </style>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/03_SalesOperations/OfferDefinition.js"></script>
+</div>
+
+
+
+
+
+
+
+
+
+

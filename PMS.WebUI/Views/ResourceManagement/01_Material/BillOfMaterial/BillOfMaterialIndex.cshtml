@@ -1,0 +1,95 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "BillOfMaterialIndex";
+    ViewBag.Title = SystemResource.Men_BillOfMaterial;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Resm_fld_Mat_project </label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" id="txtProjectCode" />
+							<input type="hidden" maxlength="100" class="form-control input-sm addable editable" id="txtProjectID" />
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchProject">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12 billmaterial_parent">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable sub_contr_sub" name="ProjectCode" id="txtProjectName" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_phase</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm addable editable" name="PhaseCode" id="txtPhaseCode" />
+							<input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="PhaseId"/>
+						</div>
+
+						<div class="info-btn col-md-1">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchPhase">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12 billmaterial_parent">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable sub_contr_sub" name="PhaseName" id="txtPhaseName" />
+						</div>
+
+						<button class="def_btn bill_show_requirment" type="button" id="btnShowRequired"> Show Requirment</button>
+					</div>
+				</div>
+				<div class="col-xs-12 form-horizontal" id="Billmaterial" style="height:500px;">
+					<style>
+						.jsgrid-grid-body {
+							height: 500px !important;
+							max-height:550px!important;
+						}
+					</style>
+					<div class="" style="height:490px;overflow:unset;">
+						<table id="parent"></table>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<div>
+		<table></table>
+	</div>
+	<script src="~/ClientApp/JsGrid.js"></script>
+	<script src="~/ClientApp/Components/ResourceManagement/01_Material/BillOfMaterial.js"></script>
+</div>
+
+
+<style>
+    .jsgrid-grid-body {
+        height: 451px !important;
+        max-height: 550px !important;
+    }
+
+</style>
+
+
+

@@ -1,0 +1,12 @@
+﻿.h4_header, .span_pic {
+    float: right !important
+}
+.info-btn {
+    float: right !important;
+}
+.control-label {
+    text-align: right !important;
+}
+#active_btn {
+    float:left!important;
+}

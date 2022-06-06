@@ -1,0 +1,182 @@
+﻿
+@using PMS.WebUI.Resources
+
+
+<div class="clear"></div>
+<label for="rpTitle" style="display:none" id="rpTitle" langRef="Rep_AttendanceAndLeaveS">@SystemResource.Resm_UnprodHour</label>
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.ResM_fld_laborrequest_fromdate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+
+                            <input type="date" class="form-control input-sm" id="FromDate" name="FromDate">
+                        </div>
+
+                        <label class="col-sm-2 col-xs-12 control-label text-right" style="width: 105px;">@SystemResource.ResM_fld_laborrequest_todate</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:19.9%">
+                            <input type="date" class="form-control inpt-sm" id="ToDate">
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <input type="radio" class="radio_resm" id="RAD_detailseng" name="status" />
+                            <label class="text-right" style="margin:4px 6px">@SystemResource.Resm_detailseng</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Fld_projectexpFromproject</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+
+                            <input type="text" class="form-control input-sm" id="txtFromProjectRP" name="txtFromProjectRP">
+                        </div>
+                        
+                        <label class="col-sm-2 col-xs-12 control-label text-right" style="width: 106px;">@SystemResource.Eng_Fld_projectexpToproject</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:19.9%">
+                            <input type="text" class="form-control inpt-sm" id="txtToProjectRP">
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <input type="radio" class="radio_resm" id="RAD_summarybyproject"name="status" />
+                            <label class="text-right" style="margin:4px 6px">@SystemResource.Resm_summarybyproject</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_projeng</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtProjectEngineerID" id="txtProjectEngineerID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtProjectEngineerRP" name="txtProjectEngineerRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnProjectEngineerRP" name="btnProjectEngineerRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtProjectEngineer1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_scopecat</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtScopeCatID" id="txtScopeCatID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtScopeCatRP" name="txtScopeCatRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnScopeCatRP" name="btnScopeCatRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtScopeCat1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_Scope</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtScopeID" id="txtScopeID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtScopeRP" name="txtScopeRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnScopeRP" name="btnScopeRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtScope1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_Dailyworkprod_customercat</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtCustomerCatID" id="txtCustomerCatID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtCustomerCatRP" name="txtCustomerCatRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnCustomerCatRP" name="btnCustomerCatRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtCustomerCat1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Eng_Rep_ProjectStatuscustomer</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtCustomerID" id="txtCustomerID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtCustomerRP" name="txtCustomerRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnCustomerRP" name="btnCustomerRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtCustomer1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Spec_UnProdCat</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtUnProdCatID" id="txtUnProdCatID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtUnProdCatRP" name="txtUnProdCatRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnUnProdCatRP" name="btnUnProdCatRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtUnProdCat1RP">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Spec_UnProdReason</label>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 109px;">
+                            <input type="hidden" class="form-control input-sm" name="txtUnProdReasonID" id="txtUnProdReasonID">
+                            <input type="text" class="form-control input-sm" disabled="disabled" id="txtUnProdReasonRP" name="txtUnProdReasonRP">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-warning" id="btnUnProdReasonRP" name="btnUnProdReasonRP">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:32.5%">
+                            <input type="text" class="form-control inpt-sm" disabled="disabled" id="txtUnProdReason1RP">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="~/ClientApp/Components/ResourceManagement/05_Reports/Unprod.Hour.js"></script>
+
+
+
+

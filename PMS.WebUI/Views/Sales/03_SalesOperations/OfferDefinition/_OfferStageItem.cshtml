@@ -1,0 +1,48 @@
+﻿@using PMS.WebUI.Resources;
+<input type="hidden" id="txtMinUnitPrice" class="clearable" />
+<input type="hidden" id="txtStdPrice" class="clearable" />
+<input type="hidden" id="txtUomID" class="clearable" />
+<input type="hidden" id="txtDropOfferStageId" class="clearable" />
+<input type="hidden" id="txtDescTemp" class="clearable" />
+
+<div style="margin-top: 8px;margin-bottom: 50px;">
+    <label class="col-lg-1 col-md-1 col-xs-12 control-label text-right" style="color: #FFF;font-size: 14px;padding-left: 7px;"> @SystemResource.Fld_Stage </label>
+    <div id="DivHtml" class="col-lg-11 col-md-10 col-xs-12">
+        <select id="DropOfferStageId" style="width: 100%; height: 33px;">
+
+        </select>
+</div>
+</div>
+<table id="GridChild" class="offerStgegrid"></table>
+<label class="col-lg-2 col-md-3 col-xs-12 control-label text-right"> Total </label>
+<div class="col-md-3 col-sm-4 col-xs-5">
+    <input type="text" id="txtTotalItem" disabled="disabled" class="form-control input-sm clearable">
+    <input type="hidden"  id="h_ItemID" class="form-control input-sm clearable">
+    <input type="hidden" id="txtItemsSystemId" class="form-control input-sm clearable">
+</div>
+<script src="~/ClientApp/JsGrid.js"></script>
+<script src="~/ClientApp/Components/Sales/03_SalesOperations/_OfferStageItem.js"></script>
+
+<style>
+     #GridChild {
+        height: 400px !important;
+    }
+
+    .jsgrid-grid-body {
+        max-height: 250px !important;
+        height: 250px !important;
+    }
+
+    .offerStgegrid .jsgrid-table {
+        width: 225%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow: scroll;
+    }
+    .offerStgegrid  .jsgrid-grid-body {
+        margin-top: -20px;
+        max-height: 295px !important;
+        height: 301px !important;
+    }
+</style>

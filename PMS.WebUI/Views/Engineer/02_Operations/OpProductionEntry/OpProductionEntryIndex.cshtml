@@ -1,0 +1,247 @@
+﻿
+@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "OpProductionEntryIndex";
+    ViewBag.Title = SystemResource.Men_OpProductionEntry;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-lg-12">
+
+
+                <div class="col-lg-6">
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.Eve_transno </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="xaddable xeditable form-control input-sm clearable"   name="TrNo" id="txtTrNo">
+                        </div>
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchTrNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right "> @SystemResource.Fld_Date </label>
+                        <div class="col-md-4 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable dateable  " name="TrDate" id="txtTrDate">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.work_sec_sched </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5"  >
+                            <input type="text" class="addable editable form-control input-sm"  id="txtScheduleId">
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 39px;">
+                            <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSerchSchdule">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width: 244px;">
+                            @*<input type="text" class="form-control input-sm" disabled="disabled" name="WorkDescr" id="txtSchduleName">*@
+                        </div>
+                        @*<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right work_secdu_label to_per_label"> @SystemResource.work_toperiod </label>
+                            <div class="col-sm-1 col-xs-12" style="width:113px">
+                                <input type="time" maxlength="100" class="form-control input-sm addable editable to_per_input" name="EndDateTime" id="txtEndTime" />
+                            </div>
+
+                            <div class="col-sm-2 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm addable editable" name="EndDateTime" id="txtEndDate" />
+                            </div>
+                            <button type="button" class="authorize" disabled="disabled" id="btnunauthorized">Un Authorize</button>*@
+                    </div>
+
+
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.work_desc </label>
+                        <div class="col-sm-4 col-xs-12" style="width: 406px;">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="WorkDescr" id="txtWorkDescr" />
+                        </div>
+                        <div class="col-md-1" style="width: 42px;"></div>
+                        @*<label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right hour_label work_secdu_label"> @SystemResource.wrok_period_Hours </label>
+                            <div class="col-sm-3 col-xs-12" style="width: 302px;">
+                                <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="WorkHours" id="txtWorkHours" />
+                            </div>
+                            <button type="button" class="authorize editable" id="btnCalcHours">Calc Hours</button>*@
+
+                    </div>
+
+
+
+
+                    <div class="form-group col-lg-12">
+                        <label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.Eng_project </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="Proj_Code" id="txtProj_DescE">
+                        </div>
+
+                        <label for="txtEngCode" class="col-sm-1 col-xs-12 control-label text-right work_secdu_label  "> @SystemResource.Def_projecphase </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="Phase_Code" id="txtPhase_DescE">
+                        </div>
+
+                        @*<label for="ChkStatus" class="col-sm-3 col-xs-12 control-label text-right" style="left: 42px;"> @SystemResource.Fld_Status </label>
+                            <div class="col-xs-2">
+                                <input type="checkbox" id="ChkStatus" style="left: 15px;top: 10px;" name="Status" class="checkdef col-xs-2 editable" >
+                            </div>*@
+                        <div class="col-md-4" style="width:296px;"></div>
+                        <button type="button" class="authorize editable" style="display:none" id="btnLoadActivity">@SystemResource.Fld_loadActivity </button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                        <label for="txtDescE"   class="col-sm-2 col-xs-12 control-label text-right  work_secdu_label   "> @SystemResource.work_fromperiod </label>
+                        <div class="col-sm-3 col-xs-12"  >
+
+                            <input type="time" maxlength="100" class="form-control input-sm addable editable  " name="StartDateTime" id="txtStarttime" />
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="date" maxlength="100" class="form-control input-sm addable editable  " name="StartDateTime" id="txtStartDate" />
+                        </div>
+                        <button type="button" class="authorize  " disabled="disabled" id="btnAutohrize">@SystemResource.Fld_Authorize</button>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.work_toperiod </label>
+                        <div class="col-sm-3 col-xs-12" >
+                            <input type="time" maxlength="100" class="form-control input-sm addable editable  " name="EndDateTime" id="txtEndTime" />
+                        </div>
+
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="date" maxlength="100" class="form-control input-sm addable editable" name="EndDateTime" id="txtEndDate" />
+                        </div>
+                        <button type="button" class="authorize" disabled="disabled" id="btnunauthorized">Un Authorize</button>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right hour_label work_secdu_label "> @SystemResource.wrok_period_Hours </label>
+                        <div class="col-sm-7 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="WorkHours" id="txtWorkHours" />
+                        </div>
+                        <button type="button" class="authorize editable" id="btnCalcHours">Calc Hours</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="ChkStatus" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.Fld_Status </label>
+                        <div class="col-xs-2">
+                            <input type="checkbox" id="ChkStatus" style="top: 10px;" disabled="disabled" name="Status" class="checkdef col-xs-2">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-12 on_prod_section">
+                <div class="form-group">
+                    <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right work_secdu_label "> @SystemResource.work_unprodreason </label>
+                    <div class="col-sm-1 col-xs-12">
+                        <input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="Unp_ReasonCode" id="txtUnp_ReasonCode" />
+                    </div>
+
+                    <div class="info-btn onprod_search">
+                        <button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchUnprodReasons">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                    <div class="col-sm-2  col-xs-12"  >
+                        <input type="text" maxlength="100"class="form-control input-sm" disabled="disabled" name="Unp_DescE" id="txtUnp_DescE" />
+                    </div>
+                    <label for="txtDescE" class="col-sm-1 col-xs-12 control-label text-right work_secdu_label " > @SystemResource.work_unprodhours </label>
+                    <div class="col-sm-2 col-xs-12"  >
+                        <input type="text" maxlength="100" class="form-control input-sm addable editable" name="TotalunProdHours" id="txtTotalunProdHours" />
+                    </div>
+                    @*/<button type="button" class="authorize addable editable close_schedule" name="IsCloseScheduel" id="btnCloseSchdule">@SystemResource.Fld_CloseSchedule </button>*@
+                    <label for="ChkIsMaintenanceWork" class="col-sm-1 col-xs-12 control-label text-right work_secdu_label " style="padding-right:0% "> @SystemResource.Fld_CloseSchedule </label>
+                    <div class="col-xs-2">
+                        <input type="checkbox" id="ChkIsCloseScheduel" name="IsCloseScheduel" class="checkdef col-xs-2 editable" style="height: 0px;margin-top: 12px;">
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-horizontal">
+
+
+
+
+               
+
+
+                <div class="col-xs-12 form-group" style="margin-top:0%;margin-bottom:0%;">
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn Activty_btn" type="button"> Activity </button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn production_labor_btn product_labor" type="button"> @SystemResource.work_labors </button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="col-xs-12 btn btn-info btn_def_item project_item_btn production_equip_btn" type="button"> @SystemResource.sub_equipment </button>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="onproductsec">
+                    <table id="GridProductionActivity"></table>
+                </div>
+
+                <div class="col-xs-12 form-horizontal" id="onproductionlabors">
+                    <table id="Gridproductionlabors"></table>
+                </div>
+
+
+                <div class="col-xs-12 form-horizontal" id="onproductionequipment">
+                    <table id="Gridproductionequipment"></table>
+                </div>
+
+
+
+            </div>
+
+
+        </form>
+    </div>
+    <div>
+        <table></table>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Engineer/02_Operations/OnProductionEntry.js"></script>
+</div>
+
+
+
+<style>
+
+    .on_prod_section {
+        border: 2px solid #0B6D8A !important;
+        border-radius: 3px !important;
+        padding-bottom: 9px !important;
+        padding-left: 5px !important;
+        margin-top: 14px !important;
+        padding-top: 4px !important;
+    }
+    .jsgrid-grid-body {
+        height: 270px !important;
+        max-height: 320px !important;
+        background-color: #ddd;
+        margin-top: -12px;
+    }
+
+    .form-group {
+        margin-top: 4px !important;
+    }
+</style>

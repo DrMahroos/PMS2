@@ -1,0 +1,117 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "SystemSetting";
+    ViewBag.Title = SystemResource.Men_SystemSetting;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+
+    <div class="dir col-xs-12">
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_BraCode </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control inpt-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_MaterialWaste </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_Profit </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <p class="col-xs-12 separate"> Standard Cost Ratios </p>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_LaborOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_LaborPOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_EquipmentOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_EquipmentPOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_MaterialOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_MaterialPOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_SubControlOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_SubControlPOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_ExpensesOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                        <label class="col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_ExpensesPOHRate </label>
+                        <div class="col-md-2 col-xs-4">
+                            <input type="text" class="form-control input-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Definitions/07_SubOtherDefinition/SystemSetting.js"></script>
+</div>
+

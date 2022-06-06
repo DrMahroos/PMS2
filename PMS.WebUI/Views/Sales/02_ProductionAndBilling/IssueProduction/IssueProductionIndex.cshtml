@@ -1,0 +1,183 @@
+﻿@using PMS.WebUI.Resources;
+@{
+    ViewBag.ScreenKey = "IssueProductionIndex";
+    ViewBag.Title = SystemResource.Men_IssueProduction;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 color1">
+        @Html.ControlsButtons()
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_ProdNo </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 150px;">
+                            <input type="text" class="xaddable xeditable form-control input-sm clearable" name="TrNo" id="txtTrNo" >
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info xaddable xeditable" type="button" id="btnSearchProdNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:21.5%">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_Date </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable dateable" name="TrDate" id="txtTrDate">
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_Project </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 150px;">
+                            <input type="text" class="addable editable form-control input-sm clearable"  name="ProjCode" id="txtProjCode">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info addable editable" type="button" id="btnSearchProject">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:21.5%">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Proj_DescL" id="txtProjectName">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_RefNo </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable clearable" name="RefCode" id="txtRefCode">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;">@SystemResource.Fld_Process</label>
+                        <div class="col-xs-2">
+                            @*<input type="checkbox" class="checkdef  col-xs-5 editable" style="margin-left:-13%;height: 0px;margin-top: 12px;" id="ChkProcess">*@
+                            <input type="checkbox" class="checkdef check_billing_cusotmer col-xs-2 addable editable" style="margin-left:-13%;height: 0px;margin-top: 12px;" id="ChkProcess" name="Statuss" value="">
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_Costumer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 150px;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="CustomerID" id="txtCustomerID">
+                        </div>
+                        <div class="col-md-3 col-xs-2">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="Cust_DescE" id="txtCustomerName">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;"> @SystemResource.Fld_FromDate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" name="FromDate" id="txtFromDate">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right issueprodlabel" style="padding-right:0%;"> @SystemResource.Fld_To </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5 issueproduction_to">
+                            <input type="date" class="form-control input-sm addable editable" name="ToDate" id="txtToDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group col-sm-12"style="margin-bottom:1%;">
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_WorkDescription </label>
+                        <div class="col-sm-7 col-xs-5" style="    width: 706px;">
+                            <textarea class="form-control input-sm addable editable" name="WorkDiscription" id="txtWorkDiscription" rows="3"></textarea>
+                        </div>
+                       
+                    <div class="form-group"> 
+                       
+                         
+                         
+                            <button type="button" class="btn btn-warning addable editable generatproductbtn" id="btnGenerateProduction"> @SystemResource.Fld_GenerateProduction </button>
+                            <button type="button" class="btn btn-warning rejectremainingbtn" id="btnRejectremaining" disabled="disabled" style="background-color:#cb8725!important;border-color:#f0ad4e!important"> Open Production </button>
+                        
+                    </div>
+                        </div>
+                </div>
+                <style>
+                    #grid {
+                        height: 320px !important;
+                    }
+
+                    .jsgrid-grid-body {
+                        height: 300px !important;
+                        margin-top: -13px;
+                    }
+                    .jsgrid-table {
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        overflow: scroll;
+                    }
+                </style>
+                <table id="Grid"></table>
+                <div class="form-horizontal">
+                    <div class="form-group col-md-6 " style="margin-bottom:1%;">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Remarks </label>
+                        <div class="col-xs-10">
+                            <textarea class="form-control input-sm addable editable" name="Remarks" id="txtRemarks" rows="3"></textarea>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group padgrob">
+
+
+                        <label class="col-sm-1 col-xs-12 control-label text-right padlebel"> @SystemResource.Fld_ProdAmount </label>
+                        <div class="col-sm-2 col-xs-5 padtext">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="ProdTotal" id="txtProdTotal">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right" padlebel> @SystemResource.Fld_DiscountPrc  </label>
+                        <div class="col-sm-2 col-xs-5 padtext">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="DiscountPrc" id="txtDiscountPrc">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right padlebel"> @SystemResource.Fld_DiscountAmount </label>
+                        <div class="col-sm-2 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="Discount" id="txtDiscount">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right padlebel"> @SystemResource.Fld_NetAmount </label>
+                        <div class="col-sm-2 col-xs-5">
+                            <input type="text" class="form-control input-sm" disabled="disabled" name="NetAmount" id="txtNetAmount">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="clear"></div>
+    </div>
+    <script src="~/ClientApp/JsGrid.js"></script>
+    @Html.Partial("../Partial/Navigator")
+    <script src="~/ClientApp/Components/Sales/02_ProductionAndBilling/IssueProduction.js"></script>
+</div>
+
+
+<style>
+    .padgrob {
+        padding-top: 15px;
+    }
+    .padlebel {
+        padding: 0px 0 0 16px;
+    }
+
+   
+    .padtext{
+        padding-bottom:4px;
+    }
+    #btnGenerateProduction {
+        float: left;
+        margin-left: 100px;
+    }
+
+    .margbuttm {
+        margin-bottom: 1%;
+    }
+</style>
+
+
+
+
+
+

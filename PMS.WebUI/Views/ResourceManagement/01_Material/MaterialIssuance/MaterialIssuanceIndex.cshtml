@@ -1,0 +1,148 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "MaterialIssuanceIndex";
+    ViewBag.Title = SystemResource.Men_MaterialIssuance;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12" style="padding-bottom:30px">
+
+
+				<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_issueno</label>
+                        <div class="col-sm-2 col-xs-12" style="width:130px">
+                            <input type="text" maxlength="100" class="form-control input-sm addable editable" name="TrNo" id="txtTrNo" />
+                            <input type="hidden" maxlength="100" class="form-control input-sm" name="IssueMaterialId" />
+                            <input type="hidden" maxlength="100" class="form-control input-sm" name="ScheduleId" />
+                        </div>
+
+                        <div class="info-btn col-md-1">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchIssueNo">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right" style="width: 95px;">@SystemResource.Fld_Process</label>
+
+                        <div class="col-xs-2">
+                            <input type="checkbox" class="checkdef col-xs-2" style="margin-left:-13%;height: 0px;margin-top: 12px;" name="Status" id="ChkStatus">
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_date</label>
+                            <div class="col-sm-6 col-xs-12">
+                                <input type="date" maxlength="100" class="form-control input-sm addable editable" name="TrDate" id="txtTrDate" />
+                            </div>
+                        </div>
+                    </div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_requestno</label>
+						<div class="col-sm-1 col-xs-12" style="width:130px">
+							<input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="ReqMat_TrNo" id="txtReqMat_TrNo" />
+							<input type="hidden" maxlength="100" class="form-control input-sm" disabled="disabled" name="RequestMaterialId" />
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_project</label>
+						<div class="col-sm-1 col-xs-12" style="width:130px">
+							<input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="Prj_ProjectCode" id="txtPrj_ProjectCode" />
+							<input type="hidden" maxlength="100" class="form-control input-sm" name="ProjectID" />
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12 ">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" name="Prj_DescE" id="txtPrj_DescE" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_phase</label>
+						<div class="col-sm-1 col-xs-12" style="width:130px">
+							<input type="text" maxlength="100" class="form-control input-sm" disabled="disabled" name="Phase_ProjectPhaseCode" id="txtPhase_ProjectPhaseCode" />
+							<input type="hidden" maxlength="100" class="form-control input-sm" name="ProjectPhaseID" />
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12 ">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" name="Phase_DescE" id="txtPhase_DescE" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_mat_issue_remarks</label>
+						<div class="col-sm-9 col-xs-12">
+							<textarea type="text" maxlength="100" class="form-control input-sm addable editable" name="Remarks" id="txtRemarks"></textarea>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-xs-12 form-horizontal" id="materialissuesec" style="height: 400px;">
+					<style>
+						.jsgrid-grid-body {
+							height: 470px!important;
+							max-height: 470px!important;
+						}
+					</style>
+
+					<div class="" style="height: 370px;overflow:unset;">
+						<table id="parent"></table>
+					</div>
+				</div>
+
+				<div class="form-horizontal" >
+					<div class="form-group">
+						@*<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_Bill_material_total</label>
+						<div class="col-sm-2 col-xs-12 pull-right">
+							<input type="text" maxlength="20" class="form-control input-sm addable editable" name="offerno" id="offerno" />
+						</div>*@
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+		</form>
+	</div>
+	<div>
+		<table></table>
+	</div>
+	<script src="~/ClientApp/JsGrid.js"></script>
+		@Html.Partial("../Partial/Navigator")
+		<script src="~/ClientApp/Components/ResourceManagement/01_Material/MaterialIssuance.js"></script>
+</div>
+
+<style>
+    .jsgrid-grid-body {
+        height: 330px !important;
+        max-height: 550px !important;
+    }
+
+    .jsgrid-insert-row > .jsgrid-cell {
+        background: transparent !important;
+    }
+</style>

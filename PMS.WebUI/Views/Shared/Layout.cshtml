@@ -1,0 +1,776 @@
+﻿<!DOCTYPE html>
+@using PMS.WebUI.Resources;
+@using System.Web.Optimization;
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href="~/css/background.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    @*<link rel="stylesheet" href="../css/bootstrap-arabic.min.css">*@
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    @Styles.Render("~/Bundles/css");
+
+    <link href="~/Scripts/JsGrid/jsgrid.min.css" rel="stylesheet" />
+    <link href="~/Scripts/JsGrid/jsgrid-theme.min.css" rel="stylesheet" />
+    <style>
+        * {
+            outline: none;
+        }
+
+        .GridButtonLabel {
+            background-color: darkgray;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .JsGridHeaderCenter {
+            text-align: center;
+        }
+        .JsGridHeaderRight {
+            text-align: right;
+        }
+        .JsGridHeaderLeft {
+            text-align: left;
+        }
+
+        .TransparentButton {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+        }
+
+        .ui-iggrid-tablebody tr {
+            cursor: pointer;
+        }
+
+        .HiddenRow {
+            display: none !important;
+        }
+
+        #SearchBox {
+            z-index: 1041;
+            position: fixed;
+            padding-top: 19px;
+            background-color: white;
+            border-radius: 15px;
+            -moz-box-shadow: black 5px 4px 18px 0px;
+            -webkit-box-shadow: black 5px 4px 18px 0px;
+            box-shadow: black 5px 4px 18px 0px;
+        }
+
+        thead[role="rowgroup"] {
+            background-color: #d37db9;
+        }
+
+        .ui-widget-header {
+            background-color: #d37db9;
+            text-align: center !important;
+        }
+
+        .hiiden {
+            display: none;
+        }
+
+        #SearchGrid_container {
+            width: 100% !important;
+        }
+
+        .form-control {
+            padding: 3px !important;
+        }
+    </style>
+    <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="hidden" id="GetAPIUrl" name="name" value="@System.Configuration.ConfigurationManager.AppSettings["ServiceUrl"]" />
+    <input type="hidden" id="GetActionUrl" name="name" value="@Url.Action("GetActionUrl","ClientTools")" />
+    <input type="hidden" id="ModelPreview" name="name" value="" />
+    <input type="hidden" id="SearchControlName" name="name" value="" />
+    <header class="container">
+        <div class="row">
+            <div class="title1 col-sm-5 col-xs-4" style="padding:0px;">
+                <div class="back_sys" style="display:inline-block;">
+                    <h1 class="h1_sys"><span> </span><span id="AppNameSpan">Sales</span></h1>
+                </div>
+                <input type="hidden" id="imgFavUrl" name="name" value="" />
+                <span style="display:inline-block;" id="spnFav">
+                    <a href="#">
+                        <img id="favImage" src="~/images/favourit.gif" width="25" height="21" alt="">
+                    </a>
+                </span>
+            </div>
+            <div class="user_im col-sm-5 col-xs-4 text-right" style="padding:0px;">
+                <div class="user_name text-right" data-toggle="modal" data-target="#user_setting"><span><img src="~/images/profile.png" alt=""></span><span id="SpanUserName"></span> </div>
+            </div>
+            <div class="log_in col-sm-2 col-xs-4 text-center" style="padding:0px;">
+                <a href="#" id="LanguageButton"><img src="~/images/lang.png" width="40" style="margin-top:2px;" alt=""></a>
+                <a href=@(PMS.ServiceConnector.Tools.SessionManager.SessionRecord.Language=="ar"? "../Help/HelpAr.html" : "../Help/HelpEn.html") target="_blank">
+                    <img src="~/images/help.png" width="40" style="margin-top:2px;" alt="">
+                </a>
+
+
+            </div>
+        </div>
+    </header>
+
+    <table id="myElement"></table>
+    @*Pobup Custom For Screens*@
+    <div class="help-pop modal fade model_shared" id="myModalScreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalContentScreen">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabelScreen"></h5>
+                </div>
+                <div class="modal-body  content content-8" id="modalScreen">
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">@SystemResource.Fld_Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-pop modal fade model_shared" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">@SystemResource.Fld_Help</h5>
+                </div>
+                <div class="modal-body  content content-8" id="modalHelp">
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">@SystemResource.Fld_Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--..............................user setting..................................................-->
+    <div class="modal fade" id="user_setting" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">إعدادات المستخدم</h4>
+                </div>
+                <div class="user_1">
+                    <div class="modal-body">
+                        <table class="table table-bordered user_setting table-striped">
+                            <tr>
+                                <td>النظام</td>
+                                <td>
+                                    <span id="infoSysName"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>النظام الفرعى</td>
+                                <td>
+                                    <span id="infoSubSysName"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>الشركة </td>
+                                <td>
+                                    <span id="infoCompanyName"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>اسم الفرع</td>
+                                <td>
+
+                                    <table width="100%" border="0">
+                                        <tr>
+                                            <td>
+                                                <select type="password" class="form-control input-sm" id="ddlBrachs" disabled="disabled">
+                                                    <option>الفرع الاول</option>
+                                                    <option>الفرع الثانى</option>
+                                                </select>
+                                            </td>
+                                            <td><button class="btn btn-primary btn-xs" id="btnEditUserBranchs">تعديل <i class="glyphicon glyphicon-pencil"></i></button></td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>سنة الدخول</td>
+                                <td>
+                                    <span id="infoCurrentYear"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>اسم المستخدم</td>
+                                <td>
+                                    <span id="infoUserCode"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="btnChangeBranch" class="btn btn-primary">تغيير الفرع</button>
+                        <button type="button" class="btn btn-danger change_btn">تغيير كلمة المرور</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">اغلاق</button>
+                    </div>
+                </div>
+                <div class="user_2">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-4 control-label">كلمة المرور القديمة</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="txtOldPassword">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-4 control-label">كلمة المرور الجديدة</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="txtNewPassword">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" id="btnChangePassword" class="btn btn-danger">تاكيد</button>
+                        <button type="button" class="btn btn-primary btn_back">رجوع</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">اغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--.............................inner page..............-->
+
+    <table id="myElement"></table>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">المساعدة</h4>
+                </div>
+                <div class="modal-body content content-8">
+                    لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--..............................delete popup.....myModal2.............................................-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">حذف!!</h4>
+                </div>
+                <div class="modal-body" style="max-height:200px; overflow:auto;">
+                    <div class="col-xs-7"> <h3>هل تريد حقا الحذف ؟</h3></div>
+
+                    <div class="col-xs-5 text-center"><img src="../images/delete_pop.gif" width="120px;" alt=""></div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">تاكيد</button>
+
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--..............................MessageBox dialog..................................................-->
+    <div class="modal fade" id="MessageBoxDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="MessageBoxTitle">حذف!!</h4>
+                </div>
+                <div class="modal-body" style="max-height:200px; overflow:auto;">
+                    <div class="col-xs-7"> <h3 id="MessageBoxMessage">هل تريد حقا الحذف ؟</h3></div>
+
+                    <div class="col-xs-5 text-center">
+                        @*<img src="../images/delete_pop.gif" width="120px;" alt="">*@
+                        <i class="glyphicon btn-danger"></i>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="MessageBoxOk" class="btn btn-danger">@SystemResource.Fld_Ok</button>
+
+                    <button type="button" id="MessageBoxCancel" class="btn btn-warning" data-dismiss="modal">@SystemResource.Fld_Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--..............................search..................................................-->
+    <div id="SearchBox" class=" fade search_box_popup" style="display:none;">
+        <div style="background-color:#0b6d8a; position:absolute;top:0px;left:0px;width:100%;height:40px;cursor:move">
+            <input type="button" onclick="$('#SearchBox').modal('hide');" id="btnCloseSearch" name="name" value="x" class="btn btn-danger" style="float:right;" />
+            <h4 id="searchTitle" class="col-xs-3 searchTitleStyle" style="color: #fff;line-height: 20px;"></h4>
+        </div>
+        <div style="overflow-x:scroll;overflow-y:scroll; margin-top:20px;width:100%;left:0px;left: 0px; position: absolute; width: 100%; height: 85%;">
+            <div id="tableDiv" class="table table-bordered table-hover" style="width:100%;"></div>
+        </div>
+    </div>
+    <!--..............................print popup..................................................-->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">الطباعة</h4>
+                </div>
+                <div class="modal-body" style="max-height:200px; overflow:auto;">
+                    <div class="col-xs-7"> <h3>هل تريد حقا الطباعة ؟</h3></div>
+
+                    <div class="col-xs-5 text-center"><img src="../images/printer.gif" width="120px;" alt=""></div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">تاكيد</button>
+
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------...................animation selectied.................-->
+    <link href="~/css/lightbox.min.css" rel="stylesheet" />
+    <script src="~/js/lightbox-plus-jquery.min.js"></script>
+    <!--Img Popup-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body" id="btnImgBody">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <select name="effects" id="effectTypes_shake" style="display:none;">
+        <option value="shake">Shake</option>
+    </select>
+
+    <select name="effects" id="effectTypes_puff" style="display:none;">
+        <option value="puff">Puff</option>
+    </select>
+    <select name="effects" id="effectTypes_refresh" style="display:none;">
+        <option value="slide">Slide</option>
+    </select>
+
+    @Scripts.Render("~/Bundles/jquery")
+    @Scripts.Render("~/Bundles/ClientApp")
+    @*@Html.Partial("../Partial/ImagePopup")*@
+    <div class="container margin yourdiv">
+        @RenderBody()
+    </div>
+    <div class="clear"></div>
+    @*TreeView*@
+    <div class="modal fade" id="TreeModalForm" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 id="searchTitle" class="modal-title text-primary"></h4>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label style="float:right;">بحث بالكود</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="searchCode" />
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary" id="btnSearch" style="float:right;">بحث</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-10">
+                                <input type="text" class="form-control input-sm" disabled="disabled" id="txt_treeCode">
+                            </div>
+                            <div class="col-md-3 col-xs-10">
+                                <input type="text" class="form-control input-sm" disabled="disabled" id="txt_treeName">
+                            </div>
+                            <div class="col-xs-1">
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary" id="btn_Seleted_Data" data-dismiss="modal">أختيار</button>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <span id="selectedId" class="alert alert-info" style="display:none;"></span>
+                    <ul id="treeViewElement"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--................................more option..................-->
+    <div id="dir"></div>
+    <footer>
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div id="dir_2" class="col-xs-1"></div>
+
+                <label for="inputPassword" class="col-md-1 col-xs-2 control-label text-right"><img src="~/images/bottom_save.png" width="29" height="29" alt=""></label>
+                <div class="col-md-2 col-xs-2">
+                    <input type="text" name="CreatedAt" class="form-control input-sm" id="txtCreatedAt" disabled style="margin-top:8px;">
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input type="text" name="CreatedBy" class="form-control input-sm" id="txtCreatedBy" disabled style="margin-top:8px;">
+                </div>
+
+                <label for="inputPassword" class="col-md-1 col-xs-2 control-label text-right"><img src="~/images/bottom_icon.png" width="29" height="29" alt=""></label>
+                <div class="col-md-2 col-xs-2">
+                    <input type="text" name="UpdatedAt" class="form-control input-sm" id="txtUpdatedAt" disabled style="margin-top:8px;">
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input type="text" name="UpdatedBy" class="form-control input-sm" id="txtUpdatedBy" disabled style="margin-top:8px;">
+                </div>
+            </div>
+
+        </div>
+        <span id="timeLeft" class="admin-name display_none" style="color: red;font-weight: bold;     margin-right: 76%;font-size: 20px;"></span>
+
+        @*------------------------------------------------------NewSession---------------------------------------*@
+        @*<label id="timeLeft" style="color: red" class=" "></label>*@
+        <input id="idSession" value="10" class="display_none" />
+        <select id="SelectSession" class="display_none">
+            <option value="0">off</option>
+            <option value="1">on</option>
+            <option value="2">out</option>
+        </select>
+        @*---------------------------------------------------------------------------------------------------------------*@
+        <div class="clear"></div>
+
+    </footer>
+
+    <script src="~/ClientApp/App.js"></script>
+
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap.js"></script>
+    <script src="~/ClientApp/DataTable.js"></script>
+
+    @Scripts.Render("~/Bundles/bootstrap");
+    @Scripts.Render("~/Bundles/ClientApp2");
+    @Html.Partial("../Partial/FavoriteList");
+    @RenderSection("scripts", required: false);
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--.......................................panel...........................-->
+    <script src="~/js/jquery.slidepanel.js"></script>
+    <script src="~/Scripts/jsgrid/jsgrid.js"></script>
+    <script src="~/js/jquery.panelslider.min.js"></script>
+    @Html.Partial("../Partial/ReportsPopup")
+    <script>
+
+        $(document).ready(function () {
+
+            $('#left-panel-link').panelslider();
+            $('#close-panel-bt').click(function () {
+                $.panelslider.close();
+            });
+
+            $(".btn-warning").click(function () {
+                $("#SearchControlName").val(this.id);
+            });
+            $(".search_btn").click(function () {
+                $("#SearchControlName").val(this.id);
+            });
+
+            var tempLang = sessionStorage.getItem("temp_lang");
+
+            if (tempLang == "ar") {
+                RemoveStyleSheet("bootstrap.min");
+                AppendStyleSheet("bootstrap-arabic.min");
+                AppendStyleSheet("arabic-style");
+            }
+            else {
+                RemoveStyleSheet("bootstrap-arabic.min");
+                RemoveStyleSheet("arabic-style");
+                AppendStyleSheet("bootstrap.min");
+            }
+
+            //$("#SearchBox").draggable();
+            App.Startup();
+
+            $("input[type=number]").on("keyup change mouseenter click", function () {
+
+                var val = parseFloat($(this).val());
+                var max = parseFloat($(this).attr("max"));
+                if (val > max) {
+                    $(this).val(max);
+                }
+            });
+
+            $('.item').hover(
+                function () {
+                    var $this = $(this);
+                    expand($this);
+                },
+                function () {
+                    var $this = $(this);
+                    collapse($this);
+                }
+            );
+
+            var current_effect = 'win8';
+            $('.save_ro').click(function () {
+                setTimeout(function () {
+                    $(".waitMe").removeAttr("style").fadeOut(200);
+                }, 4000);
+            });
+
+            function run_waitMe(effect) {
+                $('.yourdiv').waitMe({
+                    effect: effect,
+                    text: 'Please wait...',
+                    bg: 'rgba(255,255,255,0.7)',
+                    color: '#000',
+                    sizeW: '',
+                    sizeH: ''
+                });
+            }
+        });
+
+        function expand($elem) {
+            var angle = 0;
+            var t = setInterval(function () {
+                if (angle == 1440) {
+                    clearInterval(t);
+                    return;
+                }
+                angle += 40;
+                $('.link', $elem).stop().animate({ rotate: '+=-40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '110px' }, 1000)
+                .find('.item_content').fadeIn(400, function () {
+                    $(this).find('p').stop(true, true).fadeIn(600);
+                });
+        }
+        function collapse($elem) {
+            var angle = 1440;
+            var t = setInterval(function () {
+                if (angle == 0) {
+                    clearInterval(t);
+                    return;
+                }
+                angle -= 40;
+                $('.link', $elem).stop().animate({ rotate: '+=40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '37px' }, 1000)
+                .find('.item_content').stop(true, true).fadeOut().find('p').stop(true, true).fadeOut();
+        }
+        function AppendStyleSheet(fileName) {
+            var lnk = document.createElement('link');
+            lnk.href = "../css/" + fileName + ".css";
+            lnk.rel = 'stylesheet';
+            lnk.type = 'text/css';
+            var $head = $("head");
+            var $headlinklast = $head.find("link[rel='stylesheet']:first");
+            $headlinklast.after(lnk);
+            //document.getElementsByTagName("head")[0].appendChild(lnk);
+        }
+        function RemoveStyleSheet(fileName) {
+            var href = "../css/" + fileName + ".css";
+            $("link[rel=stylesheet][href~='" + href + "']").remove();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-slidepanel]').slidepanel({
+                orientation: 'right',
+                mode: 'push'
+            });
+        });
+
+        var options = {
+            orientation: 'left', //default left, available: top, right, bottom, left
+            mode: 'push', //default push, available: push, overlay
+            static: false, //default false, available: true, false
+        }
+
+    </script>
+
+    <script>
+        $('.item').hover(
+            function () {
+                var $this = $(this);
+                expand($this);
+            },
+            function () {
+                var $this = $(this);
+                collapse($this);
+            }
+        );
+        function expand($elem) {
+            var angle = 0;
+            var t = setInterval(function () {
+                if (angle == 1440) {
+                    clearInterval(t);
+                    return;
+                }
+                angle += 40;
+                $('.link', $elem).stop().animate({ rotate: '+=-40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '110px' }, 1000)
+                .find('.item_content').fadeIn(400, function () {
+                    $(this).find('p').stop(true, true).fadeIn(600);
+                });
+        }
+        function collapse($elem) {
+            var angle = 1440;
+            var t = setInterval(function () {
+                if (angle == 0) {
+                    clearInterval(t);
+                    return;
+                }
+                angle -= 40;
+                $('.link', $elem).stop().animate({ rotate: '+=40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '37px' }, 1000)
+                .find('.item_content').stop(true, true).fadeOut().find('p').stop(true, true).fadeOut();
+        }
+    </script>
+    <!-- ..................................panels...................................-->
+    <script>
+        $('#left-panel-link').panelslider();
+        $('#close-panel-bt').click(function () {
+            $.panelslider.close();
+        });
+
+        //side: 'left', // panel side: left or right
+    </script>
+    <!-- ..................................loading...................................-->
+    <script>
+        $(function () {
+
+            var current_effect = 'win8';
+
+            $('.save_ro').click(function () {
+                run_waitMe(current_effect);
+                setTimeout(function () {
+                    $(".waitMe").removeAttr("style").fadeOut(200);
+                }, 4000);
+            });
+            function run_waitMe(effect) {
+                $('.yourdiv').waitMe({
+                    effect: effect,
+                    text: 'Please wait...',
+                    bg: 'rgba(255,255,255,0.7)',
+                    color: '#000',
+                    sizeW: '',
+                    sizeH: ''
+                });
+            }
+            $(document).ready(function () {
+                $("#LanguageButton").click(function () {
+                    window.location.reload();
+                });
+            });
+        });
+    </script>
+    @*//------------------------------------------------------NewSession---------------------------------------*@
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>*@
+    <script>
+        debugger
+        var timeInSecondsAfterSessionOut = 0;
+        $(function () {
+            $("body").on('mousemove', function () {
+                $("#timeLeft").addClass('display_none');
+                ResetThisSession();
+            });
+        });
+        $('#SelectSession').on('change', function () {
+            timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+            $("#timeLeft").html(timeInSecondsAfterSessionOut);
+        });
+        timeInSecondsAfterSessionOut = Number($('#idSession').val()) * 60; // change this to change session time out (in seconds).
+        $("#timeLeft").html(timeInSecondsAfterSessionOut);
+        var secondTick = 0;
+        StartThisSessionTimer();
+        function ResetThisSession() {
+            secondTick = 0;
+        }
+        var SessionBoxOk = document.getElementById("SessionBoxOk");
+        var SessionBoxCancel = document.getElementById("SessionBoxCancel");
+        function StartThisSessionTimer() {
+            secondTick++;
+            var timeLeft = ((timeInSecondsAfterSessionOut - secondTick) / 60).toFixed(0); // in minutes
+            timeLeft = timeInSecondsAfterSessionOut - secondTick; // override, we have 30 secs only
+            if (timeLeft == 9) {
+                $("#timeLeft").removeClass('display_none')
+            }
+            $("#timeLeft").html(timeLeft);
+            if (secondTick > timeInSecondsAfterSessionOut) {
+                clearTimeout(tick);
+                var chak = false;
+                $("#modalSession").modal("show");
+                $("#timeLeft").addClass('display_none');
+                $("#" + SessionBoxOk.id).click(() => {
+                    $("#timeLeft").addClass('display_none')
+                    secondTick = 0;
+                    $("#modalSession").modal("hide");
+                    chak = true;
+                });
+                $("#" + SessionBoxCancel.id).click(() => {
+                    $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                    $("#modalSession").modal("hide");
+                    chak = false;
+                });
+                setTimeout(function () {
+                    if (chak == false) {
+                        $('#SelectSession option[value=2]').prop('selected', 'selected').change();
+                    }
+                }, 10000);
+            }
+            tick = setTimeout("StartThisSessionTimer()", 1000);
+        }
+    </script>
+    @*//---------------------------------------------------------------------------------------------------------------*@
+
+
+<script src="~/ClientApp/Partial/Sessiontimeout.js"></script>
+
+</body>
+</html>

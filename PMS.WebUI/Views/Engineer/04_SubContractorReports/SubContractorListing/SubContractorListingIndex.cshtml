@@ -1,0 +1,91 @@
+﻿@using PMS.WebUI.Resources
+<div class="row">
+	<div class="col-xs-12 color1">
+		
+	</div>
+	<div class="clear"></div>
+    <label for="rpTitle" style="display:none" id="rpTitle">@SystemResource.Men_SubContractorListing</label>
+	<form>
+    <div class="col-xs-12">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.work_fromsubcontr </label>
+                <div class="col-sm-1 col-xs-12">
+                    <input type="hidden" class="form-control input-sm" name="fromsubcontrID" id="fromsubcontrID">
+                    <input type="text" maxlength="100" class="form-control input-sm addable editable" name="fromsubcontrCodeRP" id="fromsubcontrCodeRP"disabled />
+                </div>
+
+                <div class="info-btn col-md-1" style="width: 39px;">
+                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butfromsubcontrRP" name="butfromsubcontrRP">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+
+                <div class="col-md-2 col-sm-4 col-xs-12" style="width: 230px;">
+                    <input type="text" maxlength="20" class="form-control input-sm addable editable" name="fromsubcontrNameRP" id="fromsubcontrNameRP"disabled />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.work_tosubcontr</label>
+                <div class="col-sm-1 col-xs-12">
+                    <input type="hidden" class="form-control input-sm" name="tosubcontrID" id="tosubcontrID">
+                    <input type="text" maxlength="100" class="form-control input-sm addable editable" name="tosubcontrCodeRP" id="tosubcontrCodeRP"disabled />
+                </div>
+
+                <div class="info-btn col-md-1" style="width: 39px;">
+                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="buttosubcontrRP" name="buttosubcontrRP">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+
+                <div class="col-md-2 col-sm-4 col-xs-12" style="width: 230px;">
+                    <input type="text" maxlength="20" class="form-control input-sm addable editable " name="tosubcontrNameRP" id="tosubcontrNameRP"disabled />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.def_scope</label>
+                <div class="col-sm-1 col-xs-12">
+                    <input type="hidden" class="form-control input-sm" name="scopeCodeID" id="scopeCodeID">
+                    <input type="text" maxlength="100" class="form-control input-sm addable editable" name="scopeCodeRP" id="scopeCodeRP" disabled/>
+                </div>
+
+                <div class="info-btn col-md-1" style="width: 39px;">
+                    <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butscopeRP" name="butscopeRP">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+
+                <div class="col-md-2 col-sm-4 col-xs-12" style="width: 230px;">
+                    <input type="text" maxlength="20" class="form-control input-sm addable editable " name="scopeNameRP" id="scopeNameRP" disabled/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 form-horizontal" id="subcontractorlisting">
+            <style>
+                .jsgrid-grid-body {
+                    height: 450px !important;
+                    background-color: #ddd;
+                }
+            </style>
+
+            <table id="subcontractorlistinggrid"></table>
+        </div>
+
+    </div>
+</form>
+	
+
+    <script src="~/ClientApp/Components/Engineer/04_SubContractorReports/SubContractorListing.js"></script>
+    
+</div>
+
+
+

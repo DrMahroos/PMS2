@@ -1,0 +1,100 @@
+﻿@using PMS.WebUI.Resources
+
+<div class="row">
+    <div class="clear"></div>
+    <div class="col-xs-12 dir" id="effects">
+
+
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="ToDate" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_todate </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="date" class="form-control input-sm addable editable" name="ToDate" id="ToDate">
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtFromProject" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpFromproject </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtFromProject">
+                        </div>
+                        <label for="txtToProject" class="col-sm-2 col-xs-12 control-label text-right" style="width: 90px;"> @SystemResource.Eng_Fld_projectexpToproject </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm addable editable" style="width:;" name="ToProject" id="txtToProject">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtSalesCode1" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_ProjectStatussalescode </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 111px;">
+                            <input type="hidden" name="txtSalesCodeID" id="txtSalesCodeID">
+                            <input type="text" class="form-control input-sm addable editable" name="ProjectCode" id="txtProjectCode" disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butSalesCode" name="butSalesCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5" style="width: 330px;">
+                            <input type="text" class="form-control input-sm addable editable" name="txtSalesDescription" id="txtSalesDescription"disabled>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtCustomerClass" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_ProjectStatuscustomerclass </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 111px;">
+                            <input type="hidden" class="form-control input-sm" name="CustomerCategoryID" id="CustomerCategoryID">
+                            <input type="text" class="form-control input-sm addable editable"  name="CustomerCatCode" id="CustomerCatCode"disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butCustomerClass" name="butCustomerClass">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5" style="width: 330px;">
+                            <input type="text" class="form-control input-sm addable editable" style="width:;" name="txtCustomerClassDescription" id="txtCustomerClassDescription"disabled>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtCustomer" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Rep_ProjectStatuscustomer </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5" style="width: 111px;">
+                            <input type="hidden" class="form-control input-sm" name="CustomerID" id="CustomerID">
+                            <input type="text" class="form-control input-sm addable editable" name="CustomerCode" id="CustomerCode"disabled>
+                        </div>
+                        <div class="info-btn col-md-1" style="width: 56px;">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnCustomer" name="btnCustomer">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-5" style="width: 330px;">
+                            <input type="text" class="form-control input-sm addable editable" name="CustomerDescription" id="CustomerDescription"disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div>
+        <table></table>
+    </div>
+</div>
+<script src="~/ClientApp/Components/Engineer/05_Reports/ProjectStatus.js"></script>

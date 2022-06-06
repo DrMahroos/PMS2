@@ -1,0 +1,385 @@
+﻿@using PMS.WebUI.Resources;
+@{
+	ViewBag.ScreenKey = "CustomersIndex";
+	ViewBag.Title = SystemResource.Men_Customers;
+	Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .display_none{
+        display:none!important;
+    }
+
+    .navbar-inverse {
+        background-color: #f4f5da !important;
+        border-color: #f4f5da !important;
+        color: #0a0a0a !important;
+    }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #0a0a0a;
+        }
+
+    .Actiev {
+        font-weight: bold !important;
+        color: #0a0a0a !important;
+        background-color: #e8eac2;
+        border: inset !important;
+        padding:0px!important
+    }
+
+
+    .navbar {
+        margin-bottom: 0px !important;
+    }
+
+    .border_li {
+        border: outset 1px;
+    }
+    .form-group {
+        margin-top: 5px!important;
+    }
+    .catin {
+       width: 22% !important;
+    }
+
+    .stylelep {
+        color: #0a0a0a !important;
+        padding: 10px 0px 0px 0px;
+        height: 46px;
+        text-align: center;
+    }
+    .fontitm7Processes {
+        float: left;
+        margin: 5px 0px 0px -20px !important;
+        font-size: 25px !important;
+        position: absolute;
+    }
+</style>
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+    <div class="col-xs-12 dir" id="effects">
+        <div style="height:5px"></div>
+        <div class="clear"></div>
+        <form>
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_CustomerCode </label>
+                        <div class="col-md-2 col-sm-4 col-xs-5">
+                            <input type="number" class="form-control input-sm" disabled="disabled" id="txtCustomerCode" name="CustomerCode">
+                            <input type="hidden" class="form-control input-sm" name="CustomerID" id="txtCustomerID">
+                        </div>
+                        <div class="info-btn">
+                            <button class="btn btn-info xaddable xeditable" type="button" id="btnCustomerCode" name="btnCustomerCode">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 hidden-xs hidden-sm" style="width:13%;">
+                        </div>
+                        <div class="col-md-1 col-sm-2 col-xs-3">
+                            <input type="checkbox" class="checkdef checkdef1 col-xs-5 editable addable" style="" id="txtIsActive" name="IsActive" value="">
+                        </div>
+                        <div class="col-md-1 col-sm-2 col-xs-3">
+                            <input type="checkbox" class="checkdef checkdef2 col-xs-5 editable addable" style="" id="txtVatType" name="VatType" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right "> @SystemResource.Fld_DescE  </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable " id="txtDescE" name="DescE">
+                        </div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_Mobile </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtMobile" name="Mobile">
+                        </div>
+                        <label class="col-sm-1 col-xs-12 control-label text-right"> @SystemResource.Fld_Temporary </label>
+                        <div class="col-md-1 col-sm-2 col-xs-3">
+                            <input type="checkbox" class="checkdef  col-xs-5 editable addable" style="" id="txtIsTemporary" name="IsTemporary" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_DescA </label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtDescA" name="DescA">
+                        </div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_Email </label>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtEmail" name="Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right">@SystemResource.Fld_telephone</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtContactTel" name="ContactTel">
+                        </div>
+                        <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right">  @SystemResource.Fld_telephone  </label>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtTel1" name="Tel1">
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtTel2" name="Tel2">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-xs-12 control-label text-right ">@SystemResource.Fld_ContPer</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtContactPerson" name="ContactPerson">
+                        </div>
+                        <label class="col-md-1 col-xs-12 control-label text-right"> @SystemResource.Fld_fax </label>
+                        <div class="col-md-2 col-xs-12">
+                            <input type="text" class="form-control input-sm addable editable" id="txtFax" name="Fax">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Men_CustomerCategory </label>
+                        <div class="col-md-1 col-sm-4 col-xs-5">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" id="txtCustomercCode" name="CustomercCode">
+                            <input type="hidden" class="clearable" id="txtCustomerCategoryID" name="CustomerCategoryID">
+                        </div>
+                        <div class="info-btn">
+                            <button type="button" class="btn btn-info addable editable" id="btnCustomerCat" name="btnCustomerCat">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-5" style="width:22%;">
+
+                            <input type="text" class="form-control inpt-sm clearable" disabled="disabled" id="txtCustomerName1">
+                        </div>
+                        <div>
+                            <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right hidden">@SystemResource.Fld_CRNumber </label>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control input-sm addable editable hidden" maxlength="14" id="txtCrNo" name="CrNo">
+                            </div>
+                            <div class="col-md-1 col-sm-2 col-xs-6">
+                                <input type="text" style="display:none;" class="form-control input-sm clearable" disabled="disabled" id="txtSalesEngineerId" name="SalesEngineerId">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right">Sales Type</label>
+
+                        <div class="col-md-2 col-sm-2 col-xs-6" >
+                            <select id="drpSalesTp" name="" class="form-control  clearable" disabled="disabled"><option value="null">- Select -</option><option value="1">Retail Sale</option><option value="2">wholesale</option></select>
+                        </div>
+
+                        
+                        <label class="col-md-2 col-sm-4 col-xs-12 control-label text-right" style="padding-left:0px;padding-right:0px">CustRegistration.N</label>
+
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <input id="txt_RefCode2" disabled="disabled" name="RefCode2" type="number" class="form-control input-sm text_Display">
+                        </div>
+
+                    </div>*@
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_BraCode </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5">
+                                <input type="number" class="form-control input-sm clearable" disabled="disabled" name="BraCode" id="txtBraCode">
+                            </div>
+                            <div class="info-btn">
+                                <button type="button" class="btn btn-info src-btn btn btn-warning addable editable" id="btnArea">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="catin col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm clearable" disabled="disabled" id="txtAreaName">
+                            </div>
+                            <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_vat </label>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control input-sm addable editable" maxlength="15" id="txtVatNo" name="VatNo">
+                            </div>
+
+                            <label class="col-md-1 col-sm-2 col-xs-12 control-label text-right hidden ">@SystemResource.Fld_ChamberNo </label>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <input type="text" class="form-control input-sm addable editable hidden " id="txtChamberNo" name="ChamberNo">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+
+                            <label for="txtSalesEngCategoryId" class="col-md-2 col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_SalesEngineerId </label>
+                            <div class="col-md-1 col-sm-4 col-xs-5">
+                                <input class="form-control input-sm clearable" disabled="disabled" id="txtSalesEngineerCode">
+                            </div>
+                            <div class="info-btn">
+                                <button type="button" class="src-btn btn btn-warning addable editable" id="butEngCode" name="custEng_code">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <div class="catin col-md-2 col-sm-4 col-xs-5">
+                                <input type="text" class="form-control inpt-sm clearable" disabled="disabled" id="txtEngName">
+                            </div>
+                            <label class="col-md-1 col-xs-2 control-label text-right">@SystemResource.SMB_Remarks </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <textarea class="form-control col-xs-12 addable editable" id="txtRemarks" name="Remarks" rows="3"></textarea>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label  class="col-md-2 col-xs-2 control-label text-right hidden"> @SystemResource.Fld_Address </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <textarea class="form-control col-xs-12 addable editable hidden" id="txtCustomerAddress" name="CustomerAddress" rows="3"></textarea>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <style>
+            #grid {
+                height: 250px !important;
+            }
+
+            .jsgrid-grid-body {
+                height: 191px !important;
+            }
+
+            .jsgrid-table {
+                width: 150%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 0;
+                overflow: scroll;
+            }
+            /*.dir {
+                height:683px;
+            }*/
+        </style> 
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-5">
+            <nav class="">
+                <div class=" ">
+                    <ul class="nav navbar-nav">
+                        <li id="btndiv_1" class="border_li col-lg-4 "><a class="stylelep" id="btndiv_1" href="#"> Projects   </a></li>
+                        <li id="btndiv_2" class="border_li col-lg-4 "><a class="stylelep" id="btndiv_2" href="#"> Identifiers  </a></li>
+                        <li id="btndiv_3" class="border_li col-lg-4 "><a class="stylelep" id="btndiv_3" href="#"> Address  </a></li>
+                    </ul>
+                </div>
+            </nav>
+             </div>
+            <div id="div_1" class="form-horizontal  display_none">
+                <table id="Grid" style=""></table>
+
+
+            </div>
+            <div id="div_2" class=" col-lg-12 display_none">
+                <div class="form-horizontal margingred  borderred" id="Div_DOC">
+
+
+                    <div class="form-group">
+                        <br>
+                    </div>
+
+                    <div id=" " class="form-group font_header" style="bottom: 5px;font-weight:bold">
+                        <br>
+
+                        <div class="col-lg-1  text-center" style="width: 3%;"><span class="">   </span></div>
+                        <div class="col-lg-1  text-center" style="width: 10%;"><span class="">IDEntifier </span></div>
+                        <div class="col-lg-2  text-center" style=""><span class="">N.IDEntifier  </span></div>
+                        <div class="col-lg-2  text-center" style=""><span class="">Place of Release</span></div>
+                        <div class="col-lg-1  text-center" style="width: 9%;"><span class="">Release Date</span></div>
+                        <div class="col-lg-2  text-center" style="width: 18%;"><span class=""> Release DateH  </span></div>
+                        <div class="col-lg-2  text-center" style="width: 9%;"><span class="">Expiry Date</span></div>
+                        <div class="col-lg-2  text-center" style=""><span class="">Expiry DateH</span></div>
+
+                    </div>
+                    <div id="data_lebel" class="col-lg-12" style="margin-top: 1%;"></div>
+
+                    <span id="btnAddDetails" class="glyphicon glyphicon-plus-sign display_none" style="font-size: 33px;"></span>
+
+                </div>
+
+
+            </div>
+            <div id="div_3" class="col-lg-12  display_none">
+
+                
+                <div class="form-horizontal  " id="Div_ADDRESS">
+
+                    <div class="form-group" style="">
+                        <div class="col-lg-5">
+                        </div>
+
+                        <label class="col-lg-1 col-xs-4 control-label text-right" style="font-size: 23px;text-align: center;">   Address </label>
+
+                    </div>
+
+
+                    <div class="form-group ">
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Country </label>
+                        <div class="col-lg-2 col-xs-8">
+                            <select id="txt_Country"   name="RefCode1" class="form-control  text_Display addable editable"></select>
+                        </div>
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Region </label>
+                        <div class="col-lg-2 col-xs-4">
+                            <input id="txt_Address_District"  name="Address_District" type="text" class="form-control  text_Display addable editable">
+                        </div>
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> City </label>
+                        <div class="col-lg-2 col-xs-4">
+                            <input id="txt_Address_City"   name="Address_City" type="text" class="form-control  text_Display addable editable">
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Governorate </label>
+                        <div class="col-lg-2 col-xs-4">
+                            <input id="txt_Address_Province"  name="Address_Province" type="text" class="form-control  text_Display addable editable">
+                        </div>
+
+                        <label class="col-lg-1 col-xs-4  control-label text-right">Posta box</label>
+                        <div class="col-lg-2 col-xs-4">
+                            <input id="txt_Address_postal"  name="Address_postal" type="text" class="form-control  text_Display addable editable">
+                        </div>
+                        <label class="col-lg-1 col-xs-4  control-label text-right">  Building No.1 </label>
+                        <div class="col-lg-2 col-xs-4">
+                            <input id="txt_Address_BuildingNo"   name="Address_BuildingNo" type="text" class="form-control  text_Display addable editable">
+                        </div> 
+
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Building No.2</label>
+                        <div class="col-lg-2 col-xs-8">
+                            <input id="txt_Address_Build_Additional"   name="Address_Build_Additional" type="text" class="form-control  text_Display addable editable">
+                        </div> 
+                    </div>
+
+                    <div class="form-group"> 
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Street 1 </label>
+                        <div class="col-lg-5 col-xs-8">
+                            <input id="txt_Address_Street"  name="Address_Street" type="text" class="form-control  text_Display addable editable">
+                        </div>
+
+                        <label class="col-lg-1 col-xs-4  control-label text-right"> Street 2</label>
+                        <div class="col-lg-5 col-xs-8">
+                            <input id="txt_Address_Str_Additional"  name="Address_Str_Additional" type="text" class="form-control  text_Display addable editable">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+	<script src="~/ClientApp/JsGrid.js"></script>
+	@Html.Partial("../Partial/Navigator")
+	<script src="~/ClientApp/Components/Sales/01_SalesDataLibrary/Customers.js"></script>
+</div>

@@ -1,0 +1,16 @@
+﻿<script src="~/ClientApp/Partial/Navigator.js"></script>
+<script>
+    $(document).ready(function () {
+        NavigatorComponent.InitalizeComponent();
+    });
+    
+</script>
+<div class="clear"></div>
+
+<div class="gigantic pagination text-left">
+    <button name="nav" class="first" data-action="first" id="btnFirst">&laquo;</button>
+    <button name="nav" class="previous" data-action="previous" id="btnPrev">&lsaquo;</button>
+    <input  name="nav" type="text" id="txtNav" readonly />
+    <button name="nav" class="next" data-action="next" id="btnNext">&rsaquo;</button>
+    <button name="nav" class="last" data-action="last" id="btnLast">&raquo;</button>
+</div>

@@ -1,0 +1,155 @@
+﻿@using PMS.WebUI.Resources
+<div class="row">
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Fld_FromDate </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="date" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width:103px"> @SystemResource.Fld_ToDate </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="date" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						@*<div class="col-md-2" style="width: 142px;">
+								<input type="radio" class="progress_input"/>
+								<label>@SystemResource.Eng_Fld_projectexpdistribution</label>
+							</div>*@
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpFromproject </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right" style="width:103px"> @SystemResource.Eng_Fld_projectexpToproject </label>
+						<div class="col-md-2 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="col-md-2" style="width: 115px;">
+							<input type="radio" checked name="summary" class="progress_input" />
+							<label>Summary</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpproject </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="col-md-2" style="width: 97px;">
+							<input type="radio" name="summary" class="progress_input" />
+							<label>Detail</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpCustomer </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpscopeclass </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpscope </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpexpcat </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtEngCode" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eng_Fld_projectexpexpcode </label>
+						<div class="col-md-1 col-sm-4 col-xs-5" style="width: 130px;">
+							<input type="text" class="form-control input-sm addable editable" style="width:;" name="EngCode" id="txtEngCode">
+						</div>
+						<div class="info-btn col-md-1" style="width: 56px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="butProj_Code" name="butProj_Code">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-5">
+							<input type="text" class="form-control input-sm addable editable" name="EngCode" id="txtEngCode">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>

@@ -1,0 +1,160 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "LateandAbsenceIndex";
+    ViewBag.Title = SystemResource.Men_LateandAbsence;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir" id="effects">
+
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right numberaddtionnumber"> @SystemResource.ResM_Materiallabor_LateNo</label>
+						<div class="col-sm-2 col-xs-12" style="width: 122px;">
+							@*<input type="hidden" class="form-control input-sm" name="TrNo" id="txtTrNo">*@
+							<input type="text" maxlength="100" class="xaddable xeditable form-control input-sm clearable"  name="TrNo" id="txtTrNo" />
+						</div>
+						<div class="info-btn col-md-1" style="width: 20px;">
+							<button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchAbsence">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right numberaddtionnumber ScheduleNo_latend"> @SystemResource.ResM_Mat_ScheduleNo</label>
+						<div class="info-btn col-md-1 secduleno_label">
+							<button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchSchadule">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+						<div class="col-sm-2 col-xs-12" style="width: 122px;">
+							<input type="text" maxlength="100" style="width:80px;" class="addable editable form-control input-sm"  name="schd_TrNo" id="txtWorkDescr" />
+						</div>
+
+						<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Change_date</label>
+						<div class="col-sm-4 col-xs-12 " style="width: 179px;">
+							<input type="date" maxlength="100" class="form-control input-sm addable editable Dateable" name="TrDate" id="txtTrDate" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_Fld_MaterialOvertime_projecteng</label>
+						<div class="col-sm-2 col-xs-12" style="width:120px;">
+							<input type="hidden" class="form-control input-sm" name="SiteEngineerId" id="txtSiteEngineerId">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Eng_Code" id="txtEng_Code" />
+						</div>
+
+
+						<div class="col-sm-2 col-xs-12" style="width: 303px;">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Eng_DescA" id="txtEng_Desc" />
+						</div>
+
+						<div class="col-md-6 ">
+							<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_fromdate</label>
+							<div class="col-sm-4 col-xs-12">
+								<input type="date" maxlength="100" class="form-control input-sm addable editable" name="StartDateTime" id="txtStartDateTime" />
+							</div>
+							<label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;width: 70px"> @SystemResource.Fld_Authorize </label>
+							<div class="col-xs-2">
+								<input type="checkbox" class="checkdef  overtimecheck " style="margin-left: 38%;height: 0px;margin-top: 12px;" id="ChkStatus" name="Status" value="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_MatLabor_project</label>
+						<div class="col-sm-2 col-xs-12" style="width:120px;">
+							<input type="hidden" class="form-control input-sm" name="ProjectID" id="txtProjectID">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Prj_ProjectCode" id="txtPrj_ProjectCode" />
+						</div>
+
+
+						<div class="col-sm-2 col-xs-12 " style="width: 303px;">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Prj_DescE" id="txtPrj_DescE" />
+						</div>
+
+						<div class="col-md-6">
+							<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.ResM_fld_laborrequest_todate</label>
+							<div class="col-sm-4 col-xs-12">
+								<input type="date" maxlength="100" class="form-control input-sm addable editable" name="EndDateTime" id="txtEndDateTime" />
+							</div>
+							<label class="col-sm-1 col-xs-12 control-label text-right" style="padding-right:0%;width: 70px;"> @SystemResource.ResM_Mat_Unauthorized </label>
+							<div class="col-xs-2">
+								@*<input type="checkbox" class="checkdef  overtimecheck editable" style="margin-left: 38%;height: 0px;margin-top: 12px;" id="ChkStatus" name="Status" value="">*@
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Def_projecphase</label>
+						<div class="col-sm-2 col-xs-12" style="width:120px;">
+							@*<input type="hidden" class="form-control input-sm" name="ProjectID" id="txtProjectID">*@
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Phase_ProjectPhaseCode" id="txtPhase_ProjectPhaseCode" />
+						</div>
+						<div class="col-sm-2 col-xs-12 " style="width: 320px;">
+							<input type="text" maxlength="100" style="width: 273px;" class="form-control input-sm clearable" disabled="disabled" name="Phase_DescE" id="txtPhase_DescE" />
+						</div>
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Change_Remarks</label>
+						<div class="col-sm-5 col-xs-12" style="width: 407px;">
+							<textarea type="text" maxlength="100" class="form-control input-sm addable editable" name="Remarks" id="txtRemarks"></textarea>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 form-horizontal" id="lateandabsence">
+                    <style>
+                        .jsgrid-grid-body {
+                            height: 310px !important;
+                            max-height: 550px !important;
+                             margin-top: -15px;
+                        }
+    </style>
+					<div class="" style="height:390px;overflow:unset;">
+						<table id="GridParent"></table>
+					</div>
+                    <input type="hidden" id="h_LaborID" />
+                    <input type="hidden" id="h_AbsenceTypeID" />
+				</div>
+
+			</div>
+			
+		</form>
+	</div>
+
+	<script src="~/ClientApp/JsGrid.js"></script>
+		@Html.Partial("../Partial/Navigator")
+		<script src="~/ClientApp/Components/ResourceManagement/03_Labor/LateandAbsence.js"></script>
+</div>
+<style>
+       .jsgrid-grid-header {
+           height: 78px!important;
+       }
+    .jsgrid-table {
+           width: 140%;
+           table-layout: fixed;
+           border-collapse: collapse;
+           border-spacing: 0;
+           overflow: scroll;
+       }
+
+</style>

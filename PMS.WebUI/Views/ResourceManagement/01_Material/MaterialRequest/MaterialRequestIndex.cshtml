@@ -1,0 +1,190 @@
+﻿@using PMS.WebUI.Resources
+@{
+    ViewBag.ScreenKey = "MaterialRequestIndex";
+    ViewBag.Title = SystemResource.Men_MaterialRequest;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+	<div class="col-xs-12 color1">
+		@Html.ControlsButtons()
+	</div>
+	<div class="clear"></div>
+	<div class="col-xs-12 dir matrequest" id="effects">
+
+		<div style="height:5px"></div>
+		<div class="clear"></div>
+		<form>
+			<div class="col-xs-12">
+
+
+				<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_requestno</label>
+                        <div class="col-sm-2 col-xs-12" style="width: 148px;">
+                            
+                            <input type="hidden" id="h_SchedQty" />
+                            <input type="hidden" id="h_ReqBeforeQty"/>
+                            <input type="text" maxlength="100" class="form-control input-sm xaddable xeditable clearable" name="TrNo" id="txtTrNo" />
+                            <input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="RequestMaterialId" />
+                        </div>
+                        <div class="info-btn col-md-1" style="width:60px">
+                            <button type="button" class="src-btn btn btn-warning xaddable xeditable fst_serach_proj" id="btnSearchRequest">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> so</label>
+                            <input type="radio" class="soradio addable editable" id="rdServiceorder" name="RequestType">
+                        </div>
+
+
+                        <div class="col-xs-1">
+                            <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> Schdule</label>
+                            <input type="radio" class="secdule_radio addable editable" name="RequestType" id="rdSchdule">
+                        </div>
+
+                    </div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_prodsched</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="SchduleTrNo" id="txtSchduleTrNo" />
+							<input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="ScheduleId" />
+						</div>
+
+						<div class="info-btn col-md-1" style="width:60px">
+							<button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj clearable" id="btnSeachSchdule">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12 production_input">
+							<input type="text" maxlength="20" class="form-control input-sm clearable" disabled="disabled" name="WorkDescr" id="txtWorkDescr" />
+						</div>
+						<div class="col-md-6">
+							<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_Date</label>
+							<div class="col-sm-4 col-xs-12">
+								<input type="date" maxlength="100" class="form-control input-sm addable editable dateable" name="TrDate" id="txtTrDate" />
+							</div>
+							<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right" style="width: 100px"> @SystemResource.ChkStatus</label>
+							<select disabled="disabled" id="chkStatus" name="Status" class="form-control col-md-1" style="width: 89px;">
+								<option selected="selected" value="0">new</option>
+								<option value="1">Request</option>
+								<option value="2">Approve</option>
+								<option value="3">Cancelled</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Eve_sono</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="So_TrNo" id="txtSo_TrNo" />
+							<input type="hidden" maxlength="100" class="form-control input-sm addable editable" name="SubServiceOrderId" />
+						</div>
+
+						<div class="info-btn col-md-1" style="width:60px">
+							<button type="button" class="src-btn btn btn-warning addable editable fst_serach_proj" id="btnSearchSO">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+
+						<div class="col-md-2 col-sm-4 col-xs-12 production_input">
+							<input type="text" maxlength="20" class="form-control input-sm clearable" disabled="disabled" name="So_DescE" id="txtSo_DescE" />
+						</div>
+
+						<div class="col-md-6">
+							<label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_RequestedBy</label>
+							<div class="col-sm-4 col-xs-12" style="width: 288px;">
+								<input type="text" maxlength="100" class="form-control input-sm addable clearable" name="RequestedBy" id="txtRequestedBy" />
+							</div>
+                            @*<button type="button" class="src-btn btn btn-warning addable" id="btnNew">new</button>*@
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_project</label>
+						<div class="col-sm-1 col-xs-12">
+							<input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Prj_ProjectCode" id="txtPrj_ProjectCode" />
+						</div>
+						<label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right phase_prod_label material_re_phase"> @SystemResource.Resm_fld_Mat_req_phase</label>
+
+						<div class="col-md-2 col-sm-4 col-xs-12" style="width: 114px;">
+							<input type="text" maxlength="20" style="width: 80px;" class="form-control input-sm clearable" disabled="disabled" name="Phase_ProjectPhaseCode" id="txtPhase_ProjectPhaseCode" />
+						</div>
+
+                        <div class="col-md-6">
+                            <label for="txtDescE" class="col-sm-3 col-xs-12 control-label text-right"> @SystemResource.Fld_ApprovedBy</label>
+                            <div class="col-sm-4 col-xs-12" style="width: 288px;">
+                                <input type="text" maxlength="100" class="form-control input-sm addable clearable" name="ApprovedBy" id="txtApprovedBy" />
+                            </div>
+                            <button type="button" class="src-btn btn btn-warning"disabled="disabled" id="btnRequest">Request</button>
+
+                        </div>
+
+					</div>
+				</div>
+
+				<div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_siteenginer</label>
+                        <div class="col-sm-1 col-xs-12">
+                            <input type="text" maxlength="100" class="form-control input-sm clearable" disabled="disabled" name="Eng_EngCode" id="txtEng_EngCode" />
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12 " style="width: 305px;">
+                            <input type="text" maxlength="20" style="width: 259px;" class="form-control input-sm clearable" disabled="disabled" name="Eng_DescE" id="txtEng_DescE" />
+                        </div>
+                        <label for="txtDescE" class="col-sm-2 col-xs-12 control-label text-right"> @SystemResource.Resm_fld_Mat_req_remark</label>
+                        <div class="col-sm-3 col-xs-12">
+                            <textarea type="text" style="height: 77px;" maxlength="100" class="form-control input-sm addable clearable" name="Remarks" id="txtRemarks"></textarea>
+                        </div>
+                        <button type="button" class="src-btn btn btn-warning" disabled="disabled" id="btnApprove">Approve</button>
+                        <br />
+                        <button type="button" class="src-btn btn btn-warning" disabled="disabled" id="btnclose" style="margin-top:10px;">close</button>
+
+                    </div>
+				</div>
+
+
+				<div class="col-xs-12 form-horizontal" id="MaterialGridsec" >
+					
+					<div class="" style="height: 460px;overflow:unset;">
+						<table id="GridMaterial"></table>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+	<div>
+		<table></table>
+	</div>
+	<script src="~/ClientApp/JsGrid.js"></script>
+	@Html.Partial("../Partial/Navigator")
+	<script src="~/ClientApp/Components/ResourceManagement/01_Material/MaterialRequest.js"></script>
+</div>
+
+
+<style>
+    .jsgrid-grid-body {
+        height: 390px !important;
+        max-height: 550px !important;
+    }
+
+    .jsgrid-grid-header {
+        height: 60px;
+    }
+</style>
+
+
