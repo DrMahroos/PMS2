@@ -45,6 +45,7 @@ var CustomerDbCr;
     var btnSearchBill;
     var btnSearchProject;
     //var btnLoadProdution: HTMLButtonElement;
+    var btnReopen;
     var btnCalc;
     //var btnAuthorize: HTMLButtonElement;
     var btnSearchInv;
@@ -417,8 +418,10 @@ var CustomerDbCr;
         btnSearchProject = DocumentActions.GetElementById("btnSearchProject");
         //btnLoadProdution = DocumentActions.GetElementById<HTMLButtonElement>("btnLoadProdution");
         //btnAuthorize = DocumentActions.GetElementById<HTMLButtonElement>("btnAuthorize");
+        btnReopen = DocumentActions.GetElementById("btnReopen");
         li2_AdvPrc = DocumentActions.GetElementById("li2_AdvPrc");
         txtDoNo = DocumentActions.GetElementById("txtDoNo");
+        $('#btnReopen').css('display', 'None');
     }
     function InitalizeEvents() {
         btnSearchProject.onclick = btnSearchProject_Clicked;
@@ -427,6 +430,26 @@ var CustomerDbCr;
         txtProjCode.onchange = SearchProject_onchange;
         btnSearchBill.onclick = btnSearchBill_Clicked;
         btnSearchInv.onclick = btnSearchInv_Clicked;
+        btnReopen.onclick = btnAuthorize_Clicked;
+    }
+    function btnAuthorize_Clicked() {
+        var date = txtTrDate.value;
+        if (CheckDate(Number(_CompCode), Number(_BraCode), date) == false) {
+            WorningMessage("غير مسموح بهذا التاريخ", "This Date is not allowed");
+            return;
+        }
+        Ajax.Callsync({
+            url: Url.Action("UnAuthorize", ControllerName),
+            data: { invId: Master.InvoiceId },
+            success: function (d) {
+                var msg = ReturnMsg("تم اعادة الفتح بنجاح  ", "Re Opened Successfuly. ");
+                MessageBox.Show(msg, "ReOpen", function () {
+                    var index = GetIndexByUseId(Master.InvoiceId, "PQ_GetSalesDbCr", "InvoiceId", "CompCode = " + _CompCode + " and BraCode = " + _BraCode);
+                    NavigateToSearchResultKey(Number(index), Navigate);
+                    //LoadDetails(Master.ProjectID);
+                });
+            }
+        });
     }
     function SearchProject_onchange() {
         var reus = 0;
@@ -578,6 +601,18 @@ var CustomerDbCr;
         ChkStatus.disabled = true;
         DiscountPrc = Master.DiscountPrc;
         MasterVatPrc = Master.VatPrc;
+        if (SharedSession.CurrentPrivileges.CUSTOM2 == true && Master.Status == 1) {
+            $('#btnReopen').css('display', 'inline');
+            $('#btnReopen').removeAttr('disabled');
+            $("#btnReopen").css('cursor', 'pointer');
+            $("#btnReopen").css('backgroundColor', 'red');
+        }
+        else {
+            $('#btnReopen').css('display', 'None');
+            $('#btnReopen').attr('disabled', 'disabled');
+            $("#btnReopen").css('cursor', 'no-drop');
+            $("#btnReopen").css('backgroundColor', '#0B6D8A');
+        }
     }
     function Add() {
         txtTrDate.value = DateFormat((new Date()).toString());

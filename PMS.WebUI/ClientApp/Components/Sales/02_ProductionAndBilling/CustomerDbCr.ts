@@ -50,6 +50,7 @@ namespace CustomerDbCr {
     var btnSearchBill: HTMLButtonElement;
     var btnSearchProject: HTMLButtonElement;
     //var btnLoadProdution: HTMLButtonElement;
+    var btnReopen: HTMLButtonElement;
     var btnCalc: HTMLButtonElement;
 
     //var btnAuthorize: HTMLButtonElement;
@@ -448,9 +449,10 @@ namespace CustomerDbCr {
         btnSearchProject = DocumentActions.GetElementById<HTMLButtonElement>("btnSearchProject");
         //btnLoadProdution = DocumentActions.GetElementById<HTMLButtonElement>("btnLoadProdution");
          //btnAuthorize = DocumentActions.GetElementById<HTMLButtonElement>("btnAuthorize");
-        
+        btnReopen = DocumentActions.GetElementById<HTMLButtonElement>("btnReopen");
          li2_AdvPrc = DocumentActions.GetElementById<HTMLInputElement>("li2_AdvPrc");
-        txtDoNo = DocumentActions.GetElementById<HTMLInputElement>("txtDoNo"); 
+        txtDoNo = DocumentActions.GetElementById<HTMLInputElement>("txtDoNo");
+        $('#btnReopen').css('display', 'None');
      }
 
     function InitalizeEvents() { 
@@ -459,9 +461,33 @@ namespace CustomerDbCr {
         txtInvNo.onchange = SearchBillonchange;
         txtProjCode.onchange = SearchProject_onchange;
         btnSearchBill.onclick = btnSearchBill_Clicked;
-        btnSearchInv.onclick = btnSearchInv_Clicked;        
+        btnSearchInv.onclick = btnSearchInv_Clicked;    
+        btnReopen.onclick = btnAuthorize_Clicked;
      }
+    function btnAuthorize_Clicked() {
 
+        let date: string = txtTrDate.value;
+        if (CheckDate(Number(_CompCode), Number(_BraCode), date) == false) {
+            WorningMessage("غير مسموح بهذا التاريخ", "This Date is not allowed");
+            return;
+        }
+        Ajax.Callsync({
+            url: Url.Action("UnAuthorize", ControllerName),
+            data: { invId: Master.InvoiceId },
+            success: (d) => {
+                let msg: string = ReturnMsg("تم اعادة الفتح بنجاح  ", "Re Opened Successfuly. ");
+                MessageBox.Show(msg, "ReOpen", () => {
+
+                    let index = GetIndexByUseId(Master.InvoiceId, "PQ_GetSalesDbCr", "InvoiceId", "CompCode = " + _CompCode + " and BraCode = " + _BraCode);
+                    NavigateToSearchResultKey(Number(index), Navigate);
+                    //LoadDetails(Master.ProjectID);
+                });
+
+            }
+        });
+ 
+
+    }
     function SearchProject_onchange() {
         var reus: number = 0;
         let ProjCode = txtProjCode.value;
@@ -625,7 +651,19 @@ namespace CustomerDbCr {
         ChkStatus.disabled = true;
         DiscountPrc = Master.DiscountPrc;
         MasterVatPrc = Master.VatPrc; 
-       
+        if (SharedSession.CurrentPrivileges.CUSTOM2 == true && Master.Status == 1) {
+            $('#btnReopen').css('display', 'inline');
+            $('#btnReopen').removeAttr('disabled');
+            $("#btnReopen").css('cursor', 'pointer');
+            $("#btnReopen").css('backgroundColor', 'red');
+        }
+        else {
+            $('#btnReopen').css('display', 'None');
+            $('#btnReopen').attr('disabled', 'disabled');
+            $("#btnReopen").css('cursor', 'no-drop');
+            $("#btnReopen").css('backgroundColor', '#0B6D8A');
+        }
+
        
     }
 
