@@ -396,6 +396,9 @@
         <EntityTypeShape EntityType="PMSModel.P_TR_SalesDbCrDetail" Width="1.5" PointX="31.75" PointY="24.75" />
         <EntityTypeShape EntityType="PMSModel.PQ_GetSalesDbCr" Width="1.5" PointX="31.75" PointY="30.75" />
         <EntityTypeShape EntityType="PMSModel.PQ_GetSalesDbCrDetail" Width="1.5" PointX="0.75" PointY="32.75" />
+        <EntityTypeShape EntityType="PMSModel.P_D_SalesItemSystem" Width="1.5" PointX="3.375" PointY="32.75" />
+        <EntityTypeShape EntityType="PMSModel.P_D_ScopeSystem" Width="1.5" PointX="5.375" PointY="32.75" />
+        <EntityTypeShape EntityType="PMSModel.PQ_GetSalesItemSystems" Width="1.5" PointX="7.375" PointY="32.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

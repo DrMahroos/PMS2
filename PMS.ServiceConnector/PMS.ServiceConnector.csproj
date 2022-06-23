@@ -319,9 +319,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="PRep_sls_ProductionEngEN.rdlc" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Content Include="bin\Debug\LinqToSqlConverter.dll" />

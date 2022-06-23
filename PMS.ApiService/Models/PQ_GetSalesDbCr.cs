@@ -61,5 +61,9 @@ namespace PMS.ApiService.Models
         public Nullable<int> inv_TrNo { get; set; }
         public Nullable<System.DateTime> inv_TrDate { get; set; }
         public string inv_DocNo { get; set; }
+        public Nullable<decimal> AdvDeduction { get; set; }
+        public Nullable<decimal> AdvVatAmount { get; set; }
+        public Nullable<decimal> TaxableAmount { get; set; }
+        public Nullable<decimal> NetTax { get; set; }
     }
 }

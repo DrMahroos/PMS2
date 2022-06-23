@@ -410,6 +410,15 @@
     <Compile Include="Models\PQ_GetSalesDbCrDetail.cs">
       <DependentUpon>SysModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PQ_GetSalesItemSystems.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_SalesItemSystem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\P_D_ScopeSystem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\P_TR_SalesDbCr.cs">
       <DependentUpon>SysModel.tt</DependentUpon>
     </Compile>

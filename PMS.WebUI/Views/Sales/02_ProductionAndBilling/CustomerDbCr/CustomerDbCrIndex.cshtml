@@ -70,7 +70,7 @@
                         <button class="authorize" id="btnReopen" type="button" disabled="disabled" style="margin-left: 84px;"> @SystemResource.Fld_Reopen </button>
                         <label class="col-sm-1 col-xs-12 control-label text-right" style="width: 5.5%;right:1%"> Bill No </label>
                         <div class="col-md-2 col-sm-4 col-xs-5 " style="width: 9%;padding-left:0px!important">
-                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="InvTrNo" id="txtInvNo">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="inv_TrNo" id="txtInvNo">
                             <input type="text" class="form-control input-sm hidden" name="RefInvoiceid" id="txtRefInvoiceid">
                         </div>
                         <div class="info-btn">
@@ -138,17 +138,17 @@
 
                     </div>
                 </div>
-                
+
                 <div class="form-horizontal">
                     <div class="form-group">
                         <label class="col-sm-2 col-xs-12 control-label text-right"> Work Discription </label>
                         <div class="col-md-6 col-sm-6 col-xs-5" style="left: -17px">
                             <input type="text" class="form-control input-sm addable editable" style="width:99%;" name="WorkDiscription" id="txtWorkDiscription">
                         </div>
-                         
-                        <label class="col-sm-1 col-xs-12 control-label text-right"style="margin-left: 4%;left: 0.5%;">   DbReason </label>
+
+                        <label class="col-sm-1 col-xs-12 control-label text-right" style="margin-left: 4%;left: 0.5%;">   DbReason </label>
                         <div class="col-md-3 col-sm-3 col-xs-3" style="left: -32px">
-                            <select style="" type="text" class="form-control input-sm addable editable"  name="DbReason" id="ddDbReason">
+                            <select style="" type="text" class="form-control input-sm addable editable" name="DbReason" id="ddDbReason">
                                 <option value="0"> Choose DbReason</option>
                             </select>
                         </div>
@@ -172,10 +172,10 @@
                         <table id="GridSales"></table>
                     </div>
                 </div>
-                 
+
                 <div class="form-horizontal col-lg-12" style="margin-top: 320px;">
                     <div class="form-group">
-                        
+
                         <label class="info-btn" style="padding-top:0.5%">  Total </label>
                         <div class="col-xs-2" style="width:15%;">
                             <input type="text" class="form-control input-sm clearable" disabled="disabled" name="TotalAmount" id="txtTotalAmount" />
@@ -187,11 +187,41 @@
                         </div>
                         <label class="info-btn" style="padding-top:0.5%"> Net With VAT </label>
                         <div class="  col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  " style="width:10%;">
-                            <input  disabled="disabled" class=" form-control input-sm " name="NetAmount" id="txtNetAmount" />
+                            <input disabled="disabled" class=" form-control input-sm " name="NetAmount" id="txtNetAmount" />
+                        </div>
+                        <label class="info-btn" style="padding-top:0.5%">  Adv Return </label>
+                        <div class="col-xs-2" style="width:15%;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="AdvDeduction" id="txtAdvDeduction" />
+                        </div>
+
+                        <label class="info-btn" style="padding-top:0.5%"> Adv. Vat Ret </label>
+                        <div class="  col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  ">
+                            <input disabled="disabled" class="form-control input-sm  " name="AdvVatAmount" id="txtAdvVatAmount" />
+                        </div>
+                        <label class="info-btn" style="padding-top:0.5%"> Tot Adv Net </label>
+                        <div class="  col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  " style="width:10%;">
+                            <input disabled="disabled" class=" form-control input-sm " name="" id="txtTotAdv" />
                         </div>
                     </div>
                 </div>
+                <div class="form-horizontal col-lg-12" >
+                    <div class="form-group">
 
+                      <label class="info-btn" style="padding-top:0.5%"> Taxable Amount </label>
+                        <div class="col-xs-2" style="width:15%;">
+                            <input type="text" class="form-control input-sm clearable" disabled="disabled" name="TaxableAmount" id="txtTaxableAmount" />
+                        </div>
+
+                        <label class="info-btn" style="padding-top:0.5%"> Adv. Vat Ret </label>
+                        <div class="  col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  ">
+                            <input disabled="disabled" class="form-control input-sm  " name="NetTax" id="txtNetTax" />
+                        </div>
+                        <label class="info-btn" style="padding-top:0.5%"> Tot Adv Net </label>
+                        <div class="  col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  " style="width:10%;">
+                            <input disabled="disabled" class=" form-control input-sm " name="" id="txtTotNet" />
+                        </div>
+                    </div>
+                </div>
 
                 <div class="form-horizontal col-lg-12">
                     <div class="form-group">
