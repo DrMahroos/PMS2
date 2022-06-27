@@ -12,6 +12,8 @@ namespace PMS.ApiService.Controllers.Sales
 {
     public class P_D_SalesCustomerCategoryController : BaseController, IBaseController
     {
+
+
         [HttpPost]
         public ResponseResult DeleteEntity(JObject data)
         {
@@ -58,7 +60,7 @@ namespace PMS.ApiService.Controllers.Sales
                         {
 
                             dbTransaction.Commit();
-                            SEC.CustomerCatCode =res.ResponseData.ToString();
+                            SEC.CustomerCatCode = res.ResponseData.ToString();
                             result.ResponseData = JsonSerialize(SEC);
                         }
                         else
@@ -196,5 +198,50 @@ namespace PMS.ApiService.Controllers.Sales
             result.ResponseData = obj.Entity;
             return result;
         }
+        [HttpGet]
+        public List<P_D_SalesCustomerCategory> GetList()
+        {
+            var res = db.P_D_SalesCustomerCategory.ToList();
+            return res;
+        }
+        [HttpPost, AllowAnonymous]
+        public IHttpActionResult UpdateLst([FromBody]List<P_D_SalesCustomerCategory> CategoryList)
+        {
+
+            using (var dbTrans = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    var inserted = CategoryList.Where(x => x.StatusFlag == "i").ToList();
+                    var updated = CategoryList.Where(x => x.StatusFlag == "u").ToList();
+                    var deleted = CategoryList.Where(x => x.StatusFlag == "d").ToList();
+                    foreach (var item in inserted)
+                    {
+                        db.P_D_SalesCustomerCategory.Add(item);
+                        db.Entry(item).State = System.Data.Entity.EntityState.Added; 
+                    }
+                    foreach (var item in updated)
+                    {
+                        db.P_D_SalesCustomerCategory.Attach(item);
+                        db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    foreach (var item in deleted)
+                    {
+                    db.P_D_SalesCustomerCategory.Remove(item); 
+
+                    }
+                    db.SaveChanges();
+                    dbTrans.Commit();
+                    return Ok(CategoryList);
+                }
+                catch (Exception ex)
+                {
+                    dbTrans.Rollback();
+                    return Ok(ex.Message);
+                }
+            }
+
+        }
+
     }
 }
