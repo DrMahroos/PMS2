@@ -227,7 +227,8 @@ namespace PMS.ApiService.Controllers.Sales
                     }
                     foreach (var item in deleted)
                     {
-                    db.P_D_SalesCustomerCategory.Remove(item); 
+                    //db.P_D_SalesCustomerCategory.Remove(item);
+                        db.Database.ExecuteSqlCommand("DELETE FROM [dbo].[P_D_SalesCustomerCategory] WHERE CustomerCategoryID = " + item.CustomerCategoryID + "");
 
                     }
                     db.SaveChanges();
