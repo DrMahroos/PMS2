@@ -198,45 +198,50 @@ namespace PMS.ApiService.Controllers.Sales
             result.ResponseData = obj.Entity;
             return result;
         }
-
-
-        //[HttpPost, AllowAnonymous]
-        //public IHttpActionResult UpdateLst(List<P_D_SalesCustomerCategory> CategoryList)
-        //{
-
-        //    using (var dbTrans = db.Database.BeginTransaction())
-        //    {
-        //        try
-        //        {
-        //            //var inserted = CategoryList.Where(x => x.StatusFlag == 'i').ToList();
-        //            //var updated = CategoryList.Where(x => x.StatusFlag == 'u').ToList();
-        //            //var deleted = CategoryList.Where(x => x.StatusFlag == 'd').ToList();
-
-        //            //db.P_TR_SalesOffer.Attach(master);
-        //            //db.Entry(master).State = System.Data.Entity.EntityState.Modified;
-        //            //db.SaveChanges();
-        //            return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ""));
-                     
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            dbTrans.Rollback();
-        //            return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
-        //        }
-        //    }
-        //}
-
-
-        [HttpGet, AllowAnonymous]
-        public IHttpActionResult UpdateLst(List<P_D_SalesCustomerCategory> id)
+        [HttpGet]
+        public List<P_D_SalesCustomerCategory> GetList()
         {
-            if (ModelState.IsValid)
-            {
-                List<P_D_SalesCustomerCategory> _View = new List<P_D_SalesCustomerCategory>();
-                _View = db.P_D_SalesCustomerCategory.Where(x => x.CustomerCategoryID == 1).ToList();
-                return Ok(new BaseResponse(_View));
-            }
-            return BadRequest(ModelState);
+            var res = db.P_D_SalesCustomerCategory.ToList();
+            return res;
         }
+        [HttpPost, AllowAnonymous]
+        public IHttpActionResult UpdateLst([FromBody]List<P_D_SalesCustomerCategory> CategoryList)
+        {
+
+            using (var dbTrans = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    var inserted = CategoryList.Where(x => x.StatusFlag == "i").ToList();
+                    var updated = CategoryList.Where(x => x.StatusFlag == "u").ToList();
+                    var deleted = CategoryList.Where(x => x.StatusFlag == "d").ToList();
+                    foreach (var item in inserted)
+                    {
+                        db.P_D_SalesCustomerCategory.Add(item);
+                        db.Entry(item).State = System.Data.Entity.EntityState.Added; 
+                    }
+                    foreach (var item in updated)
+                    {
+                        db.P_D_SalesCustomerCategory.Attach(item);
+                        db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    foreach (var item in deleted)
+                    {
+                    db.P_D_SalesCustomerCategory.Remove(item); 
+
+                    }
+                    db.SaveChanges();
+                    dbTrans.Commit();
+                    return Ok(CategoryList);
+                }
+                catch (Exception ex)
+                {
+                    dbTrans.Rollback();
+                    return Ok(ex.Message);
+                }
+            }
+
+        }
+
     }
 }
