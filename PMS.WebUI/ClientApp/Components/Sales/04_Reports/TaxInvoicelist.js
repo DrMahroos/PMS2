@@ -36,6 +36,7 @@ var TaxInvoicelist;
     var btntoProjectRP;
     var txttoProject1RP;
     var redDownpayment;
+    var redCrdb;
     var redProgress;
     //Just put the elements IDs  
     var Cust = new P_D_SalesCustomerCategory();
@@ -86,6 +87,7 @@ var TaxInvoicelist;
         txttoProject1RP = DocumentActions.GetElementById("txttoProject1RP");
         redProgress = DocumentActions.GetElementById("redProgress");
         redDownpayment = DocumentActions.GetElementById("redDownpayment");
+        redCrdb = DocumentActions.GetElementById("redCrdb");
     }
     function InitalizeEvents() {
         btnCustomerCodeRP.onclick = btnCustomerCode_ClickedRP;
@@ -226,6 +228,9 @@ var TaxInvoicelist;
         }
         else if (redDownpayment.checked == true) {
             RP.GroupType = 1;
+        }
+        else if (redCrdb.checked == true) {
+            RP.GroupType = 3;
         }
         Ajax.CallAsync({
             //CRMReport

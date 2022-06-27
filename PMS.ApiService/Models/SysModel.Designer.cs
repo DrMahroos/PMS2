@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\PMS\2021-03-16\PMS_V1.0_Source\PMS.ApiService\Models\SysModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\PMS\PMS2\PMS.ApiService\Models\SysModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

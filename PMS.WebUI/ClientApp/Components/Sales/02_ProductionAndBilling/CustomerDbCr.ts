@@ -50,6 +50,7 @@ namespace CustomerDbCr {
     var btnSearchBill: HTMLButtonElement;
     var btnSearchProject: HTMLButtonElement;
     //var btnLoadProdution: HTMLButtonElement;
+    var btnReopen: HTMLButtonElement;
     var btnCalc: HTMLButtonElement;
 
     //var btnAuthorize: HTMLButtonElement;
@@ -63,7 +64,10 @@ namespace CustomerDbCr {
     var ProjectPhaseId: number;
     var Serial: number;
     var InvSerial: number;
-     
+    var invAdvAmount: number; 
+    var invTotal: number; 
+    var invAdvVat: number 
+    var invadvDedPrc: number;
         
     var itemID: number;
     var customerId: number;
@@ -77,8 +81,15 @@ namespace CustomerDbCr {
     var txtDoNo: HTMLInputElement; 
     var txtNetAmount: HTMLInputElement;
     var VatAmount: HTMLInputElement;
+    var txtAdvDeduction: HTMLInputElement;
+    var txtAdvVatAmount: HTMLInputElement;
+    var txtTotAdv: HTMLInputElement;
+    var txtTaxableAmount: HTMLInputElement;
+    var txtNetTax: HTMLInputElement;
+    var txtTotNet: HTMLInputElement;
 
     var vatPrc: number;
+
     var downpaymentPrc: number;
     var DiscountPrc: number;
     var UsedDownpayment: number;
@@ -443,14 +454,23 @@ namespace CustomerDbCr {
         txtVatAmount = DocumentActions.GetElementById<HTMLInputElement>("txtVatAmount");
         txtVatPrc = DocumentActions.GetElementById<HTMLInputElement>("txtVatPrc");
         txtRemarks = DocumentActions.GetElementById<HTMLInputElement>("txtRemarks");
+
+        txtAdvDeduction = DocumentActions.GetElementById<HTMLInputElement>("txtAdvDeduction");
+        txtTotAdv = DocumentActions.GetElementById<HTMLInputElement>("txtTotAdv");
+        txtTaxableAmount = DocumentActions.GetElementById<HTMLInputElement>("txtTaxableAmount");
+        txtNetTax = DocumentActions.GetElementById<HTMLInputElement>("txtNetTax");
+        txtTotNet = DocumentActions.GetElementById<HTMLInputElement>("txtTotNet");
+        txtAdvVatAmount = DocumentActions.GetElementById<HTMLInputElement>("txtAdvVatAmount");
+        
         btnSearchBill = DocumentActions.GetElementById<HTMLButtonElement>("btnSearchBill");
         btnSearchInv = DocumentActions.GetElementById<HTMLButtonElement>("btnSearchInv");
         btnSearchProject = DocumentActions.GetElementById<HTMLButtonElement>("btnSearchProject");
         //btnLoadProdution = DocumentActions.GetElementById<HTMLButtonElement>("btnLoadProdution");
          //btnAuthorize = DocumentActions.GetElementById<HTMLButtonElement>("btnAuthorize");
-        
+        btnReopen = DocumentActions.GetElementById<HTMLButtonElement>("btnReopen");
          li2_AdvPrc = DocumentActions.GetElementById<HTMLInputElement>("li2_AdvPrc");
-        txtDoNo = DocumentActions.GetElementById<HTMLInputElement>("txtDoNo"); 
+        txtDoNo = DocumentActions.GetElementById<HTMLInputElement>("txtDoNo");
+        $('#btnReopen').css('display', 'None');
      }
 
     function InitalizeEvents() { 
@@ -459,9 +479,34 @@ namespace CustomerDbCr {
         txtInvNo.onchange = SearchBillonchange;
         txtProjCode.onchange = SearchProject_onchange;
         btnSearchBill.onclick = btnSearchBill_Clicked;
-        btnSearchInv.onclick = btnSearchInv_Clicked;        
-     }
+        btnSearchInv.onclick = btnSearchInv_Clicked;    
+        btnReopen.onclick = btnAuthorize_Clicked;
 
+     }
+    function btnAuthorize_Clicked() {
+
+        let date: string = txtTrDate.value;
+        if (CheckDate(Number(_CompCode), Number(_BraCode), date) == false) {
+            WorningMessage("غير مسموح بهذا التاريخ", "This Date is not allowed");
+            return;
+        }
+        Ajax.Callsync({
+            url: Url.Action("UnAuthorize", ControllerName),
+            data: { invId: Master.InvoiceId },
+            success: (d) => {
+                let msg: string = ReturnMsg("تم اعادة الفتح بنجاح  ", "Re Opened Successfuly. ");
+                MessageBox.Show(msg, "ReOpen", () => {
+
+                    let index = GetIndexByUseId(Master.InvoiceId, "PQ_GetSalesDbCr", "InvoiceId", "CompCode = " + _CompCode + " and BraCode = " + _BraCode);
+                    NavigateToSearchResultKey(Number(index), Navigate);
+                    //LoadDetails(Master.ProjectID);
+                });
+
+            }
+        });
+ 
+
+    }
     function SearchProject_onchange() {
         var reus: number = 0;
         let ProjCode = txtProjCode.value;
@@ -511,9 +556,13 @@ namespace CustomerDbCr {
                 Master = d.result as PQ_GetSalesDbCr;
                 if (Master != null) {
                     P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr = Master;
+
+                    
+                    GetSalesInvoice(P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr.RefInvoiceid)
+
                     let Index = GetIndexByUseId(Number(Master.InvoiceId), "PQ_GetSalesDbCr", "InvoiceId", " compCode = " + _CompCode + " and braCode = " + _BraCode);
                     NavigateToSearchResultKey(Number(Index), Navigate);
-                    var invoce = Number(Master.InvoiceId);
+                   
                 } else {
                     WorningMessage("لا يوجد فاتورة بهذا الرقم ", "There is no invoice with this no");
                     txtTrNo.value = "";
@@ -522,29 +571,7 @@ namespace CustomerDbCr {
         });
     }
    
-    function SearchBillonchange() {
-        debugger
-        let trNo = Number(txtInvNo.value);
-        alert("dd")
-        Ajax.CallAsync({
-            url: Url.Action("GetCustomerBillTrNo", ControllerName),
-            data: { TrNo: trNo, CompCode: _CompCode, BraCode: _BraCode },
-            success: (d) => {
-                debugger
-                Master = d.result as PQ_GetSalesDbCr;
-                if (Master != null) {
-                    P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr = Master;
-                    let Index = GetIndexByUseId(Number(Master.InvoiceId), "PQ_GetSalesDbCr", "InvoiceId", " compCode = " + _CompCode + " and braCode = " + _BraCode);
-                   // NavigateToSearchResultKey(Number(Index), Navigate);
-                    Display_src();
-                    var invoce = Number(Master.InvoiceId);
-                } else {
-                    WorningMessage("لا يوجد فاتورة بهذا الرقم ", "There is no invoice with this no");
-                    txtInvNo.value = "";
-                }
-            }
-        });
-    }
+    
 
     function Navigate() {
         Ajax.CallAsync({
@@ -606,12 +633,13 @@ namespace CustomerDbCr {
         debugger;
         DocumentActions.RenderFromModel(Master);
         $("#txtTrNo").val(Master.TrNo);
-        txtInvNo.value = Master.RefInvoiceid.toString();
+        //txtInvNo.value = Master.RefInvoiceid.toString();
         txtInvNo.disabled = true;
         btnSearchInv.disabled = true;
         customerId = Master.CustomerID;
         ProjectID = Master.ProjectID;
         InvoiceId = Master.InvoiceId;
+        GetSalesInvoice(Master.RefInvoiceid);
         Proj_ProjectCode = Master.ProjCode;
         txtDoNo.value = Master.DocNo;
         txtTrDate.value = DateFormat(Master.TrDate);
@@ -622,16 +650,34 @@ namespace CustomerDbCr {
         LoadInvoiceDetails(Master.InvoiceId);
         txtProj_DescL.value = _ScreenLang == "ar" ? Master.WorkDiscription : Master.WorkDiscription;
         txtCust_DescE.value = _ScreenLang == "ar" ? Master.Cust_DescA : Master.Cust_DescE;
+        $("#txtTotAdv").val(Master.AdvDeduction + Master.AdvVatAmount);
+        $("#txtTotNet").val(Master.TaxableAmount + Master.NetTax);
         ChkStatus.disabled = true;
         DiscountPrc = Master.DiscountPrc;
         MasterVatPrc = Master.VatPrc; 
-       
+        if (SharedSession.CurrentPrivileges.CUSTOM2 == true && Master.Status == 1) {
+            $('#btnReopen').css('display', 'inline');
+            $('#btnReopen').removeAttr('disabled');
+            $("#btnReopen").css('cursor', 'pointer');
+            $("#btnReopen").css('backgroundColor', 'red');
+        }
+        else {
+            $('#btnReopen').css('display', 'None');
+            $('#btnReopen').attr('disabled', 'disabled');
+            $("#btnReopen").css('cursor', 'no-drop');
+            $("#btnReopen").css('backgroundColor', '#0B6D8A');
+        }
+
        
     }
 
     function Add() {
         txtTrDate.value = DateFormat((new Date()).toString());
-
+        txtProjectID.value = "";
+        invAdvAmount = 0;
+        invTotal = 0;
+        invAdvVat = 0;
+        invadvDedPrc = 0;
         var dt = new Date();
         //var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
         //txtTime.value = time;
@@ -652,7 +698,7 @@ namespace CustomerDbCr {
      }
 
     function Insert() {
-        // btnCalc_Clicked();
+         btnCalc_Clicked();
         Assign();
         let compCode: number = Number(_CompCode);
         let braCode: number = Number(_BraCode);
@@ -704,7 +750,7 @@ namespace CustomerDbCr {
 
     function Update() {
 
-        //btnCalc_Clicked();
+        btnCalc_Clicked();
 
         Assign();
         Master.CustomerID = customerId;
@@ -911,11 +957,68 @@ namespace CustomerDbCr {
         GridSales.Bind();
         btnCalc_Clicked();
     }
-    function Display_src() {
+    function Display_src(invoiceMasterDetails: M_D_CustomerBillingMasterDetail) {
+        //fill master
+        //display inovice in CRDB 
+       
+        Master.ProjectID = invoiceMasterDetails.PQ_GetSalesInvoice.ProjectID;
+        Master.ProjCode = invoiceMasterDetails.PQ_GetSalesInvoice.ProjCode;
+        Master.Proj_DescA = invoiceMasterDetails.PQ_GetSalesInvoice.Proj_DescA;
+        Master.Proj_DescL = invoiceMasterDetails.PQ_GetSalesInvoice.Proj_DescL;
+        Master.BraCode = invoiceMasterDetails.PQ_GetSalesInvoice.BraCode;
+        Master.CompCode = invoiceMasterDetails.PQ_GetSalesInvoice.CompCode;
+        Master.CreatedAt = invoiceMasterDetails.PQ_GetSalesInvoice.CreatedAt;
+        Master.FromDate = invoiceMasterDetails.PQ_GetSalesInvoice.FromDate;
+        Master.ToDate = invoiceMasterDetails.PQ_GetSalesInvoice.ToDate;
+        Master.CreatedBy = invoiceMasterDetails.PQ_GetSalesInvoice.CreatedBy;
+        Master.CryptographicStamp = invoiceMasterDetails.PQ_GetSalesInvoice.CryptographicStamp;
+        Master.CustomerID = invoiceMasterDetails.PQ_GetSalesInvoice.CustomerID;
+        Master.Cust_DescA = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_DescA;
+        Master.Cust_DescE = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_DescE;
+        Master.Cust_CustomerCode = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_CustomerCode;
+        Master.Discount = invoiceMasterDetails.PQ_GetSalesInvoice.Discount;
+        Master.DiscountPrc = invoiceMasterDetails.PQ_GetSalesInvoice.DiscountPrc;
+        Master.DocNo = invoiceMasterDetails.PQ_GetSalesInvoice.DocUUID;
+        Master.DocUUID = invoiceMasterDetails.PQ_GetSalesInvoice.DocNo;;
+        Master.GlobalInvoiceCounter = invoiceMasterDetails.PQ_GetSalesInvoice.GlobalInvoiceCounter;
+        Master.InvoiceId = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId;
+        Master.InvoiceTransCode = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTransCode;
+        Master.InvoiceTypeCode = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTypeCode;
+        Master.NetAmount = invoiceMasterDetails.PQ_GetSalesInvoice.NetAmount;
+        Master.PrevInvoiceHash = invoiceMasterDetails.PQ_GetSalesInvoice.PrevInvoiceHash;
+        Master.ProjCode = invoiceMasterDetails.PQ_GetSalesInvoice.ProjCode;
+        Master.QRCode = invoiceMasterDetails.PQ_GetSalesInvoice.QRCode;
+        Master.RefCode = invoiceMasterDetails.PQ_GetSalesInvoice.RefCode;
+        Master.Remarks = invoiceMasterDetails.PQ_GetSalesInvoice.Remarks;
+        Master.Status = 0;
+        Master.TrNo = invoiceMasterDetails.PQ_GetSalesInvoice.TrNo;
+        Master.TrTime = invoiceMasterDetails.PQ_GetSalesInvoice.TrTime;
+        Master.TrDate = invoiceMasterDetails.PQ_GetSalesInvoice.TrDate;//txtTrDate.value;
+        Master.VatAmount = invoiceMasterDetails.PQ_GetSalesInvoice.VatAmount;
+        Master.VatPrc = invoiceMasterDetails.PQ_GetSalesInvoice.VatPrc;
+        Master.WorkDiscription = invoiceMasterDetails.PQ_GetSalesInvoice.WorkDiscription;
+        Master.TrType = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTypeCode;
+        Master.IsPosted = invoiceMasterDetails.PQ_GetSalesInvoice.IsPosted;
+        Master.RefInvoiceid = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId
+        Master.PostRef = invoiceMasterDetails.PQ_GetSalesInvoice.RefCode;
+        Master.TotalAmount = invoiceMasterDetails.PQ_GetSalesInvoice.TotalAmount; 
+
+         // display master 
         debugger;
         DocumentActions.RenderFromModel(Master);
-        $("#txtInvNo").val(Master.TrNo);
-        
+        $("#txtInvNo").val(invoiceMasterDetails.PQ_GetSalesInvoice.TrNo)
+        $("#txtRefInvoiceid").val(invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId)
+
+        invTotal = (invoiceMasterDetails.PQ_GetSalesInvoice.TotalAmount - invoiceMasterDetails.PQ_GetSalesInvoice.Discount)
+
+        invAdvAmount = invoiceMasterDetails.PQ_GetSalesInvoice.AdvDeduction 
+        invAdvVat = invoiceMasterDetails.PQ_GetSalesInvoice.AdvVatAmount
+
+ 
+
+
+        invadvDedPrc = 0
+
         customerId = Master.CustomerID;
         ProjectID = Master.ProjectID;
         InvoiceId = Master.InvoiceId;
@@ -925,14 +1028,14 @@ namespace CustomerDbCr {
         txtFromDate.value = DateFormat(Master.FromDate) != null ? DateFormat(Master.FromDate) : null;
         txtToDate.value = DateFormat(Master.ToDate) != null ? DateFormat(Master.ToDate) : null;
         Master.Status == 1 ? ControlsButtons.EditButton.disabled = true : ControlsButtons.EditButton.disabled = false;
-
-        LoadInvoiceDetails_src(Master.InvoiceId);
+              
         txtProj_DescL.value = _ScreenLang == "ar" ? Master.WorkDiscription : Master.WorkDiscription;
         txtCust_DescE.value = _ScreenLang == "ar" ? Master.Cust_DescA : Master.Cust_DescE;
         ChkStatus.disabled = true;
         DiscountPrc = Master.DiscountPrc;
         MasterVatPrc = Master.VatPrc;
 
+        LoadInvoiceDetails_src(Master.InvoiceId);
       
     }
     function LoadInvoiceDetails_src(id: number) {
@@ -961,7 +1064,7 @@ namespace CustomerDbCr {
             itm.Uom_DescE = sls.Uom_DescE;
             itm.uom_DescA = sls.uom_DescA;
             itm.ItemVatPrc = sls.ItemVatPrc;
-            itm.ItemVatAmount = sls.ItemVatAmount;
+            itm.ItemVatAmount = 0;
 
             if (itm.ItemVatAmount == null) {
                 itm.ItemVatAmount = 0;
@@ -1022,9 +1125,13 @@ namespace CustomerDbCr {
         });
     }
 
+   
     function btnCalc_Clicked() {
         if (ClientSharedWork.CurrentMode == ScreenModes.Query)
             return;
+
+
+        debugger
 
         vatPrc = Number(txtVatPrc.value);
         let DiscTotal: number = 0;
@@ -1052,6 +1159,37 @@ namespace CustomerDbCr {
 
         var totNetAmount = ItemTotal + VatTotal;
         txtNetAmount.value = Number(totNetAmount).toFixed(2);
+        //alert(invAdvAmount);
+        if (ItemTotal < 0 && invAdvAmount > 0) {
+            //if (invAdvAmount > -ItemTotal) {
+            //    txtAdvDeduction.value = (-ItemTotal).toFixed(2);
+            //    txtAdvVatAmount.value = (-VatTotal).toFixed(2);
+
+            //}
+            //else {
+            //    txtAdvDeduction.value = invAdvAmount.toFixed(2);
+            //    txtAdvVatAmount.value = invAdvVat.toFixed(2);
+            //}
+
+            
+
+            if (-ItemTotal - invTotal + invAdvAmount > 0 ) {
+                txtAdvDeduction.value = (-ItemTotal - invTotal + invAdvAmount).toFixed(2);
+                txtAdvVatAmount.value = (invAdvVat * (-ItemTotal - invTotal + invAdvAmount) / (invAdvAmount)).toFixed(2);
+
+            }
+            else {
+                txtAdvDeduction.value = "0";
+                txtAdvVatAmount.value = "0";
+            }
+        } else {
+            txtAdvDeduction.value = "0";
+            txtAdvVatAmount.value = "0";
+        }
+        txtTotAdv.value = (Number(txtAdvDeduction.value) + Number(txtAdvVatAmount.value)).toString()
+        txtTaxableAmount.value = (Number(txtTotalAmount.value) + Number(txtAdvDeduction.value)).toString()
+        txtNetTax.value = (Number(VatAmount.value) + Number(txtAdvVatAmount.value)).toString()
+        txtTotNet.value = (Number(txtTaxableAmount.value) + Number(txtNetTax.value)).toString()
     }
      
     function CalctotalAdd() {
@@ -1085,9 +1223,30 @@ namespace CustomerDbCr {
         $('#h_ItemTotalAVat').val(result);
     }
 
+    function GetSalesInvoice(id: number) {
+
+        Ajax.Callsync({
+            url: Url.Action("GetCustomerBillMasterDetail", "CustomerBilling"),
+            data: { id: id },
+            success: (d) => {
+                debugger
+                let invoiceMasterDetails = d.result as M_D_CustomerBillingMasterDetail;
+
+                invTotal = (invoiceMasterDetails.PQ_GetSalesInvoice.TotalAmount - invoiceMasterDetails.PQ_GetSalesInvoice.Discount)
+
+                invAdvAmount = invoiceMasterDetails.PQ_GetSalesInvoice.AdvDeduction
+                invAdvVat = invoiceMasterDetails.PQ_GetSalesInvoice.AdvVatAmount
+
+
+           
+                  
+            }
+        });
+
+    }
 
     function btnSearchBill_Clicked() {
-        alert("hh")
+        //alert("hh")
         sys.FindKey(Modules.CustomerDbCr, "btnSearchDbCr", "CompCode = " + _CompCode + " and BraCode = " + _BraCode, () => {
             let id = ClientSharedWork.SearchDataGrid.SelectedKey;
             Ajax.CallAsync({
@@ -1097,9 +1256,17 @@ namespace CustomerDbCr {
                     P_TR_SalesDbCrMasterDetails = d.result as M_D_CustomerDbCr;
                     Master = d.result as PQ_GetSalesDbCr;
                     P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr = Master;
+
+
+                    GetSalesInvoice(P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr.RefInvoiceid)
+
+                
+
+
+
                     let Index = GetIndexByUseId(Number(Master.InvoiceId), "PQ_GetSalesDbCr", "InvoiceId", " compCode = " + _CompCode + " and braCode = " + _BraCode);
                     NavigateToSearchResultKey(Number(Index), Navigate);
-                    var invoce = Number(Master.InvoiceId);
+                   
 
                 }
             });
@@ -1114,7 +1281,7 @@ namespace CustomerDbCr {
         else {
             con = "CompCode = " + _CompCode + " and BraCode = " + _BraCode + " and status = 1 ";
         }
-        alert(con);
+        //alert(con);
         sys.FindKey(Modules.CustomerBilling, "btnSearchBill", con, () => {
             let id = ClientSharedWork.SearchDataGrid.SelectedKey;
             Ajax.CallAsync({
@@ -1123,57 +1290,36 @@ namespace CustomerDbCr {
                 success: (d) => {
                     debugger
                     let invoiceMasterDetails = d.result as M_D_CustomerBillingMasterDetail;
-                    //display inovice in CRDB 
-                    $("#txtInvNo").val(invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTransCode)
-                    $("#txtRefInvoiceid").val(invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId)
-                    Master.ProjectID = invoiceMasterDetails.PQ_GetSalesInvoice.ProjectID;
-                    Master.ProjCode = invoiceMasterDetails.PQ_GetSalesInvoice.ProjCode;
-                    Master.Proj_DescA = invoiceMasterDetails.PQ_GetSalesInvoice.Proj_DescA;
-                    Master.Proj_DescL = invoiceMasterDetails.PQ_GetSalesInvoice.Proj_DescL;
-                    Master.BraCode = invoiceMasterDetails.PQ_GetSalesInvoice.BraCode;
-                    Master.CompCode = invoiceMasterDetails.PQ_GetSalesInvoice.CompCode;
-                    Master.CreatedAt = invoiceMasterDetails.PQ_GetSalesInvoice.CreatedAt;
-                    Master.FromDate = invoiceMasterDetails.PQ_GetSalesInvoice.FromDate;
-                    Master.ToDate = invoiceMasterDetails.PQ_GetSalesInvoice.ToDate;
-                    Master.CreatedBy = invoiceMasterDetails.PQ_GetSalesInvoice.CreatedBy;
-                    Master.CryptographicStamp = invoiceMasterDetails.PQ_GetSalesInvoice.CryptographicStamp;
-                    Master.CustomerID = invoiceMasterDetails.PQ_GetSalesInvoice.CustomerID;
-                    Master.Cust_DescA = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_DescA;
-                    Master.Cust_DescE = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_DescE;
-                    Master.Cust_CustomerCode = invoiceMasterDetails.PQ_GetSalesInvoice.Cust_CustomerCode;
-                    Master.Discount = invoiceMasterDetails.PQ_GetSalesInvoice.Discount;
-                    Master.DiscountPrc = invoiceMasterDetails.PQ_GetSalesInvoice.DiscountPrc;
-                    Master.DocNo = invoiceMasterDetails.PQ_GetSalesInvoice.DocUUID;
-                    Master.DocUUID = invoiceMasterDetails.PQ_GetSalesInvoice.DocNo;;
-                    Master.GlobalInvoiceCounter = invoiceMasterDetails.PQ_GetSalesInvoice.GlobalInvoiceCounter;
-                    Master.InvoiceId = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId;
-                    Master.InvoiceTransCode = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTransCode;
-                    Master.InvoiceTypeCode = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTypeCode;
-                    Master.NetAmount = invoiceMasterDetails.PQ_GetSalesInvoice.NetAmount;
-                    Master.PrevInvoiceHash = invoiceMasterDetails.PQ_GetSalesInvoice.PrevInvoiceHash;
-                    Master.ProjCode = invoiceMasterDetails.PQ_GetSalesInvoice.ProjCode;
-                    Master.QRCode = invoiceMasterDetails.PQ_GetSalesInvoice.QRCode;
-                    Master.RefCode = invoiceMasterDetails.PQ_GetSalesInvoice.RefCode;
-                    Master.Remarks = invoiceMasterDetails.PQ_GetSalesInvoice.Remarks;
-                    Master.Status = 0;
-                    Master.TrNo = invoiceMasterDetails.PQ_GetSalesInvoice.TrNo;
-                    Master.TrTime = invoiceMasterDetails.PQ_GetSalesInvoice.TrTime;
-                    Master.TrDate = invoiceMasterDetails.PQ_GetSalesInvoice.TrDate;//txtTrDate.value;
-                    Master.VatAmount = invoiceMasterDetails.PQ_GetSalesInvoice.VatAmount;
-                    Master.VatPrc = invoiceMasterDetails.PQ_GetSalesInvoice.VatPrc;
-                    Master.WorkDiscription = invoiceMasterDetails.PQ_GetSalesInvoice.WorkDiscription;
-                    Master.TrType = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceTypeCode;
-                    Master.IsPosted = invoiceMasterDetails.PQ_GetSalesInvoice.IsPosted;
-                    Master.RefInvoiceid = invoiceMasterDetails.PQ_GetSalesInvoice.InvoiceId
-                    Master.PostRef = invoiceMasterDetails.PQ_GetSalesInvoice.RefCode;
-                    Master.TotalAmount = invoiceMasterDetails.PQ_GetSalesInvoice.TotalAmount;
+                    
                       
-                    Display_src();
+                    Display_src(invoiceMasterDetails);
                 }
             });
         });
     }
-   
+    function SearchBillonchange() {
+        debugger
+        let trNo = Number(txtInvNo.value);
+
+        Ajax.CallAsync({
+            url: Url.Action("GetCustomerBillTrNo", ControllerName),
+            data: { TrNo: trNo, CompCode: _CompCode, BraCode: _BraCode },
+            success: (d) => {
+                debugger
+                let invoiceMasterDetails = d.result as M_D_CustomerBillingMasterDetail;
+                if ( invoiceMasterDetails != null) {
+                    //P_TR_SalesDbCrMasterDetails.P_TR_SalesDbCr = Master;
+                    //let Index = GetIndexByUseId(Number(Master.InvoiceId), "PQ_GetSalesDbCr", "InvoiceId", " compCode = " + _CompCode + " and braCode = " + _BraCode);
+                    // NavigateToSearchResultKey(Number(Index), Navigate);
+                    Display_src(invoiceMasterDetails);
+                     
+                } else {
+                    WorningMessage("لا يوجد فاتورة بهذا الرقم ", "There is no invoice with this no");
+                    txtInvNo.value = "";
+                }
+            }
+        });
+    }
     function TimeFormat_(tim: Date): string {
         tim = new Date("2000-01-10T" + tim.toString());
         let x = tim.getHours();

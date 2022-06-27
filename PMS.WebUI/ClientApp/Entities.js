@@ -1394,6 +1394,10 @@ var P_D_Activity = /** @class */ (function () {
         this.IsDetail = 0;
         this.Remarks = "";
         this.CompCode = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     return P_D_Activity;
 }());
@@ -1403,6 +1407,10 @@ var P_D_ActivityEquipClass = /** @class */ (function () {
         this.ActivityID = 0;
         this.EquipClassId = 0;
         this.NoOfEquipments = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     return P_D_ActivityEquipClass;
 }());
@@ -1415,6 +1423,10 @@ var P_D_ActivityIMaterial = /** @class */ (function () {
         this.WastPrc = 0;
         this.WastQty = 0;
         this.ReqQty = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     return P_D_ActivityIMaterial;
 }());
@@ -1424,6 +1436,10 @@ var P_D_ActivityLaborClass = /** @class */ (function () {
         this.ActivityID = 0;
         this.LaborClassId = 0;
         this.NoOfLabors = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     return P_D_ActivityLaborClass;
 }());
@@ -2557,6 +2573,10 @@ var PQ_GetActivityEquipmentClass = /** @class */ (function () {
         this.DescA = "";
         this.DescE = "";
         this.HourCost = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
     }
     return PQ_GetActivityEquipmentClass;
 }());
@@ -2570,6 +2590,10 @@ var PQ_GetActivityLaborClass = /** @class */ (function () {
         this.LaborClassId = 0;
         this.NoOfLabors = 0;
         this.HourCost = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
     }
     return PQ_GetActivityLaborClass;
 }());
@@ -2588,6 +2612,10 @@ var PQ_GetActivityMaterialClass = /** @class */ (function () {
         this.UomCode = "";
         this.Unit_descA = "";
         this.Unit_descE = "";
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
     }
     return PQ_GetActivityMaterialClass;
 }());
@@ -6298,6 +6326,10 @@ var P_TR_SalesDbCr = /** @class */ (function () {
         this.PrevInvoiceHash;
         this.QRCode;
         this.CryptographicStamp;
+        this.AdvDeduction = 0;
+        this.AdvVatAmount = 0;
+        this.TaxableAmount = 0;
+        this.NetTax = 0;
     }
     return P_TR_SalesDbCr;
 }());
@@ -6372,6 +6404,10 @@ var PQ_GetSalesDbCr = /** @class */ (function () {
         this.inv_TrNo = 0;
         this.inv_TrDate = "";
         this.inv_DocNo = "";
+        this.AdvDeduction = 0;
+        this.AdvVatAmount = 0;
+        this.TaxableAmount = 0;
+        this.NetTax = 0;
     }
     return PQ_GetSalesDbCr;
 }());

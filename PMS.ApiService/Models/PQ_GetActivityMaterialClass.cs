@@ -27,5 +27,9 @@ namespace PMS.ApiService.Models
         public string UomCode { get; set; }
         public string Unit_descA { get; set; }
         public string Unit_descE { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public string UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     }
 }

@@ -18,5 +18,9 @@ namespace PMS.ServiceConnector.Models
         public Nullable<int> ActivityID { get; set; }
         public Nullable<int> EquipClassId { get; set; }
         public Nullable<decimal> NoOfEquipments { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public string UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     }
 }

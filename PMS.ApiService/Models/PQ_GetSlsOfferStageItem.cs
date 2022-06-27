@@ -44,5 +44,10 @@ namespace PMS.ApiService.Models
         public Nullable<int> UomID { get; set; }
         public string ItemCode { get; set; }
         public Nullable<decimal> MinUnitPrice { get; set; }
+        public string SystemCode { get; set; }
+        public string Sys_DescA { get; set; }
+        public string sys_DescE { get; set; }
+        public Nullable<int> ItemSystemID { get; set; }
+        public Nullable<int> SystemID { get; set; }
     }
 }

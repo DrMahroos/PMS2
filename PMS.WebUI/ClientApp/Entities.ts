@@ -239,7 +239,7 @@ class ReportParameters {
     public IsExecludeZero: number;
     public SalsEngId: number;
     public TrID: number;
-    public ScopeCategCode: string;   
+    public ScopeCategCode: string;
     public BranchNameEn: string;
     public BranchName: string;
     public CompanyNameAr: string;
@@ -2258,7 +2258,7 @@ class P_Control {
         this.StdProfitMargin = 0;
         this.MaxImagesize = 0;
         this.DashBoardPeriodinSec = 0;
- 
+
     }
     public CompCode: number;
     public BraCode: number;
@@ -2298,6 +2298,10 @@ class P_D_Activity {
         this.IsDetail = 0;
         this.Remarks = "";
         this.CompCode = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     public ActivityID: number;
     public ActivityCode: string;
@@ -2312,6 +2316,10 @@ class P_D_Activity {
     public IsDetail: number;
     public Remarks: string;
     public CompCode: number;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 class P_D_ActivityEquipClass {
     constructor() {
@@ -2319,11 +2327,19 @@ class P_D_ActivityEquipClass {
         this.ActivityID = 0;
         this.EquipClassId = 0;
         this.NoOfEquipments = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     public ActivityEquipClassID: number;
     public ActivityID: number;
     public EquipClassId: number;
     public NoOfEquipments: number;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 class P_D_ActivityIMaterial {
     constructor() {
@@ -2334,6 +2350,10 @@ class P_D_ActivityIMaterial {
         this.WastPrc = 0;
         this.WastQty = 0;
         this.ReqQty = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     public ActivityMaterialID: number;
     public ActivityID: number;
@@ -2342,6 +2362,10 @@ class P_D_ActivityIMaterial {
     public WastPrc: number;
     public WastQty: number;
     public ReqQty: number;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 class P_D_ActivityLaborClass {
     constructor() {
@@ -2349,11 +2373,19 @@ class P_D_ActivityLaborClass {
         this.ActivityID = 0;
         this.LaborClassId = 0;
         this.NoOfLabors = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = null;
+        this.UpdatedBy = "";
+        this.UpdatedAt = null;
     }
     public ActivityLaborClassID: number;
     public ActivityID: number;
     public LaborClassId: number;
     public NoOfLabors: number;
+    public CreatedBy: string;
+    public CreatedAt: any;
+    public UpdatedBy: string;
+    public UpdatedAt: any
 }
 class P_D_Calender {
     constructor() {
@@ -3192,7 +3224,7 @@ class P_TR_SalesInvoice {
         this.IsDownpayment = false;
         this.UsedDownpayment = 0;
         this.RemainDownpayment = 0;
-        this.TrTime ="";
+        this.TrTime = "";
         this.DocNo = "";
         this.DocUUID = "";
         this.InvoiceTypeCode = 0;
@@ -4286,6 +4318,11 @@ class PQ_GetActivityEquipmentClass {
         this.DescA = "";
         this.DescE = "";
         this.HourCost = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
+
     }
     public ActivityEquipClassID: number;
     public ActivityID: number;
@@ -4295,6 +4332,10 @@ class PQ_GetActivityEquipmentClass {
     public DescA: string;
     public DescE: string;
     public HourCost: number;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 class PQ_GetActivityLaborClass {
     constructor() {
@@ -4306,6 +4347,10 @@ class PQ_GetActivityLaborClass {
         this.LaborClassId = 0;
         this.NoOfLabors = 0;
         this.HourCost = 0;
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
     }
     public ClassCode: string;
     public DescA: string;
@@ -4315,6 +4360,10 @@ class PQ_GetActivityLaborClass {
     public LaborClassId: number;
     public NoOfLabors: number;
     public HourCost: number;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 class PQ_GetActivityMaterialClass {
     constructor() {
@@ -4331,6 +4380,10 @@ class PQ_GetActivityMaterialClass {
         this.UomCode = "";
         this.Unit_descA = "";
         this.Unit_descE = "";
+        this.CreatedBy = "";
+        this.CreatedAt = "";
+        this.UpdatedBy = "";
+        this.UpdatedAt = "";
     }
     public ActivityMaterialID: number;
     public ActivityID: number;
@@ -4345,6 +4398,10 @@ class PQ_GetActivityMaterialClass {
     public UomCode: string;
     public Unit_descA: string;
     public Unit_descE: string;
+    public CreatedBy: string;
+    public CreatedAt: string;
+    public UpdatedBy: string;
+    public UpdatedAt: string;
 }
 
 class PQ_GetSalesCustomer {
@@ -7082,7 +7139,7 @@ class PQ_GetEngProject {
     public EndDate: string;
     public ISPosted: boolean;
     public VatPrc: number;
-    public VatType : number;
+    public VatType: number;
 }
 class PQ_GetEngProjectItem {
     constructor() {
@@ -10238,7 +10295,7 @@ class P_D_SalesCustomerDoc {
         this.IDIssueDate = "";
         this.IDIssueDateH = "";
         this.IDExpireDate = "";
-        this.IDExpireDateH = ""; 
+        this.IDExpireDateH = "";
         this.StatusFlag = "";
 
     }
@@ -10462,7 +10519,7 @@ class Proc_prnt_sls_invoice_results {
     public TaxableAmount: number;
     public NetTax: number;
     public TotalDue: number;
-    public IsDownpayment : boolean;
+    public IsDownpayment: boolean;
     public UsedDownpayment: number;
     public RemainDownpayment: number;
     public BRA_CODE: number;
@@ -10500,7 +10557,7 @@ class Mytime {
     constructor() {
         this.Days = 0;
         this.Hours = 0;
-        this.Milliseconds =0;
+        this.Milliseconds = 0;
         this.Minutes = 0;
         this.Seconds = 0;
         this.Tiks = 0;
@@ -10757,6 +10814,10 @@ class P_TR_SalesDbCr {
         this.PrevInvoiceHash
         this.QRCode
         this.CryptographicStamp
+        this.AdvDeduction = 0;
+        this.AdvVatAmount = 0;
+        this.TaxableAmount = 0;
+        this.NetTax = 0;
     }
     public InvoiceId: number;
     public TrType: number;
@@ -10796,6 +10857,10 @@ class P_TR_SalesDbCr {
     public PrevInvoiceHash: any;
     public QRCode: any;
     public CryptographicStamp: any;
+    public AdvDeduction: number;
+    public AdvVatAmount: number;
+    public TaxableAmount: number;
+    public NetTax: number;
 }
 
 class P_TR_SalesDbCrDetail {
@@ -10886,6 +10951,10 @@ class PQ_GetSalesDbCr {
         this.inv_TrNo = 0;
         this.inv_TrDate = "";
         this.inv_DocNo = "";
+        this.AdvDeduction = 0;
+        this.AdvVatAmount = 0;
+        this.TaxableAmount = 0;
+        this.NetTax = 0;
     }
     public InvoiceId: number;
     public TrNo: number;
@@ -10934,6 +11003,11 @@ class PQ_GetSalesDbCr {
     public inv_TrNo: number;
     public inv_TrDate: string;
     public inv_DocNo: string;
+    public AdvDeduction: number;
+    public AdvVatAmount: number;
+    public TaxableAmount: number;
+    public NetTax: number;
+
 }
 
 class PQ_GetSalesDbCrDetail {

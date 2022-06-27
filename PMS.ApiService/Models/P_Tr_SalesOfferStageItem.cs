@@ -39,5 +39,7 @@ namespace PMS.ApiService.Models
         public Nullable<decimal> EstimatedProfit { get; set; }
         public Nullable<decimal> EstimatedOH { get; set; }
         public Nullable<decimal> EstimatedPOH { get; set; }
+        public Nullable<int> ItemSystemID { get; set; }
+        public Nullable<int> SystemID { get; set; }
     }
 }

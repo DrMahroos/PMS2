@@ -27,5 +27,6 @@ namespace PMS.ApiService.Models
         public string puomdescA { get; set; }
         public string puomDescE { get; set; }
         public Nullable<decimal> Act_StdUunitPrice { get; set; }
+        public Nullable<int> ItemSystemID { get; set; }
     }
 }

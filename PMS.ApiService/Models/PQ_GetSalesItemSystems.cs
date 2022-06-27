@@ -12,19 +12,19 @@ namespace PMS.ApiService.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PQ_GetActivityEquipmentClass
+    public partial class PQ_GetSalesItemSystems
     {
-        public int ActivityEquipClassID { get; set; }
-        public Nullable<int> ActivityID { get; set; }
-        public Nullable<int> EquipClassId { get; set; }
-        public Nullable<decimal> NoOfEquipments { get; set; }
-        public string ClassCode { get; set; }
+        public int ItemSystemID { get; set; }
+        public Nullable<int> ItemID { get; set; }
+        public Nullable<int> SystemID { get; set; }
+        public Nullable<decimal> StdPrice { get; set; }
+        public Nullable<decimal> MinUnitPrice { get; set; }
+        public Nullable<decimal> UnitPrice { get; set; }
+        public string Remarks { get; set; }
+        public Nullable<int> ScopeID { get; set; }
+        public string SystemCode { get; set; }
         public string DescA { get; set; }
         public string DescE { get; set; }
-        public Nullable<decimal> HourCost { get; set; }
-        public string CreatedBy { get; set; }
-        public Nullable<System.DateTime> CreatedAt { get; set; }
-        public string UpdatedBy { get; set; }
-        public Nullable<System.DateTime> UpdatedAt { get; set; }
+        public string SysRemarks { get; set; }
     }
 }

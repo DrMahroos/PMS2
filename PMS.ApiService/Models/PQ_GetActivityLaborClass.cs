@@ -22,5 +22,9 @@ namespace PMS.ApiService.Models
         public Nullable<int> LaborClassId { get; set; }
         public Nullable<decimal> NoOfLabors { get; set; }
         public Nullable<decimal> HourCost { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public string UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     }
 }
