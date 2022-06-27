@@ -2404,11 +2404,13 @@ ul {
             }
 
                 .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a {
-                    padding: 10px 20px;
+                    padding: 10px 7px;
                     display: block;
-                    color: #085f70;
+                    color: #fbfeff;
                     font-size: 17px;
-                    text-align:start;
+                    text-align: start;
+                    font-weight: bold;
+                    border-top: solid 1px;
                 }
 
                 .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li .author-log-ic {
@@ -2433,7 +2435,7 @@ ul {
 
         .header-right-info ul.header-right-menu li.open .author-message-top, .header-right-info ul.header-right-menu li.open .notification-author, .header-right-info ul.header-right-menu li.open .author-log {
             opacity: 1;
-            top: 88%;
+            top: 85%;
             transition: all 0.5s ease 0s;
             visibility: visible;
         }
@@ -2585,12 +2587,12 @@ ul.message-menu, ul.notification-menu {
 }
 
 .header-right-info ul.header-right-menu li .admintab-wrap.menu-setting-wrap.menu-setting-wrap-bg.dropdown-menu {
-    background: #343434;
+    background: #1368d2;
 }
 
 .header-right-info ul.header-right-menu li .admintab-wrap.menu-setting-wrap.dropdown-menu {
     position: absolute;
-    top: 130%;
+    top: 87%;
     left: -8px;
     width: 350px;
     box-shadow: 0px 2px 3px rgba(0,0,0,.175);
@@ -6489,6 +6491,7 @@ ul.profile-contact-menu {
 
 .bar-button-pro {
     margin: 8px 7px;
+    color: #1368d2;
 }
 
 #sidebar .sidebar-header {
@@ -8306,7 +8309,9 @@ left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li {
 .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li {
      
     width: 100%!important;
-    float:right!important
+    float:right!important;
+    cursor:pointer!important;
+      
 }
 .src-btn {
     background-color: #118df7 !important;
@@ -8571,9 +8576,10 @@ left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li {
     border: snow;
 }
 .spanopen {
-    float: left;
-    left: -12px;
+    float: right;
+    left: -19px;
     position: absolute;
+    font-size: 20px;
 }
 .scroll {
     

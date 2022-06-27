@@ -124,7 +124,7 @@ input :disabled {
 
 .dropdown-menu {
     float: left !important;
-    text-align: right !important;
+    text-align: left !important;
 }
 .i_toolpar {
     right: 20%;
@@ -164,7 +164,7 @@ input :disabled {
     border-color: #eea236;
 }
 .spanopen {
-    color: #085f70 !important;
+    color: #b1e7ff !important;
     top: 29%;
     border-color: #3420;
     background-color: #085f7000;
