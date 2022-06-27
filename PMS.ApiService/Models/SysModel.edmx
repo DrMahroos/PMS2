@@ -977,6 +977,10 @@
           <Property Name="IsDetail" Type="bit" />
           <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
           <Property Name="CompCode" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="P_D_ActivityEquipClass">
           <Key>
@@ -986,6 +990,10 @@
           <Property Name="ActivityID" Type="int" />
           <Property Name="EquipClassId" Type="int" />
           <Property Name="NoOfEquipments" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="P_D_ActivityIMaterial">
           <Key>
@@ -998,6 +1006,10 @@
           <Property Name="WastPrc" Type="numeric" Precision="19" Scale="5" />
           <Property Name="WastQty" Type="numeric" Precision="19" Scale="5" />
           <Property Name="ReqQty" Type="numeric" Precision="19" Scale="5" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="P_D_ActivityLaborClass">
           <Key>
@@ -1007,6 +1019,10 @@
           <Property Name="ActivityID" Type="int" />
           <Property Name="LaborClassId" Type="int" />
           <Property Name="NoOfLabors" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <EntityType Name="P_D_Calender">
           <Key>
@@ -1350,6 +1366,19 @@
           <Property Name="ActQty" Type="numeric" Precision="18" Scale="2" />
           <Property Name="IsProdIncluded" Type="bit" />
           <Property Name="ProdPrc" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="ItemSystemID" Type="int" />
+        </EntityType>
+        <EntityType Name="P_D_SalesItemSystem">
+          <Key>
+            <PropertyRef Name="ItemSystemID" />
+          </Key>
+          <Property Name="ItemSystemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="SystemID" Type="int" />
+          <Property Name="StdPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="MinUnitPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="UnitPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="P_D_SalesPaymentTerms">
           <Key>
@@ -1395,6 +1424,18 @@
           <Property Name="DescA" Type="nvarchar" MaxLength="100" />
           <Property Name="DescE" Type="nvarchar" MaxLength="100" />
           <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompCode" Type="int" />
+        </EntityType>
+        <EntityType Name="P_D_ScopeSystem">
+          <Key>
+            <PropertyRef Name="SystemID" />
+          </Key>
+          <Property Name="SystemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScopeID" Type="int" />
+          <Property Name="SystemCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DescA" Type="nvarchar" MaxLength="200" />
+          <Property Name="DescE" Type="nvarchar" MaxLength="200" />
+          <Property Name="SysRemarks" Type="nvarchar" MaxLength="200" />
           <Property Name="CompCode" Type="int" />
         </EntityType>
         <EntityType Name="P_D_SiteEngCategory">
@@ -1730,7 +1771,7 @@
           <Property Name="ProjectPhaseItemActivId" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.P_TR_EngProductionActiv1102' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.P_TR_EngProductionActiv1102' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="P_TR_EngProductionActiv1102">
           <Key>
             <PropertyRef Name="ProductionActivId" />
@@ -2441,6 +2482,10 @@ warning 6002: The table/view 'PMS_2020.dbo.P_TR_EngProductionActiv1102' does not
           <Property Name="PrevInvoiceHash" Type="varchar" MaxLength="500" />
           <Property Name="QRCode" Type="varchar" MaxLength="2000" />
           <Property Name="CryptographicStamp" Type="varchar" MaxLength="2000" />
+          <Property Name="AdvDeduction" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="AdvVatAmount" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="TaxableAmount" Type="numeric" Precision="20" Scale="2" StoreGeneratedPattern="Computed" />
+          <Property Name="NetTax" Type="numeric" Precision="20" Scale="2" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="P_TR_SalesDbCrDetail">
           <Key>
@@ -2704,6 +2749,8 @@ warning 6002: The table/view 'PMS_2020.dbo.P_TR_EngProductionActiv1102' does not
           <Property Name="EstimatedProfit" Type="numeric" Precision="19" Scale="2" />
           <Property Name="EstimatedOH" Type="numeric" Precision="19" Scale="2" />
           <Property Name="EstimatedPOH" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="ItemSystemID" Type="int" />
+          <Property Name="SystemID" Type="int" />
         </EntityType>
         <EntityType Name="P_Tr_SalesOfferStageItemActivity">
           <Key>
@@ -2945,7 +2992,7 @@ warning 6002: The table/view 'PMS_2020.dbo.P_TR_EngProductionActiv1102' does not
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserBranch' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.GQ_GetUserBranch' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="GQ_GetUserBranch">
           <Key>
             <PropertyRef Name="USER_CODE" />
@@ -2972,7 +3019,7 @@ warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserBranch' does not have a pri
           <Property Name="VIEW" Type="bit" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserModule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.GQ_GetUserModule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="GQ_GetUserModule">
           <Key>
             <PropertyRef Name="USER_CODE" />
@@ -3048,7 +3095,7 @@ warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserModule' does not have a pri
           <Property Name="M_images_enabled" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserSubsystem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.GQ_GetUserSubsystem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="GQ_GetUserSubsystem">
           <Key>
             <PropertyRef Name="USER_CODE" />
@@ -3065,7 +3112,7 @@ warning 6002: The table/view 'PMS_2020.dbo.GQ_GetUserSubsystem' does not have a 
           <Property Name="SUB_SYSTEM_DESCE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.GQ_UserFavorite' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.GQ_UserFavorite' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="GQ_UserFavorite">
           <Key>
             <PropertyRef Name="MODULE_CODE" />
@@ -3082,7 +3129,7 @@ warning 6002: The table/view 'PMS_2020.dbo.GQ_UserFavorite' does not have a prim
           <Property Name="USER_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.IQ_GetItemList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.IQ_GetItemList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="IQ_GetItemList">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -3120,7 +3167,7 @@ warning 6002: The table/view 'PMS_2020.dbo.IQ_GetItemList' does not have a prima
           <Property Name="CatCode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.IQ_SrchItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.IQ_SrchItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="IQ_SrchItem">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -3139,7 +3186,7 @@ warning 6002: The table/view 'PMS_2020.dbo.IQ_SrchItem' does not have a primary 
           <Property Name="Cat_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_Calc_ActivityCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_Calc_ActivityCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_Calc_ActivityCost">
           <Key>
             <PropertyRef Name="ActivityID" />
@@ -3156,7 +3203,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_Calc_ActivityCost' does not have a
           <Property Name="UnitProfit" Type="numeric" Precision="38" Scale="6" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_Calc_ActivityLocalCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_Calc_ActivityLocalCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_Calc_ActivityLocalCost">
           <Key>
             <PropertyRef Name="ActivityID" />
@@ -3175,7 +3222,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_Calc_ActivityLocalCost' does not h
           <Property Name="UnitProfit" Type="numeric" Precision="38" Scale="6" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_G_Budget' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_G_Budget' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_G_Budget">
           <Key>
             <PropertyRef Name="BudjetID" />
@@ -3198,7 +3245,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_G_Budget' does not have a primary 
           <Property Name="UnitPrice" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityEquipmentClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetActivityEquipmentClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetActivityEquipmentClass">
           <Key>
             <PropertyRef Name="ActivityEquipClassID" />
@@ -3211,9 +3258,13 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityEquipmentClass' does no
           <Property Name="DescA" Type="nvarchar" MaxLength="100" />
           <Property Name="DescE" Type="nvarchar" MaxLength="100" />
           <Property Name="HourCost" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityLaborClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetActivityLaborClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetActivityLaborClass">
           <Key>
             <PropertyRef Name="ActivityLaborClassID" />
@@ -3226,9 +3277,13 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityLaborClass' does not ha
           <Property Name="LaborClassId" Type="int" />
           <Property Name="NoOfLabors" Type="numeric" Precision="19" Scale="2" />
           <Property Name="HourCost" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityMaterialClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetActivityMaterialClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetActivityMaterialClass">
           <Key>
             <PropertyRef Name="ActivityMaterialID" />
@@ -3236,19 +3291,23 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetActivityMaterialClass' does not
           <Property Name="ActivityMaterialID" Type="int" Nullable="false" />
           <Property Name="ActivityID" Type="int" />
           <Property Name="ItemID" Type="int" />
-          <Property Name="ProdQty" Type="numeric" Precision="19" Scale="2" />
-          <Property Name="WastPrc" Type="numeric" Precision="19" Scale="2" />
-          <Property Name="WastQty" Type="numeric" Precision="19" Scale="2" />
-          <Property Name="ReqQty" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="ProdQty" Type="numeric" Precision="19" Scale="5" />
+          <Property Name="WastPrc" Type="numeric" Precision="19" Scale="5" />
+          <Property Name="WastQty" Type="numeric" Precision="19" Scale="5" />
+          <Property Name="ReqQty" Type="numeric" Precision="19" Scale="5" />
           <Property Name="ItemCode" Type="nvarchar" MaxLength="25" />
           <Property Name="DescA" Type="nvarchar" MaxLength="100" />
           <Property Name="DescL" Type="nvarchar" MaxLength="100" />
           <Property Name="UomCode" Type="nvarchar" MaxLength="25" />
           <Property Name="Unit_descA" Type="nvarchar" MaxLength="100" />
           <Property Name="Unit_descE" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="CreatedAt" Type="smalldatetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="25" />
+          <Property Name="UpdatedAt" Type="smalldatetime" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngExpenses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngExpenses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngExpenses">
           <Key>
             <PropertyRef Name="ExpensesEntryId" />
@@ -3275,7 +3334,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngExpenses' does not have a pr
           <Property Name="Phase_DescE" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngExpensesDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngExpensesDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngExpensesDetail">
           <Key>
             <PropertyRef Name="ExpensesEntryDetailId" />
@@ -3297,7 +3356,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngExpensesDetail' does not hav
           <Property Name="Phase_DescE" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProduction">
           <Key>
             <PropertyRef Name="ProductionId" />
@@ -3337,7 +3396,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProduction' does not have a 
           <Property Name="Sc_Status" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngproductionActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngproductionActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngproductionActivity">
           <Key>
             <PropertyRef Name="ProductionActivId" />
@@ -3365,7 +3424,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngproductionActivity' does not
           <Property Name="RemainQty" Type="numeric" Precision="20" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionEquipment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProductionEquipment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProductionEquipment">
           <Key>
             <PropertyRef Name="ProductionequipId" />
@@ -3385,7 +3444,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionEquipment' does no
           <Property Name="EstHours" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProductionItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProductionItems">
           <Key>
             <PropertyRef Name="ProjectPhaseItemId" />
@@ -3409,7 +3468,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionItems' does not ha
           <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionLabour' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProductionLabour' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProductionLabour">
           <Key>
             <PropertyRef Name="ProductionLaborId" />
@@ -3429,7 +3488,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProductionLabour' does not h
           <Property Name="EstHours" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProject' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProject' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProject">
           <Key>
             <PropertyRef Name="ProjectID" />
@@ -3507,7 +3566,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProject' does not have a pri
           <Property Name="VatType" Type="tinyint" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProjectActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProjectActivity">
           <Key>
             <PropertyRef Name="ProjectPhaseItemActivId" />
@@ -3552,7 +3611,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectActivity' does not ha
           <Property Name="DailyProd" Type="numeric" Precision="21" Scale="5" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProjectItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProjectItem">
           <Key>
             <PropertyRef Name="ProjectPhaseItemId" />
@@ -3595,7 +3654,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectItem' does not have a
           <Property Name="UomCode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectPhase' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngProjectPhase' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngProjectPhase">
           <Key>
             <PropertyRef Name="ProjectPhaseId" />
@@ -3652,7 +3711,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngProjectPhase' does not have 
           <Property Name="ISPosted" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngServiceOrderActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngServiceOrderActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngServiceOrderActivity">
           <Key>
             <PropertyRef Name="SubServiceOrderActivityId" />
@@ -3679,7 +3738,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngServiceOrderActivity' does n
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubCandidateScope' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubCandidateScope' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubCandidateScope">
           <Key>
             <PropertyRef Name="SubCandidateScopeId" />
@@ -3697,7 +3756,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubCandidateScope' does not 
           <Property Name="DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContract' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubContract' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubContract">
           <Key>
             <PropertyRef Name="SubContractId" />
@@ -3759,7 +3818,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContract' does not have a
           <Property Name="VatType" Type="tinyint" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContractActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubContractActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubContractActivity">
           <Key>
             <PropertyRef Name="SubContractActivityId" />
@@ -3783,7 +3842,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContractActivity' does no
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContractorScope' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubContractorScope' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubContractorScope">
           <Key>
             <PropertyRef Name="SubContractorScopeId" />
@@ -3801,7 +3860,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubContractorScope' does not
           <Property Name="DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubProduction">
           <Key>
             <PropertyRef Name="SubProductionId" />
@@ -3857,7 +3916,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProduction' does not have
           <Property Name="IsFinal" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProductionActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubProductionActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubProductionActivity">
           <Key>
             <PropertyRef Name="SubProductionActivityId" />
@@ -3885,7 +3944,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProductionActivity' does 
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProductionItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubProductionItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubProductionItems">
           <Key>
             <PropertyRef Name="ItemId" />
@@ -3910,7 +3969,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubProductionItems' does not
           <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubServiceOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngSubServiceOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngSubServiceOrder">
           <Key>
             <PropertyRef Name="SubServiceOrderId" />
@@ -3961,7 +4020,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngSubServiceOrder' does not ha
           <Property Name="VatType" Type="tinyint" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngVariation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngVariation">
           <Key>
             <PropertyRef Name="VariationId" />
@@ -3989,7 +4048,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariation' does not have a p
           <Property Name="Proj_DescL" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariationActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngVariationActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngVariationActivity">
           <Key>
             <PropertyRef Name="VariationActivId" />
@@ -4024,7 +4083,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariationActivity' does not 
           <Property Name="NewEffItemQty" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariationItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngVariationItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngVariationItem">
           <Key>
             <PropertyRef Name="VariationItemId" />
@@ -4058,7 +4117,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngVariationItem' does not have
           <Property Name="ProgressQty" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchdule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchdule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchdule">
           <Key>
             <PropertyRef Name="ScheduleId" />
@@ -4104,7 +4163,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchdule' does not have a
           <Property Name="CalHours" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleActivity">
           <Key>
             <PropertyRef Name="ScheduleActivId" />
@@ -4130,7 +4189,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleActivity' does no
           <Property Name="DailyProd" Type="numeric" Precision="21" Scale="5" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleEquip' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleEquip' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleEquip">
           <Key>
             <PropertyRef Name="ScheduleEquipId" />
@@ -4149,7 +4208,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleEquip' does not h
           <Property Name="Eq_HourCost" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleEquipClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleEquipClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleEquipClass">
           <Key>
             <PropertyRef Name="ScheduleEquipClassId" />
@@ -4169,7 +4228,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleEquipClass' does 
           <Property Name="RequiredHrs" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleLabor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleLabor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleLabor">
           <Key>
             <PropertyRef Name="ScheduleLaborId" />
@@ -4192,7 +4251,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleLabor' does not h
           <Property Name="Lab_HourCost" Type="numeric" Precision="24" Scale="6" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleLaborClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleLaborClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleLaborClass">
           <Key>
             <PropertyRef Name="ScheduleLaborClassId" />
@@ -4212,7 +4271,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleLaborClass' does 
           <Property Name="RequiredHrs" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetEngWorkSchduleMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetEngWorkSchduleMaterial">
           <Key>
             <PropertyRef Name="ScheduleMaterialId" />
@@ -4235,7 +4294,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetEngWorkSchduleMaterial' does no
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetProjCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetProjCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetProjCustomer">
           <Key>
             <PropertyRef Name="CustomerID" />
@@ -4258,7 +4317,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetProjCustomer' does not have a p
           <Property Name="Expr3" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResEquipAssign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResEquipAssign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResEquipAssign">
           <Key>
             <PropertyRef Name="ScheduleEquipId" />
@@ -4279,7 +4338,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResEquipAssign' does not have a
           <Property Name="Class_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAbsence' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResLabourAbsence' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResLabourAbsence">
           <Key>
             <PropertyRef Name="AbsenceID" />
@@ -4312,7 +4371,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAbsence' does not have
           <Property Name="schd_TrNo" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAbsenceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResLabourAbsenceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResLabourAbsenceDetail">
           <Key>
             <PropertyRef Name="AbsenceLabourID" />
@@ -4336,7 +4395,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAbsenceDetail' does no
           <Property Name="AbsenceType_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAssign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResLabourAssign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResLabourAssign">
           <Key>
             <PropertyRef Name="ScheduleLaborId" />
@@ -4357,7 +4416,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourAssign' does not have 
           <Property Name="LabourClass_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourOverTime' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResLabourOverTime' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResLabourOverTime">
           <Key>
             <PropertyRef Name="OverTimeID" />
@@ -4393,7 +4452,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourOverTime' does not hav
           <Property Name="Phase_DescE" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourOverTimeDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResLabourOverTimeDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResLabourOverTimeDetail">
           <Key>
             <PropertyRef Name="OverTimeLabourID" />
@@ -4415,7 +4474,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResLabourOverTimeDetail' does n
           <Property Name="OTType_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialIssue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResMaterialIssue' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResMaterialIssue">
           <Key>
             <PropertyRef Name="IssueMaterialId" />
@@ -4451,7 +4510,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialIssue' does not have
           <Property Name="SchduleTrNo" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialIssueDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResMaterialIssueDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResMaterialIssueDetails">
           <Key>
             <PropertyRef Name="RequestMaterialDetailId" />
@@ -4472,7 +4531,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialIssueDetails' does n
           <Property Name="uom_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialReturned' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResMaterialReturned' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResMaterialReturned">
           <Key>
             <PropertyRef Name="ReturnMaterialId" />
@@ -4505,7 +4564,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialReturned' does not h
           <Property Name="SchduleTrNo" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialReturnedDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResMaterialReturnedDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResMaterialReturnedDetails">
           <Key>
             <PropertyRef Name="RequestMaterialDetailId" />
@@ -4525,7 +4584,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResMaterialReturnedDetails' doe
           <Property Name="uom_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResReqLabour' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResReqLabour' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResReqLabour">
           <Key>
             <PropertyRef Name="RequestLabourId" />
@@ -4557,7 +4616,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResReqLabour' does not have a p
           <Property Name="Eng_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestEquipment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestEquipment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestEquipment">
           <Key>
             <PropertyRef Name="RequestEquipmentId" />
@@ -4588,7 +4647,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestEquipment' does not h
           <Property Name="schd_TrNo" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestLaborDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestLaborDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestLaborDetails">
           <Key>
             <PropertyRef Name="ScheduleLaborClassId" />
@@ -4604,7 +4663,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestLaborDetails' does no
           <Property Name="DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestLabours' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestLabours' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestLabours">
           <Key>
             <PropertyRef Name="RequestLabourId" />
@@ -4639,7 +4698,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestLabours' does not hav
           <Property Name="CalHours" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestMaterial">
           <Key>
             <PropertyRef Name="RequestMaterialId" />
@@ -4675,7 +4734,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterial' does not ha
           <Property Name="Eng_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterialDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestMaterialDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestMaterialDetails">
           <Key>
             <PropertyRef Name="RequestMaterialDetailId" />
@@ -4699,7 +4758,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterialDetails' does
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterialMontoring' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetResRequestMaterialMontoring' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetResRequestMaterialMontoring">
           <Key>
             <PropertyRef Name="RequestMaterialId" />
@@ -4729,7 +4788,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetResRequestMaterialMontoring' do
           <Property Name="uom_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesActivityPrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesActivityPrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesActivityPrice">
           <Key>
             <PropertyRef Name="ActivityPriceId" />
@@ -4752,7 +4811,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesActivityPrice' does not ha
           <Property Name="M_ActName_en" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesActivityPriceDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesActivityPriceDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesActivityPriceDetails">
           <Key>
             <PropertyRef Name="ActivityPriceDetailId" />
@@ -4777,7 +4836,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesActivityPriceDetails' does
           <Property Name="D_ActName_en" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesCustomer">
           <Key>
             <PropertyRef Name="CustomerID" />
@@ -4828,7 +4887,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesCustomer' does not have a 
           <Property Name="ISVatRegistered" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesCustomerDoc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesCustomerDoc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesCustomerDoc">
           <Key>
             <PropertyRef Name="CustomerDocID" />
@@ -4847,7 +4906,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesCustomerDoc' does not have
           <Property Name="Doc_StdCode" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesDbCr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesDbCr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesDbCr">
           <Key>
             <PropertyRef Name="InvoiceId" />
@@ -4899,9 +4958,13 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesDbCr' does not have a prim
           <Property Name="inv_TrNo" Type="int" />
           <Property Name="inv_TrDate" Type="smalldatetime" />
           <Property Name="inv_DocNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdvDeduction" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="AdvVatAmount" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="TaxableAmount" Type="numeric" Precision="20" Scale="2" />
+          <Property Name="NetTax" Type="numeric" Precision="20" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesDbCrDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesDbCrDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesDbCrDetail">
           <Key>
             <PropertyRef Name="InvoiceDetailId" />
@@ -4934,7 +4997,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesDbCrDetail' does not have 
           <Property Name="DiffPricePrc" Type="numeric" Precision="19" Scale="5" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesFillInvoiceProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesFillInvoiceProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesFillInvoiceProd">
           <Key>
             <PropertyRef Name="Prod_ProductionId" />
@@ -4965,7 +5028,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesFillInvoiceProd' does not 
           <Property Name="LineCode" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesInvoice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesInvoice">
           <Key>
             <PropertyRef Name="InvoiceId" />
@@ -5025,7 +5088,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoice' does not have a p
           <Property Name="AdvanceConsumPrc" Type="numeric" Precision="18" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoiceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesInvoiceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesInvoiceDetail">
           <Key>
             <PropertyRef Name="InvoiceDetailId" />
@@ -5058,7 +5121,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoiceDetail' does not ha
           <Property Name="ItemTotalAVat" Type="numeric" Precision="38" Scale="4" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoiceProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesInvoiceProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesInvoiceProd">
           <Key>
             <PropertyRef Name="Prod_ProductionId" />
@@ -5091,7 +5154,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesInvoiceProd' does not have
           <Property Name="LineCode" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesIssueProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesIssueProduction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesIssueProduction">
           <Key>
             <PropertyRef Name="ProductionId" />
@@ -5128,7 +5191,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesIssueProduction' does not 
           <Property Name="NetAmount" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesIssueProductionDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesIssueProductionDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesIssueProductionDetails">
           <Key>
             <PropertyRef Name="ProductionDetailId" />
@@ -5154,7 +5217,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesIssueProductionDetails' do
           <Property Name="LineCode" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesItem">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -5189,7 +5252,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesItem' does not have a prim
           <Property Name="IsEditable" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GETSalesItemActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GETSalesItemActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GETSalesItemActivity">
           <Key>
             <PropertyRef Name="ItemsActivityId" />
@@ -5207,9 +5270,29 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GETSalesItemActivity' does not hav
           <Property Name="puomdescA" Type="nvarchar" MaxLength="50" />
           <Property Name="puomDescE" Type="nvarchar" MaxLength="50" />
           <Property Name="Act_StdUunitPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="ItemSystemID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesManBonus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesItemSystems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PQ_GetSalesItemSystems">
+          <Key>
+            <PropertyRef Name="ItemSystemID" />
+          </Key>
+          <Property Name="ItemSystemID" Type="int" Nullable="false" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="SystemID" Type="int" />
+          <Property Name="StdPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="MinUnitPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="UnitPrice" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+          <Property Name="ScopeID" Type="int" />
+          <Property Name="SystemCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DescA" Type="nvarchar" MaxLength="200" />
+          <Property Name="DescE" Type="nvarchar" MaxLength="200" />
+          <Property Name="SysRemarks" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesManBonus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesManBonus">
           <Key>
             <PropertyRef Name="SalesBonusId" />
@@ -5252,7 +5335,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesManBonus' does not have a 
           <Property Name="SlsCat_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesOffer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSalesOffer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSalesOffer">
           <Key>
             <PropertyRef Name="OfferID" />
@@ -5331,7 +5414,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSalesOffer' does not have a pri
           <Property Name="WaranteePrd" Type="numeric" Precision="16" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsCustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsCustomer">
           <Key>
             <PropertyRef Name="CustomerID" />
@@ -5383,7 +5466,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsCustomer' does not have a pr
           <Property Name="ProjEngCode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferActivity">
           <Key>
             <PropertyRef Name="OfferStageItemActivityId" />
@@ -5416,7 +5499,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferActivity' does not have
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferBilling' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferBilling' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferBilling">
           <Key>
             <PropertyRef Name="OfferBillingId" />
@@ -5438,7 +5521,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferBilling' does not have 
           <Property Name="ItemCode" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferPayment">
           <Key>
             <PropertyRef Name="OfferPaymentId" />
@@ -5452,7 +5535,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferPayment' does not have 
           <Property Name="Pay_DescE" Type="nvarchar" MaxLength="600" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferResponsibility' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferResponsibility' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferResponsibility">
           <Key>
             <PropertyRef Name="OfferResponsibilityId" />
@@ -5469,7 +5552,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferResponsibility' does no
           <Property Name="Res_DescE" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferStage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferStage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferStage">
           <Key>
             <PropertyRef Name="OfferStageId" />
@@ -5493,7 +5576,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferStage' does not have a 
           <Property Name="EstimatedPOH" Type="numeric" Precision="19" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferStageItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_GetSlsOfferStageItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_GetSlsOfferStageItem">
           <Key>
             <PropertyRef Name="OfferItemId" />
@@ -5521,16 +5604,21 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_GetSlsOfferStageItem' does not hav
           <Property Name="EstimatedPOH" Type="numeric" Precision="19" Scale="2" />
           <Property Name="UnitCost" Type="numeric" Precision="38" Scale="15" />
           <Property Name="LineCode" Type="nvarchar" MaxLength="20" />
-          <Property Name="DescA" Type="nvarchar" MaxLength="500" />
-          <Property Name="DescE" Type="nvarchar" MaxLength="500" />
+          <Property Name="DescA" Type="nvarchar" MaxLength="1500" />
+          <Property Name="DescE" Type="nvarchar" MaxLength="1500" />
           <Property Name="TechDescA" Type="nvarchar" MaxLength="100" />
           <Property Name="TechDescE" Type="nvarchar" MaxLength="100" />
           <Property Name="UomID" Type="int" />
           <Property Name="ItemCode" Type="nvarchar" MaxLength="10" />
           <Property Name="MinUnitPrice" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="SystemCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sys_DescA" Type="nvarchar" MaxLength="200" />
+          <Property Name="sys_DescE" Type="nvarchar" MaxLength="200" />
+          <Property Name="ItemSystemID" Type="int" />
+          <Property Name="SystemID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_LoadEngSubSOContractActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_LoadEngSubSOContractActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_LoadEngSubSOContractActivity">
           <Key>
             <PropertyRef Name="SubContractId" />
@@ -5555,7 +5643,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_LoadEngSubSOContractActivity' does
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_ResEquipmentWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_ResEquipmentWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_ResEquipmentWork">
           <Key>
             <PropertyRef Name="ProductionId" />
@@ -5574,7 +5662,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_ResEquipmentWork' does not have a 
           <Property Name="EquipmentID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_ResLabourWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_ResLabourWork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_ResLabourWork">
           <Key>
             <PropertyRef Name="ProductionId" />
@@ -5595,7 +5683,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_ResLabourWork' does not have a pri
           <Property Name="LaborID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_Sales_SrchOfferItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_Sales_SrchOfferItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_Sales_SrchOfferItem">
           <Key>
             <PropertyRef Name="OfferItemId" />
@@ -5608,7 +5696,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_Sales_SrchOfferItem' does not have
           <Property Name="OfferID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SalesInvoiceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SalesInvoiceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SalesInvoiceDetail">
           <Key>
             <PropertyRef Name="InvoiceProdId" />
@@ -5621,7 +5709,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SalesInvoiceDetail' does not have 
           <Property Name="InvoiceDetailId" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SearchSchduleMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SearchSchduleMaterial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SearchSchduleMaterial">
           <Key>
             <PropertyRef Name="ScheduleMaterialId" />
@@ -5643,7 +5731,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SearchSchduleMaterial' does not ha
           <Property Name="uom_DescE" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrchActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrchActivity">
           <Key>
             <PropertyRef Name="ActivityID" />
@@ -5666,7 +5754,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchActivity' does not have a prim
           <Property Name="Uom_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchEngProjectActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrchEngProjectActivity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrchEngProjectActivity">
           <Key>
             <PropertyRef Name="ProjectPhaseItemActivId" />
@@ -5699,7 +5787,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchEngProjectActivity' does not h
           <Property Name="AvaL_Qty" Type="numeric" Precision="21" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchEngProjectPhase' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrchEngProjectPhase' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrchEngProjectPhase">
           <Key>
             <PropertyRef Name="ProjectID" />
@@ -5723,7 +5811,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchEngProjectPhase' does not have
           <Property Name="CompCode" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchSalesOffer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrchSalesOffer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrchSalesOffer">
           <Key>
             <PropertyRef Name="OfferID" />
@@ -5764,7 +5852,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchSalesOffer' does not have a pr
           <Property Name="Stat_DescE" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchSlsItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrchSlsItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrchSlsItem">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -5788,7 +5876,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrchSlsItem' does not have a prima
           <Property Name="IsEditable" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'PMS2_2022.dbo.PQ_SrcSchdule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PQ_SrcSchdule">
           <Key>
             <PropertyRef Name="ScheduleId" />
@@ -8109,10 +8197,12 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySet Name="P_D_SalesEngCateory" EntityType="Self.P_D_SalesEngCateory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SalesItems" EntityType="Self.P_D_SalesItems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SalesItemsActivity" EntityType="Self.P_D_SalesItemsActivity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="P_D_SalesItemSystem" EntityType="Self.P_D_SalesItemSystem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SalesPaymentTerms" EntityType="Self.P_D_SalesPaymentTerms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SalesResponsibility" EntityType="Self.P_D_SalesResponsibility" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_Scope" EntityType="Self.P_D_Scope" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_ScopeCategory" EntityType="Self.P_D_ScopeCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="P_D_ScopeSystem" EntityType="Self.P_D_ScopeSystem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SiteEngCategory" EntityType="Self.P_D_SiteEngCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_SiteEngineer" EntityType="Self.P_D_SiteEngineer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P_D_Status" EntityType="Self.P_D_Status" Schema="dbo" store:Type="Tables" />
@@ -8392,7 +8482,11 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GetActivityEquipmentClass].[ClassCode] AS [ClassCode], 
     [PQ_GetActivityEquipmentClass].[DescA] AS [DescA], 
     [PQ_GetActivityEquipmentClass].[DescE] AS [DescE], 
-    [PQ_GetActivityEquipmentClass].[HourCost] AS [HourCost]
+    [PQ_GetActivityEquipmentClass].[HourCost] AS [HourCost], 
+    [PQ_GetActivityEquipmentClass].[CreatedBy] AS [CreatedBy], 
+    [PQ_GetActivityEquipmentClass].[CreatedAt] AS [CreatedAt], 
+    [PQ_GetActivityEquipmentClass].[UpdatedBy] AS [UpdatedBy], 
+    [PQ_GetActivityEquipmentClass].[UpdatedAt] AS [UpdatedAt]
     FROM [dbo].[PQ_GetActivityEquipmentClass] AS [PQ_GetActivityEquipmentClass]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_GetActivityLaborClass" EntityType="Self.PQ_GetActivityLaborClass" store:Type="Views" store:Schema="dbo">
@@ -8404,7 +8498,11 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GetActivityLaborClass].[ActivityID] AS [ActivityID], 
     [PQ_GetActivityLaborClass].[LaborClassId] AS [LaborClassId], 
     [PQ_GetActivityLaborClass].[NoOfLabors] AS [NoOfLabors], 
-    [PQ_GetActivityLaborClass].[HourCost] AS [HourCost]
+    [PQ_GetActivityLaborClass].[HourCost] AS [HourCost], 
+    [PQ_GetActivityLaborClass].[CreatedBy] AS [CreatedBy], 
+    [PQ_GetActivityLaborClass].[CreatedAt] AS [CreatedAt], 
+    [PQ_GetActivityLaborClass].[UpdatedBy] AS [UpdatedBy], 
+    [PQ_GetActivityLaborClass].[UpdatedAt] AS [UpdatedAt]
     FROM [dbo].[PQ_GetActivityLaborClass] AS [PQ_GetActivityLaborClass]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_GetActivityMaterialClass" EntityType="Self.PQ_GetActivityMaterialClass" store:Type="Views" store:Schema="dbo">
@@ -8421,7 +8519,11 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GetActivityMaterialClass].[DescL] AS [DescL], 
     [PQ_GetActivityMaterialClass].[UomCode] AS [UomCode], 
     [PQ_GetActivityMaterialClass].[Unit_descA] AS [Unit_descA], 
-    [PQ_GetActivityMaterialClass].[Unit_descE] AS [Unit_descE]
+    [PQ_GetActivityMaterialClass].[Unit_descE] AS [Unit_descE], 
+    [PQ_GetActivityMaterialClass].[CreatedBy] AS [CreatedBy], 
+    [PQ_GetActivityMaterialClass].[CreatedAt] AS [CreatedAt], 
+    [PQ_GetActivityMaterialClass].[UpdatedBy] AS [UpdatedBy], 
+    [PQ_GetActivityMaterialClass].[UpdatedAt] AS [UpdatedAt]
     FROM [dbo].[PQ_GetActivityMaterialClass] AS [PQ_GetActivityMaterialClass]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_GetEngExpenses" EntityType="Self.PQ_GetEngExpenses" store:Type="Views" store:Schema="dbo">
@@ -9899,7 +10001,11 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GetSalesDbCr].[PostRef] AS [PostRef], 
     [PQ_GetSalesDbCr].[inv_TrNo] AS [inv_TrNo], 
     [PQ_GetSalesDbCr].[inv_TrDate] AS [inv_TrDate], 
-    [PQ_GetSalesDbCr].[inv_DocNo] AS [inv_DocNo]
+    [PQ_GetSalesDbCr].[inv_DocNo] AS [inv_DocNo], 
+    [PQ_GetSalesDbCr].[AdvDeduction] AS [AdvDeduction], 
+    [PQ_GetSalesDbCr].[AdvVatAmount] AS [AdvVatAmount], 
+    [PQ_GetSalesDbCr].[TaxableAmount] AS [TaxableAmount], 
+    [PQ_GetSalesDbCr].[NetTax] AS [NetTax]
     FROM [dbo].[PQ_GetSalesDbCr] AS [PQ_GetSalesDbCr]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_GetSalesDbCrDetail" EntityType="Self.PQ_GetSalesDbCrDetail" store:Type="Views" store:Schema="dbo">
@@ -10178,8 +10284,25 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GETSalesItemActivity].[puomcode] AS [puomcode], 
     [PQ_GETSalesItemActivity].[puomdescA] AS [puomdescA], 
     [PQ_GETSalesItemActivity].[puomDescE] AS [puomDescE], 
-    [PQ_GETSalesItemActivity].[Act_StdUunitPrice] AS [Act_StdUunitPrice]
+    [PQ_GETSalesItemActivity].[Act_StdUunitPrice] AS [Act_StdUunitPrice], 
+    [PQ_GETSalesItemActivity].[ItemSystemID] AS [ItemSystemID]
     FROM [dbo].[PQ_GETSalesItemActivity] AS [PQ_GETSalesItemActivity]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PQ_GetSalesItemSystems" EntityType="Self.PQ_GetSalesItemSystems" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PQ_GetSalesItemSystems].[ItemSystemID] AS [ItemSystemID], 
+    [PQ_GetSalesItemSystems].[ItemID] AS [ItemID], 
+    [PQ_GetSalesItemSystems].[SystemID] AS [SystemID], 
+    [PQ_GetSalesItemSystems].[StdPrice] AS [StdPrice], 
+    [PQ_GetSalesItemSystems].[MinUnitPrice] AS [MinUnitPrice], 
+    [PQ_GetSalesItemSystems].[UnitPrice] AS [UnitPrice], 
+    [PQ_GetSalesItemSystems].[Remarks] AS [Remarks], 
+    [PQ_GetSalesItemSystems].[ScopeID] AS [ScopeID], 
+    [PQ_GetSalesItemSystems].[SystemCode] AS [SystemCode], 
+    [PQ_GetSalesItemSystems].[DescA] AS [DescA], 
+    [PQ_GetSalesItemSystems].[DescE] AS [DescE], 
+    [PQ_GetSalesItemSystems].[SysRemarks] AS [SysRemarks]
+    FROM [dbo].[PQ_GetSalesItemSystems] AS [PQ_GetSalesItemSystems]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_GetSalesManBonus" EntityType="Self.PQ_GetSalesManBonus" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -10465,7 +10588,12 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
     [PQ_GetSlsOfferStageItem].[TechDescE] AS [TechDescE], 
     [PQ_GetSlsOfferStageItem].[UomID] AS [UomID], 
     [PQ_GetSlsOfferStageItem].[ItemCode] AS [ItemCode], 
-    [PQ_GetSlsOfferStageItem].[MinUnitPrice] AS [MinUnitPrice]
+    [PQ_GetSlsOfferStageItem].[MinUnitPrice] AS [MinUnitPrice], 
+    [PQ_GetSlsOfferStageItem].[SystemCode] AS [SystemCode], 
+    [PQ_GetSlsOfferStageItem].[Sys_DescA] AS [Sys_DescA], 
+    [PQ_GetSlsOfferStageItem].[sys_DescE] AS [sys_DescE], 
+    [PQ_GetSlsOfferStageItem].[ItemSystemID] AS [ItemSystemID], 
+    [PQ_GetSlsOfferStageItem].[SystemID] AS [SystemID]
     FROM [dbo].[PQ_GetSlsOfferStageItem] AS [PQ_GetSlsOfferStageItem]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PQ_LoadEngSubSOContractActivity" EntityType="Self.PQ_LoadEngSubSOContractActivity" store:Type="Views" store:Schema="dbo">
@@ -12940,6 +13068,9 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySet Name="P_TR_SalesDbCrDetail" EntityType="PMSModel.P_TR_SalesDbCrDetail" />
           <EntitySet Name="PQ_GetSalesDbCr" EntityType="PMSModel.PQ_GetSalesDbCr" />
           <EntitySet Name="PQ_GetSalesDbCrDetail" EntityType="PMSModel.PQ_GetSalesDbCrDetail" />
+          <EntitySet Name="P_D_SalesItemSystem" EntityType="PMSModel.P_D_SalesItemSystem" />
+          <EntitySet Name="P_D_ScopeSystem" EntityType="PMSModel.P_D_ScopeSystem" />
+          <EntitySet Name="PQ_GetSalesItemSystems" EntityType="PMSModel.PQ_GetSalesItemSystems" />
           <FunctionImport Name="PProc_Prnt_sls_DbCr" ReturnType="Collection(PMSModel.PProc_Prnt_sls_DbCr_Result)">
             <Parameter Name="comp" Mode="In" Type="Int32" />
             <Parameter Name="CompNameA" Mode="In" Type="String" />
@@ -16483,6 +16614,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="IsDetail" Type="Boolean" />
           <Property Name="Remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CompCode" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="P_D_ActivityEquipClass">
           <Key>
@@ -16492,6 +16627,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="ActivityID" Type="Int32" />
           <Property Name="EquipClassId" Type="Int32" />
           <Property Name="NoOfEquipments" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="P_D_ActivityIMaterial">
           <Key>
@@ -16504,6 +16643,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="WastPrc" Type="Decimal" Precision="19" Scale="5" />
           <Property Name="WastQty" Type="Decimal" Precision="19" Scale="5" />
           <Property Name="ReqQty" Type="Decimal" Precision="19" Scale="5" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="P_D_ActivityLaborClass">
           <Key>
@@ -16513,6 +16656,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="ActivityID" Type="Int32" />
           <Property Name="LaborClassId" Type="Int32" />
           <Property Name="NoOfLabors" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="P_D_Calender">
           <Key>
@@ -16842,6 +16989,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="ActQty" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="IsProdIncluded" Type="Boolean" />
           <Property Name="ProdPrc" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ItemSystemID" Type="Int32" />
         </EntityType>
         <EntityType Name="P_D_SalesPaymentTerms">
           <Key>
@@ -18010,6 +18158,8 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="EstimatedProfit" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="EstimatedOH" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="EstimatedPOH" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ItemSystemID" Type="Int32" />
+          <Property Name="SystemID" Type="Int32" />
         </EntityType>
         <EntityType Name="P_Tr_SalesOfferStageItemActivity">
           <Key>
@@ -18494,6 +18644,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="DescA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DescE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="HourCost" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="PQ_GetActivityLaborClass">
           <Key>
@@ -18507,6 +18661,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="LaborClassId" Type="Int32" />
           <Property Name="NoOfLabors" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="HourCost" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="PQ_GetActivityMaterialClass">
           <Key>
@@ -18515,16 +18673,20 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="ActivityMaterialID" Type="Int32" Nullable="false" />
           <Property Name="ActivityID" Type="Int32" />
           <Property Name="ItemID" Type="Int32" />
-          <Property Name="ProdQty" Type="Decimal" Precision="19" Scale="2" />
-          <Property Name="WastPrc" Type="Decimal" Precision="19" Scale="2" />
-          <Property Name="WastQty" Type="Decimal" Precision="19" Scale="2" />
-          <Property Name="ReqQty" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ProdQty" Type="Decimal" Precision="19" Scale="5" />
+          <Property Name="WastPrc" Type="Decimal" Precision="19" Scale="5" />
+          <Property Name="WastQty" Type="Decimal" Precision="19" Scale="5" />
+          <Property Name="ReqQty" Type="Decimal" Precision="19" Scale="5" />
           <Property Name="ItemCode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="DescA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DescL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UomCode" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Unit_descA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Unit_descE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="PQ_GetEngExpenses">
           <Key>
@@ -20110,6 +20272,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="puomdescA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="puomDescE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Act_StdUunitPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="ItemSystemID" Type="Int32" />
         </EntityType>
         <EntityType Name="PQ_GetSalesManBonus">
           <Key>
@@ -20406,13 +20569,18 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="EstimatedPOH" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="UnitCost" Type="Decimal" Precision="38" Scale="15" />
           <Property Name="LineCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="DescA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="DescE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DescA" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="DescE" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
           <Property Name="TechDescA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TechDescE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UomID" Type="Int32" />
           <Property Name="ItemCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="MinUnitPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SystemCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sys_DescA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sys_DescE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ItemSystemID" Type="Int32" />
+          <Property Name="SystemID" Type="Int32" />
         </EntityType>
         <EntityType Name="PQ_LoadEngSubSOContractActivity">
           <Key>
@@ -23018,6 +23186,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="PrevInvoiceHash" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="QRCode" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
           <Property Name="CryptographicStamp" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="AdvDeduction" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AdvVatAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TaxableAmount" Type="Decimal" Precision="20" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="NetTax" Type="Decimal" Precision="20" Scale="2" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="P_TR_SalesDbCrDetail">
           <Key>
@@ -23092,6 +23264,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="inv_TrNo" Type="Int32" />
           <Property Name="inv_TrDate" Type="DateTime" Precision="0" />
           <Property Name="inv_DocNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdvDeduction" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AdvVatAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TaxableAmount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="NetTax" Type="Decimal" Precision="20" Scale="2" />
         </EntityType>
         <EntityType Name="PQ_GetSalesDbCrDetail">
           <Key>
@@ -23124,6 +23300,47 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Name="InvDiscountAmt" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="DiffPricePrc" Type="Decimal" Precision="19" Scale="5" />
         </EntityType>
+        <EntityType Name="P_D_SalesItemSystem">
+          <Key>
+            <PropertyRef Name="ItemSystemID" />
+          </Key>
+          <Property Name="ItemSystemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemID" Type="Int32" />
+          <Property Name="SystemID" Type="Int32" />
+          <Property Name="StdPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="MinUnitPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="Remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="P_D_ScopeSystem">
+          <Key>
+            <PropertyRef Name="SystemID" />
+          </Key>
+          <Property Name="SystemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScopeID" Type="Int32" />
+          <Property Name="SystemCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DescA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DescE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SysRemarks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompCode" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PQ_GetSalesItemSystems">
+          <Key>
+            <PropertyRef Name="ItemSystemID" />
+          </Key>
+          <Property Name="ItemSystemID" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" />
+          <Property Name="SystemID" Type="Int32" />
+          <Property Name="StdPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="MinUnitPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="Remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ScopeID" Type="Int32" />
+          <Property Name="SystemCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DescA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DescE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SysRemarks" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
         <ComplexType Name="PProc_Prnt_sls_DbCr_Result">
           <Property Type="Int32" Name="Comp" Nullable="true" />
           <Property Type="String" Name="CompNameA" Nullable="true" MaxLength="100" />
@@ -23154,7 +23371,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Type="DateTime" Name="ToDate" Nullable="true" Precision="16" />
           <Property Type="String" Name="WorkDiscription" Nullable="true" MaxLength="200" />
           <Property Type="String" Name="inv_HDE" Nullable="false" MaxLength="11" />
-          <Property Type="String" Name="inv_HDA" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="inv_HDA" Nullable="false" MaxLength="22" />
           <Property Type="String" Name="RefCode" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="Remarks" Nullable="true" MaxLength="200" />
           <Property Type="Int32" Name="Serial" Nullable="true" />
@@ -23232,6 +23449,12 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <Property Type="DateTime" Name="inv_TrDate" Nullable="true" Precision="16" />
           <Property Type="String" Name="inv_DocNo" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="inv_GlobalNo" Nullable="true" />
+          <Property Type="Decimal" Name="AdvDeduction" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="AdvVatAmount" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="totAdvDed" Nullable="true" Precision="19" Scale="2" />
+          <Property Type="Decimal" Name="NetTax" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="TaxableAmount" Nullable="true" Precision="20" Scale="2" />
+          <Property Type="Decimal" Name="NetAmountafterTax" Nullable="true" Precision="21" Scale="2" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -27220,6 +27443,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_D_Activity">
             <EntityTypeMapping TypeName="PMSModel.P_D_Activity">
               <MappingFragment StoreEntitySet="P_D_Activity">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="CompCode" ColumnName="CompCode" />
                 <ScalarProperty Name="Remarks" ColumnName="Remarks" />
                 <ScalarProperty Name="IsDetail" ColumnName="IsDetail" />
@@ -27239,6 +27466,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_D_ActivityEquipClass">
             <EntityTypeMapping TypeName="PMSModel.P_D_ActivityEquipClass">
               <MappingFragment StoreEntitySet="P_D_ActivityEquipClass">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="NoOfEquipments" ColumnName="NoOfEquipments" />
                 <ScalarProperty Name="EquipClassId" ColumnName="EquipClassId" />
                 <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
@@ -27249,6 +27480,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_D_ActivityIMaterial">
             <EntityTypeMapping TypeName="PMSModel.P_D_ActivityIMaterial">
               <MappingFragment StoreEntitySet="P_D_ActivityIMaterial">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="ReqQty" ColumnName="ReqQty" />
                 <ScalarProperty Name="WastQty" ColumnName="WastQty" />
                 <ScalarProperty Name="WastPrc" ColumnName="WastPrc" />
@@ -27262,6 +27497,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_D_ActivityLaborClass">
             <EntityTypeMapping TypeName="PMSModel.P_D_ActivityLaborClass">
               <MappingFragment StoreEntitySet="P_D_ActivityLaborClass">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="NoOfLabors" ColumnName="NoOfLabors" />
                 <ScalarProperty Name="LaborClassId" ColumnName="LaborClassId" />
                 <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
@@ -27607,6 +27846,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_D_SalesItemsActivity">
             <EntityTypeMapping TypeName="PMSModel.P_D_SalesItemsActivity">
               <MappingFragment StoreEntitySet="P_D_SalesItemsActivity">
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
                 <ScalarProperty Name="ProdPrc" ColumnName="ProdPrc" />
                 <ScalarProperty Name="IsProdIncluded" ColumnName="IsProdIncluded" />
                 <ScalarProperty Name="ActQty" ColumnName="ActQty" />
@@ -28814,6 +29054,8 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_Tr_SalesOfferStageItem">
             <EntityTypeMapping TypeName="PMSModel.P_Tr_SalesOfferStageItem">
               <MappingFragment StoreEntitySet="P_Tr_SalesOfferStageItem">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
                 <ScalarProperty Name="EstimatedPOH" ColumnName="EstimatedPOH" />
                 <ScalarProperty Name="EstimatedOH" ColumnName="EstimatedOH" />
                 <ScalarProperty Name="EstimatedProfit" ColumnName="EstimatedProfit" />
@@ -29294,6 +29536,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GetActivityEquipmentClass">
             <EntityTypeMapping TypeName="PMSModel.PQ_GetActivityEquipmentClass">
               <MappingFragment StoreEntitySet="PQ_GetActivityEquipmentClass">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="HourCost" ColumnName="HourCost" />
                 <ScalarProperty Name="DescE" ColumnName="DescE" />
                 <ScalarProperty Name="DescA" ColumnName="DescA" />
@@ -29308,6 +29554,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GetActivityLaborClass">
             <EntityTypeMapping TypeName="PMSModel.PQ_GetActivityLaborClass">
               <MappingFragment StoreEntitySet="PQ_GetActivityLaborClass">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="HourCost" ColumnName="HourCost" />
                 <ScalarProperty Name="NoOfLabors" ColumnName="NoOfLabors" />
                 <ScalarProperty Name="LaborClassId" ColumnName="LaborClassId" />
@@ -29322,6 +29572,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GetActivityMaterialClass">
             <EntityTypeMapping TypeName="PMSModel.PQ_GetActivityMaterialClass">
               <MappingFragment StoreEntitySet="PQ_GetActivityMaterialClass">
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="Unit_descE" ColumnName="Unit_descE" />
                 <ScalarProperty Name="Unit_descA" ColumnName="Unit_descA" />
                 <ScalarProperty Name="UomCode" ColumnName="UomCode" />
@@ -30945,6 +31199,7 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GETSalesItemActivity">
             <EntityTypeMapping TypeName="PMSModel.PQ_GETSalesItemActivity">
               <MappingFragment StoreEntitySet="PQ_GETSalesItemActivity">
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
                 <ScalarProperty Name="Act_StdUunitPrice" ColumnName="Act_StdUunitPrice" />
                 <ScalarProperty Name="puomDescE" ColumnName="puomDescE" />
                 <ScalarProperty Name="puomdescA" ColumnName="puomdescA" />
@@ -31233,6 +31488,11 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GetSlsOfferStageItem">
             <EntityTypeMapping TypeName="PMSModel.PQ_GetSlsOfferStageItem">
               <MappingFragment StoreEntitySet="PQ_GetSlsOfferStageItem">
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
+                <ScalarProperty Name="sys_DescE" ColumnName="sys_DescE" />
+                <ScalarProperty Name="Sys_DescA" ColumnName="Sys_DescA" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
                 <ScalarProperty Name="MinUnitPrice" ColumnName="MinUnitPrice" />
                 <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
                 <ScalarProperty Name="UomID" ColumnName="UomID" />
@@ -34059,6 +34319,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="P_TR_SalesDbCr">
             <EntityTypeMapping TypeName="PMSModel.P_TR_SalesDbCr">
               <MappingFragment StoreEntitySet="P_TR_SalesDbCr">
+                <ScalarProperty Name="NetTax" ColumnName="NetTax" />
+                <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+                <ScalarProperty Name="AdvVatAmount" ColumnName="AdvVatAmount" />
+                <ScalarProperty Name="AdvDeduction" ColumnName="AdvDeduction" />
                 <ScalarProperty Name="CryptographicStamp" ColumnName="CryptographicStamp" />
                 <ScalarProperty Name="QRCode" ColumnName="QRCode" />
                 <ScalarProperty Name="PrevInvoiceHash" ColumnName="PrevInvoiceHash" />
@@ -34126,6 +34390,10 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
           <EntitySetMapping Name="PQ_GetSalesDbCr">
             <EntityTypeMapping TypeName="PMSModel.PQ_GetSalesDbCr">
               <MappingFragment StoreEntitySet="PQ_GetSalesDbCr">
+                <ScalarProperty Name="NetTax" ColumnName="NetTax" />
+                <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+                <ScalarProperty Name="AdvVatAmount" ColumnName="AdvVatAmount" />
+                <ScalarProperty Name="AdvDeduction" ColumnName="AdvDeduction" />
                 <ScalarProperty Name="inv_DocNo" ColumnName="inv_DocNo" />
                 <ScalarProperty Name="inv_TrDate" ColumnName="inv_TrDate" />
                 <ScalarProperty Name="inv_TrNo" ColumnName="inv_TrNo" />
@@ -34205,6 +34473,50 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
                 <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
                 <ScalarProperty Name="ProjectPhaseItemId" ColumnName="ProjectPhaseItemId" />
                 <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="P_D_SalesItemSystem">
+            <EntityTypeMapping TypeName="PMSModel.P_D_SalesItemSystem">
+              <MappingFragment StoreEntitySet="P_D_SalesItemSystem">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="MinUnitPrice" ColumnName="MinUnitPrice" />
+                <ScalarProperty Name="StdPrice" ColumnName="StdPrice" />
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="P_D_ScopeSystem">
+            <EntityTypeMapping TypeName="PMSModel.P_D_ScopeSystem">
+              <MappingFragment StoreEntitySet="P_D_ScopeSystem">
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="SysRemarks" ColumnName="SysRemarks" />
+                <ScalarProperty Name="DescE" ColumnName="DescE" />
+                <ScalarProperty Name="DescA" ColumnName="DescA" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="ScopeID" ColumnName="ScopeID" />
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PQ_GetSalesItemSystems">
+            <EntityTypeMapping TypeName="PMSModel.PQ_GetSalesItemSystems">
+              <MappingFragment StoreEntitySet="PQ_GetSalesItemSystems">
+                <ScalarProperty Name="SysRemarks" ColumnName="SysRemarks" />
+                <ScalarProperty Name="DescE" ColumnName="DescE" />
+                <ScalarProperty Name="DescA" ColumnName="DescA" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="ScopeID" ColumnName="ScopeID" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="MinUnitPrice" ColumnName="MinUnitPrice" />
+                <ScalarProperty Name="StdPrice" ColumnName="StdPrice" />
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemSystemID" ColumnName="ItemSystemID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -34318,6 +34630,12 @@ warning 6002: The table/view 'PMS_2020.dbo.PQ_SrcSchdule' does not have a primar
                 <ScalarProperty Name="inv_TrDate" ColumnName="inv_TrDate" />
                 <ScalarProperty Name="inv_DocNo" ColumnName="inv_DocNo" />
                 <ScalarProperty Name="inv_GlobalNo" ColumnName="inv_GlobalNo" />
+                <ScalarProperty Name="AdvDeduction" ColumnName="AdvDeduction" />
+                <ScalarProperty Name="AdvVatAmount" ColumnName="AdvVatAmount" />
+                <ScalarProperty Name="totAdvDed" ColumnName="totAdvDed" />
+                <ScalarProperty Name="NetTax" ColumnName="NetTax" />
+                <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+                <ScalarProperty Name="NetAmountafterTax" ColumnName="NetAmountafterTax" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

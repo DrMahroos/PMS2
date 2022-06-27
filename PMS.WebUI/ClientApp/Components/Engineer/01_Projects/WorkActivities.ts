@@ -72,7 +72,9 @@ namespace WorkActivities {
     var _ScreenLanguage: string;
     var _CompCode: string;
     //var _BranchCode: string;
-
+    var falagCreate = false;
+    var LaborClass = false;
+    var EquClass = false;
     export function InitalizeComponent() {
         SharedSession.CurrentPrivileges = GetPrivileges();
         SharedSession.CurrentEnvironment = GetSystemEnvironment();
@@ -101,7 +103,7 @@ namespace WorkActivities {
         ControlsButtons.DeleteAction(() => { });
         ControlsButtons.UndoAction(Undo);
         InitalizeGrid();
-        
+
         wastvalue = Ajax.Call<Array<P_Control>>({ url: Url.Action("getWasteValue", ControllerName) });
         $('#h_WastPrc').val(wastvalue[0].MaterialWastPrc);
     }
@@ -156,8 +158,8 @@ namespace WorkActivities {
         GridMaterial.ConfirmDeleteing = SharedSession.CurrentPrivileges.Remove;
         GridMaterial.InsertionMode = JsGridInsertionMode.Binding;
         GridMaterial.OnItemInserting = () => { };
-        GridMaterial.OnItemUpdating =  () => { };
-        GridMaterial.OnItemDeleting =  () => { };
+        GridMaterial.OnItemUpdating = () => { };
+        GridMaterial.OnItemDeleting = () => { };
         GridMaterial.Columns = [
             {
                 title: res.Act_ItemCode, name: "ItemCode", width: columnWidth, css: JsGridHeaderCenter,
@@ -185,6 +187,7 @@ namespace WorkActivities {
                     let txt = CreateElement("label", GridInputClassName, " ", " ", "DescA", " ");
                     txt.id = "h_MatDescA"
                     txt.disabled = true;
+
                     return HeaderTemplateNew(res.Act_ItemName, txt);
                 }
             },
@@ -222,7 +225,9 @@ namespace WorkActivities {
                     txt.id = "h_ProdQty";
                     txt.disabled = false;
                     txt.onkeyup = (e) => {
-                        
+
+
+
                         calcWastQty();
                     };
                     return HeaderTemplateNew(res.Act_ProdQty, txt);
@@ -235,7 +240,9 @@ namespace WorkActivities {
                     txt.id = "h_WastPrc"
                     txt.disabled = false;
                     txt.onkeyup = (e) => {
-                        
+
+
+
                         calcWastQty();
                     };
                     return HeaderTemplateNew(res.Act_WastPrc, txt);
@@ -259,6 +266,49 @@ namespace WorkActivities {
                     return HeaderTemplateNew(res.Act_ReqQty, txt);
                 }
             },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedBy", " ");
+                    txt.id = "h_CreatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedBy', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedAt", " ");
+                    txt.id = "h_CreatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedAt', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedBy", " ");
+                    txt.id = "h_UpdatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedBy', txt);
+                }
+            },
+
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedAt", " ");
+                    txt.id = "h_UpdatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedAt', txt);
+                }
+            },
+
+
             {
                 title: "#", name: "btnAddItem", visible: true, width: NumberColumnWidth,
                 headerTemplate: (): HTMLElement => {
@@ -274,7 +324,8 @@ namespace WorkActivities {
                             WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
                             return;
                         }
-                        
+                        //falagCreate = true;
+
                         AddItemInMaterialGrid();
                     };
                     return btn;
@@ -314,11 +365,12 @@ namespace WorkActivities {
                     btn.type = "button";
                     btn.name = DetailsMaterial.indexOf(item).toString();
                     btn.onclick = (e) => {
-                        
+
                         if (ClientSharedWork.CurrentMode == ScreenModes.Query) {
                             WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
                             return;
                         }
+                        falagCreate = true;
                         DetailsAssignHeaderMaterial = new PQ_GetActivityMaterialClass();
                         h_ItemID = item.ItemID;
                         DetailsAssignHeaderMaterial.ItemCode = item.ItemCode;
@@ -331,11 +383,17 @@ namespace WorkActivities {
                         DetailsAssignHeaderMaterial.WastQty = item.WastQty;
                         DetailsAssignHeaderMaterial.ReqQty = item.ReqQty;
 
+                        DetailsAssignHeaderMaterial.CreatedBy = item.CreatedBy;
+                        DetailsAssignHeaderMaterial.CreatedAt = item.CreatedAt;
+                        DetailsAssignHeaderMaterial.UpdatedBy = item.UpdatedBy;
+                        DetailsAssignHeaderMaterial.UpdatedAt = item.UpdatedAt;
+
+
                         let index = Number((e.currentTarget as HTMLButtonElement).name);
                         DetailsMaterial.splice(index, 1);
                         BindDataMaterialGrids();
                         //ReIndexingGrid();
-                        
+
                         DetailsAssignHeaderMaterial.ItemID = h_ItemID;
                         $('#btnFindMaterial').text(DetailsAssignHeaderMaterial.ItemCode);
                         FillInputText("h_MatDescA", DetailsAssignHeaderMaterial.DescA);
@@ -346,6 +404,11 @@ namespace WorkActivities {
                         FillInputText("h_WastPrc", DetailsAssignHeaderMaterial.WastPrc.toString());
                         FillInputText("h_WastQty", DetailsAssignHeaderMaterial.WastQty.toString());
                         FillInputText("h_ReqQty", DetailsAssignHeaderMaterial.ReqQty.toString());
+                        FillInputText("h_CreatedAt", DetailsAssignHeaderMaterial.CreatedAt.toString());
+                        FillInputText("h_CreatedBy", DetailsAssignHeaderMaterial.CreatedBy.toString());
+
+                        FillInputText("h_UpdatedAt", DetailsAssignHeaderMaterial.UpdatedAt.toString());
+                        FillInputText("h_UpdatedBy", DetailsAssignHeaderMaterial.UpdatedBy.toString());
                     };
                     return btn;
                 }
@@ -423,6 +486,48 @@ namespace WorkActivities {
                     return HeaderTemplateNew(res.Act_NoOfLabors, txt);
                 }
             },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedBy", " ");
+                    txt.id = "Lab_CreatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedBy', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedAt", " ");
+                    txt.id = "Lab_CreatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedAt', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedBy", " ");
+                    txt.id = "Lab_UpdatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedBy', txt);
+                }
+            },
+
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedAt", " ");
+                    txt.id = "Lab_UpdatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedAt', txt);
+                }
+            },
+
             {
                 title: "#", name: "btnAddItem", visible: true, width: NumberColumnWidth,
                 headerTemplate: (): HTMLElement => {
@@ -476,27 +581,42 @@ namespace WorkActivities {
                     btn.type = "button";
                     btn.name = DetailsLabor.indexOf(item).toString();
                     btn.onclick = (e) => {
-                        
+
                         if (ClientSharedWork.CurrentMode == ScreenModes.Query) {
                             WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
                             return;
                         }
+
+                        LaborClass = true;
+
                         DetailsAssignHeaderLabor = new PQ_GetActivityLaborClass();
                         h_LaborClassId = item.LaborClassId;
                         DetailsAssignHeaderLabor.ClassCode = item.ClassCode;
                         DetailsAssignHeaderLabor.DescA = item.DescA;
                         DetailsAssignHeaderLabor.DescE = item.DescE;
                         DetailsAssignHeaderLabor.NoOfLabors = item.NoOfLabors;
+                        DetailsAssignHeaderLabor.CreatedAt = item.CreatedAt;
+                        DetailsAssignHeaderLabor.CreatedBy = item.CreatedBy;
+                        DetailsAssignHeaderLabor.UpdatedAt = item.UpdatedAt;
+                        DetailsAssignHeaderLabor.UpdatedBy = item.UpdatedBy;
 
                         let index = Number((e.currentTarget as HTMLButtonElement).name);
                         DetailsLabor.splice(index, 1);
                         BindDataLaborGrids();
                         //ReIndexingGrid();
-                        
+
+
+
+
+
                         DetailsAssignHeaderLabor.LaborClassId = h_LaborClassId;
                         $('#btnFindLabor').text(DetailsAssignHeaderLabor.ClassCode);
                         FillInputText("h_LaborDescA", DetailsAssignHeaderLabor.DescA);
                         FillInputText("h_LaborDescE", DetailsAssignHeaderLabor.DescE);
+                        FillInputText("Lab_CreatedBy", DetailsAssignHeaderLabor.CreatedAt);
+                        FillInputText("Lab_CreatedBy", DetailsAssignHeaderLabor.CreatedBy);
+                        FillInputText("Lab_UpdatedAt", DetailsAssignHeaderLabor.UpdatedAt);
+                        FillInputText("Lab_UpdatedBy", DetailsAssignHeaderLabor.UpdatedBy);
                         FillInputText("h_NoOfLabors", DetailsAssignHeaderLabor.NoOfLabors.toString());
                     };
                     return btn;
@@ -525,7 +645,7 @@ namespace WorkActivities {
         GridEquipment.OnItemInserting = () => { };
         GridEquipment.OnItemUpdating = () => { };
         GridEquipment.OnItemDeleting = () => { };
-        GridEquipment.Columns = [       
+        GridEquipment.Columns = [
             {
                 title: res.Act_EquipClassName, name: "EquipClassId", width: columnWidth, css: JsGridHeaderCenter,
                 headerTemplate: (): HTMLElement => {
@@ -575,6 +695,48 @@ namespace WorkActivities {
                     return HeaderTemplateNew(res.Act_NoOfEquipments, txt);
                 }
             },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedBy", " ");
+                    txt.id = "Equ_CreatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedBy', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "CreatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "CreatedAt", " ");
+                    txt.id = "Equ_CreatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('CreatedAt', txt);
+                }
+            },
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedBy", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedBy", " ");
+                    txt.id = "Equ_UpdatedBy"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedBy', txt);
+                }
+            },
+
+
+            {
+                title: res.Act_ReqQty, name: "UpdatedAt", width: "9.5%",
+                headerTemplate: (): HTMLElement => {
+                    let txt = CreateElement("label", GridInputClassName, " ", " ", "UpdatedAt", " ");
+                    txt.id = "Equ_UpdatedAt"
+                    txt.disabled = true;
+                    return HeaderTemplateNew('UpdatedAt', txt);
+                }
+            },
+
             {
                 title: "#", name: "btnAddItem", visible: true, width: NumberColumnWidth,
                 headerTemplate: (): HTMLElement => {
@@ -590,7 +752,7 @@ namespace WorkActivities {
                             WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
                             return;
                         }
-                        
+
                         AddItemInEquipGrid();
                     };
                     return btn;
@@ -629,28 +791,39 @@ namespace WorkActivities {
                     btn.type = "button";
                     btn.name = DetailsEquip.indexOf(item).toString();
                     btn.onclick = (e) => {
-                        
+
                         if (ClientSharedWork.CurrentMode == ScreenModes.Query) {
                             WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
                             return;
                         }
+                        EquClass = true;
                         DetailsAssignHeaderEquip = new PQ_GetActivityEquipmentClass();
                         h_EquipClassId = item.EquipClassId;
                         DetailsAssignHeaderEquip.ClassCode = item.ClassCode;
                         DetailsAssignHeaderEquip.DescA = item.DescA;
                         DetailsAssignHeaderEquip.DescE = item.DescE;
                         DetailsAssignHeaderEquip.NoOfEquipments = item.NoOfEquipments;
+                        DetailsAssignHeaderEquip.CreatedBy = item.CreatedBy;
+                        DetailsAssignHeaderEquip.CreatedAt = item.CreatedAt;
+                        DetailsAssignHeaderEquip.UpdatedBy = item.UpdatedBy;
+                        DetailsAssignHeaderEquip.UpdatedAt = item.UpdatedAt;
+
 
                         let index = Number((e.currentTarget as HTMLButtonElement).name);
                         DetailsEquip.splice(index, 1);
                         BindDataEquipGrids();
                         //ReIndexingGrid();
-                        
+
                         DetailsAssignHeaderEquip.EquipClassId = h_EquipClassId;
                         $('#btnFindEquip').text(DetailsAssignHeaderEquip.ClassCode);
                         FillInputText("h_EquipDescA", DetailsAssignHeaderEquip.DescA);
                         FillInputText("h_EquipDescE", DetailsAssignHeaderEquip.DescE);
                         FillInputText("h_NoOfEquipments", DetailsAssignHeaderEquip.NoOfEquipments.toString());
+                        FillInputText("Equ_CreatedAt", DetailsAssignHeaderEquip.CreatedAt.toString());
+                        FillInputText("Equ_CreatedBy", DetailsAssignHeaderEquip.CreatedBy.toString());
+
+                        FillInputText("Equ_UpdatedAt", DetailsAssignHeaderEquip.UpdatedAt.toString());
+                        FillInputText("Equ_UpdatedBy", DetailsAssignHeaderEquip.UpdatedBy.toString());
                     };
                     return btn;
                 }
@@ -661,11 +834,11 @@ namespace WorkActivities {
     }
 
     function Navigate() {
-        
+
         Ajax.CallAsync({
             url: Url.Action("GetByIndex", ControllerName),
             success: (d) => {
-                
+
                 Master = d.result as P_D_Activity;
                 Display();
             }
@@ -683,7 +856,7 @@ namespace WorkActivities {
         ClearGrid(GridEquipment, EquipDataSource);
 
         // New 
-        
+
         $('#h_WastPrc').val(wastvalue[0].MaterialWastPrc);
         $('#h_ProdQty').val(0);
         ChkIsDetail.checked = true;
@@ -699,7 +872,9 @@ namespace WorkActivities {
     }
 
     function Insert() {
-        
+
+
+
         if (Number(txtHourProduction.value) <= 0 || IsNullOrEmpty(txtHourProduction.value)) {
             WorningMessage("ساعات الانتاج لا يمكن ان تكون بصفر", "Hour Production Must Not Equal Zero Or Null");
             return;
@@ -712,17 +887,22 @@ namespace WorkActivities {
         MasterDetails.P_D_Activity.IsDetail = 1;
         Master.ParentActivityID = parentactivityId;
         Master.UomID = uomId;
+
+
+        MasterDetails.P_D_Activity.CreatedAt = DateTimeFormat(Date());
+        MasterDetails.P_D_Activity.CreatedBy = SharedSession.CurrentEnvironment.UserCode;
+
         Ajax.CallAsync({
             url: Url.Action("Insert", ControllerName),
             data: { JsonData: JSON.stringify(MasterDetails) },
             success: (d) => {
-                
+
                 let result = d.result as ResponseResult;
                 if (result.ResponseState == true) {
-                    ClientSharedWork.SwitchModes(ScreenModes.Query);              
+                    ClientSharedWork.SwitchModes(ScreenModes.Query);
                     let msg: string = ReturnMsg("تم الحفظ  ", "Data Saved");
                     MessageBox.Show(msg, "Insert", () => {
-                        
+
                         //Display();
                         let _Index = GetIndexByUseId(result.ResponseData, "P_D_Activity", "ActivityID");
                         NavigateToSearchResultKey(Number(_Index), Navigate)
@@ -733,7 +913,7 @@ namespace WorkActivities {
             }
         });
     }
-   
+
     function Update() {
         debugger
         if (Number(txtHourProduction.value) <= 0 || IsNullOrEmpty(txtHourProduction.value)) {
@@ -743,6 +923,52 @@ namespace WorkActivities {
         Assign();
         Master.UomID = uomId;
         Master.CompCode = Number(_CompCode);
+
+        MasterDetails.P_D_Activity.UpdatedAt = DateTimeFormat(Date().toString());
+        MasterDetails.P_D_Activity.UpdatedBy = SharedSession.CurrentEnvironment.UserCode;
+
+        for (var i = 0; i < MasterDetails.P_D_ActivityIMaterial.length; i++) {
+
+            try {
+
+                MasterDetails.P_D_ActivityIMaterial[i].CreatedAt.trim() == '' ? MasterDetails.P_D_ActivityIMaterial[i].CreatedAt = null : MasterDetails.P_D_ActivityIMaterial[i].CreatedAt
+                MasterDetails.P_D_ActivityIMaterial[i].UpdatedAt.trim() == '' ? MasterDetails.P_D_ActivityIMaterial[i].UpdatedAt = null : MasterDetails.P_D_ActivityIMaterial[i].UpdatedAt
+
+
+            } catch (e) {
+
+            }
+        }
+
+
+        for (var i = 0; i < MasterDetails.P_D_ActivityLaborClass.length; i++) {
+
+            try {
+
+                MasterDetails.P_D_ActivityLaborClass[i].CreatedAt.trim() == '' ? MasterDetails.P_D_ActivityLaborClass[i].CreatedAt = null : MasterDetails.P_D_ActivityLaborClass[i].CreatedAt
+                MasterDetails.P_D_ActivityLaborClass[i].UpdatedAt.trim() == '' ? MasterDetails.P_D_ActivityLaborClass[i].UpdatedAt = null : MasterDetails.P_D_ActivityLaborClass[i].UpdatedAt
+
+
+            } catch (e) {
+
+            }
+        }
+
+        for (var i = 0; i < MasterDetails.P_D_ActivityEquipClass.length; i++) {
+
+            try {
+
+                MasterDetails.P_D_ActivityEquipClass[i].CreatedAt.trim() == '' ? MasterDetails.P_D_ActivityEquipClass[i].CreatedAt = null : MasterDetails.P_D_ActivityEquipClass[i].CreatedAt
+                MasterDetails.P_D_ActivityEquipClass[i].UpdatedAt.trim() == '' ? MasterDetails.P_D_ActivityEquipClass[i].UpdatedAt = null : MasterDetails.P_D_ActivityEquipClass[i].UpdatedAt
+
+
+            } catch (e) {
+
+            }
+        }
+
+
+
         Ajax.CallAsync({
             url: Url.Action("Update", ControllerName),
             data: { JsonData: JSON.stringify(MasterDetails) },
@@ -753,7 +979,7 @@ namespace WorkActivities {
                     ClientSharedWork.SwitchModes(ScreenModes.Query);
                     let msg: string = ReturnMsg("تم التعديل بنجاح  ", "Data Updated Successfuly. ");
                     MessageBox.Show(msg, "Insert", () => {
-                        
+
                         Display();
                         let _Index = GetIndexByUseId(result.ResponseData, "P_D_Activity", "ActivityID");
                         NavigateToSearchResultKey(Number(_Index), Navigate);
@@ -764,9 +990,9 @@ namespace WorkActivities {
     }
 
     function Display() {
-        
+
         DocumentActions.RenderFromModel(Master);
-        txtDailyProd.value =( Number(txtHourProduction.value) * 8).toString();
+        txtDailyProd.value = (Number(txtHourProduction.value) * 8).toString();
         getUom();
         if (Master.IsDetail == 1) {
             //chkIsDetail.disabled = true;
@@ -790,7 +1016,7 @@ namespace WorkActivities {
     }
 
     function activeControls() {
-        
+
         $('#btnMaterial').removeAttr('disabled');
         $('#btnLabor').removeAttr('disabled');
         $('#btnEquipt').removeAttr('disabled');
@@ -821,14 +1047,16 @@ namespace WorkActivities {
     }
 
     function Assign() {
-        
+
         //AssignMaster
         //Master = new P_D_Activity();
         DocumentActions.AssignToModel<P_D_Activity>(Master);
         MasterDetails.P_D_Activity = Master as P_D_Activity;
         MasterDetails.P_D_Activity.ActivityID = Master.ActivityID;;
-       
-        
+
+
+
+
         //AssignDetails
         MasterDetails.P_D_ActivityEquipClass = DetailsEquip as Array<PQ_GetActivityEquipmentClass>;
         for (var equip of DetailsEquip) {
@@ -848,7 +1076,7 @@ namespace WorkActivities {
             Tbl_DetailLabor.push(labor);
         }
     }
-    
+
     function Edit() {
         $('#h_WastPrc').val(wastvalue[0].MaterialWastPrc);
         $('#h_ProdQty').val(0);
@@ -927,12 +1155,12 @@ namespace WorkActivities {
     }
 
     function getParent(parentid: number) {
-        
+
         Ajax.CallAsync({
             url: Url.Action("getParent", ControllerName),
             data: { _id: Number(Master.ParentActivityID) },
             success: (d) => {
-                
+
                 let master = d.result as P_D_Activity;
                 if (master != null) {
                     txtParentActivityID.value = master.ActivityCode;
@@ -943,7 +1171,7 @@ namespace WorkActivities {
     }
 
     function InsertMaterialRow(e: JsGridInsertEventArgs) {
-        
+
         let detalisMaterial: PQ_GetActivityMaterialClass = new PQ_GetActivityMaterialClass();
         detalisMaterial = e.Item;
         //let actitvityID: number = Number(Master.ActivityID);
@@ -954,7 +1182,7 @@ namespace WorkActivities {
     }
 
     function InsertLaborRow(e: JsGridInsertEventArgs) {
-        
+
         let detalisLabor: PQ_GetActivityLaborClass = new PQ_GetActivityLaborClass();
         detalisLabor = e.Item;
         //let actitvityID: number = Number(Master.ActivityID);
@@ -965,11 +1193,22 @@ namespace WorkActivities {
     }
 
     function getMaterial(activity_id: number) {
+        debugger
         Ajax.CallAsync({
             url: Url.Action("getMaterial", ControllerName),
             data: { id: activity_id },
             success: (d) => {
                 DetailsMaterial = d.result as Array<PQ_GetActivityMaterialClass>;
+                for (var i = 0; i < DetailsMaterial.length; i++) {
+
+                    if (DetailsMaterial[i].CreatedAt != null && DetailsMaterial[i].CreatedAt.trim() != '') {
+                        DetailsMaterial[i].CreatedAt = DateTimeFormat(DetailsMaterial[i].CreatedAt);
+                    }
+
+                    if (DetailsMaterial[i].UpdatedAt != null && DetailsMaterial[i].UpdatedAt.trim() != '') {
+                        DetailsMaterial[i].UpdatedAt = DateTimeFormat(DetailsMaterial[i].UpdatedAt);
+                    }
+                }
                 GridMaterial.DataSource = DetailsMaterial;
                 GridMaterial.Bind();
             }
@@ -982,6 +1221,19 @@ namespace WorkActivities {
             data: { id: activity_id },
             success: (d) => {
                 DetailsLabor = d.result as Array<PQ_GetActivityLaborClass>;
+                for (var i = 0; i < DetailsLabor.length; i++) {
+
+
+                    if (DetailsLabor[i].CreatedAt != null && DetailsLabor[i].CreatedAt.trim() != '') {
+
+                        DetailsLabor[i].CreatedAt = DateTimeFormat(DetailsLabor[i].CreatedAt);
+                    }
+
+                    if (DetailsLabor[i].UpdatedAt != null && DetailsLabor[i].UpdatedAt.trim() != '') {
+
+                        DetailsLabor[i].UpdatedAt = DateTimeFormat(DetailsLabor[i].UpdatedAt);
+                    }
+                }
                 GridLabor.DataSource = DetailsLabor;
                 GridLabor.Bind();
             }
@@ -994,6 +1246,20 @@ namespace WorkActivities {
             data: { id: activity_id },
             success: (d) => {
                 DetailsEquip = d.result as Array<PQ_GetActivityEquipmentClass>;
+
+                for (var i = 0; i < DetailsEquip.length; i++) {
+
+                    if (DetailsEquip[i].CreatedAt != null && DetailsEquip[i].CreatedAt.trim() != '') {
+
+                        DetailsEquip[i].CreatedAt = DateTimeFormat(DetailsEquip[i].CreatedAt);
+                    }
+
+                    if (DetailsEquip[i].UpdatedAt != null && DetailsEquip[i].UpdatedAt.trim() != '') {
+
+                        DetailsEquip[i].UpdatedAt = DateTimeFormat(DetailsEquip[i].UpdatedAt);
+                    }
+                }
+
                 GridEquipment.DataSource = DetailsEquip;
                 GridEquipment.Bind();
             }
@@ -1006,7 +1272,7 @@ namespace WorkActivities {
     }
 
     function BindDataMaterialGrids() {
-        
+
         GridMaterial.DataSource = DetailsMaterial;
         GridMaterial.Bind();
     }
@@ -1022,7 +1288,7 @@ namespace WorkActivities {
     }
 
     function AddItemInMaterialGrid() {
-        
+
         let test: string = $('#h_MatDescE').val();
         if (test == " ") {
             WorningMessage("يجب اضافة بيانات اولا", "You Should Add Record Data To Insert In Grid");
@@ -1047,12 +1313,27 @@ namespace WorkActivities {
         DetailsAssignHeaderMaterial.WastPrc = $('#h_WastPrc').val();
         DetailsAssignHeaderMaterial.WastQty = $('#h_WastQty').val();
         DetailsAssignHeaderMaterial.ReqQty = $('#h_ReqQty').val();
+        debugger
+        if (falagCreate == false) {
+            DetailsAssignHeaderMaterial.CreatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderMaterial.CreatedAt = DateTimeFormat(Date().toString());
+
+        } else {
+            DetailsAssignHeaderMaterial.UpdatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderMaterial.UpdatedAt = DateTimeFormat(Date().toString());// $('#h_UpdatedAt').val();
+            DetailsAssignHeaderMaterial.CreatedBy = $('#h_CreatedBy').val();
+            DetailsAssignHeaderMaterial.CreatedAt = $('#h_CreatedAt').val();
+        }
+
+        falagCreate = false;
+
+
         DetailsMaterial.unshift(DetailsAssignHeaderMaterial);
         BindDataMaterialGrids();
     }
 
     function AddItemInLaborGrid() {
-        
+
         let test: string = $('#h_LaborDescE').val();
         if (test == " ") {
             WorningMessage("يجب اضافة بيانات اولا", "You Should Add Record Data To Insert In Grid");
@@ -1070,13 +1351,32 @@ namespace WorkActivities {
         DetailsAssignHeaderLabor.ClassCode = $('#btnFindLabor').text();
         DetailsAssignHeaderLabor.DescA = $('#h_LaborDescA').val();
         DetailsAssignHeaderLabor.DescE = $('#h_LaborDescE').val();
+        DetailsAssignHeaderLabor.UpdatedBy = $('#Lab_UpdatedBy').val();
+        DetailsAssignHeaderLabor.UpdatedAt = $('#Lab_UpdatedAt').val();
+        DetailsAssignHeaderLabor.CreatedAt = $('#Lab_CreatedBy').val();
+        DetailsAssignHeaderLabor.CreatedBy = $('#Lab_CreatedBy').val();
         DetailsAssignHeaderLabor.NoOfLabors = $('#h_NoOfLabors').val();
+
+
+        if (LaborClass == false) {
+            DetailsAssignHeaderLabor.CreatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderLabor.CreatedAt = DateTimeFormat(Date().toString());
+
+        } else {
+            DetailsAssignHeaderLabor.UpdatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderLabor.UpdatedAt = DateTimeFormat(Date().toString());// $('#h_UpdatedAt').val();
+            DetailsAssignHeaderLabor.CreatedBy = $('#Lab_CreatedBy').val();
+            DetailsAssignHeaderLabor.CreatedAt = $('#Lab_CreatedAt').val();
+        }
+
+        LaborClass = false;
+
         DetailsLabor.unshift(DetailsAssignHeaderLabor);
         BindDataLaborGrids();
     }
 
     function AddItemInEquipGrid() {
-        
+
         let test: string = $('#h_EquipDescE').val();
         if (test == " ") {
             WorningMessage("يجب اضافة بيانات اولا", "You Should Add Record Data To Insert In Grid");
@@ -1095,20 +1395,39 @@ namespace WorkActivities {
         DetailsAssignHeaderEquip.DescA = $('#h_EquipDescA').val();
         DetailsAssignHeaderEquip.DescE = $('#h_EquipDescE').val();
         DetailsAssignHeaderEquip.NoOfEquipments = $('#h_NoOfEquipments').val();
+        DetailsAssignHeaderEquip.CreatedAt = $('#Equ_CreatedAt').val();
+        DetailsAssignHeaderEquip.CreatedBy = $('#Equ_CreatedBy').val();
+        DetailsAssignHeaderEquip.UpdatedAt = $('#Equ_UpdatedAt').val();
+        DetailsAssignHeaderEquip.UpdatedBy = $('#Equ_UpdatedBy').val();
+
+        if (EquClass == false) {
+            DetailsAssignHeaderEquip.CreatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderEquip.CreatedAt = DateTimeFormat(Date().toString());
+
+        } else {
+            DetailsAssignHeaderEquip.UpdatedBy = SharedSession.CurrentEnvironment.UserCode;
+            DetailsAssignHeaderEquip.UpdatedAt = DateTimeFormat(Date().toString());// $('#h_UpdatedAt').val();
+            DetailsAssignHeaderEquip.CreatedBy = $('#Equ_CreatedBy').val();
+            DetailsAssignHeaderEquip.CreatedAt = $('#Equ_CreatedAt').val();
+        }
+
+        EquClass = false;
+
+
         DetailsEquip.unshift(DetailsAssignHeaderEquip);
         BindDataEquipGrids();
     }
 
     function btnFindMaterial_onclick() {
-        
-        sys.FindKey(Modules.WorkActivities, "btnFindMaterial", "CompCode = " + _CompCode , () => {
+
+        sys.FindKey(Modules.WorkActivities, "btnFindMaterial", "CompCode = " + _CompCode, () => {
             let _Id: number = ClientSharedWork.SearchDataGrid.SelectedKey;
-            
+
             Ajax.CallAsync({
                 url: Url.Action("findMaterial", ControllerName),
-                data: { id: _Id},
+                data: { id: _Id },
                 success: (d) => {
-                    
+
                     let result = d.result as IQ_SrchItem;
                     h_ItemID = result.ItemID;
                     $('#h_WastPrc').val(wastvalue[0].MaterialWastPrc);
@@ -1123,14 +1442,14 @@ namespace WorkActivities {
     }
 
     function btnFindLabor_onclick() {
-        
-        sys.FindKey(Modules.WorkActivities, "btnFindLabor", "" , () => {
+
+        sys.FindKey(Modules.WorkActivities, "btnFindLabor", "", () => {
             let _Id: number = ClientSharedWork.SearchDataGrid.SelectedKey;
             Ajax.CallAsync({
                 url: Url.Action("findLabor", ControllerName),
-                data: { id: _Id},
+                data: { id: _Id },
                 success: (d) => {
-                    
+
                     let result = d.result as P_D_LaborClass;
                     h_LaborClassId = result.LaborClassId;
                     $('#btnFindLabor').text(result.ClassCode);
@@ -1143,14 +1462,14 @@ namespace WorkActivities {
     }
 
     function btnFindEquip_onclick() {
-        
-        sys.FindKey(Modules.WorkActivities, "btnFindEquip", "" , () => {
+
+        sys.FindKey(Modules.WorkActivities, "btnFindEquip", "", () => {
             let _Id: number = ClientSharedWork.SearchDataGrid.SelectedKey;
             Ajax.CallAsync({
                 url: Url.Action("findEquip", ControllerName),
                 data: { id: _Id },
                 success: (d) => {
-                    
+
                     let result = d.result as P_D_EquipmentClass;
                     h_EquipClassId = result.EquipClassId;
                     $('#btnFindEquip').text(result.ClassCode);
@@ -1164,11 +1483,21 @@ namespace WorkActivities {
 
     // Calculations
     function calcWastQty() {
-        
+
         let result: number = (Number($('#h_ProdQty').val()) * Number($('#h_WastPrc').val())) / 100;
         $('#h_WastQty').val(result);
         let res: number = Number($('#h_ProdQty').val()) + Number($('#h_WastQty').val());
         $('#h_ReqQty').val(res);
+
+
+
+        //$('#h_CreatedBy').val(SharedSession.CurrentEnvironment.UserCode);
+        //$('#h_CreatedAt').val(DateFormat(Date().toString()));
+
+
+        //$('#h_UpdatedBy').val(SharedSession.CurrentEnvironment.UserCode);
+        //$('#h_UpdatedAt').val(DateFormat(Date().toString()));
+
     }
 
     function CalcDailyQty() {
@@ -1179,7 +1508,7 @@ namespace WorkActivities {
         let opt: JQueryAjaxSettings = {
             url: Url.Action("_ActivityReport", "GeneralReports"),
             success: (d) => {
-                
+
                 let result = d as string;
                 $("#ReportPopupBody").html(result);
                 $("#ReportsPopupDialog").modal("show");

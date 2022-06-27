@@ -12,14 +12,14 @@ namespace PMS.ApiService.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class P_D_SalesItemsActivity
+    public partial class P_D_SalesItemSystem
     {
-        public int ItemsActivityId { get; set; }
+        public int ItemSystemID { get; set; }
         public Nullable<int> ItemID { get; set; }
-        public Nullable<int> ActivityID { get; set; }
-        public Nullable<decimal> ActQty { get; set; }
-        public Nullable<bool> IsProdIncluded { get; set; }
-        public Nullable<decimal> ProdPrc { get; set; }
-        public Nullable<int> ItemSystemID { get; set; }
+        public Nullable<int> SystemID { get; set; }
+        public Nullable<decimal> StdPrice { get; set; }
+        public Nullable<decimal> MinUnitPrice { get; set; }
+        public Nullable<decimal> UnitPrice { get; set; }
+        public string Remarks { get; set; }
     }
 }

@@ -272,6 +272,9 @@ namespace PMS.ApiService.Models
         public virtual DbSet<P_TR_SalesDbCrDetail> P_TR_SalesDbCrDetail { get; set; }
         public virtual DbSet<PQ_GetSalesDbCr> PQ_GetSalesDbCr { get; set; }
         public virtual DbSet<PQ_GetSalesDbCrDetail> PQ_GetSalesDbCrDetail { get; set; }
+        public virtual DbSet<P_D_SalesItemSystem> P_D_SalesItemSystem { get; set; }
+        public virtual DbSet<P_D_ScopeSystem> P_D_ScopeSystem { get; set; }
+        public virtual DbSet<PQ_GetSalesItemSystems> PQ_GetSalesItemSystems { get; set; }
     
         public virtual int G_TOL_GetCounter(string system, Nullable<int> comp, Nullable<int> branch, string trType, ObjectParameter trNo)
         {

@@ -21,5 +21,9 @@ namespace PMS.ServiceConnector.Models
         public Nullable<decimal> WastPrc { get; set; }
         public Nullable<decimal> WastQty { get; set; }
         public Nullable<decimal> ReqQty { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public string UpdatedBy { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     }
 }

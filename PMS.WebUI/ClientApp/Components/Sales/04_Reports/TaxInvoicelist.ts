@@ -42,6 +42,7 @@ namespace TaxInvoicelist {
 
         
     var redDownpayment: HTMLInputElement;
+    var redCrdb: HTMLInputElement;
     var redProgress: HTMLInputElement;
      //Just put the elements IDs  
     var Cust: P_D_SalesCustomerCategory = new P_D_SalesCustomerCategory();
@@ -99,6 +100,7 @@ namespace TaxInvoicelist {
 
         redProgress = DocumentActions.GetElementById<HTMLInputElement>("redProgress");
         redDownpayment = DocumentActions.GetElementById<HTMLInputElement>("redDownpayment");
+        redCrdb = DocumentActions.GetElementById<HTMLInputElement>("redCrdb");
      }
     function InitalizeEvents() {
 
@@ -264,9 +266,10 @@ namespace TaxInvoicelist {
         }
         else if (redDownpayment.checked == true) {
             RP.GroupType = 1;
+        }        
+        else if (redCrdb.checked == true) {
+            RP.GroupType =3;
         }
-        
-
         Ajax.CallAsync({
             //CRMReport
             url: Url.Action("rptSlsinvoices", "GeneralReports"),

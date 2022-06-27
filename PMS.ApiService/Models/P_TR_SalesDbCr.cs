@@ -52,5 +52,9 @@ namespace PMS.ApiService.Models
         public string PrevInvoiceHash { get; set; }
         public string QRCode { get; set; }
         public string CryptographicStamp { get; set; }
+        public Nullable<decimal> AdvDeduction { get; set; }
+        public Nullable<decimal> AdvVatAmount { get; set; }
+        public Nullable<decimal> TaxableAmount { get; set; }
+        public Nullable<decimal> NetTax { get; set; }
     }
 }

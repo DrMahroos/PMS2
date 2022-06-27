@@ -143,7 +143,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(Fields!typ.Value = 1 ,"Billing","Production")</Value>
+                              <Value>=IIf(Fields!typ.Value = 0 ,"Production" ,IIf(Fields!typ.Value = 1 ,"Billing" ,"Cr/Db Note"))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -730,7 +730,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(Fields!typ.Value = 1, "Billing total", "Production total")</Value>
+                              <Value>=IIf(Fields!typ.Value = 0 ,"Production" ,IIf(Fields!typ.Value = 1 ,"Billing" ,"Cr/Db Note")) + " Total"</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,0.00;(#,0.00)</Format>
