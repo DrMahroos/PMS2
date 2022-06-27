@@ -98,6 +98,7 @@ var MaterialIssuance;
             { title: res.Resm_Bill_material_IssuedQty, name: "IssuedQty", type: "text", width: "7.5%" },
             { title: res.Resm_Bill_material_unitcost, name: "UnitCost", type: "text", width: "7.5%" },
             { title: res.Resm_Bill_material_total, name: "Total", type: "text", width: "7.5%" },
+            //{ type: "control", width: "7%" }
         ];
         Grid.DataSource = DetailsMaterial;
         Grid.Bind();

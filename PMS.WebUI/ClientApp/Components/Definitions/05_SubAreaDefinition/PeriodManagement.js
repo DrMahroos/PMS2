@@ -312,6 +312,24 @@ var PeriodManagement;
                     };
                     return btn;
                 },
+                //    itemTemplate: (s: string, item: P_G_Period): HTMLButtonElement => {
+                //        let btn: HTMLButtonElement = DocumentActions.CreateElement<HTMLButtonElement>("button");
+                //        btn.innerHTML = "<i class='glyphicon glyphicon-remove'></i>";
+                //        btn.className = TransparentButton + "editable";
+                //        btn.style.fontSize = "24px";
+                //        btn.type = "button";
+                //        btn.style.color = "red";
+                //        btn.name = Details.indexOf(item).toString();
+                //        btn.onclick = (e) => {
+                //            if (ClientSharedWork.CurrentMode == ScreenModes.Query) {
+                //                WorningMessage("يجب اختيار وضع التعديل اولا ", "Please Select Edit Mode First");
+                //                return;
+                //            }
+                //            let index = Number((e.currentTarget as HTMLButtonElement).name);
+                //            Details.splice(index, 1);
+                //        };
+                //        return btn;
+                //    },
             },
             {
                 css: JsGridHeaderCenter,

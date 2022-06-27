@@ -16,10 +16,10 @@ namespace CustomerRespItems {
         _ScreenLang = SharedSession.CurrentEnvironment.ScreenLanguage;
         _CompCode = SharedSession.CurrentEnvironment.CompCode;
         _BraCode = SharedSession.CurrentEnvironment.BranchCode;
-        ControlsButtons.AddButton.disabled = true;
-        ControlsButtons.EditButton.disabled = true;
-        ControlsButtons.DeleteButton.disabled = true;
-        ControlsButtons.PrintButton.disabled = true;
+        //ControlsButtons.AddButton.disabled = true;
+        //ControlsButtons.EditButton.disabled = true;
+        //ControlsButtons.DeleteButton.disabled = true;
+        //ControlsButtons.PrintButton.disabled = true;
 
         InitalizeGrid();
     }

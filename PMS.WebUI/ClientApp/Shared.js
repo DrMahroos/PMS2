@@ -30,7 +30,7 @@ var ClientSharedWork = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("Me", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(ClientSharedWork, "PageIndex", {
@@ -47,7 +47,7 @@ var ClientSharedWork = /** @class */ (function () {
             //document.cookie = "pageIndex=" + value;
             this.SetClientSession("PageIndex", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(ClientSharedWork, "ModelCount", {
@@ -57,7 +57,7 @@ var ClientSharedWork = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("ModelCount", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     ClientSharedWork.Render = function () {

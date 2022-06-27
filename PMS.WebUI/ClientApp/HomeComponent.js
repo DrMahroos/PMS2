@@ -18,10 +18,12 @@ var HomeComponent;
     var btnPriceList;
     var btnCustomers;
     var btnTransfer;
+    var btn_loguotuser;
     var SelectSession;
     var systemEnv = new SystemEnvironment();
     function InitalizeComponent() {
         //------------------------------------------------------NewSession---------------------------------------
+        debugger;
         //---------------------------------------------
         Ajax.Callsync({
             url: Url.Action("GetSystemProperties", "Home"),
@@ -31,9 +33,96 @@ var HomeComponent;
         });
         document.cookie = "PMS_systemProperties=" + JSON.stringify(systemEnv).toString() + ";expires=Fri, 31 Dec 2030 23:59:59 GMT;path=/";
         SharedSession.CurrentEnvironment = systemEnv;
-        var lang = SharedSession.CurrentEnvironment.Language;
-        if (lang == "en") {
-            $("#main-menu").removeClass("sm-rtl");
+        $('#sidebarCollapse').on('click', function () {
+            $(".left-sidebar-pro").css({ 'display': 'block' });
+        });
+        $('#sidebarCollapse2').on('click', function () {
+            $(".left-sidebar-pro").toggle("slide");
+            $("#cont").addClass("colapsdivcont");
+            $("#i_toolpar").removeAttr('hidden');
+            $("#i_toolpar").addClass('i_toolpar');
+        });
+        $('#i_toolpar').on('click', function () {
+            $(".left-sidebar-pro").css({ 'display': 'none' });
+            $("#cont").addClass("colapsdivcont");
+            $("#i_toolpar").attr('hidden');
+            $("#i_toolpar").removeClass('i_toolpar');
+        });
+        debugger;
+        var _SubSys_ = SharedSession.CurrentEnvironment.SubSystemCode;
+        if (_SubSys_ == "TEST") {
+            Language();
+            if (SharedSession.CurrentEnvironment.ScreenLanguage == "ar") {
+                document.getElementById('camp_name').innerHTML = SharedSession.CurrentEnvironment.CompanyNameAr;
+            }
+            else {
+                document.getElementById('camp_name').innerHTML = SharedSession.CurrentEnvironment.CompanyName;
+            }
+            //if (SharedSession.CurrentEnvironment.ScreenLanguage == "ar") { document.getElementById('bra_name').innerHTML = "( " + SharedSession.CurrentEnvironment.BranchName + " )" }
+            //else { document.getElementById('bra_name').innerHTML = "(" + SharedSession.CurrentEnvironment.BranchNameEn + ")" }
+            var lang = SharedSession.CurrentEnvironment.Language;
+            if (lang == "en") {
+                $("#main-menu").removeClass("sm-rtl");
+            }
+            document.getElementById('Admin_name').innerHTML = SharedSession.CurrentEnvironment.UserCode;
+            if (SharedSession.CurrentEnvironment.ScreenLanguage == 'ar') {
+                $('#homeTitle').text("نظام سيف لادارة الاملاك");
+            }
+            else {
+                $('#homeTitle').text("Safe Proprity Managment");
+                $("#main-menu").removeClass("sm-rtl");
+            }
+            if (SharedSession.CurrentEnvironment.ScreenLanguage == 'ar') {
+                $('#LanguageButtonHome').text("Change Language");
+            }
+            else {
+                $('#LanguageButtonHome').text(" تغير اللغة  ");
+            }
+            btn_loguotuser = DocumentActions.GetElementById("btn_loguotuser");
+            // btn_loguotuser.onclick = LogoutUserApi;
+            //CheckTime(); 
+            $("#LanguageButtonHome").click(function () {
+                if (SharedSession.CurrentEnvironment.ScreenLanguage == "ar") { // English Mode
+                    RemoveStyleSheet("bootstrap-rtl");
+                    RemoveStyleSheet("mainAR");
+                    RemoveStyleSheet("Style_Arabic");
+                    RemoveStyleSheet("style");
+                    RemoveStyleSheet("StyleNewmassege");
+                    RemoveStyleSheet("responsive_AR");
+                    AppendStyleSheet("bootstrap.min");
+                    AppendStyleSheet("main");
+                    AppendStyleSheet("responsive");
+                    AppendStyleSheet("StyleEn");
+                    SharedSession.CurrentEnvironment.ScreenLanguage = "en";
+                    $('#LanguageButtonHome').text(" تغير اللغة  ");
+                    document.cookie = "Inv1_systemProperties=" + JSON.stringify(SharedSession.CurrentEnvironment) + ";expires=Fri, 31 Dec 2030 23:59:59 GMT;path=/";
+                }
+                else { // Arabic Mode
+                    RemoveStyleSheet("StyleEn");
+                    RemoveStyleSheet("bootstrap.min");
+                    RemoveStyleSheet("main");
+                    RemoveStyleSheet("responsive");
+                    AppendStyleSheet("bootstrap-rtl");
+                    AppendStyleSheet("StyleNewmassege");
+                    AppendStyleSheet("mainAR");
+                    AppendStyleSheet("style");
+                    AppendStyleSheet("Style_Arabic");
+                    AppendStyleSheet("responsive_AR");
+                    SharedSession.CurrentEnvironment.ScreenLanguage = "ar";
+                    $('#LanguageButtonHome').text("Change Language");
+                    document.cookie = "Inv1_systemProperties=" + JSON.stringify(SharedSession.CurrentEnvironment) + ";expires=Fri, 31 Dec 2030 23:59:59 GMT;path=/";
+                }
+                window.location.reload();
+            });
+            $(window).scroll(function () {
+                var backtotop = $('.back-to-top');
+                if (window.scrollY > 10) {
+                    backtotop.addClass('active');
+                }
+                else {
+                    backtotop.removeClass('active');
+                }
+            });
         }
         var _SubSys = SharedSession.CurrentEnvironment.SubSystemCode;
         if (_SubSys == "DEF") {
@@ -65,37 +154,36 @@ var HomeComponent;
             }
             catch (e) { }
         }
-        if (_SubSys == "SLS") {
-            try {
-                DocumentActions.GetElementById("btnCustomerCategory").onclick = function () { OpenView("CustomerCategory", Modules.CustomerCategory); };
-                DocumentActions.GetElementById("btnCustomers").onclick = function () { OpenView("Customers", Modules.Customers); };
-                DocumentActions.GetElementById("btnCustomerRespItems").onclick = function () { OpenView("CustomerRespItems", Modules.CustomerRespItems); };
-                DocumentActions.GetElementById("btnCompanyRespItem").onclick = function () { OpenView("CompanyRespItem", Modules.CompanyRespItem); };
-                DocumentActions.GetElementById("btnSalesItemLibrary").onclick = function () { OpenView("SalesItemLibrary", Modules.SalesItemLibrary); };
-                DocumentActions.GetElementById("btnSalesItemPlan").onclick = function () { OpenView("SalesItemPlan", Modules.SalesItemPlan); };
-                DocumentActions.GetElementById("btnActivityPrice").onclick = function () { OpenView("ActivityPrice", Modules.ActivityPrice); };
-                //DocumentActions.GetElementById<HTMLInputElement>("btnIssueProduction").onclick = () => { OpenView("IssueProduction", Modules.IssueProduction); }
-                DocumentActions.GetElementById("btnCustomerBilling").onclick = function () { OpenView("CustomerBilling", Modules.CustomerBilling); };
-                DocumentActions.GetElementById("btnCustomerDbCr").onclick = function () { OpenView("CustomerDbCr", Modules.CustomerDbCr); };
-                DocumentActions.GetElementById("btnSalesManBonus").onclick = function () { OpenReportsPopup(Modules.SalesManBonus); };
-                DocumentActions.GetElementById("btnOfferDefinition").onclick = function () { OpenView("OfferDefinition", Modules.OfferDefinition); };
-                DocumentActions.GetElementById("btnOfferSpecification").onclick = function () { OpenView("OfferSpecification", Modules.OfferSpecification); };
-                DocumentActions.GetElementById("btnOfferCostEstimation").onclick = function () { OpenView("OfferCostEstimation", Modules.OfferCostEstimation); };
-                DocumentActions.GetElementById("btnOfferBillingSchedule").onclick = function () { OpenView("OfferBillingSchedule", Modules.OfferBillingSchedule); };
-                DocumentActions.GetElementById("btnStartOfWork").onclick = function () { OpenView("StartOfWork", Modules.StartOfWork); };
-                DocumentActions.GetElementById("btnSalesPaymentTerms").onclick = function () { OpenView("SalesPaymentTerms", Modules.SalesPaymentTerms); };
-                //popup  reports
-                DocumentActions.GetElementById("btnContractList").onclick = function () { OpenReportsPopup(Modules.ContractList); };
-                DocumentActions.GetElementById("btnOfferList").onclick = function () { OpenReportsPopup(Modules.OfferList); };
-                DocumentActions.GetElementById("btnSalesmanActivity").onclick = function () { OpenReportsPopup(Modules.SalesmanActivity); };
-                DocumentActions.GetElementById("btnProductionVsBilling").onclick = function () { OpenReportsPopup(Modules.ProductionVsBilling); };
-                DocumentActions.GetElementById("btnProjItemsInventory").onclick = function () { OpenReportsPopup(Modules.ProjItemsInventory); };
-                DocumentActions.GetElementById("btnBillingList").onclick = function () { OpenReportsPopup(Modules.BillingList); };
-                DocumentActions.GetElementById("btnCRMReport").onclick = function () { OpenReportsPopup(Modules.CRMReport); };
-                DocumentActions.GetElementById("btnTaxInvoicelist").onclick = function () { OpenReportsPopup(Modules.TaxInvoicelist); };
-            }
-            catch (e) { }
-        }
+        //if (_SubSys == "SLS") {
+        //    try {
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCustomerCategory").onclick = () => { OpenView("CustomerCategory", Modules.CustomerCategory); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCustomers").onclick = () => { OpenView("Customers", Modules.Customers); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCustomerRespItems").onclick = () => { OpenView("CustomerRespItems", Modules.CustomerRespItems); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCompanyRespItem").onclick = () => { OpenView("CompanyRespItem", Modules.CompanyRespItem); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnSalesItemLibrary").onclick = () => { OpenView("SalesItemLibrary", Modules.SalesItemLibrary); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnSalesItemPlan").onclick = () => { OpenView("SalesItemPlan", Modules.SalesItemPlan); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnActivityPrice").onclick = () => { OpenView("ActivityPrice", Modules.ActivityPrice); }
+        //        //DocumentActions.GetElementById<HTMLInputElement>("btnIssueProduction").onclick = () => { OpenView("IssueProduction", Modules.IssueProduction); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCustomerBilling").onclick = () => { OpenView("CustomerBilling", Modules.CustomerBilling); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCustomerDbCr").onclick = () => { OpenView("CustomerDbCr", Modules.CustomerDbCr); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnSalesManBonus").onclick = () => { OpenReportsPopup( Modules.SalesManBonus); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnOfferDefinition").onclick = () => { OpenView("OfferDefinition", Modules.OfferDefinition); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnOfferSpecification").onclick = () => { OpenView("OfferSpecification", Modules.OfferSpecification); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnOfferCostEstimation").onclick = () => { OpenView("OfferCostEstimation", Modules.OfferCostEstimation); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnOfferBillingSchedule").onclick = () => { OpenView("OfferBillingSchedule", Modules.OfferBillingSchedule); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnStartOfWork").onclick = () => { OpenView("StartOfWork", Modules.StartOfWork); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnSalesPaymentTerms").onclick = () => { OpenView("SalesPaymentTerms", Modules.SalesPaymentTerms); }
+        //        //popup  reports
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnContractList").onclick = () => { OpenReportsPopup(Modules.ContractList); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnOfferList").onclick = () => { OpenReportsPopup(Modules.OfferList); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnSalesmanActivity").onclick = () => { OpenReportsPopup(Modules.SalesmanActivity); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnProductionVsBilling").onclick = () => { OpenReportsPopup(Modules.ProductionVsBilling); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnProjItemsInventory").onclick = () => { OpenReportsPopup(Modules.ProjItemsInventory); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnBillingList").onclick = () => { OpenReportsPopup(Modules.BillingList); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnCRMReport").onclick = () => { OpenReportsPopup(Modules.CRMReport); }
+        //        DocumentActions.GetElementById<HTMLInputElement>("btnTaxInvoicelist").onclick = () => { OpenReportsPopup(Modules.TaxInvoicelist); }
+        //    } catch (e) { }
+        //}
         if (_SubSys == "ENG") {
             try {
                 DocumentActions.GetElementById("btnProjectDefination").onclick = function () { OpenView("ProjectDefination", Modules.ProjectDefination); };
@@ -204,6 +292,38 @@ var HomeComponent;
             catch (e) {
             }
         }
+        if (_SubSys == "TEST") {
+            debugger;
+            try {
+                DocumentActions.GetElementById("btnActivityPrice").onclick = function () { OpenView("ActivityPrice", Modules.ActivityPrice); };
+                DocumentActions.GetElementById("btnSalesItemPlan").onclick = function () { OpenView("SalesItemPlan", Modules.SalesItemPlan); };
+                DocumentActions.GetElementById("btnSalesItemLibrary").onclick = function () { OpenView("SalesItemLibrary", Modules.SalesItemLibrary); };
+                DocumentActions.GetElementById("btnCompanyRespItem").onclick = function () { OpenView("CompanyRespItem", Modules.CompanyRespItem); };
+                DocumentActions.GetElementById("btnCustomerRespItems").onclick = function () { OpenView("CustomerRespItems", Modules.CustomerRespItems); };
+                DocumentActions.GetElementById("btnCustomerCategory").onclick = function () { OpenView("CustomerCategory", Modules.CustomerCategory); };
+                //DocumentActions.GetElementById<HTMLInputElement>("btnCustomers").onclick = () => { OpenView("Customers", Modules.Customers); }
+                //DocumentActions.GetElementById<HTMLInputElement>("btnIssueProduction").onclick = () => { OpenView("IssueProduction", Modules.IssueProduction); }
+                DocumentActions.GetElementById("btnCustomerBilling").onclick = function () { OpenView("CustomerBilling", Modules.CustomerBilling); };
+                DocumentActions.GetElementById("btnCustomerDbCr").onclick = function () { OpenView("CustomerDbCr", Modules.CustomerDbCr); };
+                DocumentActions.GetElementById("btnSalesManBonus").onclick = function () { OpenReportsPopup(Modules.SalesManBonus); };
+                DocumentActions.GetElementById("btnOfferDefinition").onclick = function () { OpenView("OfferDefinition", Modules.OfferDefinition); };
+                DocumentActions.GetElementById("btnOfferSpecification").onclick = function () { OpenView("OfferSpecification", Modules.OfferSpecification); };
+                DocumentActions.GetElementById("btnOfferCostEstimation").onclick = function () { OpenView("OfferCostEstimation", Modules.OfferCostEstimation); };
+                DocumentActions.GetElementById("btnOfferBillingSchedule").onclick = function () { OpenView("OfferBillingSchedule", Modules.OfferBillingSchedule); };
+                DocumentActions.GetElementById("btnStartOfWork").onclick = function () { OpenView("StartOfWork", Modules.StartOfWork); };
+                DocumentActions.GetElementById("btnSalesPaymentTerms").onclick = function () { OpenView("SalesPaymentTerms", Modules.SalesPaymentTerms); };
+                //popup  reports
+                DocumentActions.GetElementById("btnContractList").onclick = function () { OpenReportsPopup(Modules.ContractList); };
+                DocumentActions.GetElementById("btnOfferList").onclick = function () { OpenReportsPopup(Modules.OfferList); };
+                DocumentActions.GetElementById("btnSalesmanActivity").onclick = function () { OpenReportsPopup(Modules.SalesmanActivity); };
+                DocumentActions.GetElementById("btnProductionVsBilling").onclick = function () { OpenReportsPopup(Modules.ProductionVsBilling); };
+                DocumentActions.GetElementById("btnProjItemsInventory").onclick = function () { OpenReportsPopup(Modules.ProjItemsInventory); };
+                DocumentActions.GetElementById("btnBillingList").onclick = function () { OpenReportsPopup(Modules.BillingList); };
+                DocumentActions.GetElementById("btnCRMReport").onclick = function () { OpenReportsPopup(Modules.CRMReport); };
+                DocumentActions.GetElementById("btnTaxInvoicelist").onclick = function () { OpenReportsPopup(Modules.TaxInvoicelist); };
+            }
+            catch (e) { }
+        }
         ApplyModules();
         var _CompCode = SharedSession.CurrentEnvironment.CompCode;
         var _BranchCode = SharedSession.CurrentEnvironment.BranchCode;
@@ -215,12 +335,13 @@ var HomeComponent;
     }
     HomeComponent.InitalizeComponent = InitalizeComponent;
     function OpenView(controllerName, moduleCode) {
-        ;
+        debugger;
         SharedSession.CurrentEnvironment.ModuleCode = moduleCode;
         ClientSharedWork.Session.Modulecode = moduleCode;
         Ajax.Callsync({
             url: Url.Action("CallFunc_GetPrivilage", "ClientTools"),
             success: function (d) {
+                debugger;
                 if (d.result == undefined) {
                     window.open(Url.Action("LoginIndex", "Login"), "_self");
                     return;
@@ -459,6 +580,64 @@ var HomeComponent;
             debugger;
             window.open(Url.Action("Logout", "Home"), "_self");
         }
+    }
+    function Language() {
+        if (SharedSession.CurrentEnvironment.ScreenLanguage == "en") {
+            RemoveStyleSheet("bootstrap-rtl");
+            RemoveStyleSheet("responsive_AR");
+            RemoveStylejs("mainAR");
+            RemoveStyleSheet("Style_Arabic");
+            RemoveStyleSheet("style");
+            RemoveStyleSheet("StyleNewmassege");
+            $("#bootstrap_rtl").remove();
+            $("#Style_Arabic").remove();
+            AppendStyleSheet("bootstrap.min");
+            AppendStylejs("main");
+            AppendStyleSheet("responsive");
+            AppendStyleSheet("StyleEn");
+            SharedSession.CurrentEnvironment.ScreenLanguage = "en";
+            $("#btn_loguotuser").text("Logout");
+        }
+        else {
+            RemoveStyleSheet("StyleEn");
+            RemoveStyleSheet("bootstrap.min");
+            RemoveStylejs("main");
+            RemoveStyleSheet("responsive");
+            AppendStyleSheet("bootstrap-rtl");
+            AppendStyleSheet("StyleNewmassege");
+            AppendStylejs("mainAR");
+            AppendStyleSheet("style");
+            AppendStyleSheet("Style_Arabic");
+            AppendStyleSheet("responsive_AR");
+            //$('#langImg').attr('src', '../images/english.png');
+            SharedSession.CurrentEnvironment.ScreenLanguage = "ar";
+            $("#btn_loguotuser").text("الخروج من النظام");
+        }
+        //$("#SearchBox").draggable();
+        App.Startup();
+    }
+    HomeComponent.Language = Language;
+    function AppendStyleSheet(fileName) {
+        var lnk = document.createElement('link');
+        lnk.href = "../Style_design/" + fileName + ".css";
+        lnk.rel = 'stylesheet';
+        lnk.type = 'text/css';
+        document.getElementsByTagName("head")[0].appendChild(lnk);
+    }
+    function RemoveStyleSheet(fileName) {
+        var href = "../Style_design/" + fileName + ".css";
+        $("link[rel=stylesheet][href~='" + href + "']").remove();
+    }
+    //By Muhammad Rajab 
+    function AppendStylejs(fileName) {
+        var script = document.createElement('script');
+        script.src = "../Style_design/" + fileName + ".js";
+        document.getElementById("caret_script").appendChild(script);
+    }
+    //By Muhammad Rajab 
+    function RemoveStylejs(fileName) {
+        var href = "../Style_design/" + fileName + ".js";
+        $("<script src=" + href + " ></script>").remove();
     }
 })(HomeComponent || (HomeComponent = {}));
 //# sourceMappingURL=HomeComponent.js.map

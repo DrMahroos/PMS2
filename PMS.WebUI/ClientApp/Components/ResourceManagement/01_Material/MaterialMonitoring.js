@@ -122,6 +122,7 @@ var MaterialMonitoring;
             { title: res.Resm_Material_returnNo, name: "Ret_No", type: "text", width: "7.5%" },
             { title: res.Resm_Material_trdate, name: "Tr_Date", type: "text", width: "7.5%" },
             { title: res.Resm_Material_status, name: "tr_status", type: "text", width: "7.5%" },
+            //{ type: "control", width: "7%" }
         ];
         Child.DataSource = childDataSource;
         Child.Bind();

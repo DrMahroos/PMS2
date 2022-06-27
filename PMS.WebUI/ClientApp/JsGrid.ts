@@ -66,7 +66,7 @@
     public Bind() {
         $(".jsgrid-grid-body").css("max-height", this.Height);
         $(".jsgrid-grid-body").css("height", this.Height);
-        
+
         if (this.SwitchingLanguageEnabled == true) {
             this.SwitchColumnsLanguage();
         }
@@ -117,6 +117,22 @@
                 this.SelectedKey = e.item[this.PrimaryKey];
                 if (this.OnRowDoubleClicked != null)
                     this.OnRowDoubleClicked();
+
+                if ($("#Mod_Flag").val() != 1) {
+                    $('#dir').removeClass('display_none');
+                    $("#footer_1").animate({ "left": "-85%", });
+                    $("#dir_11").fadeIn(3000);
+                    $("#NewAdd_Falg").val(0);
+
+                    $('#btnPrintTransaction').removeClass('display_none');
+                    $('#btnUpdate').removeClass('display_none');
+                    $('#btnBack').addClass('display_none');
+                    $('#btnSave').addClass('display_none');
+
+                    $('#Loading_Div').html('');
+                }
+
+
             },
             onRefreshing: (arg) => {
             },
@@ -174,7 +190,7 @@
                 //    arg.cancel = true;
             },
             onItemDeleted: (arg) => {
-                
+
             }
         });
     }

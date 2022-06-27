@@ -41,7 +41,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("SystemCode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "SubSystemCode", {
@@ -51,7 +51,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("SubSystemCode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "Modulecode", {
@@ -61,7 +61,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("Modulecode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "UserCode", {
@@ -71,7 +71,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("UserCode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "CompCode", {
@@ -81,7 +81,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("CompCode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "BranchCode", {
@@ -91,7 +91,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("BranchCode", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "Language", {
@@ -101,7 +101,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("Language", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "CurrentYear", {
@@ -111,7 +111,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("CurrentYear", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "CompanyName", {
@@ -121,7 +121,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("CompanyName", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "CompanyNameAr", {
@@ -131,7 +131,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("CompanyNameAr", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "BranchName", {
@@ -141,7 +141,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("BranchName", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(SessionRecord.prototype, "ScreenLanguage", {
@@ -151,7 +151,7 @@ var SessionRecord = /** @class */ (function () {
         set: function (value) {
             this.SetClientSession("ScreenLanguage", value);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return SessionRecord;
@@ -1854,6 +1854,7 @@ var P_D_SalesCustomerCategory = /** @class */ (function () {
         this.DescA = "";
         this.DescE = "";
         this.Remarks = "";
+        this.StatusFlag = "";
         this.CompCode = 0;
     }
     return P_D_SalesCustomerCategory;

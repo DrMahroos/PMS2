@@ -250,6 +250,8 @@ var ProjectDefination;
             { title: res.ProjDef_ProdQty, name: "ProdQty", type: "text", width: "7.%" },
             { title: res.ProjDef_BilledQty, name: "BilledQty", type: "text", width: "7%" },
             { title: res.ProjDef_UntilPrice, name: "UnitPrice", type: "text", width: "7%" },
+            //{ title: res.ProjDef_ScopeName, name: "Scp_DescE", type: "text", width: "9%" },
+            //{ title: res.ProjDef_Remark, name: "Remarks", type: "text", width: "7%" },
         ];
         GridItem.DataSource = DataSourceItem;
         GridItem.Bind();

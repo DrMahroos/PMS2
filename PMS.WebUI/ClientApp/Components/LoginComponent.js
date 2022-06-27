@@ -213,6 +213,7 @@ var LoginComponent;
             url: OnLoggedUrl,
             success: function (result) {
                 var obj = result.result;
+                debugger;
                 ClientSharedWork.Session.SystemCode = "P";
                 ClientSharedWork.Session.SubSystemCode = $("#cmbSubSys").val();
                 window.location.href = obj.url;

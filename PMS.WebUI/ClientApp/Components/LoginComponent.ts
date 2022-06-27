@@ -1,6 +1,7 @@
 ﻿$(document).ready(() => {
 
     LoginComponent.InitalizeComponent();
+
 })
 namespace LoginComponent {
     let sys: SystemTools = new SystemTools();
@@ -232,6 +233,7 @@ namespace LoginComponent {
             url: OnLoggedUrl,
             success: (result) => {
                 let obj = result.result;
+                debugger
                 ClientSharedWork.Session.SystemCode = "P";
                 ClientSharedWork.Session.SubSystemCode = $("#cmbSubSys").val();
                 window.location.href = obj.url;

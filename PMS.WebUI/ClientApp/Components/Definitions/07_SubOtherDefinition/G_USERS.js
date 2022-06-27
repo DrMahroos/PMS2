@@ -423,6 +423,7 @@ var Users;
             { title: res.URS_Edit, name: "EDIT", type: "checkbox", width: "10%" },
             { title: res.URS_Delete, name: "DELETE", type: "checkbox", width: "10%" },
             { title: res.URS_Print, name: "PRINT", type: "checkbox", width: "10%" },
+            //{ title: res.URS_Show, name: "VIEW", type: "checkbox", width: "15px" },
         ];
         GridUserBranch.DataSource = DetailsUserBranch;
         GridUserBranch.Bind();

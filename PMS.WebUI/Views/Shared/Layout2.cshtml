@@ -1,0 +1,513 @@
+﻿
+
+
+@using PMS.WebUI.Resources;
+@using System.Web.Optimization;
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' type='text/css' href='~/AssistiveTouch/static/css/at.css' />
+    <link rel="shortcut icon" href="~/images/newlogo.jpg">
+    <title>@SystemResource.App_Home</title>
+    <link href="~/Style_design/LodBut/font-awesome.min.css" rel="stylesheet" />
+    @Styles.Render("~/Bundles/AppStyle2")
+    @*<link id="bootstrap_rtl" href="~/Style_design/bootstrap-rtl.css" rel="stylesheet" />*@
+    @*<link id="Style_Arabic" href="~/Style_design/Style_Arabic.css" rel="stylesheet" />*@
+    <link href="~/Style_design/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Style_design/StyleEn.css" rel="stylesheet" />
+    @*<script src="http://code.jquery.com/jquery-3.0.0.js"></script>*@
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Style_design/js/jquery-3.4.1.js"></script>
+    @Scripts.Render("~/Bundles/AppScript2")
+    <script src="~/Style_design/jquery.cookie.min.js"></script>
+    @Scripts.Render("~/Bundles/AppScript3")
+    <link href="~/Style_design/Stylelayout.css" rel="stylesheet" />
+
+    <link href="~/Content/Toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/Loading/src/css/preloader.css" rel="stylesheet" />
+    <link href="~/Content/style2.css" rel="stylesheet" />
+    <link href="~/Website/assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <style>
+        .modal-dialog {
+            width: 58% !important;
+        }
+
+        .Style_GridBatch {
+            /*background-color: #8dccdf !important;
+            text-align: center !important;
+            color: white !important;*/
+            font-weight: bold;
+        }
+    </style>
+    <link href="~/css/StyleNew_Toolbar.css" rel="stylesheet" />
+
+</head>
+<body>
+    <input type="hidden" id="GetActionUrl" name="name" value="@Url.Action("GetActionUrl","ClientTools")" />
+    <input type="hidden" id="GetAPIUrl" name="name" value="@System.Configuration.ConfigurationManager.AppSettings["ServiceUrl"]" />
+    @*---------------------------New Toolbar ------------------------*@
+    <div id="dir_11">
+        <i style="margin-right: -2px;">
+            <img src="~/images/open.png" style="margin-left: -12px;" />
+            القائمة
+        </i>
+    </div>
+    <footer id="footer_1" style="top:16%;">
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div id="dir_22" class="col-xs-1">
+
+                </div>
+
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar">
+                    <button id="btnAdd" type="button" class="btnAdd btn btn-success   StyleNew_ToolbarBUT" style=" ">
+                        <span class="glyphicon glyphicon-plus-sign"></span>    أضافة
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar">
+                    <button id="btnShow" type="button" class="btnShow btn btn-primary   StyleNew_ToolbarBUT " style="">
+                        <span class="	glyphicon glyphicon-align-justify"></span> عرض
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar">
+                    <button id="btnPrintTrview" type="button" class="btnPrintTrview btn btn-primary   StyleNew_ToolbarBUT " style="   ">
+                        <span class="glyphicon glyphicon-print"></span> طباعه
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar">
+                    <button id="btnPrintTrPDF" type="button" class="btnPrintTrPDF btn btn-primary   StyleNew_ToolbarBUT " style="   ">
+
+                        <span class="glyphicon glyphicon-file"></span>    تنزيل PDF
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar">
+                    <button id="btnPrintTrEXEL" type="button" class="btnPrintTrEXEL btn btn-primary   StyleNew_ToolbarBUT " style="">
+                        <span class="glyphicon glyphicon-th"></span>      تنزيل Excel
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar display_none">
+                    <button id="btnPrint" type="button" class="btnPrintTrEXEL btn btn-info  StyleNew_ToolbarBUT" style="     ">
+                        <span class="glyphicon glyphicon-print"></span>      تنزيل Excel
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar display_none">
+                    <input id="NewAdd_Falg" />
+                    <input id="Mod_Flag" />
+                </div>
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </footer>
+    @*---------------------------New Toolbar ------------------------*@
+    <div id="dir" class="display_none">
+        <i style="margin-right: -2px;">
+            <img src="~/images/open.png" style="margin-left: -12px;" />
+            الحركة
+        </i>
+    </div>
+    <footer id="footer_2" style="width: 50% !important;top: 85%; background-color: rgb(3 45 53 / 38%) !important;">
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div id="dir_2" class="col-xs-1">
+
+                </div>
+
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar_bottom">
+                    <button id="btnBack" type="button" class="btnBack btn btn-warning   StyleNew_ToolbarBUT" style="">
+                        <span class="glyphicon glyphicon-refresh"></span> تراجع
+                    </button>
+                    <button id="btnUpdate" type="button" class="btnUpdate btn btn-primary   StyleNew_ToolbarBUT " style="">
+                        <span class="glyphicon glyphicon-edit"></span> تعديل
+                    </button>
+                </div>
+                <div class="col-md-2 col-xs-2 StyleNew_Toolbar_bottom">
+                    <button id="btnSave" type="button" class=" button  StyleNew_ToolbarBUT btnSave" onclick="  this.classList.toggle('button--loading')" style="">
+                        <span class=" glyphicon glyphicon-saved">   حفظ  </span>
+                    </button>
+                    <button id="btn_Copy_Inv" type="button" class="hidden_Control btn btn-info StyleNew_ToolbarBUT " style="  background: linear-gradient( 87deg,#41519b,#81cdc6) !important;">
+                        <span class="glyphicon glyphicon-copy"></span> نسخ الفاتوره
+                    </button>
+                    <button id="btnPrintInvoicePrice" type="button" class="hidden_Control btn btn-primary   StyleNew_ToolbarBUT " style="  background: linear-gradient( 87deg,#7b7b7b,#000000) !important;">
+                        <span class="glyphicon glyphicon-usd"></span>طباعةأسعار
+                    </button>
+                </div>
+                <div id="div_btnPrint">
+                    <div class="col-md-2 col-xs-2 StyleNew_Toolbar_bottom">
+                        <button id="btnPrintTransaction" type="button" class="btn btn-primary   StyleNew_ToolbarBUT " style="  background: linear-gradient( 87deg,#7b7b7b,#000000) !important;">
+                            <span class="glyphicon glyphicon-print"></span> طباعة
+                        </button>
+                    </div>
+                    <div class="col-md-2 col-xs-2 StyleNew_Toolbar_bottom">
+                        <button id="btnPrintslip" type="button" class="hidden_Control btn btn-info  StyleNew_ToolbarBUT" style="  background: linear-gradient( 87deg,#7b7b7b,#000000) !important;">
+                            <span class="glyphicon glyphicon-paperclip"></span> Slipطباعة
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </footer>
+    @*---------------------------------------------------------------------*@
+
+    <div class="wrapper-pro">
+        <!-- Header top area start المنيو اللي في الجنب  -->
+        <div class="left-sidebar-pro  ">
+            <nav id="sidebar" class="scroll" style="">
+                <div class="sidebar-header">                 </div>
+                <div class="left-custom-menu-adp-wrap">
+                    <ul id="main_menu" name="main_menu" class="nav navbar-nav left-sidebar-menu-pro">
+
+                        <li class="liItem MED nav-item" id="btnSalesDataLibrary">
+                            <a id="lep1"  data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">   <i class="glyphicon glyphicon-transfer left_right">  </i>    <span class="mini-dn">@SystemResource.Men_SalesDataLibrary  </span><i id="span1" class="fa fa-caret-left floatleftPurOrder"> </i></a>
+                            <div id=" " role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <ul id=" ">
+                                    <li class="liItem dropdown-item" id="btnCustomerCategory" key="CustomerCategory"><a id="btnCustomerCategory">@SystemResource.Men_CustomerCategory</a> <span title="فتح في صفحه جديدة" id="btnSlsTrReturnOpenT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnCustomerRespItems" key="CustomerRespItems"><a id="btnCustomerRespItems__">@SystemResource.Men_CustomerRespItems</a><span title="فتح في صفحه جديدة" id="btnCustomerRespItemsT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnCompanyRespItem" key="btnCompanyRespItem"><a id="btnCompanyRespItem">@SystemResource.Men_CompanyRespItem</a><span title="فتح في صفحه جديدة" id="btnCompanyRespItemT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnSalesPaymentTerms" key="SalesPaymentTerms"><a id="btnSalesPaymentTerms__">@SystemResource.Men_SalesPaymentTerms</a><span title="فتح في صفحه جديدة" id="btnSalesPaymentTermsT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnSalesItemLibrary" key="SalesItemLibrary"><a id="btnSalesItemLibrary__">@SystemResource.Men_SalesItemLibrary</a><span title="فتح في صفحه جديدة" id="btnSalesItemLibraryT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnSalesItemPlan" key="SalesItemPlan"><a id="btnSalesItemPlan__">@SystemResource.Men_SalesItemPlan</a><span title="فتح في صفحه جديدة" id="btnSalesItemPlanT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnActivityPrice" key="ActivityPrice"><a id="btnActivityPrice__">@SystemResource.Men_ActivityPrice</a><span title="فتح في صفحه جديدة" id="btnActivityPriceT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="liItem MED nav-item" id="btnSalesOperations">
+                            <a id="lep2" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">   <i class="glyphicon glyphicon-transfer left_right">  </i>    <span class="mini-dn">@SystemResource.Men_SalesOperations  </span><i id="span1" class="fa fa-caret-left floatleftPurOrder"> </i></a>
+                            <div id=" " role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <ul id=" ">
+                                    <li class="liItem dropdown-item" id="btnOfferDefinition" key="OfferDefinition"><a id="btnOfferDefinition" href="#">@SystemResource.Men_OfferDefinition</a><span title="فتح في صفحه جديدة" id="btnOfferDefinitionT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnOfferBillingSchedule" key="OfferBillingSchedule"><a id="btnOfferBillingSchedule" href="#">@SystemResource.Men_OfferBillingSchedule</a><span title="فتح في صفحه جديدة" id="btnOfferBillingScheduleT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnOfferSpecification" key="OfferSpecification"><a id="btnOfferSpecification" href="#">@SystemResource.Men_OfferSpecification</a><span title="فتح في صفحه جديدة" id="btnOfferSpecificationT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnOfferCostEstimation" key="OfferCostEstimation"><a id="btnOfferCostEstimation" href="#">@SystemResource.Men_OfferCostEstimation</a><span title="فتح في صفحه جديدة" id="btnOfferCostEstimationT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnStartOfWork" key="StartOfWork"><a id="btnStartOfWork" href="#">@SystemResource.Men_StartOfWork</a><span title="فتح في صفحه جديدة" id="btnStartOfWorkT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="liItem MED nav-item" id="btnProductionAndBilling">
+                            <a id="lep3" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">   <i class="glyphicon glyphicon-transfer left_right">  </i>    <span class="mini-dn">@SystemResource.Men_ProductionAndBilling  </span><i id="span1" class="fa fa-caret-left floatleftPurOrder"> </i></a>
+                            <div id=" " role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <ul id=" ">
+                                    @*<li class="liItem dropdown-item" id="btnIssueProduction" key="IssueProduction"><a id="btnIssueProduction" href="#">@SystemResource.Men_IssueProduction</a><span title="فتح في صفحه جديدة" id="btnIssueProductionT" class="glyphicon glyphicon-new-window spanopen"></span></li>*@
+                                    <li class="liItem dropdown-item" id="btnCustomerBilling" key="CustomerBilling"><a id="btnCustomerBilling" href="#">@SystemResource.Men_CustomerBilling</a><span title="فتح في صفحه جديدة" id="btnCustomerBillingT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnCustomerDbCr" key="CustomerDbCr"><a id="btnCustomerDbCr" href="#">@SystemResource.Men_CreditDebitNote</a><span title="فتح في صفحه جديدة" id="btnCustomerDbCrT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnSalesManBonus" key="SalesManBonus"><a id="btnSalesManBonus" href="#">@SystemResource.Men_SalesManBonus</a><span title="فتح في صفحه جديدة" id="btnSalesManBonusT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="liItem disabledLi dropdown" id="btnReports">
+                             <a id="lep4" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">   <i class="glyphicon glyphicon-transfer left_right">  </i>    <span class="mini-dn">@SystemResource.Men_Reports  </span><i id="span1" class="fa fa-caret-left floatleftPurOrder"> </i></a>
+                            <div id=" " role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <ul class="dropdown-menu">
+                                    <li class="liItem dropdown-item" id="btnContractList" key="ContractList"><a id="btnContractList" href="#">@SystemResource.Men_ContractList </a><span title="فتح في صفحه جديدة" id="btnContractListT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnOfferList" key="OfferList"><a id="btnOfferList" href="#">@SystemResource.Men_OfferList </a><span title="فتح في صفحه جديدة" id="btnOfferListT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnSalesmanActivity" key="SalesmanActivity"><a id="btnSalesmanActivity" href="#">@SystemResource.Men_SalesmanActivity </a><span title="فتح في صفحه جديدة" id="btnSalesmanActivityT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnProductionVsBilling" key="ProductionVsBilling"><a id="btnProductionVsBilling" href="#">@SystemResource.Men_ProductionVsBilling </a><span title="فتح في صفحه جديدة" id="btnProductionVsBillingT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnProjItemsInventory" key="ProjItemsInventory"><a id="btnProjItemsInventory" href="#">@SystemResource.ProjItemsInventory </a><span title="فتح في صفحه جديدة" id="btnProjItemsInventoryT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnBillingList" key="BillingList"><a id="btnBillingList" href="#">@SystemResource.RDBillingList </a><span title="فتح في صفحه جديدة" id="btnBillingListT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnCRMReport" key="CRMReport"><a id="btnCRMReport" href="#">@SystemResource.CRMReport </a><span title="فتح في صفحه جديدة" id="btnCRMReportT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                    <li class="liItem dropdown-item" id="btnTaxInvoicelist" key="TaxInvoicelist"><a id="btnTaxInvoicelist" href="#">@SystemResource.TaxInvoicelist</a><span title="فتح في صفحه جديدة" id="btnTaxInvoicelistT" class="glyphicon glyphicon-new-window spanopen"></span></li>
+                                </ul>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Header top area start المنيو اللي فوق  -->
+        <div class="content-inner-all fixed-header-top">
+            <div class="header-top-area">
+                <div class="fixed-header-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 p-0" style="top: 13px;">
+                                <a id="btnHome" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class=" liItem nav-link dropdown-toggle">  <i id="btnHome" class="glyphicon glyphicon-home"> </i>    <span id="btnHome" class="mini-dn">@*@SystemResource.*@Men_Home</span></a>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 sidebarCollapse p-0">
+                                <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn   navbar-btn">
+                                    <i class="fa fa-bars"> </i>
+                                </button>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <i class="fa fa-question-circle styleHelp" alt="Help" id="btnHelpRep" data-toggle="modal" data-target="#myModal">  </i>
+                                </div>
+                                <button type="button" id="sidebarCollapse2" class="btn bar-button-pro header-drl-controller-btn  navbar-btn btn_toolpar">
+                                    <i class="fa fa-bars"> </i>
+                                </button>
+                            </div>
+                            <div class="  col-lg-2 col-md-2 col-sm-3 col-xs-3  posation_titel_top_par">
+                                <div class="header-top-menu tabl-d-n">
+                                    <label id="Screen_name" class="pading_titelpag"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 pl-0 pr-0">
+                                <div class="header-top-menu tabl-d-n">
+                                    <label id="camp_name" class="pading_titelpag"></label>
+                                </div>
+                            </div>
+                            <div class="  col-lg-2 col-md-2 col-sm-2 col-xs-2" style="width: 14%;">
+                                
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pl-0 pr-0" style="width:2%">
+                                <div class="header-top-menu tabl-d-n">
+                                    <label id="yersno" class="pading_titelpag"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 posation_control posation_  top29 margin-right_5 ">
+                                <div class="header-right-info">
+                                    <ul class="col-lg-12 nav naposation_  vbar-nav mai-top-nav header-right-menu pading_top_15px classright208 ">
+                                        <li class="liItem" key="tol_Dashboard" id="tol_Dashboard">
+                                            @*<img style="display:none!important" src="~/images/chart-Copy.png">
+                                            <img class="charimg" title="DashBoard" src="~/images/chart-Copy.png" />*@
+
+                                        </li>
+                                        <li class="liItem nav-item dropdown " key="tol_messagestoppar" id="tol_messagestoppar">
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span class="adminpro-icon adminpro-chat-pro"></span><span class="indicator-nt"></span>@*<span class="indicator-ms"></span>*@</a>
+                                            <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated flipInX">
+                                                <ul class="nav nav-tabs custon-set-tab">
+                                                    <li class="active">
+                                                        <a data-toggle="tab" href="#Notes">  @*@SystemResource.*@tol_Notifications</a>
+                                                    </li>
+                                                    <li>
+                                                        <a data-toggle="tab" href="#Projects"> @*@SystemResource.*@tol_messages </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    @*____________________  اشعارات ____________________*@
+                                                    <div id="Notes" class="tab-pane fade in active">
+                                                        <div class="notes-area-wrap">
+                                                            <div class="note-heading-iyyndicate">
+                                                                <h2>
+                                                                    <i class="fa fa-bell-o">
+                                                                    </i>
+                                                                </h2>
+                                                            </div>
+                                                            <div class="notes-list-area notes-menu-scrollbar">
+                                                                <ul class="notes-menu-list" id="creatnotesmassg"></ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @*______________رسائل  ____________________*@
+                                                    <div id="Projects" class="tab-pane fade rtl-menu">
+                                                        <div class="projects-settings-wrap">
+                                                            <div class="note-heading-indicate">
+                                                                <i class="adminpro-icon adminpro-chat-pro" style="color:#fff;font-weight: bold;font-size: 20px;">
+                                                                </i>
+                                                            </div>
+                                                            <div class="project-st-list-area project-st-menu-scrollbar">
+                                                                <ul class="projects-st-menu-list" id="creatmassg"></ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="liItem nav-item " id="tol_allnotification" key="tol_allnotification" y>
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"> </i><span class="indicator-nt"></span></a>
+                                            <div role="menu" class="notification-author dropdown-menu animated flipInX">
+                                                <div class="notification-single-top">
+                                                    <h1 style="color:white!important">@*@SystemResource.*@tol_Notifications</h1>
+                                                </div>
+                                                <div class="notifcations" id="notification">
+                                                    <div class="notic_triangle"></div>
+                                                    <ul class="list-unstyled" id="notificationUL"></ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="liItem nav-item" id="tol_Userstoppar">
+                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
+                                                <span id="Admin_name" class="admin-name"></span>
+                                                <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
+                                            </a>
+                                            <ul role="menu" class="liItem dropdown-header-top author-log dropdown-menu animated flipInX">
+                                                <li>
+                                                    <a class="liItem" href="#" id="LanguageButtonHome"> <span id="LanguageButtonHome" class="adminpro-icon adminpro-money author-log-ic"></span> </a>
+                                                </li>
+                                                <li>
+                                                    <a class="liItem" href="#" id="btnUsers" data-toggle="modal" data-target="#user_setting"> @*@SystemResource.*@tol_change_Password<span id="btn_G_User" class="adminpro-icon adminpro-locked author-log-ic"></span>  </a>
+                                                </li>
+                                                <li>
+                                                    <a class="liItem" id="btn_loguotuser" href="#">  تسجيل الخروج @*@SystemResource.l_Log_Out*@<span class="adminpro-icon adminpro-reload author-log-ic"></span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <span id="timeLeft" class="admin-name display_none" style="color: red;font-weight: bold;     margin-right: 76%;font-size: 20px;"></span>
+                                    <input id="idSession" value="10" class="display_none" />
+                                    <select id="SelectSession" class="display_none">
+                                        <option value="0">off</option>
+                                        <option value="1">on</option>
+                                        <option value="2">out</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cont" class="divcont">
+            @RenderBody()
+        </div>
+    </div>
+
+    <input type="hidden" id="GetActionUrl" name="name" value="@Url.Action("GetActionUrl","ClientTools")" />
+    <input type="hidden" id="ModelPreview" name="name" value="" />
+    <input type="hidden" id="SearchControlName" name="name" value="" />
+
+    <div id="caret_script" style="display:none!important">
+        
+
+    </div>
+
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+
+    @Scripts.Render("~/Bundles/AppScript4")
+
+    <script>
+        $('#sidebarCollapse').on('click', function () {
+            $('#cont').toggleClass('colapsdivcont');
+        });
+        $('#chinng_languag').on('click', function () {
+            $('#main-menu').toggleClass('rtl-menu');
+        });
+    </script>
+    <script>
+        $("#NewAdd_Falg").val(0);
+        $("#Mod_Flag").val(0);
+
+
+        $("#btnAdd").click(function () {
+            debugger
+            $('#dir').removeClass('display_none');
+            $("#footer_1").animate({ "left": "-85%", });
+            $("#dir_11").fadeIn(3000);
+
+            $('#dir_11').addClass('display_none');
+            $("#NewAdd_Falg").val(1);
+            $("#Mod_Flag").val(1);
+
+
+            $("#footer_2").animate({ "left": "0", "margin-left": "0px" });
+            $("#dir").hide();
+
+            $('#btnPrintTransaction').addClass('display_none');
+            $('#btnUpdate').addClass('display_none');
+
+            $('#btnBack').removeClass('display_none');
+            $('#btnSave').removeClass('display_none');
+
+
+            $('#btnPrintslip').addClass('display_none');
+            $('#btnPrintTransaction').addClass('display_none');
+
+
+        });
+
+        $("#btnBack").click(function () {
+            debugger
+            if ($("#NewAdd_Falg").val() == 1) {
+                $('#dir').addClass('display_none');
+                $("#footer_2").animate({ "left": "-85%", });
+                $("#dir").fadeIn(3000);
+            }
+
+            $('#dir_11').removeClass('display_none');
+
+
+            $('#btnPrintTransaction').removeClass('display_none');
+            $('#btnUpdate').removeClass('display_none');
+
+            $('#btnBack').addClass('display_none');
+            $('#btnSave').addClass('display_none');
+
+            $('#btnPrintslip').removeClass('display_none');
+            $('#btnPrintTransaction').removeClass('display_none');
+
+            $("#NewAdd_Falg").val('0');
+            $("#Mod_Flag").val('0');
+        });
+
+        $("#btnUpdate").click(function () {
+            $('#dir_11').addClass('display_none');
+
+            $('#btnPrintTransaction').addClass('display_none');
+            $('#btnUpdate').addClass('display_none');
+
+
+            $('#btnBack').removeClass('display_none');
+            $('#btnSave').removeClass('display_none');
+
+            $('#btnPrintslip').addClass('display_none');
+            $('#btnPrintTransaction').addClass('display_none');
+
+            $("#Mod_Flag").val(1);
+        });
+
+
+
+
+        $("#btn_Copy_Inv").click(function () {
+            $("#NewAdd_Falg").val(1);
+            $("#Mod_Flag").val(1);
+            $('#dir_11').addClass('display_none');
+        });
+
+        $("#btnShow").click(function () {
+            $('#dir').addClass('display_none');
+
+
+            $("#footer_1").animate({ "left": "-85%", });
+            $("#dir_11").fadeIn(3000);
+        });
+
+        $("#btnSave").click(function () {
+
+        });
+
+
+        $("#btnUpdate_Def").click(function () {
+
+            $('#btnUpdate_Def').addClass('display_none');
+            $('#btnBack_Def').removeClass('display_none');
+            $('#btnSave_Def').removeClass('display_none');
+
+        });
+
+        $("#btnBack_Def").click(function () {
+
+            $('#btnUpdate_Def').removeClass('display_none');
+            $('#btnBack_Def').addClass('display_none');
+            $('#btnSave_Def').addClass('display_none');
+        });
+
+
+        $("#btnSave_Def").click(function () {
+
+        });
+
+
+
+
+    </script>
+</body>
+</html>

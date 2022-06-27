@@ -950,14 +950,14 @@ function CloseSearchBox() {
     $("#SearchBox").modal("hide"); //.css("display", "none");
 }
 function run_waitMe() {
-    $('body').waitMe({
-        effect: "win8",
-        text: 'Please wait...',
-        bg: 'rgba(255,255,255,0.7)',
-        color: '#000',
-        sizeW: '',
-        sizeH: ''
-    });
+    //$('body').waitMe({
+    //    effect: "win8",
+    //    text: 'Please wait...',
+    //    bg: 'rgba(255,255,255,0.7)',
+    //    color: '#000',
+    //    sizeW: '',
+    //    sizeH: ''
+    //});
 }
 function HeaderTemplate(headerTitle, element) {
     var tbl = DocumentActions.CreateElement("table");
@@ -1215,5 +1215,28 @@ function CheckTime() {
         }
         return;
     }
+}
+function Save_Succ_But() {
+    $('#dir_11').removeClass('display_none');
+    $('#btnPrintTransaction').removeClass('display_none');
+    $('#btnUpdate').removeClass('display_none');
+    $('#btnBack').addClass('display_none');
+    $('#btnSave').addClass('display_none');
+    $("#footer_2").animate({ "left": "-85%", });
+    $("#dir").fadeIn(3000);
+    $('#btnPrintslip').removeClass('display_none');
+    $('#btnPrintTransaction').removeClass('display_none');
+    $("#NewAdd_Falg").val('0');
+    $('#btnUpdate_Def').removeClass('display_none');
+    $('#btnBack_Def').addClass('display_none');
+    $('#btnSave_Def').addClass('display_none');
+    $('.button').removeClass('button--loading');
+    $('#btnSave_Def').removeClass('button--loading');
+    $('#save_Load').html('');
+    $('#save_Load').append('<span class=" glyphicon glyphicon-floppy-saved">   حفظ  </span>');
+    $('#save_Load_Def').html('');
+    $('#save_Load_Def').append('<span class=" glyphicon glyphicon-floppy-saved">   حفظ  </span>');
+    $('#btnSave_Def').removeAttr('disabled');
+    $('#btnSave').removeAttr('disabled');
 }
 //# sourceMappingURL=App.js.map

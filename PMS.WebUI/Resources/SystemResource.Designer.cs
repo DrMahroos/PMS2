@@ -196,6 +196,2085 @@ namespace PMS.WebUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Customer.
+        /// </summary>
+        public static string App_AccCust {
+            get {
+                return ResourceManager.GetString("App_AccCust", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account Number.
+        /// </summary>
+        public static string App_account_numbe {
+            get {
+                return ResourceManager.GetString("App_account_numbe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bank account.
+        /// </summary>
+        public static string App_account_numbe11 {
+            get {
+                return ResourceManager.GetString("App_account_numbe11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active ?.
+        /// </summary>
+        public static string App_Active {
+            get {
+                return ResourceManager.GetString("App_Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string App_Add {
+            get {
+                return ResourceManager.GetString("App_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Additional Costs &amp; Prod.instrcction.
+        /// </summary>
+        public static string App_AddC_ProdInst {
+            get {
+                return ResourceManager.GetString("App_AddC_ProdInst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string App_adding {
+            get {
+                return ResourceManager.GetString("App_adding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string App_address {
+            get {
+                return ResourceManager.GetString("App_address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address Floor.
+        /// </summary>
+        public static string App_Address_Floor {
+            get {
+                return ResourceManager.GetString("App_Address_Floor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address LandMarks.
+        /// </summary>
+        public static string App_Address_LandMarks {
+            get {
+                return ResourceManager.GetString("App_Address_LandMarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address Room.
+        /// </summary>
+        public static string App_Address_Room {
+            get {
+                return ResourceManager.GetString("App_Address_Room", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adds.
+        /// </summary>
+        public static string App_Adds {
+            get {
+                return ResourceManager.GetString("App_Adds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string App_All {
+            get {
+                return ResourceManager.GetString("App_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        public static string App_Amount {
+            get {
+                return ResourceManager.GetString("App_Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An indebtedness.
+        /// </summary>
+        public static string App_an_indebtedness {
+            get {
+                return ResourceManager.GetString("App_an_indebtedness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approved.
+        /// </summary>
+        public static string App_approved {
+            get {
+                return ResourceManager.GetString("App_approved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorized the commission.
+        /// </summary>
+        public static string App_AuthTheCommission {
+            get {
+                return ResourceManager.GetString("App_AuthTheCommission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorized to purchase.
+        /// </summary>
+        public static string App_AuthToPurchase {
+            get {
+                return ResourceManager.GetString("App_AuthToPurchase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorized to sell for.
+        /// </summary>
+        public static string App_AuthTosellfor {
+            get {
+                return ResourceManager.GetString("App_AuthTosellfor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Available Quantity.
+        /// </summary>
+        public static string App_AvailableQuantity {
+            get {
+                return ResourceManager.GetString("App_AvailableQuantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string App_back {
+            get {
+                return ResourceManager.GetString("App_back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        public static string App_Balanc {
+            get {
+                return ResourceManager.GetString("App_Balanc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        public static string App_Balance {
+            get {
+                return ResourceManager.GetString("App_Balance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balance Type.
+        /// </summary>
+        public static string App_BalanceType {
+            get {
+                return ResourceManager.GetString("App_BalanceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BarCode.
+        /// </summary>
+        public static string App_BarCode {
+            get {
+                return ResourceManager.GetString("App_BarCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Batch Code.
+        /// </summary>
+        public static string App_BatchCode {
+            get {
+                return ResourceManager.GetString("App_BatchCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Batch number.
+        /// </summary>
+        public static string App_BatchNumber {
+            get {
+                return ResourceManager.GetString("App_BatchNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beneficiary.
+        /// </summary>
+        public static string App_beneficiary {
+            get {
+                return ResourceManager.GetString("App_beneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beneficiary No..
+        /// </summary>
+        public static string App_beneficiary_no {
+            get {
+                return ResourceManager.GetString("App_beneficiary_no", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branch.
+        /// </summary>
+        public static string App_Branch {
+            get {
+                return ResourceManager.GetString("App_Branch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branch Name.
+        /// </summary>
+        public static string App_BranchName {
+            get {
+                return ResourceManager.GetString("App_BranchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Canceled.
+        /// </summary>
+        public static string App_Canceled {
+            get {
+                return ResourceManager.GetString("App_Canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card.
+        /// </summary>
+        public static string App_Card {
+            get {
+                return ResourceManager.GetString("App_Card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card Paid.
+        /// </summary>
+        public static string App_CardPaid {
+            get {
+                return ResourceManager.GetString("App_CardPaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash.
+        /// </summary>
+        public static string App_Cash {
+            get {
+                return ResourceManager.GetString("App_Cash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash Account.
+        /// </summary>
+        public static string App_CashAccount {
+            get {
+                return ResourceManager.GetString("App_CashAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cashbox.
+        /// </summary>
+        public static string App_Cashbox {
+            get {
+                return ResourceManager.GetString("App_Cashbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cash Paid.
+        /// </summary>
+        public static string App_CashPaid {
+            get {
+                return ResourceManager.GetString("App_CashPaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string APP_Category {
+            get {
+                return ResourceManager.GetString("APP_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category items.
+        /// </summary>
+        public static string APP_CategoryItem {
+            get {
+                return ResourceManager.GetString("APP_CategoryItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certified.
+        /// </summary>
+        public static string App_Certified {
+            get {
+                return ResourceManager.GetString("App_Certified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Branch.
+        /// </summary>
+        public static string App_ChangeBranch {
+            get {
+                return ResourceManager.GetString("App_ChangeBranch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        public static string App_ChangePassword {
+            get {
+                return ResourceManager.GetString("App_ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Percentage.
+        /// </summary>
+        public static string App_ChangePer {
+            get {
+                return ResourceManager.GetString("App_ChangePer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a Status.
+        /// </summary>
+        public static string App_ChoStatus {
+            get {
+                return ResourceManager.GetString("App_ChoStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string App_Clear {
+            get {
+                return ResourceManager.GetString("App_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string App_Close {
+            get {
+                return ResourceManager.GetString("App_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed AT.
+        /// </summary>
+        public static string App_Closed_AT {
+            get {
+                return ResourceManager.GetString("App_Closed_AT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed BY.
+        /// </summary>
+        public static string App_Closed_BY {
+            get {
+                return ResourceManager.GetString("App_Closed_BY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string App_Code {
+            get {
+                return ResourceManager.GetString("App_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commission.
+        /// </summary>
+        public static string App_Commission {
+            get {
+                return ResourceManager.GetString("App_Commission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company.
+        /// </summary>
+        public static string App_Company {
+            get {
+                return ResourceManager.GetString("App_Company", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string App_Confirm {
+            get {
+                return ResourceManager.GetString("App_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string App_Create {
+            get {
+                return ResourceManager.GetString("App_Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credit.
+        /// </summary>
+        public static string App_credit {
+            get {
+                return ResourceManager.GetString("App_credit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credit Limit.
+        /// </summary>
+        public static string App_CreditLimit {
+            get {
+                return ResourceManager.GetString("App_CreditLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creditor.
+        /// </summary>
+        public static string App_Creditor {
+            get {
+                return ResourceManager.GetString("App_Creditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No. Cust .
+        /// </summary>
+        public static string App_CustomerCODE {
+            get {
+                return ResourceManager.GetString("App_CustomerCODE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cutomer.
+        /// </summary>
+        public static string App_Cutomer {
+            get {
+                return ResourceManager.GetString("App_Cutomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string App_date {
+            get {
+                return ResourceManager.GetString("App_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Type.
+        /// </summary>
+        public static string App_DateType {
+            get {
+                return ResourceManager.GetString("App_DateType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Day.
+        /// </summary>
+        public static string App_Day {
+            get {
+                return ResourceManager.GetString("App_Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debtor.
+        /// </summary>
+        public static string App_Debtor {
+            get {
+                return ResourceManager.GetString("App_Debtor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string App_Delete {
+            get {
+                return ResourceManager.GetString("App_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string App_desc {
+            get {
+                return ResourceManager.GetString("App_desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arabic Name.
+        /// </summary>
+        public static string App_DescA {
+            get {
+                return ResourceManager.GetString("App_DescA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English Name.
+        /// </summary>
+        public static string App_DescE {
+            get {
+                return ResourceManager.GetString("App_DescE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description Settlement.
+        /// </summary>
+        public static string App_Description_settlement {
+            get {
+                return ResourceManager.GetString("App_Description_settlement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document No.
+        /// </summary>
+        public static string App_DocumentNo {
+            get {
+                return ResourceManager.GetString("App_DocumentNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &gt;&gt;Double click to display the required statement&lt;&lt;.
+        /// </summary>
+        public static string App_DoubleDisplay {
+            get {
+                return ResourceManager.GetString("App_DoubleDisplay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doubted.
+        /// </summary>
+        public static string App_Doubted {
+            get {
+                return ResourceManager.GetString("App_Doubted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doubted Or Cash.
+        /// </summary>
+        public static string App_DoubtedOrCash {
+            get {
+                return ResourceManager.GetString("App_DoubtedOrCash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drainage Description.
+        /// </summary>
+        public static string App_Drainage_Description {
+            get {
+                return ResourceManager.GetString("App_Drainage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movement Type.
+        /// </summary>
+        public static string App_Drainage_Type {
+            get {
+                return ResourceManager.GetString("App_Drainage_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Year.
+        /// </summary>
+        public static string App_EnterYear {
+            get {
+                return ResourceManager.GetString("App_EnterYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equip.Cost Per.Process.
+        /// </summary>
+        public static string App_EquipCostPerProcess {
+            get {
+                return ResourceManager.GetString("App_EquipCostPerProcess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equip.Cost Per.Unit.
+        /// </summary>
+        public static string App_EquipCostPerUnit {
+            get {
+                return ResourceManager.GetString("App_EquipCostPerUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string App_Everybody {
+            get {
+                return ResourceManager.GetString("App_Everybody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expiration Date.
+        /// </summary>
+        public static string App_ExpDate {
+            get {
+                return ResourceManager.GetString("App_ExpDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expiration date.
+        /// </summary>
+        public static string App_Expirationdate {
+            get {
+                return ResourceManager.GetString("App_Expirationdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Favorite Screens List.
+        /// </summary>
+        public static string App_FavoriteScreensList {
+            get {
+                return ResourceManager.GetString("App_FavoriteScreensList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Branch.
+        /// </summary>
+        public static string App_FirstBranch {
+            get {
+                return ResourceManager.GetString("App_FirstBranch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed Batch.No.
+        /// </summary>
+        public static string App_fixedBatchNo {
+            get {
+                return ResourceManager.GetString("App_fixedBatchNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From Date.
+        /// </summary>
+        public static string App_FromDate {
+            get {
+                return ResourceManager.GetString("App_FromDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App_FromPeriod.
+        /// </summary>
+        public static string App_FromPeriod {
+            get {
+                return ResourceManager.GetString("App_FromPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From Prod.date.
+        /// </summary>
+        public static string App_FromProddate {
+            get {
+                return ResourceManager.GetString("App_FromProddate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate.Per.
+        /// </summary>
+        public static string App_GeneratePer {
+            get {
+                return ResourceManager.GetString("App_GeneratePer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group.
+        /// </summary>
+        public static string App_Group {
+            get {
+                return ResourceManager.GetString("App_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to He&apos;s no Right.
+        /// </summary>
+        public static string App_He_has_no_right {
+            get {
+                return ResourceManager.GetString("App_He_has_no_right", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to He&apos;s Right.
+        /// </summary>
+        public static string App_He_has_right {
+            get {
+                return ResourceManager.GetString("App_He_has_right", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to He Owes Him.
+        /// </summary>
+        public static string App_He_Owes_Him {
+            get {
+                return ResourceManager.GetString("App_He_Owes_Him", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string App_Help {
+            get {
+                return ResourceManager.GetString("App_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string App_Home {
+            get {
+                return ResourceManager.GetString("App_Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to main.
+        /// </summary>
+        public static string App_Home2 {
+            get {
+                return ResourceManager.GetString("App_Home2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID No./Record.
+        /// </summary>
+        public static string App_IDNumberOrRecord {
+            get {
+                return ResourceManager.GetString("App_IDNumberOrRecord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to indebtedness.
+        /// </summary>
+        public static string App_indebtedness {
+            get {
+                return ResourceManager.GetString("App_indebtedness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to inventory.
+        /// </summary>
+        public static string App_inv {
+            get {
+                return ResourceManager.GetString("App_inv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice Number.
+        /// </summary>
+        public static string App_InvNum {
+            get {
+                return ResourceManager.GetString("App_InvNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice.
+        /// </summary>
+        public static string App_Invoice {
+            get {
+                return ResourceManager.GetString("App_Invoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice No..
+        /// </summary>
+        public static string App_InvoiceNum {
+            get {
+                return ResourceManager.GetString("App_InvoiceNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to InvoiceType.
+        /// </summary>
+        public static string App_invoiceType {
+            get {
+                return ResourceManager.GetString("App_invoiceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IS Operation.
+        /// </summary>
+        public static string App_ISOperationEnable {
+            get {
+                return ResourceManager.GetString("App_ISOperationEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Purchase.
+        /// </summary>
+        public static string App_IsPurchaseEnable {
+            get {
+                return ResourceManager.GetString("App_IsPurchaseEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Man.
+        /// </summary>
+        public static string App_IsSalesEnable {
+            get {
+                return ResourceManager.GetString("App_IsSalesEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string App_Item {
+            get {
+                return ResourceManager.GetString("App_Item", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Items Count.
+        /// </summary>
+        public static string App_ItemsCount {
+            get {
+                return ResourceManager.GetString("App_ItemsCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Labour Hours.
+        /// </summary>
+        public static string App_LabourHours {
+            get {
+                return ResourceManager.GetString("App_LabourHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Batch.No.
+        /// </summary>
+        public static string App_LastBatchNo {
+            get {
+                return ResourceManager.GetString("App_LastBatchNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Less Price.
+        /// </summary>
+        public static string App_LessPrice {
+            get {
+                return ResourceManager.GetString("App_LessPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lowest wholesale price.
+        /// </summary>
+        public static string App_LessPrice1 {
+            get {
+                return ResourceManager.GetString("App_LessPrice1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measuring Unit.
+        /// </summary>
+        public static string App_MeasuringUnit {
+            get {
+                return ResourceManager.GetString("App_MeasuringUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string App_Message {
+            get {
+                return ResourceManager.GetString("App_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mobile No..
+        /// </summary>
+        public static string App_Mobile {
+            get {
+                return ResourceManager.GetString("App_Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string App_Month {
+            get {
+                return ResourceManager.GetString("App_Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movement Type.
+        /// </summary>
+        public static string App_MovementType {
+            get {
+                return ResourceManager.GetString("App_MovementType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string App_Name {
+            get {
+                return ResourceManager.GetString("App_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nationality.
+        /// </summary>
+        public static string App_Nationality {
+            get {
+                return ResourceManager.GetString("App_Nationality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to negative.
+        /// </summary>
+        public static string App_negative {
+            get {
+                return ResourceManager.GetString("App_negative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net.
+        /// </summary>
+        public static string App_Net {
+            get {
+                return ResourceManager.GetString("App_Net", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string App_new {
+            get {
+                return ResourceManager.GetString("App_new", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        public static string App_NewPassword {
+            get {
+                return ResourceManager.GetString("App_NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Certified.
+        /// </summary>
+        public static string App_Not_Certified {
+            get {
+                return ResourceManager.GetString("App_Not_Certified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string App_Notes {
+            get {
+                return ResourceManager.GetString("App_Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        public static string App_Number {
+            get {
+                return ResourceManager.GetString("App_Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Password.
+        /// </summary>
+        public static string App_OldPassword {
+            get {
+                return ResourceManager.GetString("App_OldPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Balance.
+        /// </summary>
+        public static string App_openBalance {
+            get {
+                return ResourceManager.GetString("App_openBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order By.
+        /// </summary>
+        public static string App_OrderBy {
+            get {
+                return ResourceManager.GetString("App_OrderBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OverHead Cost Per.Process.
+        /// </summary>
+        public static string App_OverHeadCostPerProcess {
+            get {
+                return ResourceManager.GetString("App_OverHeadCostPerProcess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OverHead Cost Per.Unit.
+        /// </summary>
+        public static string App_OverHeadCostPerUnit {
+            get {
+                return ResourceManager.GetString("App_OverHeadCostPerUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Package.
+        /// </summary>
+        public static string App_Package {
+            get {
+                return ResourceManager.GetString("App_Package", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Package Count.
+        /// </summary>
+        public static string App_PackageCount {
+            get {
+                return ResourceManager.GetString("App_PackageCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paid Money.
+        /// </summary>
+        public static string App_PaidMoney {
+            get {
+                return ResourceManager.GetString("App_PaidMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string App_Password {
+            get {
+                return ResourceManager.GetString("App_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Period Long.
+        /// </summary>
+        public static string App_PeriodLong {
+            get {
+                return ResourceManager.GetString("App_PeriodLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Period Name.
+        /// </summary>
+        public static string App_PeriodName {
+            get {
+                return ResourceManager.GetString("App_PeriodName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Petty Cash.
+        /// </summary>
+        public static string App_Petty_Cash {
+            get {
+                return ResourceManager.GetString("App_Petty_Cash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone No..
+        /// </summary>
+        public static string App_phone {
+            get {
+                return ResourceManager.GetString("App_phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Percentage.
+        /// </summary>
+        public static string app_prc {
+            get {
+                return ResourceManager.GetString("app_prc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string App_Price {
+            get {
+                return ResourceManager.GetString("App_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print.
+        /// </summary>
+        public static string App_Print {
+            get {
+                return ResourceManager.GetString("App_Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Slip.
+        /// </summary>
+        public static string App_Print_slip {
+            get {
+                return ResourceManager.GetString("App_Print_slip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Cost Result.
+        /// </summary>
+        public static string App_PrintCostResult {
+            get {
+                return ResourceManager.GetString("App_PrintCostResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Invoice.
+        /// </summary>
+        public static string App_PrintInvoice {
+            get {
+                return ResourceManager.GetString("App_PrintInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print List.
+        /// </summary>
+        public static string App_Printlist {
+            get {
+                return ResourceManager.GetString("App_Printlist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price Print.
+        /// </summary>
+        public static string App_PrintPrice {
+            get {
+                return ResourceManager.GetString("App_PrintPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Purchase Demand.
+        /// </summary>
+        public static string App_PrintPurchaseDemand {
+            get {
+                return ResourceManager.GetString("App_PrintPurchaseDemand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print Receive.
+        /// </summary>
+        public static string App_PrintReceive {
+            get {
+                return ResourceManager.GetString("App_PrintReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Description.
+        /// </summary>
+        public static string App_Prod_Desc {
+            get {
+                return ResourceManager.GetString("App_Prod_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prod.Batch Code.
+        /// </summary>
+        public static string App_ProdBatchCode {
+            get {
+                return ResourceManager.GetString("App_ProdBatchCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production Batch.No.
+        /// </summary>
+        public static string App_ProdBatchNo {
+            get {
+                return ResourceManager.GetString("App_ProdBatchNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production Instructions.
+        /// </summary>
+        public static string App_ProdInstruction {
+            get {
+                return ResourceManager.GetString("App_ProdInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product.
+        /// </summary>
+        public static string App_Product {
+            get {
+                return ResourceManager.GetString("App_Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Data.
+        /// </summary>
+        public static string App_Product_Data {
+            get {
+                return ResourceManager.GetString("App_Product_Data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Cost.
+        /// </summary>
+        public static string App_ProductCost {
+            get {
+                return ResourceManager.GetString("App_ProductCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Detail.
+        /// </summary>
+        public static string App_ProductDetail {
+            get {
+                return ResourceManager.GetString("App_ProductDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production_List.
+        /// </summary>
+        public static string App_Production_List {
+            get {
+                return ResourceManager.GetString("App_Production_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production Date.
+        /// </summary>
+        public static string App_ProductionDate {
+            get {
+                return ResourceManager.GetString("App_ProductionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Definition.
+        /// </summary>
+        public static string App_ProductionDef {
+            get {
+                return ResourceManager.GetString("App_ProductionDef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production Entry.
+        /// </summary>
+        public static string App_ProductionEntry {
+            get {
+                return ResourceManager.GetString("App_ProductionEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production Order.
+        /// </summary>
+        public static string App_ProductionOrder {
+            get {
+                return ResourceManager.GetString("App_ProductionOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purchase.
+        /// </summary>
+        public static string App_Pur {
+            get {
+                return ResourceManager.GetString("App_Pur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to invoice purchase limit .
+        /// </summary>
+        public static string App_PurchaseTheInvoice {
+            get {
+                return ResourceManager.GetString("App_PurchaseTheInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Just Qty.
+        /// </summary>
+        public static string App_Qty {
+            get {
+                return ResourceManager.GetString("App_Qty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string App_Quantity {
+            get {
+                return ResourceManager.GetString("App_Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receipt Type.
+        /// </summary>
+        public static string App_Receipt_Type {
+            get {
+                return ResourceManager.GetString("App_Receipt_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receive Date.
+        /// </summary>
+        public static string App_ReceiveDate {
+            get {
+                return ResourceManager.GetString("App_ReceiveDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reciept Box.
+        /// </summary>
+        public static string App_Reciept_Box {
+            get {
+                return ResourceManager.GetString("App_Reciept_Box", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reciept Description.
+        /// </summary>
+        public static string App_Reciept_Description {
+            get {
+                return ResourceManager.GetString("App_Reciept_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reference.NO.
+        /// </summary>
+        public static string App_ReferenceNumber {
+            get {
+                return ResourceManager.GetString("App_ReferenceNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration.NO.
+        /// </summary>
+        public static string App_Registration_Number {
+            get {
+                return ResourceManager.GetString("App_Registration_Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total restriction.
+        /// </summary>
+        public static string App_Registration_total {
+            get {
+                return ResourceManager.GetString("App_Registration_total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ReOpen AT.
+        /// </summary>
+        public static string App_ReOpen_AT {
+            get {
+                return ResourceManager.GetString("App_ReOpen_AT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ReOpen BY.
+        /// </summary>
+        public static string App_ReOpen_BY {
+            get {
+                return ResourceManager.GetString("App_ReOpen_BY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report Type.
+        /// </summary>
+        public static string App_report_type {
+            get {
+                return ResourceManager.GetString("App_report_type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Responsible.
+        /// </summary>
+        public static string App_Responsible {
+            get {
+                return ResourceManager.GetString("App_Responsible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Responsible Phone.
+        /// </summary>
+        public static string App_ResponsiblePhone {
+            get {
+                return ResourceManager.GetString("App_ResponsiblePhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.
+        /// </summary>
+        public static string App_Return {
+            get {
+                return ResourceManager.GetString("App_Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.NO.
+        /// </summary>
+        public static string App_ReturnNum {
+            get {
+                return ResourceManager.GetString("App_ReturnNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return Print.
+        /// </summary>
+        public static string App_ReturnPrint {
+            get {
+                return ResourceManager.GetString("App_ReturnPrint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.Qty.
+        /// </summary>
+        public static string App_returnQty {
+            get {
+                return ResourceManager.GetString("App_returnQty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to return Type.
+        /// </summary>
+        public static string App_retutnType {
+            get {
+                return ResourceManager.GetString("App_retutnType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salesman.
+        /// </summary>
+        public static string App_Salesman {
+            get {
+                return ResourceManager.GetString("App_Salesman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salesman Code.
+        /// </summary>
+        public static string App_SalesmanCode {
+            get {
+                return ResourceManager.GetString("App_SalesmanCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to invoice sale limit.
+        /// </summary>
+        public static string App_SaleTheInvoice {
+            get {
+                return ResourceManager.GetString("App_SaleTheInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string App_save {
+            get {
+                return ResourceManager.GetString("App_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string App_Search {
+            get {
+                return ResourceManager.GetString("App_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search: By Code, DescA or DescE.
+        /// </summary>
+        public static string App_SearchbyCode {
+            get {
+                return ResourceManager.GetString("App_SearchbyCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search: by number, name.
+        /// </summary>
+        public static string App_SearchbyNumPh {
+            get {
+                return ResourceManager.GetString("App_SearchbyNumPh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second Branch.
+        /// </summary>
+        public static string App_SecondBranch {
+            get {
+                return ResourceManager.GetString("App_SecondBranch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seller.
+        /// </summary>
+        public static string App_Seller {
+            get {
+                return ResourceManager.GetString("App_Seller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to serial.
+        /// </summary>
+        public static string App_serial {
+            get {
+                return ResourceManager.GetString("App_serial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serial Number.
+        /// </summary>
+        public static string App_SerialNumber {
+            get {
+                return ResourceManager.GetString("App_SerialNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service.
+        /// </summary>
+        public static string App_Service {
+            get {
+                return ResourceManager.GetString("App_Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total settlement.
+        /// </summary>
+        public static string App_Settlement_total {
+            get {
+                return ResourceManager.GetString("App_Settlement_total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to settlement type.
+        /// </summary>
+        public static string App_Settlement_type {
+            get {
+                return ResourceManager.GetString("App_Settlement_type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show.
+        /// </summary>
+        public static string App_Show {
+            get {
+                return ResourceManager.GetString("App_Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show All Batch.
+        /// </summary>
+        public static string App_ShowAllBatch {
+            get {
+                return ResourceManager.GetString("App_ShowAllBatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show All.Qty.
+        /// </summary>
+        public static string App_ShowAllQty {
+            get {
+                return ResourceManager.GetString("App_ShowAllQty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show All Stores.
+        /// </summary>
+        public static string App_ShowAllStores {
+            get {
+                return ResourceManager.GetString("App_ShowAllStores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Onhand Batch.
+        /// </summary>
+        public static string App_ShowOnhandBatch {
+            get {
+                return ResourceManager.GetString("App_ShowOnhandBatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Onhand.Qty.
+        /// </summary>
+        public static string App_ShowOnhandQty {
+            get {
+                return ResourceManager.GetString("App_ShowOnhandQty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show all stores.
+        /// </summary>
+        public static string App_ShowonlyoneStore {
+            get {
+                return ResourceManager.GetString("App_ShowonlyoneStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Product.
+        /// </summary>
+        public static string App_ShowProduct {
+            get {
+                return ResourceManager.GetString("App_ShowProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sold.Qty.
+        /// </summary>
+        public static string App_soldQty {
+            get {
+                return ResourceManager.GetString("App_soldQty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string App_srch {
+            get {
+                return ResourceManager.GetString("App_srch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Standard Product.Qty.
+        /// </summary>
+        public static string App_StandardProdQty {
+            get {
+                return ResourceManager.GetString("App_StandardProdQty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string App_State {
+            get {
+                return ResourceManager.GetString("App_State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string App_Status {
+            get {
+                return ResourceManager.GetString("App_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stoke.
+        /// </summary>
+        public static string APP_Stoke {
+            get {
+                return ResourceManager.GetString("APP_Stoke", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to warehouse.
+        /// </summary>
+        public static string App_Store {
+            get {
+                return ResourceManager.GetString("App_Store", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub System.
+        /// </summary>
+        public static string App_SubSystem {
+            get {
+                return ResourceManager.GetString("App_SubSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string App_System {
+            get {
+                return ResourceManager.GetString("App_System", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tax.
+        /// </summary>
+        public static string App_Tax {
+            get {
+                return ResourceManager.GetString("App_Tax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tax Number.
+        /// </summary>
+        public static string App_TaxNumber {
+            get {
+                return ResourceManager.GetString("App_TaxNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tax Type.
+        /// </summary>
+        public static string App_TaxType {
+            get {
+                return ResourceManager.GetString("App_TaxType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Be Paid.
+        /// </summary>
+        public static string App_TobePaid {
+            get {
+                return ResourceManager.GetString("App_TobePaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Date.
+        /// </summary>
+        public static string App_ToDate {
+            get {
+                return ResourceManager.GetString("App_ToDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Period.
+        /// </summary>
+        public static string App_ToPeriod {
+            get {
+                return ResourceManager.GetString("App_ToPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Prod.date.
+        /// </summary>
+        public static string App_ToProddate {
+            get {
+                return ResourceManager.GetString("App_ToProddate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total After Tax.
+        /// </summary>
+        public static string App_TotAfterTax {
+            get {
+                return ResourceManager.GetString("App_TotAfterTax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string App_total {
+            get {
+                return ResourceManager.GetString("App_total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Vat.
+        /// </summary>
+        public static string App_TotVat {
+            get {
+                return ResourceManager.GetString("App_TotVat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trans Type.
+        /// </summary>
+        public static string App_TrType {
+            get {
+                return ResourceManager.GetString("App_TrType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string App_Type {
+            get {
+                return ResourceManager.GetString("App_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string App_Update {
+            get {
+                return ResourceManager.GetString("App_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Name.
+        /// </summary>
+        public static string App_UserName {
+            get {
+                return ResourceManager.GetString("App_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Setting.
+        /// </summary>
+        public static string App_UserSetting {
+            get {
+                return ResourceManager.GetString("App_UserSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vat Type.
+        /// </summary>
+        public static string App_VatType {
+            get {
+                return ResourceManager.GetString("App_VatType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendor Number.
+        /// </summary>
+        public static string App_VendorNumber {
+            get {
+                return ResourceManager.GetString("App_VendorNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work Phone.
+        /// </summary>
+        public static string App_WorkPhone {
+            get {
+                return ResourceManager.GetString("App_WorkPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero.
+        /// </summary>
+        public static string App_Zero {
+            get {
+                return ResourceManager.GetString("App_Zero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to By Engineer.
         /// </summary>
         public static string By_Engineer {

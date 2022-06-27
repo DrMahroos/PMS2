@@ -3050,6 +3050,7 @@ class P_D_SalesCustomerCategory {
         this.DescA = "";
         this.DescE = "";
         this.Remarks = "";
+        this.StatusFlag = "";
         this.CompCode = 0;
     }
     public CustomerCategoryID: number;
@@ -3057,6 +3058,7 @@ class P_D_SalesCustomerCategory {
     public DescA: string;
     public DescE: string;
     public Remarks: string;
+    public StatusFlag: string;
     public CompCode: number;
 }
 class P_D_SalesItems {

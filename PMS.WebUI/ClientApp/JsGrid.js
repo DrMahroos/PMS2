@@ -94,6 +94,17 @@ var JsGrid = /** @class */ (function () {
                 _this.SelectedKey = e.item[_this.PrimaryKey];
                 if (_this.OnRowDoubleClicked != null)
                     _this.OnRowDoubleClicked();
+                if ($("#Mod_Flag").val() != 1) {
+                    $('#dir').removeClass('display_none');
+                    $("#footer_1").animate({ "left": "-85%", });
+                    $("#dir_11").fadeIn(3000);
+                    $("#NewAdd_Falg").val(0);
+                    $('#btnPrintTransaction').removeClass('display_none');
+                    $('#btnUpdate').removeClass('display_none');
+                    $('#btnBack').addClass('display_none');
+                    $('#btnSave').addClass('display_none');
+                    $('#Loading_Div').html('');
+                }
             },
             onRefreshing: function (arg) {
             },

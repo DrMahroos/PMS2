@@ -19,6 +19,7 @@ namespace PMS.ServiceConnector.Models
         public string DescA { get; set; }
         public string DescE { get; set; }
         public string Remarks { get; set; }
+        public string StatusFlag { get; set; }
         public Nullable<int> CompCode { get; set; }
     }
 }

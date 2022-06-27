@@ -653,7 +653,7 @@ var MaterialRequest;
             var id = ClientSharedWork.SearchDataGrid.SelectedKey;
             Ajax.CallAsync({
                 url: Url.Action("GetMaterialById", ControllerName),
-                data: { id: id, },
+                data: { id: id, /*ScheduleId: ScheduleId*/ },
                 success: function (d) {
                     debugger;
                     //PQ_GetEngWorkSchduleMaterial where schedule id and material id 

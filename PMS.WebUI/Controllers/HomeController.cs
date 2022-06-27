@@ -51,7 +51,10 @@ namespace PMS.WebUI.Controllers
                 {
                     _Index = "DecisionSupportIndex";
                 }
-
+                else if (_SessionRcord.SubSystemCode == "TEST")
+                {
+                    _Index = "HomeTESTIndex";
+                }
                 SessionManager.SessionRecord = _SessionRcord;
                 SessionManager.Me = tool.Login(_SessionRcord.UserCode, _SystemEnvironment.Password);
             }
@@ -87,8 +90,11 @@ namespace PMS.WebUI.Controllers
             else if (session.SubSystemCode == "DSS")
             {
                 _Index = "DecisionSupportIndex";
+            } 
+            else if (session.SubSystemCode == "TEST")
+            {
+                _Index = "HomeTESTIndex";
             }
-
             Session["ErrorUrl"] = Url.Action("LoginIndex", "Login");
             ViewData["lang"] = SessionManager.SessionRecord.ScreenLanguage;
 
@@ -98,6 +104,15 @@ namespace PMS.WebUI.Controllers
         }
 
         public ActionResult HomeSalesIndex()
+        {
+            Session["ErrorUrl"] = Url.Action("LoginIndex", "Login");
+            ViewData["lang"] = SessionManager.SessionRecord.ScreenLanguage;
+
+            Session["PMS_systemProperties"] = SessionManager.SessionRecord;
+
+            return View();
+        }
+        public ActionResult HomeTESTIndex()
         {
             Session["ErrorUrl"] = Url.Action("LoginIndex", "Login");
             ViewData["lang"] = SessionManager.SessionRecord.ScreenLanguage;
