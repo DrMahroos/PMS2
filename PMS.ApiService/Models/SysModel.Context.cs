@@ -275,6 +275,16 @@ namespace PMS.ApiService.Models
         public virtual DbSet<P_D_SalesItemSystem> P_D_SalesItemSystem { get; set; }
         public virtual DbSet<P_D_ScopeSystem> P_D_ScopeSystem { get; set; }
         public virtual DbSet<PQ_GetSalesItemSystems> PQ_GetSalesItemSystems { get; set; }
+        public virtual DbSet<A_D_VAT_TYPE> A_D_VAT_TYPE { get; set; }
+        public virtual DbSet<AVAT_D_Service> AVAT_D_Service { get; set; }
+        public virtual DbSet<AVAT_D_SrvCategory> AVAT_D_SrvCategory { get; set; }
+        public virtual DbSet<AVAT_TR_SlsInvoice> AVAT_TR_SlsInvoice { get; set; }
+        public virtual DbSet<AVAT_TR_SlsInvoiceItem> AVAT_TR_SlsInvoiceItem { get; set; }
+        public virtual DbSet<G_VatNature> G_VatNature { get; set; }
+        public virtual DbSet<AQVAT_GetService> AQVAT_GetService { get; set; }
+        public virtual DbSet<AQVAT_GetSlsInvoiceItem> AQVAT_GetSlsInvoiceItem { get; set; }
+        public virtual DbSet<AQVAT_GetSlsInvoiceList> AQVAT_GetSlsInvoiceList { get; set; }
+        public virtual DbSet<AQVAT_GetSrvCategory> AQVAT_GetSrvCategory { get; set; }
     
         public virtual int G_TOL_GetCounter(string system, Nullable<int> comp, Nullable<int> branch, string trType, ObjectParameter trNo)
         {
@@ -7617,6 +7627,270 @@ namespace PMS.ApiService.Models
                 new ObjectParameter("TrID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PProc_Prnt_sls_DbCr_Result>("PProc_Prnt_sls_DbCr", compParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, trIDParameter);
+        }
+    
+        public virtual ObjectResult<IProc_Rpt_VatSalesDetail_Result> IProc_Rpt_VatSalesDetail(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> braCode, Nullable<int> catID, Nullable<int> itemID, Nullable<int> cusCatID, Nullable<int> cusid, Nullable<int> sLStype, Nullable<int> tRtype, string ccCode, Nullable<int> status, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var braCodeParameter = braCode.HasValue ?
+                new ObjectParameter("braCode", braCode) :
+                new ObjectParameter("braCode", typeof(int));
+    
+            var catIDParameter = catID.HasValue ?
+                new ObjectParameter("CatID", catID) :
+                new ObjectParameter("CatID", typeof(int));
+    
+            var itemIDParameter = itemID.HasValue ?
+                new ObjectParameter("ItemID", itemID) :
+                new ObjectParameter("ItemID", typeof(int));
+    
+            var cusCatIDParameter = cusCatID.HasValue ?
+                new ObjectParameter("cusCatID", cusCatID) :
+                new ObjectParameter("cusCatID", typeof(int));
+    
+            var cusidParameter = cusid.HasValue ?
+                new ObjectParameter("cusid", cusid) :
+                new ObjectParameter("cusid", typeof(int));
+    
+            var sLStypeParameter = sLStype.HasValue ?
+                new ObjectParameter("SLStype", sLStype) :
+                new ObjectParameter("SLStype", typeof(int));
+    
+            var tRtypeParameter = tRtype.HasValue ?
+                new ObjectParameter("TRtype", tRtype) :
+                new ObjectParameter("TRtype", typeof(int));
+    
+            var ccCodeParameter = ccCode != null ?
+                new ObjectParameter("ccCode", ccCode) :
+                new ObjectParameter("ccCode", typeof(string));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("status", status) :
+                new ObjectParameter("status", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<IProc_Rpt_VatSalesDetail_Result>("IProc_Rpt_VatSalesDetail", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, braCodeParameter, catIDParameter, itemIDParameter, cusCatIDParameter, cusidParameter, sLStypeParameter, tRtypeParameter, ccCodeParameter, statusParameter, fromDateParameter, todateParameter);
+        }
+    
+        public virtual ObjectResult<IProc_Rpt_VatSalesSummary_Result> IProc_Rpt_VatSalesSummary(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> braCode, Nullable<int> catID, Nullable<int> itemID, Nullable<int> cusCatID, Nullable<int> cusid, Nullable<int> sLStype, Nullable<int> tRtype, string ccCode, Nullable<int> status, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var braCodeParameter = braCode.HasValue ?
+                new ObjectParameter("braCode", braCode) :
+                new ObjectParameter("braCode", typeof(int));
+    
+            var catIDParameter = catID.HasValue ?
+                new ObjectParameter("CatID", catID) :
+                new ObjectParameter("CatID", typeof(int));
+    
+            var itemIDParameter = itemID.HasValue ?
+                new ObjectParameter("ItemID", itemID) :
+                new ObjectParameter("ItemID", typeof(int));
+    
+            var cusCatIDParameter = cusCatID.HasValue ?
+                new ObjectParameter("cusCatID", cusCatID) :
+                new ObjectParameter("cusCatID", typeof(int));
+    
+            var cusidParameter = cusid.HasValue ?
+                new ObjectParameter("cusid", cusid) :
+                new ObjectParameter("cusid", typeof(int));
+    
+            var sLStypeParameter = sLStype.HasValue ?
+                new ObjectParameter("SLStype", sLStype) :
+                new ObjectParameter("SLStype", typeof(int));
+    
+            var tRtypeParameter = tRtype.HasValue ?
+                new ObjectParameter("TRtype", tRtype) :
+                new ObjectParameter("TRtype", typeof(int));
+    
+            var ccCodeParameter = ccCode != null ?
+                new ObjectParameter("ccCode", ccCode) :
+                new ObjectParameter("ccCode", typeof(string));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("status", status) :
+                new ObjectParameter("status", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<IProc_Rpt_VatSalesSummary_Result>("IProc_Rpt_VatSalesSummary", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, braCodeParameter, catIDParameter, itemIDParameter, cusCatIDParameter, cusidParameter, sLStypeParameter, tRtypeParameter, ccCodeParameter, statusParameter, fromDateParameter, todateParameter);
+        }
+    
+        public virtual ObjectResult<IProc_Rpt_VATSlsInvoiceList_Result> IProc_Rpt_VATSlsInvoiceList(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> trType, string fromDate, string toDate, Nullable<int> customerID, Nullable<int> cashType, Nullable<int> status)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var trTypeParameter = trType.HasValue ?
+                new ObjectParameter("TrType", trType) :
+                new ObjectParameter("TrType", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var toDateParameter = toDate != null ?
+                new ObjectParameter("ToDate", toDate) :
+                new ObjectParameter("ToDate", typeof(string));
+    
+            var customerIDParameter = customerID.HasValue ?
+                new ObjectParameter("CustomerID", customerID) :
+                new ObjectParameter("CustomerID", typeof(int));
+    
+            var cashTypeParameter = cashType.HasValue ?
+                new ObjectParameter("CashType", cashType) :
+                new ObjectParameter("CashType", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<IProc_Rpt_VATSlsInvoiceList_Result>("IProc_Rpt_VATSlsInvoiceList", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, trTypeParameter, fromDateParameter, toDateParameter, customerIDParameter, cashTypeParameter, statusParameter);
+        }
+    
+        public virtual ObjectResult<IProc_Prnt_VATSlsInvoice_Result> IProc_Prnt_VATSlsInvoice(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> tRId)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var tRIdParameter = tRId.HasValue ?
+                new ObjectParameter("TRId", tRId) :
+                new ObjectParameter("TRId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<IProc_Prnt_VATSlsInvoice_Result>("IProc_Prnt_VATSlsInvoice", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, tRIdParameter);
         }
     }
 }

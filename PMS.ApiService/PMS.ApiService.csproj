@@ -387,10 +387,52 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ACTIVITY.cs" />
+    <Compile Include="Models\AQVAT_GetService.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AQVAT_GetSlsInvoiceItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AQVAT_GetSlsInvoiceList.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AQVAT_GetSrvCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVAT_D_Service.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVAT_D_SrvCategory.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVAT_TR_SlsInvoice.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVAT_TR_SlsInvoiceItem.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_D_VAT_TYPE.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BaseResponse.cs" />
     <Compile Include="Models\CustomEntities\M_D_CustomerDbCr.cs" />
     <Compile Include="Models\CustomEntities\P_D_SalesCustomerDocModel.cs" />
     <Compile Include="Models\CustomEntities\M_D_SalesCustomer.cs" />
+    <Compile Include="Models\G_VatNature.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IProc_Prnt_VATSlsInvoice_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IProc_Rpt_VatSalesDetail_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IProc_Rpt_VatSalesSummary_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IProc_Rpt_VATSlsInvoiceList_Result.cs">
+      <DependentUpon>SysModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MyTimeViewModel.cs" />
     <Compile Include="Models\PProc_Prnt_sls_DbCr_Result.cs">
       <DependentUpon>SysModel.tt</DependentUpon>

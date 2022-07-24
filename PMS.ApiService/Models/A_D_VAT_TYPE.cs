@@ -12,13 +12,14 @@ namespace PMS.ApiService.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class P_D_SalesCustomerCategory
+    public partial class A_D_VAT_TYPE
     {
-        public int CustomerCategoryID { get; set; }
-        public string CustomerCatCode { get; set; }
-        public string DescA { get; set; }
-        public string DescE { get; set; }
-        public string Remarks { get; set; }
-        public Nullable<int> CompCode { get; set; }
+        public int COMP_CODE { get; set; }
+        public short TYPE { get; set; }
+        public short CODE { get; set; }
+        public string DESCRIPTION { get; set; }
+        public Nullable<byte> VatType { get; set; }
+        public Nullable<decimal> VatPerc { get; set; }
+        public Nullable<int> LineOrder { get; set; }
     }
 }

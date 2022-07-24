@@ -399,6 +399,16 @@
         <EntityTypeShape EntityType="PMSModel.P_D_SalesItemSystem" Width="1.5" PointX="3.375" PointY="32.75" />
         <EntityTypeShape EntityType="PMSModel.P_D_ScopeSystem" Width="1.5" PointX="5.375" PointY="32.75" />
         <EntityTypeShape EntityType="PMSModel.PQ_GetSalesItemSystems" Width="1.5" PointX="7.375" PointY="32.75" />
+        <EntityTypeShape EntityType="PMSModel.A_D_VAT_TYPE" Width="1.5" PointX="9.375" PointY="32.75" />
+        <EntityTypeShape EntityType="PMSModel.AVAT_D_Service" Width="1.5" PointX="33.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PMSModel.AVAT_D_SrvCategory" Width="1.5" PointX="33.375" PointY="5.75" />
+        <EntityTypeShape EntityType="PMSModel.AVAT_TR_SlsInvoice" Width="1.5" PointX="34.375" PointY="11.75" />
+        <EntityTypeShape EntityType="PMSModel.AVAT_TR_SlsInvoiceItem" Width="1.5" PointX="34.375" PointY="29.75" />
+        <EntityTypeShape EntityType="PMSModel.G_VatNature" Width="1.5" PointX="35.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PMSModel.AQVAT_GetService" Width="1.5" PointX="35.375" PointY="3.75" />
+        <EntityTypeShape EntityType="PMSModel.AQVAT_GetSlsInvoiceItem" Width="1.5" PointX="23.375" PointY="35.75" />
+        <EntityTypeShape EntityType="PMSModel.AQVAT_GetSlsInvoiceList" Width="1.5" PointX="25.375" PointY="35.75" />
+        <EntityTypeShape EntityType="PMSModel.AQVAT_GetSrvCategory" Width="1.5" PointX="3.375" PointY="36.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

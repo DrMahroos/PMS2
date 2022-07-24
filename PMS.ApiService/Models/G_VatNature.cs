@@ -12,13 +12,12 @@ namespace PMS.ApiService.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class P_D_SalesCustomerCategory
+    public partial class G_VatNature
     {
-        public int CustomerCategoryID { get; set; }
-        public string CustomerCatCode { get; set; }
-        public string DescA { get; set; }
-        public string DescE { get; set; }
-        public string Remarks { get; set; }
-        public Nullable<int> CompCode { get; set; }
+        public int VatNatID { get; set; }
+        public string VatNatureCode { get; set; }
+        public string VatNatureDescA { get; set; }
+        public string VatNatureDescE { get; set; }
+        public Nullable<decimal> VatPrc { get; set; }
     }
 }
